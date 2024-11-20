@@ -15,3 +15,5 @@
 4. With your new database selected, click the query tool. You should have space to write SQL code now
 5. In this space, copy and paste everything from setup.sql and select "Execute Script", which should look like a play button. Refresh your database, and you should see the empty tables in database > Schemas > Tables
 6. Open the query tool again and create mock data for each of the tables by copying and pasting everything from mockdata.sql and execute
+
+This [video](https://www.youtube.com/watch?v=4qH-7w5LZsA) details everything here.
