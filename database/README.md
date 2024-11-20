@@ -3,7 +3,7 @@
 ## Installation
 1. Navigate to the [installer](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) and download the latest version for your operating system
 2. When you reach the "Select Components" step, make sure you have every item check-marked
-3. *Important* Set and remember your password at this stage, as you will use this password to access pgAdmin ![Installer Password Step](./postgres-password.png)
+3. **Important** Set and remember your password at this stage, as you will use this password to access pgAdmin ![Installer Password Step](./postgres-password.png)
 4. Leave the port as the default port
 5. Keep clicking next until the installation is finished. You can ignore Stack Builder at the end
 
