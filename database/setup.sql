@@ -8,7 +8,7 @@ CREATE TABLE Candidate (
     party_affiliation VARCHAR(10) NOT NULL, 
     state VARCHAR(10),
     profile_image_url TEXT,
-    congressional_district VARCHAR(10),
+    congressional_district VARCHAR(10) DEFAULT NULL,
     dob DATE
 );
 
