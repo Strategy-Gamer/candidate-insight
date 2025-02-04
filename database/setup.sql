@@ -4,8 +4,8 @@ CREATE TABLE Candidate (
     first_name VARCHAR(25) NOT NULL,
     last_name VARCHAR(25) NOT NULL,
     ethnicity VARCHAR(25),
-    gender VARCHAR(10) NOT NULL,
-    party_affiliation VARCHAR(10) NOT NULL, 
+    gender VARCHAR(25) ,
+    party_affiliation VARCHAR(25), 
     state VARCHAR(10),
     profile_image_url TEXT,
     congressional_district VARCHAR(10) DEFAULT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE Candidate_Position (
     position_id SERIAL PRIMARY KEY,
     candidate_id INT REFERENCES Candidate(candidate_id) ON DELETE CASCADE,
     issue_id INT REFERENCES Political_Issue(issue_id) ON DELETE CASCADE,
-    position_description TEXT NOT NULL,
+    position_description TEXT NOT NULL
 );
 
 -- Sources Table
