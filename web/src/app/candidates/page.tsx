@@ -5,7 +5,7 @@ import { Candidate } from '@/types/candidate';
 import type { NextPage } from 'next';
 import CandidateCard from '../../components/CandidateCard';
 
-const exampleNames = ['John Doe', 'Jane Smith', 'Robert Johnson'];
+const exampleNames = ['Kamala Harris','Donald Trump'];
 
 const Candidates: NextPage = () => {
 

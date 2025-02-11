@@ -7,6 +7,7 @@ interface CandidateProps {
 }
 
 const CandidateCard: React.FC<CandidateProps> = (props) => {
+  const url = props.candidate.website_url ?? undefined;
   return (
     <div className='candidate-card'>
       <img src="../../public/" alt="Candidate's Photo" className="photo" />
@@ -20,7 +21,13 @@ const CandidateCard: React.FC<CandidateProps> = (props) => {
         </div>
         <div className='info-box'>
           Underneath this hero section would be specific information
-          {props.candidate.party_affiliation}
+          <a 
+            href={url} 
+            target='blank'
+            style={{all: 'revert'}}
+          >
+            Official Website
+          </a>
         </div>
       </div>
     </div>
