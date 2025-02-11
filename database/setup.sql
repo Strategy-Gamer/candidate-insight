@@ -9,6 +9,7 @@ CREATE TABLE Candidate (
     state VARCHAR(10),
     profile_image_url TEXT,
     congressional_district VARCHAR(10) DEFAULT NULL,
+    website_url TEXT DEFAULT NULL,
     dob DATE
 );
 
