@@ -1,0 +1,40 @@
+.candidate-card {
+    display: flex;
+    align-items: flex-start;
+    font-family: 'Libre Baskerville';
+    font-weight: 400;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-card .photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.candidate-card .details {
+    text-align: left;
+}
+
+.candidate-card .details h2 {
+    font-size: 48pt;
+    color: #1c1c84;
+    font-variant: small-caps;
+    margin-bottom: 5px;
+}
+
+.candidate-card .details h3 {
+    font-size: 24pt;
+    color: #1c1c84;
+    margin-bottom: 10px;
+}
+
+.candidate-card .details p {
+    font-size: 16pt;
+    color: #333;
+    margin-bottom: 20px;
+}

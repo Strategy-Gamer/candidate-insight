@@ -1,0 +1,51 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 25px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    color: #1c1c84;
+  }
+  
+header h1 {
+    font-variant: small-caps;
+    font-size: 24pt;
+    font-weight: 400;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: #1c1c84;
+    transition: color 0.3s ease-in-out;
+}
+
+header h1 a:hover {
+    color: #b31942;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+  
+header nav a {
+    margin-right: 15px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #1c1c84;
+    font-size: 12pt;
+    transition: color 0.3s ease-in-out;
+}
+  
+header nav a:hover {
+    color: #b31942;
+}
+  
+header nav input {
+    padding: 5px;
+    font-size: 10pt;
+    box-sizing: border-box;
+    border: 1px solid #D3D3D3;
+}
+  
