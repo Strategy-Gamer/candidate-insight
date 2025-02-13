@@ -1,3 +1,5 @@
+# Attempted to scrape FB without accessing API
+# After more research, Facebook is pretty opposed to scraping, 
 import requests
 from bs4 import BeautifulSoup
 
