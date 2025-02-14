@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Candidate } from '@/types/candidate';
 import type { NextPage } from 'next';
-import CandidateCard from '../../components/CandidateCard';
+import CandidateCard from '@/components/CandidateCard';
 
 const exampleNames = ['John Doe', 'Jane Smith', 'Robert Johnson'];
 

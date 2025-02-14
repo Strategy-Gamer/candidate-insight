@@ -27,7 +27,7 @@ const CandidatePage = () => {
             } catch (error) {
                 console.error("Error fetching candidate:", error);
             } finally {
-                /* setLoading(false); */
+                setLoading(false);
             }
         };
 

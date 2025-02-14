@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/candidatecard.css';
+import '@/styles/candidatecard.css';
 import { Candidate } from '@/types/candidate';
 
 interface CandidateProps {
