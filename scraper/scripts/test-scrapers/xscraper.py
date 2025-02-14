@@ -1,3 +1,5 @@
+# An attempt to scrape X without access to their API
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
