@@ -1,15 +1,23 @@
 // This is the candidates page
 'use client';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Candidate } from '@/types/candidate';
 import type { NextPage } from 'next';
 import CandidateCard from '../../components/CandidateCard';
 
-const exampleNames = ['Kamala Harris','Donald Trump'];
+const exampleNames = ['John Doe', 'Jane Smith', 'Robert Johnson'];
 
 const Candidates: NextPage = () => {
+  // setup the router
+  const router = useRouter();
 
-  const [candidate, setCandidate] = useState<Candidate>({first_name: 'Hello', last_name: 'World', candidate_id: 1});
+  // setup default data
+  const [candidate, setCandidate] = useState<Candidate>({
+    first_name: 'Hello', 
+    last_name: 'World', 
+    candidate_id: 1
+  });
   const [firstName, setFirstName] = useState<string>('John');
   const [lastName, setLastName] = useState<string>('Doe');
 
@@ -30,7 +38,9 @@ const Candidates: NextPage = () => {
     const data = await response.json();
 
     if (data.success) {
-      setCandidate(data.candidate);
+      // setCandidate(data.candidate);
+      // push the dynamic page
+      router.push(`/candidates/${id}`);
     } 
     else {
       alert('Candidate not found');
@@ -47,10 +57,7 @@ const Candidates: NextPage = () => {
         }
       </select>
       <button onClick={handleClick}>Search</button>
-      <h1>Below is a WIP</h1>
-      <h2>The actual candidate page will likely have a directory layout</h2>
-      <h3>Upon clicking on a candidate, the below will be rendered (finished of course)</h3>
-      <CandidateCard candidate={candidate}/>
+      { /*<CandidateCard candidate={candidate}/> */ }
     </div>
   );
 };

@@ -8,9 +8,18 @@ interface CandidateProps {
 
 const CandidateCard: React.FC<CandidateProps> = (props) => {
   const url = props.candidate.website_url ?? undefined;
+
+  const defaultImage = '/images/402_Profile_Grey.png';
+
+  const profileImage = defaultImage;
+
   return (
     <div className='candidate-card'>
-      <img src="../../public/" alt="Candidate's Photo" className="photo" />
+      <img 
+        src={profileImage} 
+        alt={`${props.candidate.first_name} ${props.candidate.last_name}'s Photo`} 
+        className="photo" 
+      />
 
       <div className='details'>
         <h2>{props.candidate.first_name} {props.candidate.last_name}</h2>
