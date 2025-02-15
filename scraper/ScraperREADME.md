@@ -11,4 +11,4 @@ An attempt to scrape X without access to their API directly in an attempt to min
 ## x2scraper.py
 - Iteration 1: Collected last 7 days of tweets up to 100 tweets from Kamala Harris's account
 - Iteration 2: Collected last 100 tweets from Nov 4, 2024 working backwards. Due to the rate limiter of 100, I only collected up to August, but the goal is May 4, 2024 (6 months before the election)
-- Iteration 3: 
+- Iteration 3: Changing "w(rite)" to "a(ppend)" and added code to send another request and continue appending from the last recorded date.
