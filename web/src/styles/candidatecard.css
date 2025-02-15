@@ -11,9 +11,11 @@
 }
 
 .candidate-card .photo {
-    width: 100%;
+    width: 200px;
     height: 200px;
+    border-radius: 50%;
     object-fit: cover;
+    margin-right: 50px;
 }
 
 .candidate-card .details {
