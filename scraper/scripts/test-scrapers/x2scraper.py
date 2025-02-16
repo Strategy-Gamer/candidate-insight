@@ -1,71 +1,48 @@
 import requests
 import os
-import time
+from datetime import datetime
 
 BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAAGk1xQEAAAAAR11kwjbQGZHWaBYL4cHuXnTSfBs%3DXNPn2guqqztAq1MEqWhJ18TnSPafCnIO2pfyBGB7ykpN4smWPL"
 
 USERNAME = "SamBrownForNV"
 
-# API endpoint for user lookup
+# Define output file so we can timestamp it before importing tweets 
+output_file = "SamBrownNV.txt"
+
+# Add a "Scraped on" timestamp at the top of new files
+if not os.path.exists(output_file):
+    with open(output_file, "w", encoding="utf-8") as file:
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        file.write(f"Scraped on: {timestamp}\n\n")
+
+# API endpoint
 url = f"https://api.twitter.com/2/users/by/username/{USERNAME}"
 
 # Headers
 headers = {
-    "Authorization": f"Bearer {BEARER_TOKEN}",
-    "Content-Type": "application/json"
+    "Authorization": f"Bearer {BEARER_TOKEN}"
 }
 
-# Get user ID
+# Make the request
 response = requests.get(url, headers=headers)
 
+# Check response
 if response.status_code == 200:
     user_data = response.json()
     user_id = user_data.get("data", {}).get("id")
     print(f"User ID for {USERNAME}: {user_id}")
 else:
     print(f"Error: {response.status_code} - {response.text}")
-    exit()
 
-# Define the output file name
-output_file = "SamBrownNV.txt"
-
-# Function to get last tweet date from the file
-def get_last_tweet_date(file_name):
-    """Reads the last tweet timestamp from the file to avoid duplicates."""
-    if not os.path.exists(file_name):
-        return "2024-05-04T00:00:00Z"  # Start from scratch if no file
-
-    with open(file_name, "r", encoding="utf-8") as f:
-        lines = f.readlines()
-
-    for line in reversed(lines):  # Read file from the end
-        if line.strip().startswith("2024-"):
-            return line.strip()  # Return last recorded tweet timestamp
-
-    return "2024-05-04T00:00:00Z"
-
-# Get last recorded tweet date
-last_tweet_date = get_last_tweet_date(output_file)
-print(f"Resuming from last tweet date: {last_tweet_date}")
-
-# API endpoint for tweets
+# Endpoint URL
 url = f"https://api.twitter.com/2/users/{user_id}/tweets"
-
-# Function to handle rate limits
-def handle_rate_limit(response):
-    """Handles Twitter API rate limits by waiting before retrying."""
-    if response.status_code == 429:
-        print("Rate limit reached. Waiting for 15 minutes before retrying...")
-        time.sleep(900)  # Wait 15 minutes (Twitter's rate limit window)
-        return True
-    return False
 
 # Query Parameters
 params = {
-    "tweet.fields": "created_at,text",
-    "start_time": last_tweet_date,  # Resume from last recorded tweet
-    "end_time": "2024-11-04T23:59:59Z",
-    "max_results": 100  # Ensure max tweets per request
+    # "max_results": 100,  # Max results per request (10–100)
+    "tweet.fields": "created_at,text",  # Additional fields to include
+    "start_time": "2024-05-04T00:00:00Z",  # ISO 8601 format
+    "end_time": "2024-05-11T23:59:59Z"
 }
 
 # Pagination loop to fetch all requested tweets
@@ -74,33 +51,26 @@ next_token = None
 
 while True:
     if next_token:
-        params["pagination_token"] = next_token  # Use pagination to get older tweets
+        params["pagination_token"] = next_token
 
     response = requests.get(url, headers=headers, params=params)
     
-    if handle_rate_limit(response):  # Handle rate limits
-        continue
-
     if response.status_code != 200:
         print(f"Error: {response.status_code} - {response.text}")
         break
-
+    
     tweets = response.json()
-    if "data" in tweets:
-        all_tweets.extend(tweets["data"])
-    else:
-        print("No new tweets found.")
-        break
-
-    # Check if there is a next page
+    all_tweets.extend(tweets.get("data", []))
+    
+    # Check if there is a next token
     next_token = tweets.get("meta", {}).get("next_token")
     if not next_token:
-        break  # Stop when no more pages
+        break
 
-# Append new tweets to the file
+# Save formatted tweets to a plain text file
 with open(output_file, "a", encoding="utf-8") as txtfile:
     for tweet in all_tweets:
         txtfile.write(f"{tweet['created_at']}\n{tweet['text']}\n\n")
 
-print(f"Total new tweets retrieved: {len(all_tweets)}")
-print(f"New tweets appended to {output_file}")
+print(f"Total tweets retrieved: {len(all_tweets)}")
+print(f"Updated {output_file} with new tweets.")
