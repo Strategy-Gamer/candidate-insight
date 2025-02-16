@@ -15,6 +15,7 @@ Appears to be deprecated. truthsocial.com/api no longer exists which is required
 
 ## xscraper.py 
 An attempt to scrape X without access to their API directly in an attempt to minimize costs. Authentication errors. 
+(Edit 2-15-2024: Deleting xscraper.py)
 
 ## x2scraper.py
 - Iteration 1: Collected last 7 days of tweets up to 100 tweets from Kamala Harris's account
@@ -22,3 +23,4 @@ An attempt to scrape X without access to their API directly in an attempt to min
 - Iteration 3: Changing "w(rite)" to "a(ppend)" and added code to send another request and continue appending from the last recorded date. Results: That doesn't work. In order to try to continue from the last recorded date, the way I have it coded now tries to request up to 8-24-2024 first so it results in "too many requests". 
 - Iteration 4: Adding a sleep time to deal with rate limit. That somehow preformed worse. It didn't even acknowledge there were tweets beyond 8-24-2024. 
 - Iteration 5: Back to iteration 2, and I'm going to do every collection manually. I will change about iteration 2 is changing "w(rite)" to "a(ppend)" and add a date/time stamp to the output file. FINAL ITERATION. COPYING TO X-scraper.py
+-(Edit 2-15-2024: Renaming to twitter-scraper.py)

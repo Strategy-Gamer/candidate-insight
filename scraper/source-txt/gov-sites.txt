@@ -10,3 +10,8 @@ John Rose TN House
 https://johnrose.house.gov
 John Rose TN Congress (House)
 https://www.congress.gov/member/john-rose/R000612
+Ruben Gaellego AZ Senate 
+https://www.gallego.senate.gov
+Ruben Gallego AZ Congress (Senate)
+https://www.congress.gov/member/ruben-gallego/G000574
+
