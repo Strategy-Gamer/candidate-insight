@@ -1,9 +1,9 @@
 -- This file contains mock data for the database tables to be used for testing and development purposes.
-INSERT INTO Candidate (first_name, last_name, ethnicity, gender, party_affiliation, state, profile_image_url, congressional_district, dob)
+INSERT INTO Candidate (first_name, last_name, ethnicity, gender, party_affiliation, state, profile_image_url, congressional_district, website_url, dob)
 VALUES
-('John', 'Doe', 'Caucasian', 'Male', 'Independent', 'NY', 'https://example.com/john_doe.jpg', 'NY-10', '1975-06-15'),
-('Jane', 'Smith', 'Hispanic', 'Female', 'Democrat', 'CA', 'https://example.com/jane_smith.jpg', 'CA-12', '1985-04-22'),
-('Robert', 'Johnson', 'African American', 'Male', 'Republican', 'TX', 'https://example.com/robert_johnson.jpg', 'TX-07', '1970-09-12');
+('John', 'Doe', 'Caucasian', 'Male', 'Independent', 'NY', 'https://example.com/john_doe.jpg', 'NY-10', 'www.johndoe.com', '1975-06-15'),
+('Jane', 'Smith', 'Hispanic', 'Female', 'Democrat', 'CA', 'https://example.com/jane_smith.jpg', 'CA-12', 'www.janesmith.com', '1985-04-22'),
+('Robert', 'Johnson', 'African American', 'Male', 'Republican', 'TX', 'https://example.com/robert_johnson.jpg', 'TX-07', 'www.robertjohnson.com', '1970-09-12');
 
 -- Inserting political issues
 INSERT INTO Political_Issue (issue_name, issue_description)
