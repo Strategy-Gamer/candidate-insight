@@ -4,6 +4,7 @@ import { Candidate } from '@/types/candidate';
 import { getPartyAbbreviation } from '@/utils/candidateHelperFuncs';
 import { getStateAbbreviation } from '@/utils/candidateHelperFuncs';
 import { appendOrdinalToDistrict } from '@/utils/candidateHelperFuncs';
+import { profile } from 'console';
 
 interface CandidateProps {
   candidate: Candidate
@@ -27,12 +28,33 @@ const getPosition = (
   return "Unknown Position";
 };
 
+const getCandidateDesc = (
+  firstName: string,
+  lastName: string,
+  district: string | null | undefined,
+  party: string | null | undefined,
+  state: string | null | undefined
+): string => {
+  const fullName = `${firstName} ${lastName}`;
+  const stateAbbrev = state ? getStateAbbreviation(state) ?? state : "Unknown State";
+
+  if (district) {
+    return `${fullName} is a Representative for ${stateAbbrev}, serving the ${appendOrdinalToDistrict(district)} District.`;
+  } else if (state) {
+    return `${fullName} is a Senator for ${stateAbbrev}.`;
+  }
+  return `${fullName} is a political candidate.`;
+};
+
 const CandidateCard: React.FC<CandidateProps> = (props) => {
   const url = props.candidate.website_url ?? undefined;
 
   const defaultImage = '/images/Rect_NonID_Grey.png';
 
   const profileImage = defaultImage;
+  
+  const profileDescription = getCandidateDesc(props.candidate.first_name, props.candidate.last_name, props.candidate.congressional_district,
+    props.candidate.party_affiliation, props.candidate.state);
 
   return (
     <div className='candidate-card'>
@@ -47,18 +69,14 @@ const CandidateCard: React.FC<CandidateProps> = (props) => {
         <h3>
           {getPosition(props.candidate.congressional_district, props.candidate.party_affiliation, props.candidate.state)}
         </h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <div className='link-box'>
-          Links to their website, social media, etc...
-        </div>
-        <div className='info-box'>
-          Underneath this hero section would be specific information
-          <a 
-            href={url} 
-            target='blank'
-            style={{all: 'revert'}}
-          >
+        <p>{profileDescription}</p>
+        {/* change this from Tailwind later */}
+        <div className="flex justify-center space-x-4 mt-4">
+          <a href="/" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">
             Official Website
+          </a>
+          <a href="/" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">
+           X (Twitter)
           </a>
         </div>
       </div>
