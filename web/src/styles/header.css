@@ -1,13 +1,28 @@
 header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 25px;
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
+    background: rgba(255, 255, 255, 1.0);
     color: #1c1c84;
-  }
-  
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
 header h1 {
     font-variant: small-caps;
     font-size: 24pt;
@@ -49,3 +64,22 @@ header nav input {
     border: 1px solid #D3D3D3;
 }
   
+
+/* I'm not exactly sure what this looks like yet */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav a {
+        width: 100%;
+        text-align: center;
+    }
+}
