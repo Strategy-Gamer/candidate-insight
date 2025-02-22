@@ -59,35 +59,52 @@ const stateAbbrevs = {
     "West Virginia": "WV",
     "Wisconsin": "WI",
     "Wyoming": "WY"
-  };
+};
+
+/* the above was stored in the opposite direction, and I didn't feel like changing it
+   I still think it's useful to be able to grab either the state name or the abbreviation,
+   so I'm keeping it */
+const stateNames: Record<string, string> = Object.fromEntries(
+    Object.entries(stateAbbrevs).map(([full, abbrev]) => [abbrev, full])
+  );
   
-export const getStateAbbreviation = (state: string): string | undefined => {
-    return stateAbbrevs[state as keyof typeof stateAbbrevs];
+  
+export const getStateName = (abbrev: string): string | undefined => {
+    return stateNames[abbrev.toUpperCase()];
 };
   
 
-export const appendOrdinalToDistrict = (district: string): string | undefined => {
-    // find the -, slice after to get the district number
-    let index: number = parseInt(district.slice(district.search("-")));
-    
-    let j: number = index % 10;
-    let k: number = index % 100;
+export const appendOrdinalToDistrict = (district: string): string => {
+    // extract district number
+    const districtNumber = district.split("-")[1];
 
+    // remove leading 0s
+    const index = parseInt(districtNumber, 10);
+
+    // Determine the correct ordinal suffix
     let ordinal: string;
-
-    if (j === 1 && k !== 11) {
+    if (index % 10 === 1 && index % 100 !== 11) {
         ordinal = "st";
-    }
-    if (j === 2 && k !== 12) {
+    } else if (index % 10 === 2 && index % 100 !== 12) {
         ordinal = "nd";
-    }
-    if (j === 3 && k !== 13) {
+    } else if (index % 10 === 3 && index % 100 !== 13) {
         ordinal = "rd";
+    } else {
+        ordinal = "th";
     }
 
-    ordinal = "th";
-    
-    return district.slice(district.search("-")+1) + ordinal; 
+    return `${index}${ordinal}`;
+};
+
+
+export const getParty = (party: string): string | undefined => {
+    if (party === "Democrat") {
+      return "Democratic Party";    
+    } else if (party === "Republican") {
+        return "Republican Party";
+    } else {
+        return "Independent";
+    }   
 }
 
   

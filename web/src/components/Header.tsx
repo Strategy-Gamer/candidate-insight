@@ -1,10 +1,23 @@
-import React from 'react';
+"use client";
+
+import React, {useEffect, useState } from 'react';
 import Link from 'next/link';
 import '@/styles/header.css';
 
 const Header: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header>
+    <header className={isScrolled ? 'header-shadow' : ''}>
       <div className="logo-container">
         <img
           src="/images/candidate-insight-logo.png"

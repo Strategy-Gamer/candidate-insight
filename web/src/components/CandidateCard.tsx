@@ -1,10 +1,17 @@
 import React from 'react';
 import '@/styles/candidatecard.css';
 import { Candidate } from '@/types/candidate';
-import { getPartyAbbreviation } from '@/utils/candidateHelperFuncs';
-import { getStateAbbreviation } from '@/utils/candidateHelperFuncs';
-import { appendOrdinalToDistrict } from '@/utils/candidateHelperFuncs';
-import { profile } from 'console';
+import { 
+  getPartyAbbreviation,
+  getStateName,
+  appendOrdinalToDistrict,
+  getParty,
+} from '@/utils/candidateHelperFuncs';
+/* import { profile } from 'console'; */
+import {
+  XOutlined,
+  GoogleOutlined,
+} from '@ant-design/icons';
 
 interface CandidateProps {
   candidate: Candidate
@@ -18,12 +25,12 @@ const getPosition = (
   state: string | null | undefined
 ): string => {
   const partyAbbrev = party ? getPartyAbbreviation(party) ?? "?" : "?";
-  const stateAbbrev = state ? getStateAbbreviation(state) ?? state : "Unknown State";
+  // const stateAbbrev = state ? getStateAbbreviation(state) ?? state : "Unknown State";
 
   if (district) {
-    return `Representative (${partyAbbrev}-${stateAbbrev} ${appendOrdinalToDistrict(district)} District)`;
+    return `Representative (${partyAbbrev}-${state} ${appendOrdinalToDistrict(district)} District)`;
   } else if (state) {
-    return `Senator (${partyAbbrev})-${stateAbbrev}`;
+    return `Senator (${partyAbbrev})-${state}`;
   }
   return "Unknown Position";
 };
@@ -35,24 +42,26 @@ const getCandidateDesc = (
   party: string | null | undefined,
   state: string | null | undefined
 ): string => {
-  const fullName = `${firstName} ${lastName}`;
-  const stateAbbrev = state ? getStateAbbreviation(state) ?? state : "Unknown State";
+  const fullName: string = `${firstName} ${lastName}`;
+  const stateName: string = state ? getStateName(state) ?? state : "Unknown State";
+  const fullParty: string = party ? getParty(party) ?? party : "Unknown Party";
+
+  let fullDesc: string = "";
 
   if (district) {
-    return `${fullName} is a Representative for ${stateAbbrev}, serving the ${appendOrdinalToDistrict(district)} District.`;
+    fullDesc = `${fullName} (${fullParty}) is a Representative for ${stateName}, serving the ${appendOrdinalToDistrict(district)} District.`;
   } else if (state) {
-    return `${fullName} is a Senator for ${stateAbbrev}.`;
+    fullDesc = `${fullName} (${fullParty}) is a Senator for ${stateName}.`;
+  } else {
+    fullDesc = `${fullName} (${fullParty}) is a political candidate.`;
   }
-  return `${fullName} is a political candidate.`;
+
+  return fullDesc;
 };
 
 const CandidateCard: React.FC<CandidateProps> = (props) => {
   const url = props.candidate.website_url ?? undefined;
-
-  const defaultImage = '/images/Rect_NonID_Grey.png';
-
-  const profileImage = defaultImage;
-  
+  const profileImage = '/images/Rect_NonID_Grey.png';
   const profileDescription = getCandidateDesc(props.candidate.first_name, props.candidate.last_name, props.candidate.congressional_district,
     props.candidate.party_affiliation, props.candidate.state);
 
@@ -70,13 +79,13 @@ const CandidateCard: React.FC<CandidateProps> = (props) => {
           {getPosition(props.candidate.congressional_district, props.candidate.party_affiliation, props.candidate.state)}
         </h3>
         <p>{profileDescription}</p>
-        {/* change this from Tailwind later */}
+        {/* possibly change this from Tailwind later */}
         <div className="flex justify-center space-x-4 mt-4">
-          <a href="/" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">
-            Official Website
+          <a href="google.com" className="text-[#1c1c84]" target="_blank" rel="noopener noreferrer">
+            <GoogleOutlined />
           </a>
-          <a href="/" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">
-           X (Twitter)
+          <a href="x.com" className="text-[#1c1c84] underline" target="_blank" rel="noopener noreferrer">
+            <XOutlined />
           </a>
         </div>
       </div>
