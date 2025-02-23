@@ -42,3 +42,8 @@ CREATE TABLE Position_Sources (
     source_id INT REFERENCES Sources(source_id) ON DELETE CASCADE,
     PRIMARY KEY (position_id, source_id)
 );
+
+-- ** New data alterations **
+ALTER TABLE candidate
+ADD COLUMN twitter VARCHAR(25) DEFAULT NULL;
+
