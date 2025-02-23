@@ -1,0 +1,67 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    background-color: #e9ecef;
+    text-align: center;
+    padding: 20px;
+  }
+  
+.hero h1 {
+    font-size: 24pt;
+    font-weight: bold;
+    color: #1c1c84;
+}
+
+.hero h2 {
+    font-size: 14pt;
+    margin-top: 16px;
+}
+
+.hero .explore-button {
+    background-color: #1c1c84;
+    margin-top: 24px;
+    padding: 12px 24px;
+    height: 40px;
+    border-radius: 0;
+    font-size: 14pt;
+    transition: 0.3s ease-in-out;
+}
+
+.hero .explore-button:hover {
+    background-color: #b31942;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    background-color: #ffffff;
+}
+  
+.feature-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box h3 {
+    font-weight: 600;
+    font-size: 18pt;
+}
+  
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+  
+footer p {
+    margin: 0;
+}
+  

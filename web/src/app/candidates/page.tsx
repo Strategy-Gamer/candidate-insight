@@ -21,14 +21,6 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 
-
-// change value to lowercase
-const exampleCands = [
-  { value: "John-Doe", label: "John Doe"},
-  { value: "Jane-Smith", label: "Jane Smith"},
-  { value: "Robert-Johnson", label: "Robert Johnson"},
-];
-
 const mockCandidates: Candidate[] = [
   {
     first_name: "John",
