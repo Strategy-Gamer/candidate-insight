@@ -36,11 +36,22 @@ const CandidatePage = () => {
 
     if (loading) {
         return (
-            <div className="flex flex-col items-center space-y-4">
-                <Skeleton className="h-10 w-40" />
-                <Skeleton className="h-32 w-32 rounded-full" />
-                <Skeleton className="h-6 w-60" />
-                <Skeleton className="h-6 w-80" />
+            <div className="flex items-start p-6 mx-auto max-w-4xl rounded-lg shadow">
+                {/* Image Skeleton */}
+                <Skeleton className="h-48 w-48 rounded-full mr-8" />
+
+                {/* Details Skeleton */}
+                <div className="flex flex-col space-y-4">
+                    {/* Name */}
+                    <Skeleton className="h-10 w-60" />
+
+                    {/* Position */}
+                    <Skeleton className="h-8 w-40" />
+
+                    {/* Description lines */}
+                    <Skeleton className="h-6 w-80" />
+                    <Skeleton className="h-6 w-80" />
+                </div>
             </div>
         );
     }

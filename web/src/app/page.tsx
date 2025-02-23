@@ -1,12 +1,34 @@
-// This is the home page
-
 import type { NextPage } from 'next';
+import { Button } from '@/components/ui/button';
+import "@/styles/homepage.css"; // Import the homepage.css file
 
 const Home: NextPage = () => {
   return (
-    <div className="text-center">
-      <h1>Home Page for Candidate Insight</h1>
-      <h2>To be fleshed out</h2> 
+    <div className="text-center font-sans">
+      <section className="hero">
+        <h1>Candidate Insight</h1>
+        <h2>
+          Understand Policy Positions & Compare Candidates
+        </h2>
+        <Button className="explore-button">
+          Explore Candidates
+        </Button>
+      </section>
+
+      <section className="features">
+        <div className="feature-box">
+          <h3>Policy Comparison</h3>
+          <p>Compare stances on major issues like abortion, gun control, and healthcare.</p>
+        </div>
+        <div className="feature-box">
+          <h3>Background Info</h3>
+          <p>Get to know candidates and explore their policies.</p>
+        </div>
+        <div className="feature-box">
+          <h3>Data-driven Insights</h3>
+          <p>Make informed decisions with data-driven insights on candidates.</p>
+        </div>
+      </section>
     </div>
   );
 };
