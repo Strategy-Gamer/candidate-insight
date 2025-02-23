@@ -43,7 +43,3 @@ CREATE TABLE Position_Sources (
     PRIMARY KEY (position_id, source_id)
 );
 
--- ** New data alterations **
-ALTER TABLE candidate
-ADD COLUMN twitter VARCHAR(25) DEFAULT NULL;
-
