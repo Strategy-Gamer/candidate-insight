@@ -30,13 +30,6 @@ def get_data_from_database():
             position_source_data = cur.fetchall()
             cur.execute("SELECT * FROM sources;") 
             source_data = cur.fetchall()
-
-            # Row by row
-            # for record in cur:
-            #     print("Data from Database:-", record)
-            
-            # Make changes persistent
-            #conn.commit()
     
     return candidate_data, issue_data, position_source_data, source_data
 
@@ -72,6 +65,8 @@ def push_position_to_database(candidate_first, candidate_last, issue, position):
             if candidate_id != -1 and issue_id != -1:
                 cur.execute("INSERT INTO candidate_position (candidate_id, issue_id, position_description) VALUE (%s, %s, %s)", (candidate_id, issue_id, position))
 
+            # Make changes persistent
+            conn.commit()
     return
 
 # Just to make sure this works
