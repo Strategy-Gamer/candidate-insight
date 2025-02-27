@@ -52,11 +52,11 @@ async function insertData() {
     const db = await pool.connect();
     // Gay Valimont FL House
     try {
-        const query = 'INSERT INTO candidate (first_name, last_name, state, congressional_district, website_url) VALUES ($1, $2, $3, $4, $5)';
+        const query = 'INSERT INTO candidate (first_name, last_name, state, congressional_district, website_url, twitter) VALUES ($1, $2, $3, $4, $5, $6)';
         for (let i=0; i < lines.length; i+=2) {
             const {firstName, lastName, state, position} = extractData(lines[i]);
-            const webURL = lines[i+1];
-            await db.query(query, [firstName, lastName, state, position, webURL]);
+            const [webURL, twitter] = lines[i+1].trim().split(' ');
+            await db.query(query, [firstName, lastName, state, position, webURL, twitter]);
         }
     }
     catch (err) {

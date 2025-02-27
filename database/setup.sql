@@ -42,3 +42,4 @@ CREATE TABLE Position_Sources (
     source_id INT REFERENCES Sources(source_id) ON DELETE CASCADE,
     PRIMARY KEY (position_id, source_id)
 );
+
