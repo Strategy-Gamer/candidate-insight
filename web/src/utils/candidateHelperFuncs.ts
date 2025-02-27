@@ -8,7 +8,7 @@ export const getPartyAbbreviation = (party: string): string | undefined => {
     return partyAbbrevs[party as keyof typeof partyAbbrevs];
 };
 
-const stateAbbrevs = {
+export const stateAbbrevs = {
     "Alabama": "AL",
     "Alaska": "AK",
     "Arizona": "AZ",
@@ -106,5 +106,21 @@ export const getParty = (party: string): string | undefined => {
         return "Independent";
     }   
 }
+
+export const getPosition = (
+    district: string | null | undefined, 
+    party: string | null | undefined, 
+    state: string | null | undefined
+  ): string => {
+    const partyAbbrev = party ? getPartyAbbreviation(party) ?? "?" : "?";
+    // const stateAbbrev = state ? getStateAbbreviation(state) ?? state : "Unknown State";
+  
+    if (district) {
+      return `Representative (${partyAbbrev}-${state} ${appendOrdinalToDistrict(district)} District)`;
+    } else if (state) {
+      return `Senator (${partyAbbrev})-${state}`;
+    }
+    return "Unknown Position";
+  };
 
   

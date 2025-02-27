@@ -5,7 +5,13 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Candidate } from '@/types/candidate';
 import type { NextPage } from 'next';
-
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 import { Button } from '@/components/ui/button';
 import {
   Command,
@@ -20,14 +26,18 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
+import { getPosition, stateAbbrevs } from '@/utils/candidateHelperFuncs';
+import { mockCandidates } from '@/utils/mockCandidates';
+import { FilterFilled } from '@ant-design/icons';
 
+/*
 const mockCandidates: Candidate[] = [
   {
     first_name: "John",
     last_name: "Doe",
     state: "NY",
     party_affiliation: "Independent",
-    congressional_district: "10",
+    congressional_district: "NY-10",
     candidate_id: 1,
   },
   {
@@ -35,7 +45,7 @@ const mockCandidates: Candidate[] = [
     last_name: "Smith",
     state: "CA",
     party_affiliation: "Democrat",
-    congressional_district: "12",
+    congressional_district: "CA-12",
     candidate_id: 2,
   },
   {
@@ -43,19 +53,79 @@ const mockCandidates: Candidate[] = [
     last_name: "Johnson",
     state: "TX",
     party_affiliation: "Republican",
-    congressional_district: "07",
+    congressional_district: "TX-07",
     candidate_id: 3,
   }
 ];
+*/
 
+const InfoCardButton: React.FC<{ candidate: Candidate; onClick: () => void; groupByParty: boolean }> = ({ candidate, onClick, groupByParty }) => {
+  const partyColors: Record<string, string> = {
+    Democrat: "bg-[#1c1c84] hover:bg-[#14146b]",
+    Republican: "bg-[#b31942] hover:bg-[#8e122f]",
+    Independent: "bg-[#ffcc00] hover:bg-[#d4aa00]",
+  };
 
-/* NEED TO HANDLE THE VALUE */
+  const party = candidate.party_affiliation ?? "Independent";
+  const fullName = `${candidate.first_name} ${candidate.last_name}`;
+  const position = getPosition(candidate.congressional_district, candidate.party_affiliation, candidate.state);
+  const bgColor = groupByParty ? partyColors[party] || "bg-gray-500" : "bg-gray-700 hover:bg-gray-900";
+  return (
+    <Card 
+      className={`w-[275px] cursor-pointer rounded-none duration-300 ease-in-out ${bgColor}`}
+      onClick={onClick}
+    >
+      <CardHeader className="text-center">
+        <CardTitle className="text-white">{fullName}</CardTitle>
+        <CardDescription className="text-white">{position}</CardDescription>
+      </CardHeader>
+      <CardContent className="flex flex-col items-center gap-4">
+        <img 
+          src='/images/Rect_NonID_Grey.png'
+          alt={`${fullName}'s Photo`} 
+          className="w-[200px] h-[250px] object-cover rounded-none" 
+        />
+      </CardContent>
+    </Card>
+  );
+};
+
 const Candidates: NextPage = () => {
   // setup the router
   const router = useRouter();
 
+  const [filters, setFilters] = useState({
+    party: '',
+    state: '',
+    house: '',
+  });
+  const [groupByParty, setGroupByParty] = useState(false);
   const [open, setOpen] = React.useState(false);
   const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
+
+  const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setFilters({ ...filters, [e.target.name]: e.target.value });
+  };
+  
+  const toggleGroupByParty = () => {
+    setGroupByParty(prevState => !prevState);
+  };
+
+  const filteredCandidates = mockCandidates.filter(candidate => {
+    const matchesParty = filters.party ? candidate.party_affiliation === filters.party: true;
+    const matchesState = filters.state ? candidate.state === filters.state: true;
+    // add filter for house/senate/president etc.
+    return matchesParty && matchesState;
+  });
+
+  const handleClearFilters = () => {
+    setFilters({
+      party: '',
+      state: '',
+      house: ''
+    });
+    setGroupByParty(false);
+  };
 
   const handleClick = async () => {
     if (!selectedCandidate) {
@@ -63,8 +133,6 @@ const Candidates: NextPage = () => {
       return;
     }
     
-    /* check the db first, might need to change this */
-
     const response = await fetch(`/api/candidates/${selectedCandidate.first_name}-${selectedCandidate.last_name}`);
     const data = await response.json();
 
@@ -76,8 +144,10 @@ const Candidates: NextPage = () => {
     }
   };
 
-  return (
+  return (    
     <div className="font-sans p-6">
+
+      {/* search section */}
       <div className="flex justify-center items-center space-x-4">
         <Popover open={open} onOpenChange={setOpen}>
           <PopoverTrigger asChild>
@@ -89,7 +159,7 @@ const Candidates: NextPage = () => {
             >
               {selectedCandidate 
                 ? `${selectedCandidate.first_name} ${selectedCandidate.last_name}` 
-                : "Select candidate..."
+                : "Find a candidate..."
               }
             </Button>
           </PopoverTrigger>
@@ -99,7 +169,7 @@ const Candidates: NextPage = () => {
               <CommandList>
                 <CommandEmpty>No candidate found.</CommandEmpty>
                 <CommandGroup>
-                  {mockCandidates.map((candidate) => (
+                  {filteredCandidates.map((candidate) => (
                     <CommandItem
                       key={`${candidate.first_name}-${candidate.last_name}`}
                       value={`${candidate.first_name}-${candidate.last_name}`}
@@ -116,34 +186,99 @@ const Candidates: NextPage = () => {
             </Command>
           </PopoverContent>
         </Popover>
+
+        {/* filters */}
+        <Popover>
+          <PopoverTrigger asChild>
+            <Button variant="outline" className="h-10 rounded-none">
+              <FilterFilled />
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent className="w-[200px] p-4 rounded-none">
+            <div className="mb-3">
+              {/* change below to shadcn/ui components (select + checkbox), just testing rn */}
+              <label>
+                <input
+                  type="checkbox"
+                  checked={groupByParty}
+                  onChange={toggleGroupByParty}
+                />
+                <span className="font-sans ml-2">Group By Party</span>
+              </label>
+            </div>
+            <label className="block text-sm">Filter by Party:</label>
+              <select name="party" onChange={handleFilterChange} className="p-2 w-full border rounded-md">
+                  <option value="">All</option>
+                  <option value="Democrat">Democrat</option>
+                  <option value="Republican">Republican</option>
+                  <option value="Independent">Independent</option>
+              </select>
+
+            <label className="block text-sm mt-3">Filter by State:</label>
+              <select name="state" onChange={handleFilterChange} className="p-2 w-full border rounded-md">
+                <option value="">All</option>
+                  {Object.entries(stateAbbrevs).map(([stateName, abbrev]) => (
+                    <option key={abbrev} value={abbrev}>
+                      {stateName}
+                    </option>
+                  ))}
+              </select>
+              <Button onClick={handleClearFilters} className="mt-3 bg-[#1c1c84] hover:bg-[#b31942] h-10 rounded-none duration-300 ease-in-out">
+                Clear Filters
+              </Button>
+          </PopoverContent>
+        </Popover>
+
+        {/* search button (redirects them) */ }
         <Button onClick={handleClick} className="bg-[#1c1c84] hover:bg-[#b31942] h-10 rounded-none duration-300 ease-in-out">
           Search
         </Button>
       </div>
+      
+      {/* candidate cards */}
       <div className="flex flex-col gap-8 p-4">
-      <PartySection
-          title="Democrats"
-          candidates={mockCandidates.filter((c) => c.party_affiliation === "Democrat")}
-          bgColor="bg-[#1c1c84]"
-          hoverColor="hover:bg-[#14146b]"
-        />
-        <PartySection
-          title="Republicans"
-          candidates={mockCandidates.filter((c) => c.party_affiliation === "Republican")}
-          bgColor="bg-[#b31942]"
-          hoverColor="hover:bg-[#8e122f]"
-        />
-        <PartySection
-          title="Independents"
-          candidates={mockCandidates.filter((c) => c.party_affiliation === "Independent")}
-          bgColor="bg-[#ffcc00]"
-          hoverColor="hover:bg-[#d4aa00]"
-        />
-      </div>  
+        {groupByParty ? (
+          // group by party
+          ["Democrat", "Republican", "Independent"].map((party) => {
+            const candidates = filteredCandidates.filter((c) => c.party_affiliation === party);
+            if (candidates.length === 0) return null;
+
+            return (
+              <section key={party} className="font-sans p-6 rounded-none border-2 border-gray-300 bg-gray-100">
+                <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">{party}s</h2>
+                <div className="flex flex-wrap justify-center gap-4">
+                  {candidates.map((candidate) => (
+                    <InfoCardButton 
+                      key={`${candidate.first_name}-${candidate.last_name}`} 
+                      candidate={candidate} 
+                      onClick={() => router.push(`/candidates/${candidate.first_name}-${candidate.last_name}`)}
+                      groupByParty={true}
+                    />
+                  ))}
+                </div>
+              </section>
+            );
+          })
+        ) : (
+          
+          // simply display all candidates
+          <div className="flex flex-wrap justify-center gap-4">
+            {filteredCandidates.map((candidate) => (
+              <InfoCardButton 
+                key={`${candidate.first_name}-${candidate.last_name}`} 
+                candidate={candidate} 
+                onClick={() => router.push(`/candidates/${candidate.first_name}-${candidate.last_name}`)}
+                groupByParty={false}
+              />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
-}; 
+};
 
+/* old candidate info cards
 const PartySection = ({ title, candidates, bgColor, hoverColor}: { title: string; candidates: Candidate[]; bgColor: string; hoverColor: string; }) => {
   const router = useRouter();
 
@@ -170,5 +305,5 @@ const PartySection = ({ title, candidates, bgColor, hoverColor}: { title: string
     </section>    
   );
 };
-
+*/
 export default Candidates;
