@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import { Button } from '@/components/ui/button';
-import "@/styles/homepage.css"; // Import the homepage.css file
+import Link from 'next/link';
+import "@/styles/homepage.css";
 
 const Home: NextPage = () => {
   return (
@@ -11,7 +12,7 @@ const Home: NextPage = () => {
           Understand Policy Positions & Compare Candidates
         </h2>
         <Button className="explore-button">
-          Explore Candidates
+          <Link href="/candidates">Explore Candidates</Link>
         </Button>
       </section>
 

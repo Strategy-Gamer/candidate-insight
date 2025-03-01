@@ -36,21 +36,27 @@ const CandidatePage = () => {
 
     if (loading) {
         return (
-            <div className="flex items-start p-6 mx-auto max-w-4xl rounded-lg shadow">
-                {/* Image Skeleton */}
-                <Skeleton className="h-48 w-48 rounded-full mr-8" />
+            <div className="flex flex-row p-10 mx-auto max-w-[80%] rounded-lg shadow gap-12">
+                {/* image skeleton */}
+                <Skeleton className="h-[500px] w-[400px] object-cover mr-12" />
 
-                {/* Details Skeleton */}
-                <div className="flex flex-col space-y-4">
-                    {/* Name */}
-                    <Skeleton className="h-10 w-60" />
+                {/* details skeleton */}
+                <div className="flex flex-col max-w-[600px] space-y-6">
+                    <div className= "flex flex-col items-center space-y-4">
+                        <Skeleton className="h-[50px] w-[400px]" /> {/* name */}
+                        <Skeleton className="h-[30px] w-[300px]" /> {/* position */}
+                    </div>
 
-                    {/* Position */}
-                    <Skeleton className="h-8 w-40" />
+                    {/* description lines */}
+                    <Skeleton className="h-[20px] w-[600px]" />
+                    <Skeleton className="h-[20px] w-[600px]" />
+                    <Skeleton className="h-[20px] w-[600px]" />
 
-                    {/* Description lines */}
-                    <Skeleton className="h-6 w-80" />
-                    <Skeleton className="h-6 w-80" />
+                    { /* social media links */ }
+                    <div className="flex justify-center space-x-6 mt-6">
+                        <Skeleton className="h-[40px] w-[40px] rounded-full" />
+                        <Skeleton className="h-[40px] w-[40px] rounded-full" />
+                    </div>
                 </div>
             </div>
         );

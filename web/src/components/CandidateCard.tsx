@@ -6,6 +6,7 @@ import {
   getStateName,
   appendOrdinalToDistrict,
   getParty,
+  getPosition,
 } from '@/utils/candidateHelperFuncs';
 /* import { profile } from 'console'; */
 import {
@@ -18,6 +19,7 @@ interface CandidateProps {
 }
 
 
+/*
 // We'll need some more DB fields to check if they're incumbent or not
 const getPosition = (
   district: string | null | undefined, 
@@ -34,6 +36,7 @@ const getPosition = (
   }
   return "Unknown Position";
 };
+*/
 
 const getCandidateDesc = (
   firstName: string,
@@ -56,6 +59,7 @@ const getCandidateDesc = (
     fullDesc = `${fullName} (${fullParty}) is a political candidate.`;
   }
 
+  fullDesc = fullDesc + `\n They took office on [date]. Their current term ends [date].`
   return fullDesc;
 };
 
