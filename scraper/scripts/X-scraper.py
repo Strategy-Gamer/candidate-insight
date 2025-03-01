@@ -4,10 +4,10 @@ from datetime import datetime
 
 BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAAGk1xQEAAAAAR11kwjbQGZHWaBYL4cHuXnTSfBs%3DXNPn2guqqztAq1MEqWhJ18TnSPafCnIO2pfyBGB7ykpN4smWPL"
 
-USERNAME = "realDonaldTrump"
+USERNAME = "KariLake"
 
 # Define output file so we can timestamp it before importing tweets 
-output_file = "realDonaldTrump.txt"
+output_file = "KariLake.txt"
 
 # Add a "Scraped on" timestamp at the top of new files
 if not os.path.exists(output_file):
@@ -42,7 +42,7 @@ params = {
     # "max_results": 100,  # Max results per request (10–100)
     "tweet.fields": "created_at,text",  # Additional fields to include
     "start_time": "2024-05-04T00:00:00Z",  # ISO 8601 format
-    "end_time": "2024-11-04T23:59:59Z"
+    "end_time": "2024-10-25T23:59:59Z"
 }
 
 # Pagination loop to fetch all requested tweets
