@@ -8,26 +8,29 @@ type Props = {
   params: { issueId: string };
 };
 
-// export async function generateMetadata({ params }: Props): Promise<Metadata> {
-//   const issue = await getIssue(params.issueId);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const id = await params;
+  const issue = await getIssue(id.issueId);
   
-//   return {
-//     title: issue?.issue_name || 'Issue not found',
-//     description: issue?.issue_description || 'Description not found'
-//   };
-// }
+  return {
+    title: issue.issue_name || 'Issue not found',
+    description: issue.issue_description || 'Description not found'
+  };
+}
 
 async function getIssue(issueId: string) {
   try {
-    const res = await fetch(`/api/issues/${issueId}`);
+
+    const res = await fetch(process.env.URL + `/api/issues/${issueId}`);
     
-    console.log('Response status:', res.status);
-    const text = await res.text();
-    console.log('Raw response:', text);
+    if (!res.ok) {
+      console.error(`API Error: ${res.status} - ${await res.text()}`);
+      return undefined;
+    }
     
-    if (!res.ok) return undefined;
+    const data = await res.json();
+    return data.issue;
     
-    return JSON.parse(text);
   } catch (error) {
     console.error('Fetch error:', error);
     return undefined;
@@ -35,15 +38,17 @@ async function getIssue(issueId: string) {
 }
 
 export default async function IssueDetail({ params }: Props) {
-  const issue = await getIssue(params.issueId);
+  const id = await params;
+
+  const issue = await getIssue(id.issueId);
 
   if (!issue) return notFound();
 
   return (
     <div className="issue-detail-container">
-      <h1>{issue.category_name}</h1>
+      <h1>Issue: {issue.issue_name}</h1>
       <div className="issue-content">
-        <p>{issue.category_description}</p>
+        <p>Description: {issue.issue_description}</p>
       </div>
     </div>
   );

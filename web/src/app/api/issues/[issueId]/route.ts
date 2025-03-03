@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET(
     request: Request,
-    { params }: { params: Promise<{ issueId: string }> }
+    { params }: { params: { issueId: string } }
 ) {
 
   const db = await pool.connect();
@@ -12,20 +12,20 @@ export async function GET(
 
     // Using the issue's id for now.
     const { issueId } = await params;
- 
-    const candidateData = await db.query(
+    
+    const issueData = await db.query(
       'SELECT * FROM political_issue WHERE issue_id = $1', [issueId]
     );
     
     //This is the error that I've been encountering. It's probably something to do with the db query, but I'm not sure.
-    if (candidateData.rowCount === 0) {
+    if (issueData.rowCount === 0) {
       return NextResponse.json(
         { success: false, error: 'Issue not found' },
         { status: 404 }
       );
     }
 
-    const issue: Issue = candidateData.rows[0];
+    const issue: Issue = issueData.rows[0];
     return NextResponse.json(
       { success: true, issue: issue}
     );

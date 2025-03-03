@@ -39,18 +39,18 @@ const IssuesPage: NextPage = () => {
   useEffect(() => {
     const mockIssues: Issue[] = [
       {
-        issue_name: "Economy",
-        issue_description: "Issues pertaining to economic issues, such as taxes, national budget, interest rates, and the stock market.",
+        issue_name: "Healthcare",
+        issue_description: "Access to affordable healthcare for all citizens.",
         issue_id: 1,
       },
       {
-        issue_name: "Foreign Policy",
-        issue_description: "Issues pertaining to foreign policy, such as trade, diplomacy, tariffs, NATO, and the UN.",
+        issue_name: "Education",
+        issue_description: "Improving public education and increasing teacher pay.",
         issue_id: 2,
       },
       {
-        issue_name: "Culture",
-        issue_description: "Issues pertaining to social ideas or concepts, such as LGBTQ+ rights, womens' rights, DEI, and other initiatives.",
+        issue_name: "Climate Change",
+        issue_description: "Addressing global warming and promoting renewable energy.",
         issue_id: 3,
       }
     ];
@@ -59,8 +59,6 @@ const IssuesPage: NextPage = () => {
   }, []);
 
   const handleCardClick = async (issueId: string) => {
-    alert(`Pushing:${issueId}`);
-
     const response = await fetch (`/api/issues/${issueId}`);
     const data = await response.json();
 
