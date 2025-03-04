@@ -14,10 +14,10 @@ export async function GET(
     const { issueId } = await params;
     
     const issueData = await db.query(
-      'SELECT * FROM political_issue WHERE issue_id = $1', [issueId]
+      `SELECT * FROM political_category WHERE category = $1`, [issueId] 
     );
     
-    //This is the error that I've been encountering. It's probably something to do with the db query, but I'm not sure.
+    //Makes sure that the data isn't empty.
     if (issueData.rowCount === 0) {
       return NextResponse.json(
         { success: false, error: 'Issue not found' },

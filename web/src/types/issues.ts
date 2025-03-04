@@ -1,7 +1,7 @@
 export type Issue = {
-     issue_id: number;
-     issue_description: string;
-     issue_name: string;
+     category: string;
+     category_description: string;
+     icon: string;
 };
 export type SubIssue = {
      issue_id: number;

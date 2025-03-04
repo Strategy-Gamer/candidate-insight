@@ -7,31 +7,6 @@ import { useRouter } from 'next/navigation';
 import { Issue, SubIssue } from '@/types/issues';
 import "@/styles/issues.css";
 
-const mockSubIssues: SubIssue[] = [
-  {
-    issue_id: 1,
-    name: "National Budget",
-    sub_id: 1,
-    description: "The national budget, defined by the amount of money spent by the US government as pertaining to public education, the military, Social Security, and Medicare/Medicaid.",
-    icon: null
-  },
-  {
-    issue_id: 2,
-     name: "NATO",
-     sub_id: 1,
-     description: "NATO, or the North Atlantic Treaty Organization, is a group of 32 member states formed during the Cold War with a purpose of defending against perceived and actual Soviet aggression.",
-     icon: null
-  },
-  {
-    issue_id: 3,
-    name: "LGBTQ+ Rights",
-    sub_id: 1,
-    description: "The rights, such as marriage, adoption, competing in sports for one's accepted sex/gender, and medical treatment, for anyone who isn't straight and cisgender.",
-    icon: null
-  },
-];
-
-
 const IssuesPage: NextPage = () => {
   const router = useRouter();
   const [issues, setIssues] = useState<Issue[]>([]);
@@ -39,19 +14,19 @@ const IssuesPage: NextPage = () => {
   useEffect(() => {
     const mockIssues: Issue[] = [
       {
-        issue_name: "Healthcare",
-        issue_description: "Access to affordable healthcare for all citizens.",
-        issue_id: 1,
+        category: "Healthcare",
+        category_description: "Access to affordable healthcare for all citizens.",
+        icon: "health_icon.png",
       },
       {
-        issue_name: "Education",
-        issue_description: "Improving public education and increasing teacher pay.",
-        issue_id: 2,
+        category: "Economy",
+        category_description: "Economic policies, taxation, and financial regulations.",
+        icon: "education_icon.png",
       },
       {
-        issue_name: "Climate Change",
-        issue_description: "Addressing global warming and promoting renewable energy.",
-        issue_id: 3,
+        category: "Education",
+        category_description: "Policies regarding education and student welfare.",
+        icon: "education_icon.png",
       }
     ];
 
@@ -76,14 +51,14 @@ const IssuesPage: NextPage = () => {
       <div className= "issuesList">
         {issues.map((issue => (
           <div 
-            key={issue.issue_id} 
+            key={issue.category} 
             className = "issueCard"
             role="button"
             tabIndex={0}
-            onClick={() => handleCardClick(String(issue.issue_id))}
+            onClick={() => handleCardClick(String(issue.category))}
             >
-            <h2 className = "issueTitle">{issue.issue_name}</h2>
-            <p className = "issueDescription">{issue.issue_description}</p>
+            <h2 className = "issueTitle">{issue.category}</h2>
+            <p className = "issueDescription">{issue.category_description}</p>
           </div>
         )))}
       </div>
