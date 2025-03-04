@@ -12,7 +12,7 @@ If you've set up pgAdmin on your machine and would like to integrate the databas
 Substitute the name and password with whatever you used in the setup of pgAdmin.
 
 If you want to view the issues' dynamic routing, then you will have to add another line to your .env file like so:
-```"URL" = http://localhost:3000```
+### "URL = http://localhost:3000"
 
 ## General
 
