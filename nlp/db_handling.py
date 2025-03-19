@@ -70,4 +70,4 @@ def push_position_to_database(candidate_first, candidate_last, issue, position):
     return
 
 # Just to make sure this works
-print(get_scraped_file_from_database("andy_ogles_tn_house.txt"))
+#print(get_scraped_file_from_database("andy_ogles_tn_house.txt"))
