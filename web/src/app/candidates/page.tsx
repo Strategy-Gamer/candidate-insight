@@ -27,10 +27,9 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { getPosition, stateAbbrevs } from '@/utils/candidateHelperFuncs';
-import { mockCandidates } from '@/utils/mockCandidates';
+// import { mockCandidates } from '@/utils/mockCandidates';
 import { FilterFilled } from '@ant-design/icons';
 
-/*
 const mockCandidates: Candidate[] = [
   {
     first_name: "John",
@@ -57,7 +56,7 @@ const mockCandidates: Candidate[] = [
     candidate_id: 3,
   }
 ];
-*/
+
 
 const InfoCardButton: React.FC<{ candidate: Candidate; onClick: () => void; groupByParty: boolean }> = ({ candidate, onClick, groupByParty }) => {
   const partyColors: Record<string, string> = {
