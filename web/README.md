@@ -31,4 +31,3 @@ OR, if you just made one .env, you can do the normal npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-

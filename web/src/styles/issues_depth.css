@@ -1,0 +1,20 @@
+h1 {
+     font-size: 2rem;
+     margin: 1.25 auto;
+     text-align: center;
+}
+
+.issue-category-container {
+     display: flex;
+     justify-content: center; /* Horizontal centering */
+     align-items: center;     /* Vertical centering */
+     max-width: 30%;
+     margin: 0 auto;
+}
+
+.issue-content {
+     font-size: 1.25rem;
+     justify-content: left;
+     margin: 1.25 auto;
+     padding: 1.0rem;
+}
