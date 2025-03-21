@@ -1,46 +1,28 @@
 # Political Database Mock Data Generator
 
-This script generates mock data for a political database, including candidates, political issues, and their positions on various topics.
-
-## Overview
-
-The data generator populates the following tables with realistic mock data:
-- Candidate
-- Political_Category
-- Political_Issue
-- Candidate_Meta
-- Position_Sources
-- Sources
-- Candidate_Position
+This folder contains both real and mock data to be inserted into the database automatically. ```fill.js``` reads from ```candidates.txt``` and populates the Candidate table with real data, while ```mockfill.js``` reads from ```FakeCandidates.txt``` and populates all of the tables based on the mock candidate data.
 
 ## Prerequisites
 
 - Node.js (v14 or higher recommended)
-- PostgreSQL database with the schema already created
-- Required Node modules: `pg`, `dotenv` (for environment variables)
+- PostgreSQL database with the schema already created (run setup.sql in pgAdmin)
 
 ## Setup
-
-1. Clone this repository
-2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Set up your database connection in a `.env` file:
-   ```
-   DB_HOST=localhost
-   DB_USER=your_username
-   DB_PASSWORD=your_password
-   DB_NAME=your_database_name
-   DB_PORT=5432
-   ```
+If you are using one .env file, then make sure to specify ```DB_NAME``` to be the name of either your mock DB or prod DB setup in pgAdmin depending on if you're running the real or mock script.
+Otherwise, rename the .env portion from this line ```env.config({path: '../.env'})``` to either .env.prodreal, .env.devreal, or .env.devmock depending on your other .env files. 
 
 ## Usage
 
-Run the script with the following command:
+Run the mock script with the following command:
 
 ```
-node generate-data.js [numberOfCandidates] [refresh]
+node mockfill.js [numberOfCandidates] [refresh]
+```
+
+Run the real script with the following command:
+
+```
+node fill.js
 ```
 
 ### Parameters
@@ -52,37 +34,22 @@ node generate-data.js [numberOfCandidates] [refresh]
 
 Generate data with default settings (988 candidates):
 ```
-node generate-data.js
+node mockill.js
 ```
 
 Generate data for 100 candidates:
 ```
-node generate-data.js 100
+node mockfill.js 100
 ```
 
 Clear existing data and generate 500 new candidate records:
 ```
-node generate-data.js 500 refresh
+node mockfill.js 500 refresh
 ```
 
-## Data Generation Details
-
-- **Candidates**: Generated with realistic names and party affiliations
-- **Political Issues**: Created across multiple categories (economy, healthcare, etc.)
-- **Candidate Metadata**: Includes information about election years, positions, and districts
-- **Candidate Positions**: Creates positions for candidates on political issues
-
-Each candidate will be present during every election year (2022, 2024, 2026, 2028), with randomly assigned positions they're running for and other metadata.
-
-## Customization
-
-You can modify the following constants in the code to customize the generated data:
-- `incumbentPositions`: Types of positions candidates might already hold
-- `runningForPositions`: Positions candidates can run for
-- `stateCodes`: State abbreviations for congressional districts
 
 ## Troubleshooting
 
 - If you encounter database connection issues, verify your `.env` file settings
 - For "Invalid number of candidates" errors, ensure the number is between 1 and 988
-- If tables don't exist, run the schema creation script first (not included in this repository)
+- If tables don't exist, run the schema creation script first
