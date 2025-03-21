@@ -1,7 +1,7 @@
 -- Run these delete statements before the create statements to clear the old schema if needed
 DROP TABLE IF EXISTS Candidate CASCADE;
 DROP TABLE IF EXISTS Political_Category CASCADE;
-DROP TABLE IF EXISTS Sub_Issue CASCADE;
+DROP TABLE IF EXISTS Political_Issue CASCADE;
 DROP TABLE IF EXISTS Candidate_Position CASCADE;
 DROP TABLE IF EXISTS Sources CASCADE;
 DROP TABLE IF EXISTS Position_Sources CASCADE;
@@ -43,7 +43,7 @@ CREATE TABLE Political_Category (
 CREATE TABLE Political_Issue (
     issue_name VARCHAR(25) PRIMARY KEY,
     category_id VARCHAR(25) REFERENCES Political_Category(category) ON DELETE CASCADE,
-    issue_decription TEXT NOT NULL
+    issue_description TEXT NOT NULL
 );
 
 -- Candidate_Position Table
