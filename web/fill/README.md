@@ -25,7 +25,7 @@ Run the real script with the following command:
 node fill.js
 ```
 
-### Parameters
+### Parameters for mockfill
 
 - `numberOfCandidates`: (Optional) The number of candidate records to generate (default: 988, max: 988)
 - `refresh`: (Optional) Include this keyword to clear existing data from tables before generating new data
