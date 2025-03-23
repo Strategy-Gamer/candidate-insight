@@ -4,15 +4,27 @@
 import type { NextPage } from 'next';
 import React, { useState, Component, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { Issue, SubIssue } from '@/types/issues';
+//import { Issue, SubIssue } from '@/types/issues';
 import "@/styles/issues.css";
+
+type IssueCategory = {
+  issue_id: number;
+  issue_name: string;
+  issue_description: string;
+  category: string;
+  category_description: string;
+  icon: string;
+}
+
+// This must match the categories in the database
+const categories = ["Economy", "Healthcare", "Environment", "Gun Control"];
 
 const IssuesPage: NextPage = () => {
   const router = useRouter();
-  const [issues, setIssues] = useState<Issue[]>([]);
+  const [issues, setIssues] = useState<IssueCategory[]>([]);
 
   useEffect(() => {
-    const mockIssues: Issue[] = [
+    /*const mockIssues: Issue[] = [
       {
         category: "Healthcare",
         category_description: "Access to affordable healthcare for all citizens.",
@@ -28,9 +40,21 @@ const IssuesPage: NextPage = () => {
         category_description: "Policies regarding education and student welfare.",
         icon: "education_icon.png",
       }
-    ];
+    ];*/
 
-    setIssues(mockIssues);
+    const getIssues = async () => {
+      const response = await fetch('/api/issues');
+      const data = await response.json();
+
+      if (data.success) {
+        setIssues(data.issues);
+      } else {
+        console.error(data.error);
+      }
+    };
+
+    // setIssues(mockIssues);
+    getIssues();
   }, []);
 
   const handleCardClick = async (issueId: string) => {
@@ -49,18 +73,28 @@ const IssuesPage: NextPage = () => {
     <section className="issuesContainer">
       <h1>Political Issues</h1>
       <div className= "issuesList">
-        {issues.map((issue => (
+        {categories.map((category) => (
           <div 
-            key={issue.category} 
-            className = "issueCard"
-            role="button"
+            key={category} 
+            className="issueCard" 
+            role="button" 
             tabIndex={0}
-            onClick={() => handleCardClick(String(issue.category))}
-            >
-            <h2 className = "issueTitle">{issue.category}</h2>
-            <p className = "issueDescription">{issue.category_description}</p>
+          >
+            <h2 className="issueTitle">{category}</h2>
+            {issues
+              .filter(issue => issue.category === category)
+              .map((issue) => (
+                <div 
+                  key={issue.issue_id} 
+                  onClick={() => handleCardClick(String(issue.issue_name))}
+                >
+                  <p className="issueDescription">
+                    {issue.issue_name} {issue.issue_description}
+                  </p>
+                </div>
+              ))}
           </div>
-        )))}
+        ))}
       </div>
     </section>
   );

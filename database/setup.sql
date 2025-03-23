@@ -41,7 +41,8 @@ CREATE TABLE Political_Category (
 );
 
 CREATE TABLE Political_Issue (
-    issue_name VARCHAR(25) PRIMARY KEY,
+    issue_id SERIAL PRIMARY KEY,
+    issue_name VARCHAR(25),
     category_id VARCHAR(25) REFERENCES Political_Category(category) ON DELETE CASCADE,
     issue_description TEXT NOT NULL
 );
@@ -50,7 +51,7 @@ CREATE TABLE Political_Issue (
 CREATE TABLE Candidate_Position (
     position_id SERIAL PRIMARY KEY,
     candidate_id INT REFERENCES Candidate(candidate_id) ON DELETE CASCADE,
-    issue_id VARCHAR(25) REFERENCES Political_Issue(issue_name) ON DELETE CASCADE,
+    issue_id INT REFERENCES Political_Issue(issue_id) ON DELETE CASCADE,
     position_description TEXT NOT NULL,
     UNIQUE (candidate_id, issue_id)
 );

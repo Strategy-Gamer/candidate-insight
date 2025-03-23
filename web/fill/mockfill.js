@@ -130,9 +130,9 @@ async function insertPolicies() {
       await db.query(query, [category, policy.category_description, policy.icon]);
         
       for (const issue of policy.issues) {
-        const query = 'INSERT INTO Political_Issue (issue_name, category_id, issue_description) VALUES ($1, $2, $3) RETURNING issue_name';
+        const query = 'INSERT INTO Political_Issue (issue_name, category_id, issue_description) VALUES ($1, $2, $3) RETURNING issue_id';
         const result = await db.query(query, [issue.issue_name, category, issue.issue_description]);
-        const issueID = result.rows[0].issue_name;
+        const issueID = result.rows[0].issue_id;
         issueIDs.push(issueID);
       }
     }
@@ -315,6 +315,7 @@ async function main() {
   await insertMeta(candidateIDs);
   console.log("Inserting positions...");
   await insertPositions(issueIDs, candidateIDs);
+  console.log("Successfully inserted!");
 }
 
 main();

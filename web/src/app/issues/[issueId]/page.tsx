@@ -29,7 +29,7 @@ async function getIssue(issueId: string) {
     }
     
     const data = await res.json();
-    return data.issue;
+    return data.positions;
     
   } catch (error) {
     console.error('Fetch error:', error);
@@ -40,17 +40,18 @@ async function getIssue(issueId: string) {
 export default async function IssueDetail({ params }: Props) {
   const id = await params;
 
-  const issue = await getIssue(id.issueId);
+  const positions = await getIssue(id.issueId);
 
-  if (!issue) return notFound();
+  if (!positions) return notFound();
 
   return (
     <div>
-      <div className="issue-category-container">
-        <h1>{issue.category}</h1>
-      </div>
-      <div className="issue-content">
-        <p>{issue.category_description}</p>
+      <div className="positions">
+        {positions.map((position) => (
+          <div key={position.position_id}>
+            <p>{position.position_description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
