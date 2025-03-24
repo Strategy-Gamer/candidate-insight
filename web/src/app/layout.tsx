@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
-import "@/styles/candidatecard.css";
-import Header from "@/components/Header";
+import "@/styles/components/candidatecard.css";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#ffffff]">
-        <Header />
+        <Navbar />
         <main>{children}</main>
         <Footer />
       </body>

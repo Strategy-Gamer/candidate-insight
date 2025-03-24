@@ -2,7 +2,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { Issue } from '@/types/issues';
-import "@/styles/issues.css";
+import "@/styles/pages/issues.css";
 
 type Props = {
   params: { issueId: string };

@@ -1,5 +1,5 @@
 import React from 'react';
-import '@/styles/candidatecard.css';
+import '@/styles/components/candidatecard.css';
 import { Candidate } from '@/types/candidate';
 import { 
   getPartyAbbreviation,
@@ -65,7 +65,7 @@ const getCandidateDesc = (
 
 const CandidateCard: React.FC<CandidateProps> = (props) => {
   const url = props.candidate.website_url ?? undefined;
-  const profileImage = '/images/Rect_NonID_Grey.png';
+  const profileImage = props.candidate.profile_image_url ?? '/images/Rect_NonID_Grey.png';
   const profileDescription = getCandidateDesc(props.candidate.first_name, props.candidate.last_name, props.candidate.congressional_district,
     props.candidate.party_affiliation, props.candidate.state);
 
@@ -85,11 +85,11 @@ const CandidateCard: React.FC<CandidateProps> = (props) => {
         <p>{profileDescription}</p>
         {/* possibly change this from Tailwind later */}
         <div className="flex justify-center space-x-4 mt-4">
-          <a href="google.com" className="text-[#1c1c84]" target="_blank" rel="noopener noreferrer">
-            <GoogleOutlined />
+          <a href={url} className="text-[#1c1c84]" target="_blank" rel="noopener noreferrer">
+            <GoogleOutlined style={{ fontSize: '150%'}} />
           </a>
           <a href="x.com" className="text-[#1c1c84] underline" target="_blank" rel="noopener noreferrer">
-            <XOutlined />
+            <XOutlined style={{ fontSize: '150%'}} />
           </a>
         </div>
       </div>
