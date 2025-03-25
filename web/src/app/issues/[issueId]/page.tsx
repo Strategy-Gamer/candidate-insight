@@ -2,7 +2,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { Issue } from '@/types/issues';
-import "@/styles/pages/issues.css";
+import "@/styles/issues_depth.css";
 
 type Props = {
   params: { issueId: string };
@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const issue = await getIssue(id.issueId);
   
   return {
-    title: issue.issue_name || 'Issue not found',
-    description: issue.issue_description || 'Description not found'
+    title: issue.category || 'Issue not found',
+    description: issue.category_description || 'Description not found'
   };
 }
 
@@ -29,7 +29,7 @@ async function getIssue(issueId: string) {
     }
     
     const data = await res.json();
-    return data.issue;
+    return data.positions;
     
   } catch (error) {
     console.error('Fetch error:', error);
@@ -40,15 +40,18 @@ async function getIssue(issueId: string) {
 export default async function IssueDetail({ params }: Props) {
   const id = await params;
 
-  const issue = await getIssue(id.issueId);
+  const positions = await getIssue(id.issueId);
 
-  if (!issue) return notFound();
+  if (!positions) return notFound();
 
   return (
-    <div className="issue-detail-container">
-      <h1>Issue: {issue.issue_name}</h1>
-      <div className="issue-content">
-        <p>Description: {issue.issue_description}</p>
+    <div>
+      <div className="positions">
+        {positions.map((position) => (
+          <div key={position.position_id}>
+            <p>{position.position_description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { PoliticalCategory, SubIssue } from "@/types/issues"
+import { PoliticalCategory, Issue } from "@/types/issues"
 
 export const politicalCategories: PoliticalCategory[] = [
   {
@@ -43,7 +43,7 @@ export const politicalCategories: PoliticalCategory[] = [
   },
 ];
 
-export const subIssues: SubIssue[] = [
+export const issues: Issue[] = [
   {
     issue_name: 'Medicare Expansion',
     category_id: 'Healthcare',

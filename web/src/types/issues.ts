@@ -4,8 +4,9 @@ export type PoliticalCategory = {
      icon?: string;
 };
 
-export type SubIssue = {
+export type Issue = {
      issue_name: string;
      category_id: string;
      issue_description: string;
 };
+

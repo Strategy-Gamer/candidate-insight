@@ -4,8 +4,9 @@
 import type { NextPage } from 'next';
 import React, { useState, Component, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { PoliticalCategory, SubIssue } from '@/types/issues';
-import { politicalCategories, subIssues } from '@/utils/mockIssues';
+import { PoliticalCategory, Issue } from '@/types/issues';
+import { politicalCategories } from '@/utils/politicalCategories';
+import { issues } from '@/utils/mockIssues';
 import "@/styles/pages/issues.css";
 
 const defaultDescription = {
@@ -24,10 +25,42 @@ Before a policy can be implemented, it must be made. The policy making process o
 In practice, policy making is much more complicated, but the above still serves as a good, high-level overview of the process.`
 };
 
+type ApiIssue = Issue & {
+  category: string;
+  category_description: string;
+  icon?: string;
+};
+
 const IssuesPage: NextPage = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<PoliticalCategory | null>(null);
+  const [issues, setIssues] = useState<ApiIssue[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const router = useRouter();
+
+  // fetch the issues first
+  useEffect(() => {
+    const fetchIssues = async () => {
+      try {
+        const response = await fetch('/api/issues');
+        const data = await response.json();
+
+        if (data.success) {
+          setIssues(data.issues);
+        } else {
+          setError('Failed to load issues');
+        }
+      } catch (err) {
+        setError('Error loading issues');
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchIssues();
+  }, []);
 
   const handleCategoryClick = (category: PoliticalCategory) => {
     setSelectedCategory(category);
@@ -41,22 +74,24 @@ const IssuesPage: NextPage = () => {
     setActiveDropdown(null);
   };
 
-  const getSubIssues = (categoryId: string): SubIssue[] => {
-    return subIssues.filter(issue => issue.category_id === categoryId);
+  const getSubIssues = (categoryId: string): ApiIssue[] => {
+    return issues.filter(issue => issue.category_id === categoryId);
   }
   
-  /* will need to be modified */
-  const handleCardClick = async (issueId: string) => {
-    const response = await fetch (`/api/issues/${issueId}`);
-    const data = await response.json();
-
-    if (data.success) {
-      router.push(`/issues/${issueId}`);
-    } else {
-      alert('Issue not found.');
-      console.error(data.error);
-    }
+  /* change the route in candidates to this format too */
+  const handleIssueClick = (subIssue: ApiIssue) => {
+    const routeName = encodeURIComponent(subIssue.issue_name.trim().replace(/\s+/g, '-'));
+    router.push(`/issues/${routeName}`);
   };
+
+  /* replace with shadcn skeleton */
+  if (loading) {
+    return <p>Loading issues...</p>
+  }
+
+  if (error) {
+    return <p>{error}</p>
+  }
 
   return (
     <main className="issues-page">
@@ -84,7 +119,7 @@ const IssuesPage: NextPage = () => {
                         className="sub-issue-item"
                         onClick={(e) => {
                           e.stopPropagation();
-                          handleCardClick(subIssue);
+                          handleIssueClick(subIssue);
                         }}
                       >
                         <h4 className="sub-issue-title">{subIssue.issue_name}</h4>
@@ -97,6 +132,7 @@ const IssuesPage: NextPage = () => {
           ))}
         </ul>
         
+        {/* will change to individual components probably */}
         <div className="description-container">
             {selectedCategory ? (
               <div className="category-description">

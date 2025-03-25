@@ -25,7 +25,7 @@ function extractData(line) {
         return {
             firstName: data[0],
             lastName: data[1],
-            state: 'USA',
+            state: 'US',
             position: 'President'
         }
     }
@@ -52,11 +52,11 @@ async function insertData() {
     const db = await pool.connect();
     // Gay Valimont FL House
     try {
-        const query = 'INSERT INTO candidate (first_name, last_name, state, congressional_district, website_url, twitter) VALUES ($1, $2, $3, $4, $5, $6)';
+        const query = 'INSERT INTO candidate (first_name, last_name, state, website_url, twitter) VALUES ($1, $2, $3, $4, $5)';
         for (let i=0; i < lines.length; i+=2) {
-            const {firstName, lastName, state, position} = extractData(lines[i]);
+            const {firstName, lastName, state} = extractData(lines[i]);
             const [webURL, twitter] = lines[i+1].trim().split(' ');
-            await db.query(query, [firstName, lastName, state, position, webURL, twitter]);
+            await db.query(query, [firstName, lastName, state, webURL, twitter]);
         }
     }
     catch (err) {
