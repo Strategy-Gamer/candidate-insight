@@ -1,5 +1,5 @@
 import pool from '../../../../utils/dbconnect';
-import { Issue } from '@/types/issues';
+//import { Issue } from '@/types/issues';
 import { NextResponse } from 'next/server';
 
 export async function GET(
@@ -10,13 +10,12 @@ export async function GET(
   const db = await pool.connect();
   try {
 
-    // Using the issue's id for now.
     const { issueId } = await params;
-    
     const issueData = await db.query(
-      `SELECT * FROM political_category WHERE category = $1`, [issueId] 
+      `SELECT issue_id FROM Political_Issue WHERE issue_name = $1`,
+      [issueId]
     );
-    
+
     //Makes sure that the data isn't empty.
     if (issueData.rowCount === 0) {
       return NextResponse.json(
@@ -25,9 +24,24 @@ export async function GET(
       );
     }
 
-    const issue: Issue = issueData.rows[0];
+    const issue = issueData.rows[0].issue_id;
+    
+    const positionData = await db.query(
+      `SELECT * FROM Candidate_Position WHERE issue_id = $1`,
+      [issue] 
+    );
+    
+    //Makes sure that the data isn't empty.
+    if (positionData.rowCount === 0) {
+      return NextResponse.json(
+        { success: false, error: 'No candidate positions found' },
+        { status: 404 }
+      );
+    }
+
+    const positions = positionData.rows;
     return NextResponse.json(
-      { success: true, issue: issue}
+      { success: true, positions: positions}
     );
   }
   catch (error) {

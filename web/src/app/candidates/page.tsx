@@ -1,7 +1,7 @@
 // This is the candidates directory page
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Candidate } from '@/types/candidate';
 import type { NextPage } from 'next';
@@ -27,36 +27,8 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { getPosition, stateAbbrevs } from '@/utils/candidateHelperFuncs';
-// import { mockCandidates } from '@/utils/mockCandidates';
+import { mockCandidates } from '@/utils/mockCandidates';
 import { FilterFilled } from '@ant-design/icons';
-
-const mockCandidates: Candidate[] = [
-  {
-    first_name: "John",
-    last_name: "Doe",
-    state: "NY",
-    party_affiliation: "Independent",
-    congressional_district: "NY-10",
-    candidate_id: 1,
-  },
-  {
-    first_name: "Jane",
-    last_name: "Smith",
-    state: "CA",
-    party_affiliation: "Democrat",
-    congressional_district: "CA-12",
-    candidate_id: 2,
-  },
-  {
-    first_name: "Robert",
-    last_name: "Johnson",
-    state: "TX",
-    party_affiliation: "Republican",
-    congressional_district: "TX-07",
-    candidate_id: 3,
-  }
-];
-
 
 const InfoCardButton: React.FC<{ candidate: Candidate; onClick: () => void; groupByParty: boolean }> = ({ candidate, onClick, groupByParty }) => {
   const partyColors: Record<string, string> = {
@@ -64,7 +36,10 @@ const InfoCardButton: React.FC<{ candidate: Candidate; onClick: () => void; grou
     Republican: "bg-[#b31942] hover:bg-[#8e122f]",
     Independent: "bg-[#ffcc00] hover:bg-[#d4aa00]",
   };
-
+  
+  const imgSrc = candidate.profile_image_url ?? '/images/Rect_NonID_Grey.png';
+  console.log(imgSrc);
+  
   const party = candidate.party_affiliation ?? "Independent";
   const fullName = `${candidate.first_name} ${candidate.last_name}`;
   const position = getPosition(candidate.congressional_district, candidate.party_affiliation, candidate.state);
@@ -80,7 +55,7 @@ const InfoCardButton: React.FC<{ candidate: Candidate; onClick: () => void; grou
       </CardHeader>
       <CardContent className="flex flex-col items-center gap-4">
         <img 
-          src='/images/Rect_NonID_Grey.png'
+          src={imgSrc}
           alt={`${fullName}'s Photo`} 
           className="w-[200px] h-[250px] object-cover rounded-none" 
         />
@@ -96,11 +71,12 @@ const Candidates: NextPage = () => {
   const [filters, setFilters] = useState({
     party: '',
     state: '',
-    house: '',
+    position: '',
   });
   const [groupByParty, setGroupByParty] = useState(false);
   const [open, setOpen] = React.useState(false);
   const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
+  // const [mockCandidates, setMockCandidates] = useState<Candidate[]>([]);
 
   const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setFilters({ ...filters, [e.target.name]: e.target.value });
@@ -113,15 +89,23 @@ const Candidates: NextPage = () => {
   const filteredCandidates = mockCandidates.filter(candidate => {
     const matchesParty = filters.party ? candidate.party_affiliation === filters.party: true;
     const matchesState = filters.state ? candidate.state === filters.state: true;
-    // add filter for house/senate/president etc.
-    return matchesParty && matchesState;
+    
+    let matchesPosition = true;
+    if (filters.position === "house") {
+      matchesPosition = candidate.congressional_district !== null; // house reps have a district set
+    } else if (filters.position === "senate") {
+      matchesPosition = candidate.state !== null && candidate.congressional_district === null;
+    } else if (filters.position === "presidential") {
+      matchesPosition = candidate.state === null && candidate.congressional_district === null;
+    }
+    return matchesParty && matchesState && matchesPosition;
   });
 
   const handleClearFilters = () => {
     setFilters({
       party: '',
       state: '',
-      house: ''
+      position: ''
     });
     setGroupByParty(false);
   };
@@ -143,9 +127,31 @@ const Candidates: NextPage = () => {
     }
   };
 
+  /* 
+  useEffect(() => {
+    async function fetchCandidates() {
+      try {
+        const response = await fetch('/api/candidates'); // API call
+        const data = await response.json();
+
+        if (data.success) {
+          setMockCandidates(data.candidates);
+        } else {
+          console.error('Failed to fetch candidates:', data.error);
+        }
+      } catch (error) {
+        console.error('API request error:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchCandidates();
+  }, []);
+  */
+
   return (    
     <div className="font-sans p-6">
-
       {/* search section */}
       <div className="flex justify-center items-center space-x-4">
         <Popover open={open} onOpenChange={setOpen}>
@@ -221,6 +227,13 @@ const Candidates: NextPage = () => {
                       {stateName}
                     </option>
                   ))}
+              </select>
+            <label className="block text-sm mt-3">Filter by Position</label>
+              <select name="position" onChange={handleFilterChange} className="p-2 w-full border rounded-md">
+                  <option value ="">All Positions</option>
+                  <option value="house">House</option>
+                  <option value="senate">Senate</option>
+                  <option value="presidential">Presidential</option>
               </select>
               <Button onClick={handleClearFilters} className="mt-3 bg-[#1c1c84] hover:bg-[#b31942] h-10 rounded-none duration-300 ease-in-out">
                 Clear Filters

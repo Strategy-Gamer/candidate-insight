@@ -119,8 +119,8 @@ export const getPosition = (
       return `Representative (${partyAbbrev}-${state} ${appendOrdinalToDistrict(district)} District)`;
     } else if (state) {
       return `Senator (${partyAbbrev})-${state}`;
-    }
-    return "Unknown Position";
+    } 
+    return "United States President";
   };
 
   

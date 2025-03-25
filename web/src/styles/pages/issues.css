@@ -1,0 +1,97 @@
+/* issues.css */
+.issues-page {
+     padding-top: 32px;
+}
+
+.horizontal-menu {
+     display: flex;
+     list-style: none;
+     padding: 0;
+     margin: 0 auto;
+     background-color: #374151;
+     position: relative;
+     text-align: center;
+     max-width: 1200px;
+}
+   
+.menu-item {
+     position: relative; 
+     flex: 1;
+     text-align: left;
+}
+   
+.menu-button {
+     background: none;
+     border: none;
+     color: white;
+     font-size: 12.5pt;
+     font-family: 'Source Sans Pro', sans-serif;
+     font-weight: 600;
+     padding: 16px;
+     width: 100%;
+     cursor: pointer;
+}
+
+.menu-button:hover {
+     text-decoration: underline;
+}
+   
+.dropdown-content {
+     position: absolute;
+     top: 100%; 
+     left: 0;
+     width: 150%;
+     background: #9EA7B5;
+     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+     z-index: 100; 
+     display: block; 
+}
+   
+.sub-issues-list {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+}
+   
+.sub-issue-item {
+     padding: 8px;
+     cursor: pointer;
+}
+   
+.sub-issue-item:hover {
+     background-color: #374151;
+     color: white;
+     transition: 0.3s ease-in-out;
+     text-decoration: underline;
+}
+   
+.menu-item.active {
+     background-color: #9EA7B5;
+}
+
+.menu-button.active {
+     color: black;
+}
+
+.description-container {
+     flex: 1;
+     width: 100%;
+}
+
+.category-description {
+     margin-top: 32px;
+     padding: 16px;
+     border-radius: 4px;
+     text-align: center;
+     height: 100%;
+}
+
+.whitespace-preserve {
+     white-space: pre-wrap;
+}
+
+.category-description h2 {
+     font-family: 'Montserrat';
+     font-weight: bold;
+     font-size: 16pt;
+}
