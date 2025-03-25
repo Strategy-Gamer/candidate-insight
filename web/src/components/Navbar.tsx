@@ -2,9 +2,9 @@
 
 import React, {useEffect, useState } from 'react';
 import Link from 'next/link';
-import '@/styles/header.css';
+import '@/styles/components/navbar.css';
 
-const Header: React.FC = () => {
+const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -33,9 +33,10 @@ const Header: React.FC = () => {
         <Link href="/issues">Issues</Link>
         <Link href="/news">News</Link>
         <Link href="/search">Search</Link>
+        <Link href="/about">About Us</Link>
       </nav>
     </header>
   );
 };
 
-export default Header;
+export default Navbar;

@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
+    "dev:mock": "dotenv -e .env.devmock next dev --turbopack",
+    "dev:real": "dotenv -e .env.devreal next dev --turbopack",
+    "build:prod": "dotenv -e .env.prodreal next build",
+    "start:prod": "dotenv -e .env.prodreal next start",
     "lint": "next lint"
   },
   "dependencies": {

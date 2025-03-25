@@ -9,5 +9,6 @@ export type Candidate = {
   profile_image_url?: string | null;
   congressional_district?: string | null;
   website_url?: string | null;
+  twitter?: string | null;
   dob?: string | null; // Date will be returned as a string
 };

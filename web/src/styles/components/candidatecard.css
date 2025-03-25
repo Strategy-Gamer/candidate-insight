@@ -5,7 +5,6 @@
     align-items: flex-start;
     justify-content: center; 
     /* min-height: 100vh; */
-    font-family: 'Libre Baskerville', serif;
     padding: 40px;
     background-color: #ffffff;
     overflow: hidden;
@@ -31,6 +30,7 @@
   
 .details h2 {
     text-align: center;
+    font-family: 'Libre Baskerville', serif;
     font-size: 36pt; /* Adjust font size */
     font-weight: 600;
     color: #1c1c84;
@@ -40,7 +40,8 @@
   
 .details h3 {
     text-align: center;
-    font-family: 'Source Sans Pro';
+    font-family: 'Montserrat';
+    font-weight: 500;
     font-size: 20pt;
     color: #1c1c84;
     margin-bottom: 10px;
@@ -48,6 +49,7 @@
   
 .details p {
     text-align: left;
+    font-family: 'Source Sans Pro';
     font-size: 14pt;
     color: #333;
     margin-bottom: 20px;

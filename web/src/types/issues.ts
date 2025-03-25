@@ -1,12 +1,12 @@
-export type Issue = {
+export type PoliticalCategory = {
      category: string;
      category_description: string;
-     icon: string;
+     icon?: string;
 };
-export type SubIssue = {
-     issue_id: number;
-     name: string;
-     sub_id: number;
-     description: string;
-     icon?: string | null;
+
+export type Issue = {
+     issue_name: string;
+     category_id: string;
+     issue_description: string;
 };
+
