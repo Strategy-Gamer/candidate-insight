@@ -10,7 +10,7 @@ export async function GET(
   const db = await pool.connect();
   try {
 
-    const { issueId } = params;
+    const { issueId } = await params;
     const issueData = await db.query(
       `SELECT issue_id FROM Political_Issue WHERE issue_name = $1`,
       [issueId]

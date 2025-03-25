@@ -2,26 +2,15 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { Issue } from '@/types/issues';
-import "@/styles/issues_depth.css";
+//import "@/styles/issues_depth.css";
 
 type Props = {
   params: { issueId: string };
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const id = await params;
-  const issue = await getIssue(id.issueId);
-  
-  return {
-    title: issue.category || 'Issue not found',
-    description: issue.category_description || 'Description not found'
-  };
-}
-
 async function getIssue(issueId: string) {
   try {
-
-    const res = await fetch(process.env.URL + `/api/issues/${issueId}`);
+    const res = await fetch(process.env.URL + `/api/issues/${decodeURIComponent(issueId).replace(/-/g, ' ')}`);
     
     if (!res.ok) {
       console.error(`API Error: ${res.status} - ${await res.text()}`);

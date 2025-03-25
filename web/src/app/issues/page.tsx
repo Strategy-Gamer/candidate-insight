@@ -75,7 +75,7 @@ const IssuesPage: NextPage = () => {
   };
 
   const getSubIssues = (categoryId: string): ApiIssue[] => {
-    return issues.filter(issue => issue.category_id === categoryId);
+    return issues.filter(issue => issue.category === categoryId);
   }
   
   /* change the route in candidates to this format too */
