@@ -3,6 +3,7 @@
 DOWNLOAD DOTENV_CLI with the command ```npm install -g dotenv-cli```
 If you've set up pgAdmin on your machine and would like to integrate the database with the front-end, you will have to create three .env files in the root directory. They will all have the format: 
 ```
+   DB_USER="postgres"
    DB_HOST="localhost"
    DB_NAME=
    DB_PASSWORD=
