@@ -2,7 +2,7 @@ import fs from 'fs';
 import pg from 'pg';
 import env from "dotenv";
 
-env.config({path: '../.env'});
+env.config({path: '../.env.devmock'});
 
 const pool = new pg.Pool({
     user: process.env.DB_USER,
@@ -199,7 +199,6 @@ async function insertCandidates(numCandidates) {
   const candidateIDs = [];
 
   const db = await pool.connect();
-  // Gay Valimont FL House
   try {
     const query = 'INSERT INTO candidate (first_name, last_name, state, gender, party_affiliation, profile_image_url, dob, website_url, twitter) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING candidate_id';
     for (let i=0; i < numCandidates*2; i+=2) {
@@ -231,7 +230,7 @@ async function insertMeta(candidates) {
     2028: "2028-11-08",
   };
 
-  const incumbentPositions = ["Governor", "Mayor", "City Council", "Representative", "Senator", "President"];
+  const incumbentPositions = ["Governor", "Representative", "Senator", "President"];
   const runningForPositions = ["Representative", "Senator", "President"];
   const stateCodes = [
     "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", 
@@ -263,11 +262,38 @@ async function insertMeta(candidates) {
         const electionYear = year;
         const electionDate = electionYears[year];
         const termEndDate = `${parseInt(year) + 4}-01-03`;
-        const runningFor = runningForPositions[Math.floor(Math.random() * runningForPositions.length)];
-        const incumbentPosition = incumbentPositions[Math.floor(Math.random() * incumbentPositions.length)];
-        const congressionalDistrict = runningFor === "Representative" ? getDistrictCode(stateCodes[Math.floor(Math.random() * stateCodes.length)]) : null;
-        const description = `${runningFor} candidate for the ${electionYear} election. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`;
         
+        // determine if candidate is incumbent, running, or both
+        const isIncumbent = Math.random() > 0.3; // 70% chance of being incumbent
+        const isRunning = Math.random() > 0.3; // 70% chance of running
+        
+        let incumbentPosition = null;
+        let runningFor = null;
+        
+        if (isIncumbent && isRunning) {
+          // both incumbent and running (possibly for same or different position)
+          incumbentPosition = incumbentPositions[Math.floor(Math.random() * incumbentPositions.length)];
+          runningFor = runningForPositions[Math.floor(Math.random() * runningForPositions.length)];
+        } else if (isIncumbent) {
+          // only incumbent
+          incumbentPosition = incumbentPositions[Math.floor(Math.random() * incumbentPositions.length)];
+        } else if (isRunning) {
+          // only running
+          runningFor = runningForPositions[Math.floor(Math.random() * runningForPositions.length)];
+        } else {
+          // neither
+          continue;
+        }
+        
+        // ensure that they have a congressional district if necessary
+        let congressionalDistrict = null;
+        if ((incumbentPosition === "Representative" || runningFor === "Representative")) {
+          const state = stateCodes[Math.floor(Math.random() * stateCodes.length)];
+          congressionalDistrict = getDistrictCode(state);
+        }
+        
+        const description = `${runningFor ? runningFor + ' candidate' : ''}${runningFor && incumbentPosition ? ' and ' : ''}${incumbentPosition ? incumbentPosition + ' incumbent' : ''} for the ${electionYear} election.`;
+
         metaPromises.push(
           db.query(query, [
             electionYear, candidateId, congressionalDistrict, 
@@ -295,10 +321,21 @@ async function insertPositions(issues, candidates) {
     const positionSourceQuery = 'INSERT INTO Position_Sources (position_id, source_id) VALUES ($1, $2)';
 
     const positionPromises = [];
-    for (const issueId of issues) {
-      for (const candidateId of candidates) {
-        const str = Math.random() < 0.5 ? "SUPPORTS" : "OPPOSES"
-        positionPromises.push(db.query(positionQuery , [candidateId, issueId, `${str} ${issueId} Lorem ipsum dolor sit amet, consectetur adipiscing elit.`]));
+    
+    // each candidate will take a position on 30-70% of issues
+    // Sully - this can be changed if you'd like
+    for (const candidateId of candidates) {
+      const issuesToTakePositionOn = Math.floor(issues.length * (0.3 + Math.random() * 0.4));
+      const shuffledIssues = [...issues].sort(() => 0.5 - Math.random());
+      const selectedIssues = shuffledIssues.slice(0, issuesToTakePositionOn);
+      
+      for (const issueId of selectedIssues) {
+        const str = Math.random() < 0.5 ? "SUPPORTS" : "OPPOSES";
+        positionPromises.push(db.query(positionQuery, [
+          candidateId, 
+          issueId, 
+          `${str} ${issueId} Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
+        ]));
       }
     }
 
@@ -339,7 +376,6 @@ async function insertPositions(issues, candidates) {
 }
 
 async function main() {
-  
   const args = process.argv.slice(2);
   const refresh = args.includes('refresh');
   const numCandidates = parseInt(args[0]) || 988;
