@@ -12,7 +12,7 @@ export async function GET(
 
     const { issueId } = await params;
     const issueData = await db.query(
-      `SELECT issue_id FROM Political_Issue WHERE issue_name = $1`,
+      `SELECT issue_id, issue_name, issue_description FROM Political_Issue WHERE issue_name = $1`,
       [issueId]
     );
 
@@ -27,7 +27,10 @@ export async function GET(
     const issue = issueData.rows[0].issue_id;
     
     const positionData = await db.query(
-      `SELECT * FROM Candidate_Position WHERE issue_id = $1`,
+      `SELECT c.first_name, c.last_name, c.party_affiliation, cp.position_description
+       FROM Candidate_Position cp
+       JOIN Candidate c ON cp.candidate_id = c.candidate_id
+       WHERE cp.issue_id = $1;`,
       [issue] 
     );
     
@@ -41,7 +44,7 @@ export async function GET(
 
     const positions = positionData.rows;
     return NextResponse.json(
-      { success: true, positions: positions}
+      { success: true, positions: positions, issue: issueData.rows[0]}
     );
   }
   catch (error) {

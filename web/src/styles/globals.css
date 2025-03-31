@@ -21,8 +21,16 @@ main {
   flex: 1;
 }
 
+.recharts-label-list text {
+  fill: white !important; 
+  font-size: 14px;
+}
+
 @layer base {
   :root {
     --radius: 0.5rem;
+    --chart-1: 344, 75%, 40%;
+    --chart-2: 240, 65%, 31%;
+    --chart-3: 197 37% 24%;
   }
 }
