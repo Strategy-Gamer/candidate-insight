@@ -51,7 +51,7 @@ def extract_content(soup):
 
 #     return scraped_text
 
-def scrape_dynamic_website(url, visited=set(), max_depth=5, depth=0):
+def scrape_dynamic_website(url, visited=set(), max_depth=1, depth=0):
     """
     Scrapes a JavaScript-heavy website and its subpages up to a certain depth.
     """
