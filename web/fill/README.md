@@ -16,7 +16,7 @@ Otherwise, rename the .env portion from this line ```env.config({path: '../.env'
 Run the mock script with the following command:
 
 ```
-node mockfill.js [numberOfCandidates] [refresh]
+node mockfill.js [numberOfCandidates] [percentageOfIssues] refresh
 ```
 
 Run the real script with the following command:
@@ -28,11 +28,12 @@ node fill.js
 ### Parameters for mockfill
 
 - `numberOfCandidates`: (Optional) The number of candidate records to generate (default: 988, max: 988)
+- `percentageOfIssues`: (Optional) The proportion of Political_Issues in which each candidate will have a position. If it is not specified, then each candidate will have a position for anywhere between 30 to 70 percent of the issues.
 - `refresh`: (Optional) Include this keyword to clear existing data from tables before generating new data
 
 ### Examples
 
-Generate data with default settings (988 candidates):
+Generate data with default settings (988 candidates, where each candidate will have a position for 30 to 70 percent of the issues):
 ```
 node mockill.js
 ```
@@ -47,9 +48,17 @@ Clear existing data and generate 500 new candidate records:
 node mockfill.js 500 refresh
 ```
 
+Clear existing data and generate 500 new candidate records, where each candidate will have a position for half of the issues:
+```
+node mockfill.js 500 0.5 refresh
+```
+
+Clear existing data and generate 500 new candidate records, where each candidate will have a position for all of the issues:
+```
+node mockfill.js 500 1 refresh
+```
+
 
 ## Troubleshooting
-
 - If you encounter database connection issues, verify your `.env` file settings
-- For "Invalid number of candidates" errors, ensure the number is between 1 and 988
-- If tables don't exist, run the schema creation script first
+- Other errors should only occur if the tables don't exist or you are working with an older version of the schema. Run setup.sql in pgAdmin again to fix these.
