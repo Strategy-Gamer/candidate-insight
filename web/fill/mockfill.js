@@ -2,7 +2,7 @@ import fs from 'fs';
 import pg from 'pg';
 import env from "dotenv";
 
-env.config({path: '../.env.devmock'});
+env.config({path: '../.env'});
 
 const pool = new pg.Pool({
     user: process.env.DB_USER,
@@ -155,6 +155,16 @@ const policyData = [
     }
 ];
 
+const tweets = [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.",
+    "Curabitur aliquet quam id dui posuere blandit.",
+    "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.",
+    "Proin eget tortor risus.",
+    "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+    "Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.",
+];
+
 function generateDate() {
   let year = Math.floor(Math.random()*50) + 1990;
   let month = Math.floor(Math.random()*12);
@@ -200,13 +210,13 @@ async function insertCandidates(numCandidates) {
 
   const db = await pool.connect();
   try {
-    const query = 'INSERT INTO candidate (first_name, last_name, state, gender, party_affiliation, profile_image_url, dob, website_url, twitter) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING candidate_id';
+    const query = 'INSERT INTO candidate (first_name, last_name, state, gender, party_affiliation, dob, website_url, twitter) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING candidate_id';
     for (let i=0; i < numCandidates*2; i+=2) {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const [firstName, lastName, state, position, gender, party, image_url, dob] = lines[i].trim().split(' ');
         const webURL = lines[i+1].trim();
 
-        const result = await db.query(query, [firstName, lastName, state, gender, party, image_url, dob, webURL, '@twitter']);
+        const result = await db.query(query, [firstName, lastName, state, gender, party, dob, webURL, '@twitter']);
         const candidateID = result.rows[0].candidate_id;
         candidateIDs.push(candidateID);
     }
@@ -312,12 +322,12 @@ async function insertMeta(candidates) {
   }
 }
 
-async function insertPositions(issues, candidates) {
+async function insertPositions(issues, percentage, candidates) {
   const db = await pool.connect();
 
   try {
-    const positionQuery = 'INSERT INTO Candidate_Position (candidate_id, issue_id, position_description) VALUES ($1, $2, $3) RETURNING position_id';
-    const sourceQuery = 'INSERT INTO Sources (bias, url, date) VALUES ($1, $2, $3) RETURNING source_id';
+    const positionQuery = 'INSERT INTO Candidate_Position (candidate_id, issue_id, supports_position, position_description) VALUES ($1, $2, $3, $4) RETURNING position_id';
+    const sourceQuery = 'INSERT INTO Sources (tweet, url, date) VALUES ($1, $2, $3) RETURNING source_id';
     const positionSourceQuery = 'INSERT INTO Position_Sources (position_id, source_id) VALUES ($1, $2)';
 
     const positionPromises = [];
@@ -325,16 +335,20 @@ async function insertPositions(issues, candidates) {
     // each candidate will take a position on 30-70% of issues
     // Sully - this can be changed if you'd like
     for (const candidateId of candidates) {
-      const issuesToTakePositionOn = Math.floor(issues.length * (0.3 + Math.random() * 0.4));
+      const issuesToTakePositionOn = percentage != -1
+        ? issues.length*percentage
+        : Math.floor(issues.length * (0.3 + Math.random() * 0.4));
+
       const shuffledIssues = [...issues].sort(() => 0.5 - Math.random());
       const selectedIssues = shuffledIssues.slice(0, issuesToTakePositionOn);
       
       for (const issueId of selectedIssues) {
-        const str = Math.random() < 0.5 ? "SUPPORTS" : "OPPOSES";
+        const supports = Math.random() < 0.5;
         positionPromises.push(db.query(positionQuery, [
           candidateId, 
-          issueId, 
-          `${str} ${issueId} Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
+          issueId,
+          supports, 
+          `${issueId} Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
         ]));
       }
     }
@@ -345,10 +359,9 @@ async function insertPositions(issues, candidates) {
     console.log("Inserting sources for positions...");
     const sourcePromises = [];
     for (let i=0; i < positionIds.length; i++) {
-      let bias1 = Math.random()*4 - 2;
-      let bias2 = Math.random()*4 - 2;
-      sourcePromises.push(db.query(sourceQuery, [bias1, "www.google.com", generateDate()]));
-      sourcePromises.push(db.query(sourceQuery, [bias2, "https://github.com/Strategy-Gamer/candidate-insight", generateDate()]));
+      let tweetIndex = Math.floor(Math.random() * tweets.length);
+      sourcePromises.push(db.query(sourceQuery, [null, "www.google.com", generateDate()]));
+      sourcePromises.push(db.query(sourceQuery, [tweets[tweetIndex], "https://github.com/Strategy-Gamer/candidate-insight", generateDate()]));
     }
 
     const sourceResults = await Promise.all(sourcePromises);
@@ -379,6 +392,7 @@ async function main() {
   const args = process.argv.slice(2);
   const refresh = args.includes('refresh');
   const numCandidates = parseInt(args[0]) || 988;
+  const percentageOfIssues = parseFloat(args[1]) || -1;
 
   if (refresh) {
     console.log("Refreshing tables...");
@@ -386,7 +400,12 @@ async function main() {
   }
 
   if (numCandidates < 1 || numCandidates > 988) {
-    console.log("Invalid number of candidates");
+    console.log("Number of candidates must be between 1 and 988.");
+    process.exit(1);
+  }
+
+  if ((percentageOfIssues > 1 || percentageOfIssues <= 0) && percentageOfIssues != -1) {
+    console.log("Percentage of issues must be between 0 and 1, or -1 for random.");
     process.exit(1);
   }
   
@@ -395,8 +414,13 @@ async function main() {
   console.log("Inserting candidate meta...");
   await insertMeta(candidateIDs);
   console.log("Inserting positions...");
-  await insertPositions(issueIDs, candidateIDs);
-  console.log("Successfully inserted!");
+  await insertPositions(issueIDs, percentageOfIssues, candidateIDs);
 }
 
-main();
+main().then(() => {
+  console.log('Data inserted');
+  process.exit(0);
+}).catch((err) => {
+  console.log(err);
+  process.exit(1);
+});

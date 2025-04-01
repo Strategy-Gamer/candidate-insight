@@ -20,7 +20,6 @@ import {
 
 type ChartData = {
   position: string,
-  proportion: number,
   amount: number,
   fill?: string
 };
@@ -41,9 +40,9 @@ const CustomTooltip = ({ active, payload }: TooltipProps<number, string>) => {
         <div className="flex items-center gap-2">
           <div 
             className="w-3 h-3 rounded-full" 
-            style={{ backgroundColor: data.payload.position === "Democratic" ? "hsl(var(--chart-2))" : "hsl(var(--chart-1))" }} 
+            style={{ backgroundColor: data.payload.position === "Supporters" ? "hsl(var(--chart-1))" : "hsl(var(--chart-2))" }} 
           />
-          <p className="font-semibold">{data.payload.position} Candidates: {data.payload.amount}</p>
+          <p className="font-semibold">{data.payload.position} {data.payload.amount}</p>
         </div>
       </div>
     );
@@ -64,7 +63,7 @@ export default function Component(props: ChartProps) {
         >
           <PieChart>
             <ChartTooltip content={<CustomTooltip />} />
-            <Pie data={props.data} dataKey="proportion">
+            <Pie data={props.data} dataKey="amount">
               <LabelList 
                 dataKey="position" 
                 className="fill-background" 

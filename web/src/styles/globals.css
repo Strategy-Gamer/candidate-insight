@@ -29,8 +29,8 @@ main {
 @layer base {
   :root {
     --radius: 0.5rem;
-    --chart-1: 344, 75%, 40%;
-    --chart-2: 240, 65%, 31%;
+    --chart-1: 217, 13%, 66%;
+    --chart-2: 217, 19%, 27%;
     --chart-3: 197 37% 24%;
   }
 }
