@@ -95,13 +95,13 @@ export default async function IssueDetail({ params }: Props) {
           data={getFilteredPositions('Democratic').data} 
           config={getFilteredPositions('Democratic').config}
           party='Democrats'
-          description="Proportion of Democratic candidates that support or oppose this issue"
+          description="Proportion of Democratic candidates that support or oppose this issue."
         />
         <CandidateChart 
           data={getFilteredPositions('Republican').data} 
           config={getFilteredPositions('Republican').config}
           party='Republicans'
-          description='Proportion of Republican candidates that support or oppose this issue'
+          description='Proportion of Republican candidates that support or oppose this issue.'
         />
       </div>
       <div className="positions">

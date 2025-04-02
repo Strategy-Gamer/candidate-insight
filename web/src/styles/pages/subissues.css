@@ -1,0 +1,74 @@
+/* subissues.css */
+h1 {
+     font-size: 2.5em;
+     padding: 8px;
+     font-weight: bold;
+     text-align: center;
+}
+
+h2 {
+     font-size: 1.9em;
+     text-align: center;
+     padding: 4px;
+}
+
+.positions {
+     display: grid;
+     grid-template-columns: repeat(4, minmax(100px, 20vw));
+     gap: 2rem;
+     text-align: center;
+     justify-content: center;
+     margin: 1rem 0;
+}
+
+.position {
+     padding: 1rem;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     box-shadow: #ddd;
+}
+
+.Name {
+     font-weight: bolder;
+}
+
+p {
+     padding-top: 1%;
+     padding-bottom: 1%;
+}
+
+.status.yes {
+     color: darkgreen;
+}
+
+.status.no {
+     color: darkred;
+}
+
+.status {
+     font-weight: bold;
+}
+
+.party.Democratic {
+     color: darkblue;
+}
+
+.party.Republican {
+     color: darkred;
+}
+
+.party.Green {
+     color: green;
+}
+
+.party.Libertarian {
+     color: darkgoldenrod;
+}
+
+.party.Independent {
+     color: gray;
+}
+
+.party.Constitution {
+     color: purple;
+}
