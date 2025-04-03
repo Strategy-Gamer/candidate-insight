@@ -15,7 +15,7 @@ CREATE TABLE Candidate (
     gender VARCHAR(25),
     party_affiliation VARCHAR(25), 
     state VARCHAR(2),
-    profile_image_url TEXT,
+    profile_image_url TEXT DEFAULT NULL,
     website_url TEXT DEFAULT NULL,
     twitter VARCHAR(50) DEFAULT NULL,
     dob DATE
@@ -52,6 +52,7 @@ CREATE TABLE Candidate_Position (
     position_id SERIAL PRIMARY KEY,
     candidate_id INT REFERENCES Candidate(candidate_id) ON DELETE CASCADE,
     issue_id INT REFERENCES Political_Issue(issue_id) ON DELETE CASCADE,
+    supports_position BOOLEAN NOT NULL,
     position_description TEXT NOT NULL,
     UNIQUE (candidate_id, issue_id)
 );
@@ -59,7 +60,7 @@ CREATE TABLE Candidate_Position (
 -- Sources Table
 CREATE TABLE Sources (
     source_id SERIAL PRIMARY KEY,
-    bias FLOAT,
+    tweet TEXT DEFAULT NULL,
     url TEXT,
     date DATE
 );
