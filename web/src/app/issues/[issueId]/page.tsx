@@ -55,11 +55,11 @@ export default async function IssueDetail({ params }: Props) {
   
     const config = {
       Supporters: {
-        label: `${parseFloat((supports/byParty.length).toFixed(4))*100}%`,
+        label: `${parseFloat(((supports/byParty.length)*100).toFixed(0))}%`,
         color: "hsl(var(--chart-1))"
       },
       Opposers: {
-        label: `${parseFloat((opposes/byParty.length).toFixed(4))*100}%`,
+        label: `${parseFloat(((supports/byParty.length)*100).toFixed(0))}%`,
         color: "hsl(var(--chart-2))"
       }
     };
