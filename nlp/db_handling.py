@@ -40,7 +40,7 @@ def get_scraped_file_from_database(name):
 
     data = ""
     #with open('../README.md') as file:
-    path = os.path.join('../scraper/dest-txt/campaign-sites', name)
+    path = os.path.join('../scraper/dest-txt/', name)
     with open(path, 'r', encoding='utf-8') as file:
         data = file.read()
     return data
