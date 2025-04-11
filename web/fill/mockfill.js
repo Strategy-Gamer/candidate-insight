@@ -1,6 +1,7 @@
 import fs from 'fs';
 import pg from 'pg';
 import env from "dotenv";
+import policyData from './issues.js';
 
 env.config({path: '../.env.devmock'});
 
@@ -11,149 +12,6 @@ const pool = new pg.Pool({
     password: process.env.DB_PASSWORD,
     port: process.env.DB_PORT,
 });
-
-const policyData = [
-    {
-        category: "Foreign Policy",
-        category_description: "Foreign Policy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt.",
-        icon: "foreign_policy.png",
-        issues: [
-            {
-                issue_name: "Military Spending",
-                issue_description: "Debates over defense budget and military investments."
-            },
-            {
-                issue_name: "International Alliances",
-                issue_description: "Discussions on NATO, UN, and other global partnerships."
-            }
-        ]
-    },
-    {
-        category: 'Social Issues',
-        category_description: 'Policies related to civil rights, LGBTQ+ rights, and religious freedoms.',
-        icon: 'social_issues.png',
-        issues: [
-            {
-                issue_name: 'Civil Rights',
-                issue_description: 'Legislation and protections for marginalized groups.'
-            },
-            {
-                issue_name: 'LGBTQ+ Rights',
-                issue_description: 'Policies supporting LGBTQ+ equality and protections.'
-            },
-        ]
-    },
-    {
-        category: 'Immigration',
-        category_description: 'Policies on border security and citizenship.',
-        icon: 'immigration.png',
-        issues: [
-            {
-                issue_name: 'Border Wall',
-                issue_description: 'Debates over building a wall along the US-Mexico border.'
-            },
-            {
-                issue_name: 'Path to Citizenship',
-                issue_description: 'Proposals for legalizing undocumented people'
-            },
-        ]
-    },
-    {
-        category: "Economy",
-        category_description: "Issues regarding taxation, employment, and business.",
-        icon: "economy.png",
-        issues: [
-            {
-                issue_name: "Minimum Wage",
-                issue_description: "Debates over raising or lowering the federal minimum wage."
-            },
-            {
-                issue_name: "Tax Reform",
-                issue_description: "Discussions on restructuring tax laws and rates."
-            },
-            {
-                issue_name: "Trade Policies",
-                issue_description: "Regulations regarding international trade and tariffs."
-            }
-        ]
-    },
-    {
-        category: "Healthcare",
-        category_description: "Policies related to medical care and insurance.",
-        icon: "healthcare.png",
-        issues: [
-            {
-                issue_name: "Medicare Expansion",
-                issue_description: "Debates over expanding or reducing Medicare coverage."
-            },
-            {
-                issue_name: "Prescription Drug Prices",
-                issue_description: "Policies aimed at controlling medication costs."
-            },
-            {
-                issue_name: "Mental Health Services",
-                issue_description: "Efforts to increase access to mental health care."
-            }
-        ]
-    },
-    {
-        category: "Education",
-        category_description: "Funding and reforms for public and private education.",
-        icon: "education.png",
-        issues: [
-            {
-                issue_name: "Student Loan Forgiveness",
-                issue_description: "Proposals to reduce or eliminate student loan debt."
-            },
-            {
-                issue_name: "Public School Funding",
-                issue_description: "Discussions on the allocation of state and federal funds for education."
-            },
-            {
-                issue_name: "Charter Schools",
-                issue_description: "Debates on the role and funding of charter schools."
-            }
-        ]
-    },
-    {
-        category: "Environment",
-        category_description: "Policies addressing climate change and sustainability.",
-        icon: "environment.png",
-        issues: [
-            {
-                issue_name: "Renewable Energy",
-                issue_description: "Investments and regulations for wind, solar, and hydro energy."
-            },
-            {
-                issue_name: "Carbon Emissions",
-                issue_description: "Legislation to reduce carbon footprints and pollution."
-            },
-            {
-                issue_name: "Deforestation",
-                issue_description: "Efforts to curb illegal logging and protect forests."
-            }
-        ]
-    },
-    {
-        category: "Gun Control",
-        category_description: "Regulations regarding firearm ownership and use.",
-        icon: "gun_control.png",
-        issues: [
-            {
-                issue_name: "Background Checks",
-                issue_description: "Expanding or restricting background checks for gun purchases."
-            },
-            {
-                issue_name: "Assault Weapons Ban",
-                issue_description: "Debates over banning high-capacity firearms."
-            },
-            {
-                issue_name: "Gun Ownership",
-                issue_description: "Second Amendment rights and legal challenges."
-            }
-        ]
-    }
-];
 
 const tweets = [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -203,21 +61,88 @@ async function insertPolicies() {
 }
 
 async function insertCandidates(numCandidates) {
-  const data = fs.readFileSync('FakeCandidates.txt', 'utf8');
+  const data = fs.readFileSync('MockCandidates.txt', 'utf8');
   const lines = data.split('\n');
   lines.pop();
   const candidateIDs = [];
 
   const db = await pool.connect();
   try {
-    const query = 'INSERT INTO candidate (first_name, last_name, state, gender, party_affiliation, dob, website_url, twitter) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING candidate_id';
+    const candidateQuery = 
+      `INSERT INTO Candidate (
+        first_name, 
+        last_name, 
+        state,
+        gender,
+        party_affiliation,
+        profile_image_url,
+        website_url, 
+        twitter,
+        dob
+      ) 
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) 
+      RETURNING candidate_id`;
+
+    const candidateMetaQuery = 
+      `INSERT INTO Candidate_Meta (
+        election_year,
+        candidate_id,
+        congressional_district,
+        incumbent_position,
+        running_for_position,
+        election_date,
+        term_end_date,
+        won_election
+      ) 
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`;
+
+
     for (let i=0; i < numCandidates*2; i+=2) {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const [firstName, lastName, state, position, gender, party, image_url, dob] = lines[i].trim().split(' ');
+    
+        const [
+          firstName, 
+          lastName, 
+          state,
+          gender,
+          partyAffiliation,
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          imageUrl,
+          dob,
+          incumbentPos,
+          runningForPos,
+          electionDate,
+          termEndDate,
+          congressionalDistrict,
+          winner
+        ]  = lines[i].trim().split(' ');
         const webURL = lines[i+1].trim();
 
-        const result = await db.query(query, [firstName, lastName, state, gender, party, dob, webURL, '@twitter']);
+        const result = await db.query(candidateQuery, [
+          firstName, 
+          lastName, 
+          state,
+          gender,
+          partyAffiliation,
+          null, 
+          webURL, 
+          "@twitter",
+          dob
+        ]);
+
         const candidateID = result.rows[0].candidate_id;
+        let term = termEndDate == "NULL" ? null : termEndDate;
+
+        await db.query(candidateMetaQuery, [
+          "2024",
+          candidateID,
+          congressionalDistrict,
+          incumbentPos,
+          runningForPos,
+          electionDate,
+          term,
+          winner
+        ]);
+
         candidateIDs.push(candidateID);
     }
 
@@ -235,7 +160,6 @@ async function insertMeta(candidates) {
   const db = await pool.connect();
   const electionYears = {
     2022: "2022-11-08",
-    2024: "2024-11-05",
     2026: "2026-11-03",
     2028: "2028-11-08",
   };
@@ -261,9 +185,9 @@ async function insertMeta(candidates) {
       INSERT INTO Candidate_Meta (
         election_year, candidate_id, congressional_district, 
         incumbent_position, running_for_position, 
-        election_date, term_end_date, description
+        election_date, term_end_date, won_election, description
       ) 
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
     `;
 
     for (let i=0; i < candidates.length; i++) {
@@ -271,11 +195,18 @@ async function insertMeta(candidates) {
         const candidateId = candidates[i];
         const electionYear = year;
         const electionDate = electionYears[year];
-        const termEndDate = `${parseInt(year) + 4}-01-03`;
+        let termEndDate;
         
         // determine if candidate is incumbent, running, or both
         const isIncumbent = Math.random() > 0.3; // 70% chance of being incumbent
         const isRunning = Math.random() > 0.3; // 70% chance of running
+        const wonElection = Math.random() > 0.5;
+
+        if (wonElection) {
+          termEndDate = `${parseInt(year) + 4}-01-03`;
+        } else {
+          termEndDate = Math.random() > 0.1 ? null : `${parseInt(year) + 1}-01-03`
+        }
         
         let incumbentPosition = null;
         let runningFor = null;
@@ -308,7 +239,7 @@ async function insertMeta(candidates) {
           db.query(query, [
             electionYear, candidateId, congressionalDistrict, 
             incumbentPosition, runningFor, 
-            electionDate, termEndDate, description
+            electionDate, termEndDate, wonElection, description
           ])
         );
       }

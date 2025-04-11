@@ -1,5 +1,6 @@
 -- Run these delete statements before the create statements to clear the old schema if needed
 DROP TABLE IF EXISTS Candidate CASCADE;
+DROP TABLE IF EXISTS Candidate_Meta CASCADE;
 DROP TABLE IF EXISTS Political_Category CASCADE;
 DROP TABLE IF EXISTS Political_Issue CASCADE;
 DROP TABLE IF EXISTS Candidate_Position CASCADE;
@@ -18,7 +19,8 @@ CREATE TABLE Candidate (
     profile_image_url TEXT DEFAULT NULL,
     website_url TEXT DEFAULT NULL,
     twitter VARCHAR(50) DEFAULT NULL,
-    dob DATE
+    dob DATE,
+    dob_text VARCHAR DEFAULT NULL
 );
 
 -- Candidate Election Table
@@ -30,7 +32,9 @@ CREATE TABLE Candidate_Meta (
     running_for_position VARCHAR(25),
     election_date DATE,
     term_end_date DATE,
-    description TEXT 
+    won_election BOOLEAN,
+    description TEXT,
+    PRIMARY KEY (election_year, candidate_id) 
 );
 
 -- Political_Issue Table

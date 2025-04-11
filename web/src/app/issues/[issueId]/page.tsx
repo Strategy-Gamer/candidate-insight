@@ -51,15 +51,15 @@ export default async function IssueDetail({ params }: Props) {
   const getFilteredPositions = (party: string) => {
     const byParty = positions.filter((position: ApiCandidatePosition) => position.party_affiliation == party);
     const supports: number = byParty.filter((position: ApiCandidatePosition) => position.supports_position == true).length;
-    const opposes: number = byParty.length - supports;
+    const opposes: number = byParty.filter((position: ApiCandidatePosition) => position.supports_position == false).length;
   
     const config = {
       Supporters: {
-        label: `${parseFloat((supports/byParty.length).toFixed(2))*100}%`,
+        label: `${parseFloat(((supports/byParty.length)*100).toFixed(0))}%`,
         color: "hsl(var(--chart-1))"
       },
       Opposers: {
-        label: `${parseFloat((opposes/byParty.length).toFixed(2))*100}%`,
+        label: `${parseFloat(((opposes/byParty.length)*100).toFixed(0))}%`,
         color: "hsl(var(--chart-2))"
       }
     };
