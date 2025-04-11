@@ -1,27 +1,3 @@
-/* candidatecard.css */
-.candidate-card {
-    display: flex;
-    flex-direction: row; 
-    align-items: flex-start;
-    justify-content: center; 
-    /* min-height: 100vh; */
-    padding: 40px;
-    background-color: #ffffff;
-    overflow: hidden;
-    max-width: 80%;
-    margin: auto;
-    overflow: hidden;
-    gap: 50px;
-}
-  
-.photo {
-    width: 400px; /* Adjust the photo size */
-    height: 500px;
-    border-radius: 0%;
-    object-fit: cover;
-    margin-right: 50px;
-}
-  
 .details {
     text-align: left; /* Center text */
     flex-direction: column;
@@ -32,7 +8,7 @@
     text-align: center;
     font-family: 'Libre Baskerville', serif;
     font-size: 36pt; /* Adjust font size */
-    font-weight: 600;
+    font-weight: 500;
     color: #1c1c84;
     font-variant: small-caps;
     margin-bottom: 10px;
@@ -40,9 +16,20 @@
   
 .details h3 {
     text-align: center;
-    font-family: 'Montserrat';
+    font-family: 'Libre Baskerville', serif;
     font-weight: 500;
     font-size: 20pt;
+    font-variant: small-caps;
+    color: #1c1c84;
+    margin-bottom: 10px;
+}
+
+.details h4 {
+    text-align: left;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 500;
+    font-size: 16pt;
+    font-variant: small-caps;
     color: #1c1c84;
     margin-bottom: 10px;
 }
