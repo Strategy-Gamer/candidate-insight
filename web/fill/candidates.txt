@@ -1,64 +1,64 @@
-Kamala Harris Presidential  
+Kamala Harris US F Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/KamalaHarris.png 1964-10-20 Vice_President President 2024-11-05 2025-01-20 NULL 0
 https://kamalaharris.com @KamalaHarris
-Donald Trump Presidential  
+Donald Trump US M Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/DonaldTrump.png 1946-06-14 NULL President 2024-11-05 2029-01-20 NULL 1
 https://www.donaldjtrump.com @realDonaldTrump
-Ruben Gallego AR Senate  
+Ruben Gallego AR M Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/RubenGallego.png 1979-11-20 House Senator 2024-11-05 2031-01-03 3 1
 http://gallegoforarizona.com/ @RubenGallego
-Kari Lake AR Senate  
+Kari Lake AR F Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/KariLake.png 1969-08-23 NULL Senator 2024-11-05 NULL NULL 0
 https://karilake.com @KariLake
-Elissa Slotkin MI Senate  
+Elissa Slotkin MI F Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/ElissaSlotkin.png 1976-07-10 House Senator 2024-11-05 2031-01-03 7 1
 https://elissaslotkin.org @SenatorSlotkin
-Mike Rogers MI Senate 
+Mike Rogers MI M Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/MikeRogers.png 1963-06-02 NULL Senator 2024-11-05 NULL NULL 0
 https://rogersforsenate.com @MikeRogersForMI
-Jacky Rosen NV Senate
+Jacky Rosen NV F Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/JackyRosen.png 1957-08-02 Senator Senator 2024-11-05 2031-01-03 NULL 1
 https://www.rosen.senate.gov @RosenforNevada
-Sam Brown NV Senate
+Sam Brown NV M Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/SamBrown.png 1983-10-15 NULL Senator 2024-11-05 NULL NULL 0
 https://www.captainsambrown.com @SamBrownForNV
-Dave McCormick PA Senate
+Dave McCormick PA M Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/DaveMcCormick.png 1965-08-17 NULL Senator 2024-11-05 2031-01-03 NULL 1
 https://www.davemccormickpa.com @SenMcCormickPA
-Bob Casey PA Senate
+Bob Casey PA M Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/BobCasey.png 1960-04-13 Senator Senator 2024-11-05 2025-01-03 NULL 0
 https://bobcasey.com @SenBobCasey
-Tammy Baldwin WI Senate
+Tammy Baldwin WI F Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/TammyBaldwin.png 1962-02-11 Senator Senator 2024-11-05 2031-01-03 NULL 1
 https://www.tammybaldwin.com @SenatorBaldwin
-Eric Hovde WI Senate
+Eric Hovde WI M Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/EricHovde.png 1964-00-00 NULL Senator 2024-11-05 NULL NULL 0
 https://www.fec.gov/data/candidate/S4WI00256/ @EricHovde
-Marsha Blackburn TN Senate
+Marsha Blackburn TN F Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/MarshaBlackburn.png 1952-06-06 Senator Senator 2024-11-05 2031-01-03 NULL 1
 https://www.marshablackburn.com @MarshaBlackburn
-Gloria Johnson TN Senate
+Gloria Johnson TN F Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/GloriaJohnson.png 1962-05-25 NULL Senator 2024-11-05 NULL NULL 0
 https://www.votegloriajohnson.com @VoteGloriaJ
-Rick Scott FL Senate
+Rick Scott FL M Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/RickScott.png 1952-12-01 Senator Senator 2024-11-05 2031-01-03 NULL 1
 https://rickscott.com @ScottforFlorida
-Debbie Mucarsel-Powell FL Senate
+Debbie Mucarsel-Powell FL F Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/DebbieMucarselPowell.png 1971-01-18 NULL Senator 2024-11-05 NULL NULL 0
 https://www.debbieforflorida.com @DebbieforFL
-Steven Cohen TN House
-http://cohenforcongress.com @ReElectCohen
-Charlotte Bergmann TN House
+Steven Cohen TN M Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/StevenCohen.png 1949-05-24 House House 2024-11-05 2027-01-03 9 1
+http://cohenforcongress.com NULL
+Charlotte Bergmann TN F Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/CharlotteBergmann.png 0000-03-30 NULL House 2024-11-05 NULL 9 0
 https://electbergmann.com @ElectBergmann
-Tim Burchett TN House
+Tim Burchett TN M Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/TimBurchett.png 1964-08-25 House House 2024-11-05 2027-01-03 2 1
 https://www.burchettforcongress.com @RepTimBurchett
-Jane George TN House
+Jane George TN F Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/JaneGeorge.png 1962-08-07 NULL House 2024-11-05 NULL 2 0
 https://janegeorgetn.com @JaneGeorgeTN
-John Rose TN House
-https://johnrose.com @JohnRoseforTN
-Lore Bergman TN House
+John Rose TN M Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/JohnRose.png 1965-02-23 House House 2024-11-05 2027-01-03 6 1
+https://johnrose.com  @JohnRoseforTN
+Lore Bergman TN F Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/LoreBergman.png 0000-00-00 NULL House 2024-11-05 NULL 6 0
 https://lorebergman.org/platform/ @UsBergman
-Andy Ogles TN House
+Andy Ogles TN M Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/AndyOgles.png 1971-06-18 House House 2024-11-05 2027-01-03 5 1
 https://andyogles.com @AndyOgles
-Maryam Abolfazli TN House
-https://www.fec.gov/data/candidate/H4TN05145/ @MaryamForTN
-Mark Green TN House
+Maryam Abolfazli TN F Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/MaryamAbolfazli.png 1978-00-00 NULL House 2024-11-05 NULL 5 0
+https://markgreentn.com @MaryamForTN
+Mark Green TN M Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/MarkGreen.png 1964-11-08 House House 2024-11-05 2027-01-03 7 1
 https://markgreentn.com @DrMarkGreen4TN
-Megan Barry TN House
-https://www.meganbarry.com/ @MeganCBarry
-Marjorie Taylor Greene GA House
+Megan Barry TN F Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/MeganBarry.png 1963-09-22 NULL House 2024-11-05 NULL 7 0
+NULL @MeganCBarry
+Marjorie Taylor-Greene GA F Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/MarjorieTaylorGreene.png 1974-05-27 House House 2024-11-05 2027-01-03 14 1
 https://www.mtgforamerica.com @mtgreenee
-Shawn Harris GA House
+Shawn Harris GA M Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/ShawnHarris.png 0000-09-22 NULL House 2024-11-05 NULL 14 0
 https://www.shawnforgeorgia.com @ShawnForGeorgia
-Don Davis NC House
+Don Davis NC M Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/DonDavis.png 1971-08-29 House House 2024-11-05 2027-01-03 1 1
 https://votedondavis.com @DonDavisNC
-Laurie Buckhout NC House
+Laurie Buckhout NC F Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/LaurieBuckhout.png 1961-12-00 NULL House 2024-11-05 NULL 1 0
 https://www.lauriebuckhoutforcongress.com @lauriebuckhout
-Matt Gaetz FL House
-https://floridafirebrandpac.com/ @mattgaetz
-Gay Valimont FL House
+Matt Gaetz FL M Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/MattGaetz.png 1987-05-02 House House 2024-11-05 2025-04-01 1 1
+NULL @mattgaetz
+Gay Valimont FL F Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/GayValimont.png 1972-10-19 NULL House 2025-04-01 NULL 1 0
 https://gayforcongress.com @gayforcongress

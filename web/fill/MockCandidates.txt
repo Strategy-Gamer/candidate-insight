@@ -1,0 +1,1980 @@
+Derrick Saric US F Democratic NULL 2001-08-05 President President 2024-11-05 2025-01-20 NULL 0
+https://google.com
+Jeremy Williams_Jr. US M Republican NULL 1993-07-20 Governor President 2024-11-05 2029-01-20 NULL 1
+https://google.com
+Paul Hayes US M Libertarian NULL 1995-08-02 NULL President 2024-11-05 NULL NULL 0
+https://google.com
+Reggie Knight US F Green NULL 1997-08-14 NULL President 2024-11-05 NULL NULL 0
+https://google.com
+Alex Yurtseven MS F Democratic NULL 2003-05-13 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Dwight Little MS M Republican NULL 2001-10-17 House Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Nathan Grant WI F Democratic NULL 1991-03-16 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Gary Kuminga WI M Republican NULL 2000-06-19 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Daniel King WI M Green NULL 1995-09-28 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Yuta Preston NC F Democratic NULL 1990-02-08 Senator Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Dario Chandler NC M Republican NULL 2000-11-16 NULL Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Tre Poeltl IN F Democratic NULL 1985-05-05 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Kevin Green IN M Republican NULL 1992-08-01 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Jacob Metu ID F Democratic NULL 1994-01-31 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Mark Simmons ID M Republican NULL 1995-10-15 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Jayson Bogdanovic MA F Democratic NULL 1997-12-21 Senator Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Joshua Poole MA F Republican NULL 2002-12-24 House Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+P.J. Garland AZ M Democratic NULL 1993-06-16 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Trey Metu AZ F Republican NULL 1999-10-15 House Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Xavier Edwards OH M Democratic NULL 2001-04-17 Senator Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Admiral Simmons OH M Republican NULL 1990-12-14 NULL Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Garrett Hernangomez OH F Constitution NULL 1992-01-03 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Devonte' Aldama SC F Democratic NULL 1997-12-02 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Jaxson Days SC F Republican NULL 2001-07-26 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Daniel Merrill SD F Democratic NULL 1996-04-22 Senator Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Jose Hartenstein SD F Republican NULL 1996-10-24 NULL Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Chris Harrison CA M Democratic NULL 1992-10-17 Senator Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Xavier George CA M Republican NULL 1995-09-28 NULL Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+CJ Fournier ME F Democratic NULL 1984-12-30 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Romeo Morris_Sr. ME F Republican NULL 1997-12-21 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Bojan Brogdon HI M Democratic NULL 1995-02-23 Senator Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Nikola Banton HI F Republican NULL 1993-09-20 NULL Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Jusuf Dosunmu GA M Democratic NULL 1997-11-20 Senator Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Kevin Ellis GA F Republican NULL 1998-09-01 House Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Stanley Gabriel NM F Democratic NULL 1992-08-28 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+TyTy Jones_Jr. NM M Republican NULL 1999-01-02 House Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Deonte Jackson_Jr. NM F Libertarian NULL 1999-09-15 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Malaki Washington_Jr. NY F Democratic NULL 1988-07-12 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Jalen Lee NY F Republican NULL 1995-06-11 House Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Jordan Taylor NY M Libertarian NULL 1991-07-20 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Damian Butler_Jr. KS M Democratic NULL 1992-06-07 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Isaiah Neto KS F Republican NULL 1996-05-03 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Victor Diabate PA F Democratic NULL 1992-10-21 Senator Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Malcolm Garuba PA F Republican NULL 2000-09-18 NULL Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Grayson Hampton WA F Democratic NULL 1995-02-19 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Daniel Ingram WA M Republican NULL 2000-07-06 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Luke Smith AL F Democratic NULL 2001-03-17 Senator Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Chima Caldwell-Pope AL F Republican NULL 1995-06-30 NULL Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Markieff Maxey TN F Democratic NULL 1993-04-06 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Tari Lewis_Jr. TN M Republican NULL 1998-07-28 House Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Miles Harrison MO M Democratic NULL 1993-09-15 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Matthew Payne MO F Republican NULL 1992-08-01 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Jalen Brissett TX F Democratic NULL 2002-02-27 Senator Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Trae Mamukelashvili TX M Republican NULL 1997-04-26 NULL Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Bruno Reid UT M Democratic NULL 1989-09-18 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Evan Bogdanovic UT M Republican NULL 1999-04-06 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Tre Vucevic MI F Democratic NULL 1995-03-28 Senator Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Chris Campazzo MI F Republican NULL 1995-07-24 NULL Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Trendon Trent_Jr. CO F Democratic NULL 1998-06-12 Senator Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Evan Oubre_Jr. CO M Republican NULL 1991-07-29 NULL Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Marko Stevens NH M Democratic NULL 1987-11-10 Senator Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+De'Aaron Hampton NH F Republican NULL 2000-01-16 NULL Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Tyrese Brooks WV M Democratic NULL 1992-08-01 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+DeAndre Smith WV F Republican NULL 2001-12-18 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Jeff Mamukelashvili MT M Democratic NULL 1993-06-05 Senator Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Kyrie Murray MT M Republican NULL 2001-09-06 House Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+PJ Mitchell ND M Democratic NULL 1996-08-30 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Tim Rivers ND F Republican NULL 1994-04-10 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Jalen Milton NE M Democratic NULL 1997-01-21 Senator Senator 2024-11-05 2025-01-03 NULL 0
+https://google.com
+Dewayne Milton NE F Republican NULL 1990-10-21 NULL Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Ochai Dedmon NE M Constitution NULL 1998-09-15 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Nerlens Johnson AR F Democratic NULL 1998-12-27 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Harrison Davison AR F Republican NULL 1990-03-05 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+TyTy Curry RI F Democratic NULL 1992-03-25 Senator Senator 2024-11-05 2031-01-03 NULL 1
+https://google.com
+Luka Ayton RI F Republican NULL 2000-05-15 NULL Senator 2024-11-05 NULL NULL 0
+https://google.com
+Boban Fultz AL F Democratic NULL 1994-04-10 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Scottie House_Jr. AL F Republican NULL 1997-05-16 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Stanley Okpala AL M Democratic NULL 2002-12-04 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Jevon Dragic AL M Republican NULL 1999-04-17 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Jayson Powell AL M Democratic NULL 1998-05-12 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Jamal Mobley AL F Republican NULL 1995-12-09 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Goran Gafford AL M Democratic NULL 1994-03-17 House House 2024-11-05 2025-01-03 4 0
+https://google.com
+Ryan White AL F Republican NULL 1992-08-18 NULL House 2024-11-05 2027-01-03 4 1
+https://google.com
+Quentin Noel AL M Democratic NULL 1999-02-28 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Kevin York AL M Republican NULL 1997-04-26 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Hamidou Carey_Jr. AL F Democratic NULL 1992-04-04 House House 2024-11-05 2025-01-03 6 0
+https://google.com
+Jarrett Thompson AL F Republican NULL 1997-01-31 NULL House 2024-11-05 2027-01-03 6 1
+https://google.com
+Ayo Dunn AL F Democratic NULL 1984-12-30 House House 2024-11-05 2025-01-03 7 0
+https://google.com
+Greg Liddell AL F Republican NULL 1991-07-01 NULL House 2024-11-05 2027-01-03 7 1
+https://google.com
+Tari Barnes AK M Democratic NULL 2000-04-20 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Jaden Fontecchio AK F Republican NULL 1994-09-12 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Svi Winslow AZ F Democratic NULL 2001-11-06 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Lamar Goodwin AZ F Republican NULL 1996-06-07 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Josh Bouyea AZ M Democratic NULL 1999-09-24 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Stephen Moon AZ F Republican NULL 1987-11-10 NULL House 2024-11-05 NULL 2 0
+https://google.com
+Cole Haslem AZ F Democratic NULL 1999-04-16 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Jonathan Jones AZ M Republican NULL 1989-09-14 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+John McConnell AZ M Democratic NULL 2002-01-21 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Kobi Lofton_Jr. AZ F Republican NULL 1999-03-14 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Charles McClung AZ F Democratic NULL 1998-02-04 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Jericho Williams AZ M Republican NULL 1991-03-13 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Malik White AZ M Democratic NULL 2001-09-06 House House 2024-11-05 2025-01-03 6 0
+https://google.com
+Tristan Huerter AZ M Republican NULL 1998-05-04 NULL House 2024-11-05 2027-01-03 6 1
+https://google.com
+Jay McGruder AZ F Democratic NULL 2001-10-13 House House 2024-11-05 2027-01-03 7 1
+https://google.com
+Donovan Fox AZ M Republican NULL 2003-08-25 NULL House 2024-11-05 NULL 7 0
+https://google.com
+Jordan Hill AZ M Democratic NULL 1991-10-10 House House 2024-11-05 2025-01-03 8 0
+https://google.com
+Malcolm Beverley AZ M Republican NULL 2002-11-18 NULL House 2024-11-05 2027-01-03 8 1
+https://google.com
+James Fox AZ F Democratic NULL 2001-12-08 House House 2024-11-05 2027-01-03 9 1
+https://google.com
+Max Williams AZ M Republican NULL 1997-12-08 NULL House 2024-11-05 NULL 9 0
+https://google.com
+Dario Anthony AR F Democratic NULL 1998-08-18 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Blake King AR M Republican NULL 1999-03-03 NULL House 2024-11-05 NULL 1 0
+https://google.com
+De'Anthony Moneke AR M Green NULL 2000-01-26 NULL House 2024-11-05 NULL 1 0 
+https://google.com
+George Pokusevski AR M Democratic NULL 1996-09-30 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Kelly Dort AR F Republican NULL 2001-05-10 NULL House 2024-11-05 NULL 2 0
+https://google.com
+Julian Joseph AR F Democratic NULL 1999-06-27 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Lindell Portis AR M Republican NULL 1996-11-20 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Marcus Marshall AR F Democratic NULL 2000-02-11 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Hamidou Williams AR F Republican NULL 1995-09-28 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Royce Looney AR F Green NULL 1993-01-06 NULL House 2024-11-05 NULL 4 0 
+https://google.com
+Payton Tatum CA M Democratic NULL 2002-03-09 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Reggie Schofield CA M Republican NULL 1989-08-12 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Jaren Lofton_Jr. CA F Democratic NULL 1997-04-10 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Isaiah Suggs CA F Republican NULL 1995-06-11 NULL House 2024-11-05 NULL 2 0
+https://google.com
+Hamidou Mitchell CA F Democratic NULL 1999-06-19 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Brandon Biyombo CA M Republican NULL 2001-04-06 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+Andrew Dorsey CA M Democratic NULL 1996-03-24 House House 2024-11-05 2025-01-03 4 0
+https://google.com
+Edmond Morris CA M Republican NULL 1995-10-25 NULL House 2024-11-05 2027-01-03 4 1
+https://google.com
+Orlando Antetokounmpo CA M Democratic NULL 1995-08-02 House House 2024-11-05 2025-01-03 5 0
+https://google.com
+Ish Azubuike CA M Republican NULL 1996-02-06 NULL House 2024-11-05 2027-01-03 5 1
+https://google.com
+Quentin Antetokounmpo CA M Democratic NULL 1991-03-16 House House 2024-11-05 2025-01-03 6 0
+https://google.com
+Isaiah Young CA M Republican NULL 1990-03-23 NULL House 2024-11-05 2027-01-03 6 1
+https://google.com
+De'Andre Moore_Jr. CA F Democratic NULL 1999-10-20 House House 2024-11-05 2027-01-03 7 1
+https://google.com
+Evan Marshall CA M Republican NULL 1996-09-30 NULL House 2024-11-05 NULL 7 0
+https://google.com
+Peyton Branham CA M Democratic NULL 1994-08-08 House House 2024-11-05 2025-01-03 8 0
+https://google.com
+MarJon Allen CA F Republican NULL 1992-03-16 NULL House 2024-11-05 2027-01-03 8 1
+https://google.com
+Luka Jones CA M Democratic NULL 1999-06-14 House House 2024-11-05 2027-01-03 9 1
+https://google.com
+Robin Langford CA M Republican NULL 1998-08-27 NULL House 2024-11-05 NULL 9 0
+https://google.com
+Isaiah Kuminga CA F Democratic NULL 1998-08-27 House House 2024-11-05 2025-01-03 10 0
+https://google.com
+Onyeka Thor CA F Republican NULL 1994-03-17 NULL House 2024-11-05 2027-01-03 10 1
+https://google.com
+Austin Jones CA M Democratic NULL 2000-07-10 House House 2024-11-05 2027-01-03 11 1
+https://google.com
+Kyle Jones_Jr. CA F Republican NULL 2003-06-09 NULL House 2024-11-05 NULL 11 0
+https://google.com
+Tobias Dosunmu CA F Democratic NULL 1994-02-25 House House 2024-11-05 2027-01-03 12 1
+https://google.com
+Taj Williams CA F Republican NULL 1997-01-21 NULL House 2024-11-05 NULL 12 0
+https://google.com
+Micah Davis CA F Democratic NULL 2002-01-10 House House 2024-11-05 2025-01-03 13 0
+https://google.com
+Sandro Silva CA F Republican NULL 1985-06-24 NULL House 2024-11-05 2027-01-03 13 1
+https://google.com
+Shai Lee CA F Democratic NULL 1994-08-08 House House 2024-11-05 2025-01-03 14 0
+https://google.com
+Jaden Duke_Jr. CA F Republican NULL 2003-05-11 NULL House 2024-11-05 2027-01-03 14 1
+https://google.com
+Mikal Hall CA F Democratic NULL 1995-08-03 House House 2024-11-05 2027-01-03 15 1
+https://google.com
+David O'Neale CA F Republican NULL 2000-01-26 NULL House 2024-11-05 NULL 15 0
+https://google.com
+James McGowens CA M Democratic NULL 1994-01-26 House House 2024-11-05 2027-01-03 16 1
+https://google.com
+Nikola Queta CA F Republican NULL 1995-01-02 NULL House 2024-11-05 NULL 16 0
+https://google.com
+Vernon Birch CA F Democratic NULL 1994-07-02 House House 2024-11-05 2025-01-03 17 0
+https://google.com
+Caleb Kispert CA M Republican NULL 1990-03-05 NULL House 2024-11-05 2027-01-03 17 1
+https://google.com
+Daniel Schofield CA F Democratic NULL 1986-05-08 House House 2024-11-05 2025-01-03 18 0
+https://google.com
+Jason Zubac CA M Republican NULL 2002-11-08 NULL House 2024-11-05 2027-01-03 18 1
+https://google.com
+Seth Lee CA M Democratic NULL 1998-06-25 House House 2024-11-05 2025-01-03 19 0
+https://google.com
+Sandro Terry CA F Republican NULL 1998-02-03 NULL House 2024-11-05 2027-01-03 19 1
+https://google.com
+Chris Pinson CA F Libertarian NULL 1997-05-16 NULL House 2024-11-05 NULL 19 0 
+https://google.com
+Zeke Windler CA F Democratic NULL 1997-11-20 House House 2024-11-05 2027-01-03 20 1
+https://google.com
+Neemias Jerome CA M Republican NULL 1998-05-12 NULL House 2024-11-05 NULL 20 0
+https://google.com
+Deonte Goodwin CA F Democratic NULL 1992-08-18 House House 2024-11-05 2027-01-03 21 1
+https://google.com
+Dylan Boucher CA F Republican NULL 2002-02-13 NULL House 2024-11-05 NULL 21 0
+https://google.com
+T.J. Queen CA F Democratic NULL 1989-04-05 House House 2024-11-05 2025-01-03 22 0
+https://google.com
+Cameron Jones CA F Republican NULL 1999-06-27 NULL House 2024-11-05 2027-01-03 22 1
+https://google.com
+Andrew Beasley CA M Green NULL 1991-07-20 NULL House 2024-11-05 NULL 22 0 
+https://google.com
+Alperen Herro CA F Democratic NULL 1990-08-23 House House 2024-11-05 2025-01-03 23 0
+https://google.com
+Marvin Knight CA F Republican NULL 2000-01-09 NULL House 2024-11-05 2027-01-03 23 1
+https://google.com
+Kyle Garza CA M Democratic NULL 2002-10-03 House House 2024-11-05 2027-01-03 24 1
+https://google.com
+Orlando White CA F Republican NULL 1997-10-03 NULL House 2024-11-05 NULL 24 0
+https://google.com
+Jalen Melton CA M Democratic NULL 2002-02-27 House House 2024-11-05 2027-01-03 25 1
+https://google.com
+Ish Jackson CA F Republican NULL 1998-08-18 NULL House 2024-11-05 NULL 25 0
+https://google.com
+Walker Carter CA M Democratic NULL 2000-11-16 House House 2024-11-05 2025-01-03 26 0
+https://google.com
+JaVale Plumlee CA M Republican NULL 2001-11-06 NULL House 2024-11-05 2027-01-03 26 1
+https://google.com
+Jordan Butler_Jr. CA M Democratic NULL 1993-02-18 House House 2024-11-05 2027-01-03 27 1
+https://google.com
+Patrick Yurtseven CA F Republican NULL 2003-05-21 NULL House 2024-11-05 NULL 27 0
+https://google.com
+Jay Johnson CA M Democratic NULL 2002-02-27 House House 2024-11-05 2027-01-03 28 1
+https://google.com
+Mike Chandler CA F Republican NULL 1999-11-07 NULL House 2024-11-05 NULL 28 0
+https://google.com
+Sterling Looney CA M Democratic NULL 2000-07-06 House House 2024-11-05 2027-01-03 29 1
+https://google.com
+Trae Queen CA M Republican NULL 1998-06-20 NULL House 2024-11-05 NULL 29 0
+https://google.com
+Peyton Covington CA F Democratic NULL 2001-11-15 House House 2024-11-05 2027-01-03 30 1
+https://google.com
+Chris Osman CA M Republican NULL 1993-07-23 NULL House 2024-11-05 NULL 30 0
+https://google.com
+Chima Embiid CA M Democratic NULL 1991-02-05 House House 2024-11-05 2027-01-03 31 1
+https://google.com
+Jack Lopez CA F Republican NULL 1997-02-14 NULL House 2024-11-05 NULL 31 0
+https://google.com
+Kobi Lamb CA F Democratic NULL 2000-06-18 House House 2024-11-05 2027-01-03 32 1
+https://google.com
+Jalen Bol CA M Republican NULL 1997-11-29 NULL House 2024-11-05 NULL 32 0
+https://google.com
+Devonte' Fontecchio CA F Constitution NULL 1990-06-21 NULL House 2024-11-05 NULL 32 0 
+https://google.com
+Darius Thybulle CA M Democratic NULL 1990-10-24 House House 2024-11-05 2027-01-03 33 1
+https://google.com
+Zion Hayward CA F Republican NULL 1997-09-05 NULL House 2024-11-05 NULL 33 0
+https://google.com
+Boban Gafford CA M Democratic NULL 1998-05-12 House House 2024-11-05 2025-01-03 34 0
+https://google.com
+Anthony Huerter CA F Republican NULL 2000-06-12 NULL House 2024-11-05 2027-01-03 34 1
+https://google.com
+Javonte Agbaji CA F Democratic NULL 1999-09-27 House House 2024-11-05 2027-01-03 35 1
+https://google.com
+Jae Preston CA M Republican NULL 2003-03-16 NULL House 2024-11-05 NULL 35 0
+https://google.com
+Devon Garuba CA M Democratic NULL 2001-06-12 House House 2024-11-05 2027-01-03 36 1
+https://google.com
+Stanley LaRavia CA M Republican NULL 1998-10-06 NULL House 2024-11-05 NULL 36 0
+https://google.com
+Kevon Dunn CA F Democratic NULL 1990-07-15 House House 2024-11-05 2027-01-03 37 1
+https://google.com
+Jerami Butler_Jr. CA F Republican NULL 2000-08-25 NULL House 2024-11-05 NULL 37 0
+https://google.com
+Charles Korkmaz CA M Democratic NULL 1998-06-20 House House 2024-11-05 2027-01-03 38 1
+https://google.com
+Garrison Hernangomez CA M Republican NULL 1995-11-15 NULL House 2024-11-05 NULL 38 0
+https://google.com
+Robert Jackson CA M Democratic NULL 1993-05-04 House House 2024-11-05 2025-01-03 39 0
+https://google.com
+T.J. Hachimura CA F Republican NULL 1997-10-03 NULL House 2024-11-05 2027-01-03 39 1
+https://google.com
+Patrick Lyles CA F Democratic NULL 1999-08-23 House House 2024-11-05 2027-01-03 40 1
+https://google.com
+Naji Oubre_Jr. CA M Republican NULL 1991-09-19 NULL House 2024-11-05 NULL 40 0
+https://google.com
+Alize Minaya CA M Democratic NULL 2002-10-06 House House 2024-11-05 2027-01-03 41 1
+https://google.com
+Wendell Mann CA M Republican NULL 1997-10-17 NULL House 2024-11-05 NULL 41 0
+https://google.com
+James Harrell CA M Democratic NULL 2001-11-28 House House 2024-11-05 2025-01-03 42 0
+https://google.com
+Luke Liddell CA M Republican NULL 1995-09-16 NULL House 2024-11-05 2027-01-03 42 1
+https://google.com
+Markieff Williams CA F Green NULL 1995-10-26 NULL House 2024-11-05 NULL 42 0 
+https://google.com
+Jalen Rozier CA M Democratic NULL 1996-03-22 House House 2024-11-05 2025-01-03 43 0
+https://google.com
+Cory Christie CA F Republican NULL 1994-09-14 NULL House 2024-11-05 2027-01-03 43 1
+https://google.com
+Chance Jones CA F Libertarian NULL 1996-09-30 NULL House 2024-11-05 NULL 43 0 
+https://google.com
+Stanley Mills CA M Democratic NULL 1988-01-19 House House 2024-11-05 2027-01-03 44 1
+https://google.com
+Harrison Isaac CA F Republican NULL 1993-06-05 NULL House 2024-11-05 NULL 44 0
+https://google.com
+Gabe Carey_Jr. CA F Democratic NULL 2000-10-28 House House 2024-11-05 2027-01-03 45 1
+https://google.com
+Lindell Mathews CA M Republican NULL 2000-01-17 NULL House 2024-11-05 NULL 45 0
+https://google.com
+Kentavious Mathews CA M Libertarian NULL 1992-12-11 NULL House 2024-11-05 NULL 45 0 
+https://google.com
+Jamaree Leonard CA F Democratic NULL 2001-12-18 House House 2024-11-05 2025-01-03 46 0
+https://google.com
+James Allen CA F Republican NULL 2000-01-17 NULL House 2024-11-05 2027-01-03 46 1
+https://google.com
+Nikola Kleber CA F Democratic NULL 1993-06-16 House House 2024-11-05 2027-01-03 47 1
+https://google.com
+Kobi Wainright CA M Republican NULL 1995-03-10 NULL House 2024-11-05 NULL 47 0
+https://google.com
+Jonas Tillman CA F Green NULL 2002-11-25 NULL House 2024-11-05 NULL 47 0 
+https://google.com
+Tari Omoruyi CA F Democratic NULL 1994-01-31 House House 2024-11-05 2025-01-03 48 0
+https://google.com
+Leandro Juzang CA F Republican NULL 1997-08-25 NULL House 2024-11-05 2027-01-03 48 1
+https://google.com
+Juancho Irving CA F Democratic NULL 1996-05-03 House House 2024-11-05 2025-01-03 49 0
+https://google.com
+Max Williams CA M Republican NULL 1988-11-12 NULL House 2024-11-05 2027-01-03 49 1
+https://google.com
+Chance Paul CA M Democratic NULL 1990-07-15 House House 2024-11-05 2027-01-03 50 1
+https://google.com
+Marcus Williams CA M Republican NULL 1999-03-07 NULL House 2024-11-05 NULL 50 0
+https://google.com
+Kelly Anderson CA M Democratic NULL 1988-01-19 House House 2024-11-05 2027-01-03 51 1
+https://google.com
+Jaden Clarke CA F Republican NULL 2000-02-29 NULL House 2024-11-05 NULL 51 0
+https://google.com
+Trevor Jackson CA M Democratic NULL 2001-07-26 House House 2024-11-05 2027-01-03 52 1
+https://google.com
+Donte Bane CA M Republican NULL 1994-03-26 NULL House 2024-11-05 NULL 52 0
+https://google.com
+AJ Daniels CO M Democratic NULL 1997-02-23 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Lonnie Suggs CO F Republican NULL 1999-11-07 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Admiral Allen CO F Green NULL 2000-12-11 NULL House 2024-11-05 NULL 1 0 
+https://google.com
+Nicolas Martin_Jr. CO F Democratic NULL 1995-02-19 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Trey Bogdanovic CO M Republican NULL 1993-10-15 NULL House 2024-11-05 NULL 2 0
+https://google.com
+LeBron Green CO M Democratic NULL 1996-07-20 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Kelly Richardson CO M Republican NULL 2002-07-03 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+Andrew Brown CO M Democratic NULL 2003-05-21 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Simone Williams CO F Republican NULL 1995-10-08 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Georges Brogdon CO F Democratic NULL 1991-02-05 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Kira Hernangomez CO F Republican NULL 2002-07-03 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Frank Williams CO M Democratic NULL 1990-12-19 House House 2024-11-05 2027-01-03 6 1
+https://google.com
+Donovan Reed CO M Republican NULL 1990-05-02 NULL House 2024-11-05 NULL 6 0
+https://google.com
+Josh Hunt CO F Constitution NULL 1993-04-04 NULL House 2024-11-05 NULL 6 0 
+https://google.com
+Kyle Roby CO F Democratic NULL 1997-02-14 House House 2024-11-05 2027-01-03 7 1
+https://google.com
+Usman Konchar CO F Republican NULL 1990-06-12 NULL House 2024-11-05 NULL 7 0
+https://google.com
+Sandro Nurkic CO M Democratic NULL 2000-04-20 House House 2024-11-05 2025-01-03 8 0
+https://google.com
+Xavier Gay CO F Republican NULL 1996-11-20 NULL House 2024-11-05 2027-01-03 8 1
+https://google.com
+Ricky Kispert CT M Democratic NULL 1998-01-20 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Jacob Wagner CT M Republican NULL 1988-09-07 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Clint Griffin CT F Democratic NULL 1998-02-08 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Jared Rollins CT F Republican NULL 1986-08-28 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Michael Butler CT F Democratic NULL 1994-04-02 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Khris Gill CT F Republican NULL 1992-05-06 NULL House 2024-11-05 NULL 3 0
+https://google.com
+George Davis CT F Democratic NULL 2000-07-15 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Naji Herro CT M Republican NULL 2000-11-09 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Moses Murray CT M Libertarian NULL 2000-10-12 NULL House 2024-11-05 NULL 4 0 
+https://google.com
+Jeff Beverley CT F Democratic NULL 1988-03-14 House House 2024-11-05 2025-01-03 5 0
+https://google.com
+Derrick Nwora CT F Republican NULL 1999-09-24 NULL House 2024-11-05 2027-01-03 5 1
+https://google.com
+Rodney Jackson_Jr. DE F Democratic NULL 1997-08-14 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Chris Antetokounmpo DE M Republican NULL 1996-05-10 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Jordan Middleton FL F Democratic NULL 1992-06-07 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Derrick Horford FL M Republican NULL 1992-03-25 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Frank Richardson FL F Democratic NULL 1998-04-06 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Jalen Hampton FL F Republican NULL 2001-02-03 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Isaiah Roddy FL M Democratic NULL 1988-12-25 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Kyle Fernando FL M Republican NULL 1996-01-22 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Onyeka Duke_Jr. FL M Democratic NULL 1995-09-28 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Ousmane Korkmaz FL F Republican NULL 1994-04-08 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Wendell Sengun FL F Democratic NULL 1999-04-19 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Alex Clarke FL F Republican NULL 2000-10-12 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Markelle Rhoden FL M Democratic NULL 1997-08-25 House House 2024-11-05 2025-01-03 6 0
+https://google.com
+Dereon Johnson FL M Republican NULL 1996-10-18 NULL House 2024-11-05 2027-01-03 6 1
+https://google.com
+Brandon Connaughton FL F Democratic NULL 1999-02-20 House House 2024-11-05 2027-01-03 7 1
+https://google.com
+Russell Bagley_III FL F Republican NULL 1995-07-24 NULL House 2024-11-05 NULL 7 0
+https://google.com
+Christian Warren FL M Democratic NULL 1989-08-12 House House 2024-11-05 2027-01-03 8 1
+https://google.com
+Domantas King FL F Republican NULL 1998-06-20 NULL House 2024-11-05 NULL 8 0
+https://google.com
+Jaylen LaRavia FL F Democratic NULL 1997-12-30 House House 2024-11-05 2025-01-03 9 0
+https://google.com
+Terrence Strus FL F Republican NULL 1997-10-03 NULL House 2024-11-05 2027-01-03 9 1
+https://google.com
+Collin Augustin FL M Democratic NULL 1996-08-31 House House 2024-11-05 2027-01-03 10 1
+https://google.com
+Dereon Barnes FL M Republican NULL 1990-10-21 NULL House 2024-11-05 NULL 10 0
+https://google.com
+Nicolas Pritchard FL F Democratic NULL 2000-11-16 House House 2024-11-05 2025-01-03 11 0
+https://google.com
+Maxi Davis FL M Republican NULL 2000-09-11 NULL House 2024-11-05 2027-01-03 11 1
+https://google.com
+Anthony Drummond FL M Democratic NULL 1994-09-12 House House 2024-11-05 2027-01-03 12 1
+https://google.com
+Dylan Bolmaro FL F Republican NULL 1998-04-12 NULL House 2024-11-05 NULL 12 0
+https://google.com
+Jake Doncic FL M Democratic NULL 1995-02-19 House House 2024-11-05 2025-01-03 13 0
+https://google.com
+Thomas Smith_Jr. FL M Republican NULL 2001-12-18 NULL House 2024-11-05 2027-01-03 13 1
+https://google.com
+Terance Morris_Sr. FL F Democratic NULL 1991-09-06 House House 2024-11-05 2025-01-03 14 0
+https://google.com
+Trevor King FL M Republican NULL 1999-06-23 NULL House 2024-11-05 2027-01-03 14 1
+https://google.com
+John Carter FL F Democratic NULL 1999-02-28 House House 2024-11-05 2027-01-03 15 1
+https://google.com
+Vlatko Morris_Sr. FL F Republican NULL 1997-02-01 NULL House 2024-11-05 NULL 15 0
+https://google.com
+Andre Winslow FL F Democratic NULL 1989-08-26 House House 2024-11-05 2025-01-03 16 0
+https://google.com
+Chris Dieng FL F Republican NULL 1998-03-28 NULL House 2024-11-05 2027-01-03 16 1
+https://google.com
+Bruno Johnson FL M Democratic NULL 1997-02-25 House House 2024-11-05 2027-01-03 17 1
+https://google.com
+Markelle Dorsey FL F Republican NULL 2000-10-12 NULL House 2024-11-05 NULL 17 0
+https://google.com
+Khris Branham FL F Democratic NULL 2000-08-25 House House 2024-11-05 2025-01-03 18 0
+https://google.com
+Charles Vincent FL F Republican NULL 1998-10-25 NULL House 2024-11-05 2027-01-03 18 1
+https://google.com
+Marko Capela FL M Constitution NULL 2001-08-05 NULL House 2024-11-05 NULL 18 0 
+https://google.com
+Georges Hield FL M Democratic NULL 1998-03-03 House House 2024-11-05 2027-01-03 19 1
+https://google.com
+Naz Valanciunas FL M Republican NULL 1995-10-15 NULL House 2024-11-05 NULL 19 0
+https://google.com
+Ousmane Lofton_Jr. FL M Democratic NULL 2002-01-21 House House 2024-11-05 2027-01-03 20 1
+https://google.com
+JT Bates-Diop FL M Republican NULL 1998-09-05 NULL House 2024-11-05 NULL 20 0
+https://google.com
+Jeenathan Towns FL M Democratic NULL 1993-09-15 House House 2024-11-05 2025-01-03 21 0
+https://google.com
+Kira Nowell FL F Republican NULL 1986-03-25 NULL House 2024-11-05 2027-01-03 21 1
+https://google.com
+Justin Gilgeous-Alexander FL F Democratic NULL 1996-04-09 House House 2024-11-05 2025-01-03 22 0
+https://google.com
+Danny Okeke FL F Republican NULL 1997-03-22 NULL House 2024-11-05 2027-01-03 22 1
+https://google.com
+Keldon Turner FL M Democratic NULL 1993-07-23 House House 2024-11-05 2027-01-03 23 1
+https://google.com
+Keon Milton FL F Republican NULL 1996-09-19 NULL House 2024-11-05 NULL 23 0
+https://google.com
+LaMelo Williams FL F Green NULL 2002-06-19 NULL House 2024-11-05 NULL 23 0 
+https://google.com
+Jordan White FL F Democratic NULL 2001-10-13 House House 2024-11-05 2027-01-03 24 1
+https://google.com
+Desmond Johnson FL M Republican NULL 1999-10-11 NULL House 2024-11-05 NULL 24 0
+https://google.com
+Klay Moore_Jr. FL F Democratic NULL 1988-07-12 House House 2024-11-05 2027-01-03 25 1
+https://google.com
+Reggie Bogdanovic FL F Republican NULL 1992-08-18 NULL House 2024-11-05 NULL 25 0
+https://google.com
+Caleb Lopez FL M Democratic NULL 1995-02-22 House House 2024-11-05 2025-01-03 26 0
+https://google.com
+Torrey Duren FL F Republican NULL 2000-08-19 NULL House 2024-11-05 2027-01-03 26 1
+https://google.com
+Markelle Morant FL F Democratic NULL 1994-07-02 House House 2024-11-05 2025-01-03 27 0
+https://google.com
+Kyle Vassell FL F Republican NULL 1986-03-25 NULL House 2024-11-05 2027-01-03 27 1
+https://google.com
+Justin Kaminsky FL M Democratic NULL 1999-02-20 House House 2024-11-05 2025-01-03 28 0
+https://google.com
+Keldon Langford FL M Republican NULL 2000-07-15 NULL House 2024-11-05 2027-01-03 28 1
+https://google.com
+Kristaps Mathews GA F Democratic NULL 1991-07-01 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Jamal Poole GA F Republican NULL 1990-03-05 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Tyler Arcidiacono GA F Democratic NULL 1992-05-19 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Chris Beal GA M Republican NULL 2003-06-09 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Lindy Grant GA F Democratic NULL 1997-12-20 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Isaiah Maxey GA F Republican NULL 1994-01-31 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+Jeff Conley GA F Democratic NULL 1998-07-12 House House 2024-11-05 2025-01-03 4 0
+https://google.com
+Larry George GA M Republican NULL 2002-06-29 NULL House 2024-11-05 2027-01-03 4 1
+https://google.com
+Blake Alvarado GA F Democratic NULL 1997-06-13 House House 2024-11-05 2025-01-03 5 0
+https://google.com
+Svi Collins GA F Republican NULL 1996-08-30 NULL House 2024-11-05 2027-01-03 5 1
+https://google.com
+Quenton Merrill GA M Democratic NULL 1998-03-03 House House 2024-11-05 2025-01-03 6 0
+https://google.com
+Mitchell Valanciunas GA M Republican NULL 1985-05-06 NULL House 2024-11-05 2027-01-03 6 1
+https://google.com
+Thaddeus Little GA F Democratic NULL 2002-08-26 House House 2024-11-05 2025-01-03 7 0
+https://google.com
+Dillon Robinson GA F Republican NULL 1990-02-08 NULL House 2024-11-05 2027-01-03 7 1
+https://google.com
+Facundo Mobley GA M Democratic NULL 1990-09-06 House House 2024-11-05 2027-01-03 8 1
+https://google.com
+Mamadi Thompson GA M Republican NULL 2000-02-16 NULL House 2024-11-05 NULL 8 0
+https://google.com
+Bobby Hunter GA M Democratic NULL 2002-02-13 House House 2024-11-05 2025-01-03 9 0
+https://google.com
+Jamaree Kessler GA F Republican NULL 2002-08-14 NULL House 2024-11-05 2027-01-03 9 1
+https://google.com
+Dereon Davis GA F Green NULL 1999-11-07 NULL House 2024-11-05 NULL 9 0 
+https://google.com
+Trae McClung GA F Democratic NULL 1988-06-21 House House 2024-11-05 2025-01-03 10 0
+https://google.com
+Bryn Kabengele GA F Republican NULL 2000-06-14 NULL House 2024-11-05 2027-01-03 10 1
+https://google.com
+Svi Ingram GA M Democratic NULL 1998-05-05 House House 2024-11-05 2027-01-03 11 1
+https://google.com
+Daishen Richardson GA M Republican NULL 1988-06-21 NULL House 2024-11-05 NULL 11 0
+https://google.com
+Jay James GA F Democratic NULL 2002-07-05 House House 2024-11-05 2027-01-03 12 1
+https://google.com
+Davis Collins GA F Republican NULL 1988-06-21 NULL House 2024-11-05 NULL 12 0
+https://google.com
+Jacob Harris GA F Constitution NULL 1988-10-04 NULL House 2024-11-05 NULL 12 0 
+https://google.com
+Boban Green GA M Democratic NULL 2001-11-03 House House 2024-11-05 2027-01-03 13 1
+https://google.com
+Ivica Fox GA F Republican NULL 1998-09-01 NULL House 2024-11-05 NULL 13 0
+https://google.com
+Patty Zubac GA F Democratic NULL 1997-12-08 House House 2024-11-05 2027-01-03 14 1
+https://google.com
+Garrett Schofield GA F Republican NULL 1993-09-05 NULL House 2024-11-05 NULL 14 0
+https://google.com
+Terance Silva HI F Democratic NULL 1999-10-25 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Patty Springer HI F Republican NULL 1991-08-12 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Mitchell Wiggins HI M Democratic NULL 1999-09-23 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Joe Dedmon HI F Republican NULL 1993-06-28 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Nathan Simons ID M Democratic NULL 1988-07-21 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Marko Shamet ID M Republican NULL 2001-11-28 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Jay Rivers ID M Democratic NULL 1999-09-27 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Jay Vonleh ID F Republican NULL 1998-09-01 NULL House 2024-11-05 NULL 2 0
+https://google.com
+Isaiah Green IL F Democratic NULL 2000-11-10 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Jamal Cunningham IL M Republican NULL 1991-07-29 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Kobi McGee IL F Democratic NULL 1999-06-14 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Richaun Lee IL M Republican NULL 2003-06-09 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Eugene Thybulle IL M Democratic NULL 1996-08-31 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Stanley Jones IL F Republican NULL 1996-03-28 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+Carlik Edwards IL M Democratic NULL 2001-07-27 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Andre Christie IL M Republican NULL 1992-10-05 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Duane Stewart IL F Constitution NULL 2000-10-28 NULL House 2024-11-05 NULL 4 0 
+https://google.com
+Zach Simons IL F Democratic NULL 2000-05-23 House House 2024-11-05 2025-01-03 5 0
+https://google.com
+Ja Beasley IL M Republican NULL 1985-05-05 NULL House 2024-11-05 2027-01-03 5 1
+https://google.com
+Jock Ellis IL F Libertarian NULL 1997-08-05 NULL House 2024-11-05 NULL 5 0 
+https://google.com
+Chima Green IL F Democratic NULL 1999-04-19 House House 2024-11-05 2025-01-03 6 0
+https://google.com
+Kenyon Pritchard IL F Republican NULL 1996-09-19 NULL House 2024-11-05 2027-01-03 6 1
+https://google.com
+Markieff Washington_Jr. IL M Democratic NULL 1988-08-15 House House 2024-11-05 2027-01-03 7 1
+https://google.com
+Matt Preston IL F Republican NULL 2000-04-20 NULL House 2024-11-05 NULL 7 0
+https://google.com
+Naz Plumlee IL F Democratic NULL 1994-12-06 House House 2024-11-05 2025-01-03 8 0
+https://google.com
+Aaron Irving IL F Republican NULL 1999-03-07 NULL House 2024-11-05 2027-01-03 8 1
+https://google.com
+Khris Vincent IL F Democratic NULL 1994-03-18 House House 2024-11-05 2025-01-03 9 0
+https://google.com
+Markieff Washington_Jr. IL M Republican NULL 2002-11-08 NULL House 2024-11-05 2027-01-03 9 1
+https://google.com
+Kai Williams IL M Democratic NULL 1996-10-18 House House 2024-11-05 2025-01-03 10 0
+https://google.com
+Frank Porter_Jr. IL M Republican NULL 1999-06-19 NULL House 2024-11-05 2027-01-03 10 1
+https://google.com
+James Minott IL M Democratic NULL 1994-01-26 House House 2024-11-05 2025-01-03 11 0
+https://google.com
+Keldon Payne IL F Republican NULL 1993-10-06 NULL House 2024-11-05 2027-01-03 11 1
+https://google.com
+Garrison Tillman IL F Democratic NULL 1996-03-28 House House 2024-11-05 2027-01-03 12 1
+https://google.com
+Nikola Gordon IL M Republican NULL 2001-09-12 NULL House 2024-11-05 NULL 12 0
+https://google.com
+Grant Hernangomez IL M Democratic NULL 1996-01-23 House House 2024-11-05 2025-01-03 13 0
+https://google.com
+Taj Minaya IL F Republican NULL 2000-07-10 NULL House 2024-11-05 2027-01-03 13 1
+https://google.com
+Feron Oladipo IL M Democratic NULL 1997-02-14 House House 2024-11-05 2027-01-03 14 1
+https://google.com
+Delon Rubio IL M Republican NULL 1994-03-22 NULL House 2024-11-05 NULL 14 0
+https://google.com
+Feron Haliburton IL M Democratic NULL 1996-03-26 House House 2024-11-05 2025-01-03 15 0
+https://google.com
+Caleb Beverley IL M Republican NULL 1996-01-22 NULL House 2024-11-05 2027-01-03 15 1
+https://google.com
+Micah Duren IL F Democratic NULL 2003-05-26 House House 2024-11-05 2025-01-03 16 0
+https://google.com
+Will Horton-Tucker IL F Republican NULL 1995-08-03 NULL House 2024-11-05 2027-01-03 16 1
+https://google.com
+Ryan Middleton IL M Democratic NULL 1999-04-28 House House 2024-11-05 2027-01-03 17 1
+https://google.com
+Monte Simmons IL M Republican NULL 2002-10-13 NULL House 2024-11-05 NULL 17 0
+https://google.com
+Tyler Queen IN F Democratic NULL 1998-02-03 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+James Ibaka IN M Republican NULL 1986-06-03 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Karl-Anthony Holiday IN M Libertarian NULL 1988-06-21 NULL House 2024-11-05 NULL 1 0 
+https://google.com
+Andrew Beal IN F Democratic NULL 1998-09-19 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Kendall Wieskamp IN M Republican NULL 1998-02-08 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Ibou Hunter IN M Democratic NULL 1994-04-22 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Davon Coffey IN F Republican NULL 1990-05-02 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Skylar Brown_III IN F Democratic NULL 1992-08-18 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Chris Wiggins IN F Republican NULL 1985-05-05 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Terrence Holiday IN M Democratic NULL 2001-08-01 House House 2024-11-05 2025-01-03 5 0
+https://google.com
+Amir Brooks IN M Republican NULL 1998-08-23 NULL House 2024-11-05 2027-01-03 5 1
+https://google.com
+Jeremy Murphy_III IN M Democratic NULL 2000-10-12 House House 2024-11-05 2025-01-03 6 0
+https://google.com
+Bryce Green IN F Republican NULL 1997-07-31 NULL House 2024-11-05 2027-01-03 6 1
+https://google.com
+McKinley Griffin IN F Constitution NULL 2002-07-25 NULL House 2024-11-05 NULL 6 0 
+https://google.com
+Delon Reaves IN M Democratic NULL 1994-08-08 House House 2024-11-05 2025-01-03 7 0
+https://google.com
+Kobi Kuzma IN M Republican NULL 2000-05-04 NULL House 2024-11-05 2027-01-03 7 1
+https://google.com
+Royce Diabate IN F Democratic NULL 1992-12-01 House House 2024-11-05 2025-01-03 8 0
+https://google.com
+Jrue Carter-Williams IN F Republican NULL 1996-08-31 NULL House 2024-11-05 2027-01-03 8 1
+https://google.com
+Frank Johnson IN M Democratic NULL 1999-02-12 House House 2024-11-05 2027-01-03 9 1
+https://google.com
+Jaden Diakite IN M Republican NULL 2000-12-11 NULL House 2024-11-05 NULL 9 0
+https://google.com
+Oshae Hill IA M Democratic NULL 1995-08-24 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Tyus Hauser IA F Republican NULL 2000-06-20 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Cade Robinson IA M Democratic NULL 1997-07-24 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Malachi Agbaji IA M Republican NULL 1995-08-19 NULL House 2024-11-05 NULL 2 0
+https://google.com
+A.J. Johnson IA M Democratic NULL 1997-09-23 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Walker McDaniels IA F Republican NULL 1988-07-12 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+Tobias Jones_Jr. IA M Constitution NULL 2001-11-03 NULL House 2024-11-05 NULL 3 0 
+https://google.com
+Draymond Biyombo IA F Democratic NULL 1998-02-04 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Wendell Livers IA M Republican NULL 1998-06-12 NULL House 2024-11-05 NULL 4 0
+https://google.com
+CJ Krejci IA M Constitution NULL 1997-05-16 NULL House 2024-11-05 NULL 4 0 
+https://google.com
+Sterling Cooks KS F Democratic NULL 2001-01-10 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Bruce Thomas KS F Republican NULL 2000-08-25 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Eugene Brantley KS M Democratic NULL 1992-03-25 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Sam Scrubb KS F Republican NULL 1996-08-31 NULL House 2024-11-05 NULL 2 0
+https://google.com
+Jaren Dosunmu KS F Democratic NULL 1995-10-26 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Furkan Rose KS M Republican NULL 1992-08-18 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+Tim Moody KS F Democratic NULL 2000-07-06 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Kai Aldama KS M Republican NULL 1999-09-27 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Walker Burton KY M Democratic NULL 1997-12-23 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Matthew Forbes KY F Republican NULL 2003-03-16 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Wendell Mathurin KY M Democratic NULL 1994-12-02 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Davis Diallo KY F Republican NULL 2000-12-11 NULL House 2024-11-05 NULL 2 0
+https://google.com
+Daishen Chandler KY M Democratic NULL 1996-04-22 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Blake Holmes KY F Republican NULL 1992-09-28 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+Patrick McClung KY M Constitution NULL 1989-09-18 NULL House 2024-11-05 NULL 3 0 
+https://google.com
+Kobi McGruder KY F Democratic NULL 1998-05-28 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Josh Pokusevski KY M Republican NULL 1996-11-26 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Patrick Mykhailiuk KY F Democratic NULL 1989-08-12 House House 2024-11-05 2025-01-03 5 0
+https://google.com
+Vlatko Beasley KY M Republican NULL 1991-07-20 NULL House 2024-11-05 2027-01-03 5 1
+https://google.com
+Bismack Sumner KY F Democratic NULL 1991-07-29 House House 2024-11-05 2027-01-03 6 1
+https://google.com
+James Trent_Jr. KY M Republican NULL 1999-07-28 NULL House 2024-11-05 NULL 6 0
+https://google.com
+Chima Haslem LA F Democratic NULL 1999-06-19 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+James Moore_Jr. LA F Republican NULL 2000-12-11 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Jabari Thor LA F Democratic NULL 2002-06-19 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+John Merrill LA M Republican NULL 1994-10-13 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Tre Gill LA M Democratic NULL 1994-02-28 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Josh Wiggins LA F Republican NULL 1994-12-06 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Tyrese Diabate LA F Democratic NULL 1991-08-12 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Caris Green LA M Republican NULL 1995-11-05 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Alondes Vonleh LA F Democratic NULL 1992-05-06 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Quenton Jones LA M Republican NULL 1996-10-24 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Saben Wood LA F Democratic NULL 1989-08-12 House House 2024-11-05 2027-01-03 6 1
+https://google.com
+Brandon House_Jr. LA F Republican NULL 1998-08-23 NULL House 2024-11-05 NULL 6 0
+https://google.com
+Quentin Dosunmu ME M Democratic NULL 1991-02-05 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Amir Herro ME F Republican NULL 1999-06-27 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Bruno Barton ME M Democratic NULL 2001-01-19 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Michael Bagley_III ME F Republican NULL 2002-07-12 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Skylar Taylor MD M Democratic NULL 1997-07-17 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Joe Gilgeous-Alexander MD M Republican NULL 1989-04-05 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Jalen Antetokounmpo MD F Democratic NULL 1996-01-22 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Bojan Young MD M Republican NULL 2001-04-06 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Vit Green MD M Democratic NULL 2003-01-09 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Robert Rollins MD F Republican NULL 1999-08-10 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+Justin Young MD F Democratic NULL 1997-04-10 House House 2024-11-05 2025-01-03 4 0
+https://google.com
+Udoka Rubio MD M Republican NULL 1999-02-20 NULL House 2024-11-05 2027-01-03 4 1
+https://google.com
+De'Andre Birch MD F Democratic NULL 1992-05-19 House House 2024-11-05 2025-01-03 5 0
+https://google.com
+Malachi Langford MD F Republican NULL 1991-10-10 NULL House 2024-11-05 2027-01-03 5 1
+https://google.com
+Cade Lyles MD F Democratic NULL 1993-05-04 House House 2024-11-05 2025-01-03 6 0
+https://google.com
+TyTy Allen MD M Republican NULL 1996-03-22 NULL House 2024-11-05 2027-01-03 6 1
+https://google.com
+Isaiah Culver MD M Democratic NULL 1998-03-04 House House 2024-11-05 2027-01-03 7 1
+https://google.com
+John Eason MD M Republican NULL 2001-05-10 NULL House 2024-11-05 NULL 7 0
+https://google.com
+Eugene Mann MD M Democratic NULL 1997-02-14 House House 2024-11-05 2025-01-03 8 0
+https://google.com
+Donte Goodwin MD M Republican NULL 1996-12-09 NULL House 2024-11-05 2027-01-03 8 1
+https://google.com
+Kyle Lowry MA M Democratic NULL 1997-09-23 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Christian Clarkson MA F Republican NULL 1998-07-31 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Jalen Walker MA M Constitution NULL 1997-07-04 NULL House 2024-11-05 NULL 1 0 
+https://google.com
+Devonte' McDaniels MA F Democratic NULL 2002-03-09 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Brook James MA M Republican NULL 1995-08-19 NULL House 2024-11-05 NULL 2 0
+https://google.com
+Paul McGowens MA M Democratic NULL 1996-09-26 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Sandro Sneed MA F Republican NULL 1999-11-11 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Jeremiah Sabonis MA M Democratic NULL 1986-05-06 House House 2024-11-05 2025-01-03 4 0
+https://google.com
+Kevon Antetokounmpo MA M Republican NULL 1990-06-12 NULL House 2024-11-05 2027-01-03 4 1
+https://google.com
+Ivica Gafford MA F Democratic NULL 2000-09-29 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Justin Smith MA M Republican NULL 1997-09-23 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Isaiah Cauley-Stein MA M Democratic NULL 1996-01-22 House House 2024-11-05 2025-01-03 6 0
+https://google.com
+Trent Jones MA F Republican NULL 1998-06-29 NULL House 2024-11-05 2027-01-03 6 1
+https://google.com
+Chris Garza MA F Democratic NULL 1997-06-13 House House 2024-11-05 2027-01-03 7 1
+https://google.com
+Derrick Bagley_III MA M Republican NULL 2000-02-11 NULL House 2024-11-05 NULL 7 0
+https://google.com
+Bryce Diallo MA M Democratic NULL 1998-09-01 House House 2024-11-05 2027-01-03 8 1
+https://google.com
+Robert Nwora MA M Republican NULL 1988-01-19 NULL House 2024-11-05 NULL 8 0
+https://google.com
+Paul Williams MA F Democratic NULL 2002-10-06 House House 2024-11-05 2027-01-03 9 1
+https://google.com
+Chima Strus MA M Republican NULL 2001-12-16 NULL House 2024-11-05 NULL 9 0
+https://google.com
+Robert Jackson MI M Democratic NULL 1993-05-25 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Mike Winslow MI F Republican NULL 2001-05-10 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Devon Washington_Jr. MI F Democratic NULL 1993-09-15 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Mo Joseph MI F Republican NULL 1991-08-20 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Donovan Jordan MI M Democratic NULL 1998-08-15 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Michael Joe MI F Republican NULL 1996-10-30 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+Leandro Grant MI M Democratic NULL 1992-05-30 House House 2024-11-05 2025-01-03 4 0
+https://google.com
+Hamidou Primo MI M Republican NULL 1999-03-14 NULL House 2024-11-05 2027-01-03 4 1
+https://google.com
+Jeenathan Alvarado MI M Democratic NULL 1995-08-24 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Haywood LaVine MI M Republican NULL 1997-02-23 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Bryce Adebayo MI M Democratic NULL 1992-10-29 House House 2024-11-05 2027-01-03 6 1
+https://google.com
+Bennedict Marjanovic MI M Republican NULL 2003-05-21 NULL House 2024-11-05 NULL 6 0
+https://google.com
+Jalen Antetokounmpo MI M Democratic NULL 1990-01-18 House House 2024-11-05 2027-01-03 7 1
+https://google.com
+Garrett Jackson MI F Republican NULL 1993-07-20 NULL House 2024-11-05 NULL 7 0
+https://google.com
+Tyrese Marshall MI M Democratic NULL 1993-09-20 House House 2024-11-05 2025-01-03 8 0
+https://google.com
+AJ Arcidiacono MI F Republican NULL 1998-05-29 NULL House 2024-11-05 2027-01-03 8 1
+https://google.com
+Chris Jones_Jr. MI M Democratic NULL 1999-10-13 House House 2024-11-05 2025-01-03 9 0
+https://google.com
+Jack Isaac MI F Republican NULL 2002-05-31 NULL House 2024-11-05 2027-01-03 9 1
+https://google.com
+Ivica Powell MI F Democratic NULL 1987-02-20 House House 2024-11-05 2025-01-03 10 0
+https://google.com
+Dejounte Jones MI F Republican NULL 1996-11-20 NULL House 2024-11-05 2027-01-03 10 1
+https://google.com
+P.J. Saric MI M Libertarian NULL 1997-08-25 NULL House 2024-11-05 NULL 10 0 
+https://google.com
+Jay Paul MI F Democratic NULL 1989-09-18 House House 2024-11-05 2027-01-03 11 1
+https://google.com
+De'Andre Highsmith MI F Republican NULL 1994-10-13 NULL House 2024-11-05 NULL 11 0
+https://google.com
+Isaiah Fox MI M Democratic NULL 1992-07-18 House House 2024-11-05 2027-01-03 12 1
+https://google.com
+Jeff Lawson MI M Republican NULL 1998-03-04 NULL House 2024-11-05 NULL 12 0
+https://google.com
+Jonas Carey_Jr. MI M Democratic NULL 2002-05-31 House House 2024-11-05 2025-01-03 13 0
+https://google.com
+Trey Dedmon MI M Republican NULL 1996-04-14 NULL House 2024-11-05 2027-01-03 13 1
+https://google.com
+Jaden Morris MN M Democratic NULL 1992-01-03 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+De'Aaron Mathews MN F Republican NULL 1992-12-17 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Tyus Zeller MN F Constitution NULL 1995-02-22 NULL House 2024-11-05 NULL 1 0 
+https://google.com
+Meyers Braun MN M Democratic NULL 1999-10-25 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Cedi Dort MN F Republican NULL 2003-11-18 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Nathan Garland MN M Democratic NULL 2000-02-16 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Jarrett Liddell MN F Republican NULL 1988-04-01 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+Dylan Jovic MN M Constitution NULL 1991-02-05 NULL House 2024-11-05 NULL 3 0 
+https://google.com
+Gary Adebayo MN F Democratic NULL 1999-02-20 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Dillon Morris MN M Republican NULL 1997-12-20 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Malachi Jackson_Jr. MN M Democratic NULL 1993-07-23 House House 2024-11-05 2025-01-03 5 0
+https://google.com
+Khem Duke_Jr. MN M Republican NULL 1998-04-06 NULL House 2024-11-05 2027-01-03 5 1
+https://google.com
+Michael Olynyk MN M Democratic NULL 2001-08-27 House House 2024-11-05 2027-01-03 6 1
+https://google.com
+Kyle McGee MN F Republican NULL 1996-04-22 NULL House 2024-11-05 NULL 6 0
+https://google.com
+Wendell Horford MN F Democratic NULL 2001-07-27 House House 2024-11-05 2025-01-03 7 0
+https://google.com
+Harrison Johnson MN F Republican NULL 1996-02-06 NULL House 2024-11-05 2027-01-03 7 1
+https://google.com
+Raul Noel MN M Democratic NULL 1992-10-29 House House 2024-11-05 2027-01-03 8 1
+https://google.com
+Aaron Morris MN F Republican NULL 1994-03-18 NULL House 2024-11-05 NULL 8 0
+https://google.com
+Cody Boeheim MS F Democratic NULL 1996-05-03 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Shai Rose MS F Republican NULL 1994-04-02 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Joe George MS F Democratic NULL 2001-01-03 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Olivier Oubre_Jr. MS M Republican NULL 2002-02-27 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Keon Ivey MS F Democratic NULL 1995-08-24 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Kelly Alexander-Walker MS F Republican NULL 1986-05-08 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+Terence Brunson MS M Democratic NULL 1988-07-12 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Cameron Gay MS F Republican NULL 2002-12-24 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Gorgui Murray MO F Democratic NULL 2001-11-03 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Shake Potter MO M Republican NULL 2002-10-06 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Jalen Green MO F Democratic NULL 1992-09-28 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Aaron Martin_Jr. MO M Republican NULL 2002-10-10 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Braxton Green MO M Democratic NULL 1991-07-15 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Thomas Reaves MO M Republican NULL 2001-11-06 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Kyrie Connaughton MO F Democratic NULL 2002-10-10 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Marko Collins MO M Republican NULL 1999-04-12 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Keita Agbaji MO M Democratic NULL 1991-03-23 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Jalen Matthews MO M Republican NULL 1990-04-16 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Kyle Curry MO F Democratic NULL 1991-07-20 House House 2024-11-05 2027-01-03 6 1
+https://google.com
+Robin Walker MO M Republican NULL 1999-10-13 NULL House 2024-11-05 NULL 6 0
+https://google.com
+Myles Gordon MO M Democratic NULL 1994-02-25 House House 2024-11-05 2027-01-03 7 1
+https://google.com
+Jay Rubio MO F Republican NULL 1997-08-14 NULL House 2024-11-05 NULL 7 0
+https://google.com
+George Antetokounmpo MO M Democratic NULL 1997-04-10 House House 2024-11-05 2027-01-03 8 1
+https://google.com
+Kai Korkmaz MO M Republican NULL 1992-03-23 NULL House 2024-11-05 NULL 8 0
+https://google.com
+Max Burton MT F Democratic NULL 1993-06-03 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Bol Duke_Jr. MT M Republican NULL 1993-10-06 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Josh Green MT M Democratic NULL 1999-08-27 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Romeo Gobert MT M Republican NULL 2001-02-25 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Lester Gilyard NE M Democratic NULL 1993-06-28 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Svi Kennard NE F Republican NULL 2002-07-25 NULL House 2024-11-05 NULL 1 0
+https://google.com
+John Middleton NE F Democratic NULL 2000-01-26 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Bojan Keels NE F Republican NULL 1997-08-14 NULL House 2024-11-05 NULL 2 0
+https://google.com
+Matthew Tate NE M Democratic NULL 2003-03-16 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Lester Arcidiacono NE F Republican NULL 1990-10-24 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+AJ Sexton NV F Democratic NULL 1994-09-12 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Chris Kleber NV M Republican NULL 2001-05-22 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Cameron Wright NV F Green NULL 1992-09-28 NULL House 2024-11-05 NULL 1 0 
+https://google.com
+Chuma Thor NV F Democratic NULL 1999-04-28 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Ochai White NV F Republican NULL 1985-05-06 NULL House 2024-11-05 NULL 2 0
+https://google.com
+Jaylen Brown NV F Democratic NULL 1998-06-13 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Josh Knight NV F Republican NULL 2001-01-19 NULL House 2024-11-05 NULL 3 0
+https://google.com
+RaiQuan Fernando NV F Democratic NULL 2000-07-10 House House 2024-11-05 2025-01-03 4 0
+https://google.com
+Jalen Forbes NV F Republican NULL 2001-11-06 NULL House 2024-11-05 2027-01-03 4 1
+https://google.com
+Nick Bryant NH M Democratic NULL 1999-10-25 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Tyus Garza NH M Republican NULL 1995-09-28 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Mark Conley NH M Democratic NULL 1999-06-27 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Feron Watson NH F Republican NULL 1999-09-23 NULL House 2024-11-05 NULL 2 0
+https://google.com
+Reggie Smith NJ F Democratic NULL 1999-01-02 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Robert Davison NJ M Republican NULL 1994-02-25 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Dorian Kuminga NJ M Democratic NULL 1992-08-28 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Justin Gabriel NJ M Republican NULL 1992-04-26 NULL House 2024-11-05 NULL 2 0
+https://google.com
+Anthony Edwards NJ F Democratic NULL 1992-05-30 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Bogdan Schroder NJ F Republican NULL 1991-07-20 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Markieff Okogie NJ F Democratic NULL 1993-08-18 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Wendell Nance_Jr. NJ F Republican NULL 1994-08-25 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Matt Hall NJ M Democratic NULL 1999-06-19 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Jaden Herro NJ F Republican NULL 1995-08-02 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Udonis Garland NJ M Democratic NULL 1999-07-02 House House 2024-11-05 2027-01-03 6 1
+https://google.com
+Jabari Hall NJ F Republican NULL 1999-06-19 NULL House 2024-11-05 NULL 6 0
+https://google.com
+Tyus Simmons NJ F Democratic NULL 1997-04-10 House House 2024-11-05 2027-01-03 7 1
+https://google.com
+Jrue Conley NJ F Republican NULL 1991-07-20 NULL House 2024-11-05 NULL 7 0
+https://google.com
+Isaiah Stevens NJ M Democratic NULL 2001-11-03 House House 2024-11-05 2025-01-03 8 0
+https://google.com
+Precious Love NJ F Republican NULL 1997-07-17 NULL House 2024-11-05 2027-01-03 8 1
+https://google.com
+Justin Ball NJ M Democratic NULL 2002-12-24 House House 2024-11-05 2025-01-03 9 0
+https://google.com
+Markelle Hampton NJ M Republican NULL 1998-09-02 NULL House 2024-11-05 2027-01-03 9 1
+https://google.com
+Jock Kornet NJ F Democratic NULL 2002-11-12 House House 2024-11-05 2025-01-03 10 0
+https://google.com
+Jevon Nesmith NJ F Republican NULL 2000-03-16 NULL House 2024-11-05 2027-01-03 10 1
+https://google.com
+Javonte Dotson NJ M Democratic NULL 1997-07-09 House House 2024-11-05 2027-01-03 11 1
+https://google.com
+Cameron Ryan NJ F Republican NULL 2001-06-29 NULL House 2024-11-05 NULL 11 0
+https://google.com
+Stanley Wainright NJ M Democratic NULL 1998-01-28 House House 2024-11-05 2025-01-03 12 0
+https://google.com
+Alex Johnson NJ M Republican NULL 1997-06-17 NULL House 2024-11-05 2027-01-03 12 1
+https://google.com
+Malik Tillman NM M Democratic NULL 1997-07-04 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Omer Favors NM M Republican NULL 1986-10-14 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Bojan Fournier NM M Democratic NULL 1996-12-09 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Devin Brown_Jr. NM M Republican NULL 1991-02-05 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Fred Augustin NM M Democratic NULL 1996-03-28 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Walker Smith_Jr. NM F Republican NULL 1984-01-28 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+Royce Rollins NY M Democratic NULL 1999-04-16 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Terrence Walker NY M Republican NULL 1998-09-09 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Saben Beal NY F Democratic NULL 1994-08-23 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Cole Adebayo NY F Republican NULL 1992-10-21 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Eric Muscala NY M Democratic NULL 1990-07-15 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Nikola Oubre_Jr. NY F Republican NULL 2000-09-11 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Paul Powell NY F Democratic NULL 2001-02-03 House House 2024-11-05 2025-01-03 4 0
+https://google.com
+Xavier Wade NY M Republican NULL 2000-08-25 NULL House 2024-11-05 2027-01-03 4 1
+https://google.com
+Kira Bagley_III NY M Democratic NULL 1997-12-20 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Dillon Wright NY M Republican NULL 2001-08-05 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Jordan Grimes NY F Democratic NULL 2000-06-12 House House 2024-11-05 2025-01-03 6 0
+https://google.com
+Tony Dellavedova NY F Republican NULL 1999-06-08 NULL House 2024-11-05 2027-01-03 6 1
+https://google.com
+Kobi Kispert NY M Democratic NULL 1994-03-18 House House 2024-11-05 2025-01-03 7 0
+https://google.com
+Kennedy Queta NY F Republican NULL 1998-08-27 NULL House 2024-11-05 2027-01-03 7 1
+https://google.com
+Grant Dedmon NY F Democratic NULL 1999-02-12 House House 2024-11-05 2025-01-03 8 0
+https://google.com
+Shai Gabriel NY M Republican NULL 1996-03-26 NULL House 2024-11-05 2027-01-03 8 1
+https://google.com
+Christian Portis NY M Democratic NULL 1989-09-02 House House 2024-11-05 2027-01-03 9 1
+https://google.com
+Ryan Hampton NY F Republican NULL 1993-09-15 NULL House 2024-11-05 NULL 9 0
+https://google.com
+Jeremiah Kleber NY F Democratic NULL 2002-11-18 House House 2024-11-05 2025-01-03 10 0
+https://google.com
+Otto Jovic NY M Republican NULL 1991-08-20 NULL House 2024-11-05 2027-01-03 10 1
+https://google.com
+Paul Anderson NY M Democratic NULL 1997-12-08 House House 2024-11-05 2025-01-03 11 0
+https://google.com
+McKinley Bouyea NY F Republican NULL 1999-10-16 NULL House 2024-11-05 2027-01-03 11 1
+https://google.com
+John Turner NY F Democratic NULL 1999-03-07 House House 2024-11-05 2025-01-03 12 0
+https://google.com
+Keon Krejci NY F Republican NULL 1988-11-12 NULL House 2024-11-05 2027-01-03 12 1
+https://google.com
+DeAndre Okoro NY F Democratic NULL 1988-01-19 House House 2024-11-05 2027-01-03 13 1
+https://google.com
+Kristaps Juzang NY M Republican NULL 1995-09-28 NULL House 2024-11-05 NULL 13 0
+https://google.com
+Christian Williams NY F Green NULL 1999-09-23 NULL House 2024-11-05 NULL 13 0 
+https://google.com
+Terence Jones_Jr. NY M Democratic NULL 1997-02-15 House House 2024-11-05 2025-01-03 14 0
+https://google.com
+Edmond Alvarado NY F Republican NULL 2000-05-04 NULL House 2024-11-05 2027-01-03 14 1
+https://google.com
+Quentin Holiday NY M Libertarian NULL 1997-03-18 NULL House 2024-11-05 NULL 14 0 
+https://google.com
+Moses Nowell NY F Democratic NULL 1998-01-28 House House 2024-11-05 2027-01-03 15 1
+https://google.com
+Mikal Carter NY F Republican NULL 2001-01-09 NULL House 2024-11-05 NULL 15 0
+https://google.com
+Moses Bey NY M Democratic NULL 1998-03-28 House House 2024-11-05 2025-01-03 16 0
+https://google.com
+Delon Achiuwa NY F Republican NULL 2002-08-14 NULL House 2024-11-05 2027-01-03 16 1
+https://google.com
+Eugene Konchar NY M Democratic NULL 1994-04-08 House House 2024-11-05 2025-01-03 17 0
+https://google.com
+Nicolas Marshall NY M Republican NULL 2002-10-13 NULL House 2024-11-05 2027-01-03 17 1
+https://google.com
+Michael Joe NY M Democratic NULL 1996-09-22 House House 2024-11-05 2027-01-03 18 1
+https://google.com
+Thomas Vonleh NY F Republican NULL 1996-05-10 NULL House 2024-11-05 NULL 18 0
+https://google.com
+Josh Dorsey NY M Democratic NULL 1986-05-06 House House 2024-11-05 2027-01-03 19 1
+https://google.com
+Juan McBride NY F Republican NULL 1996-07-20 NULL House 2024-11-05 NULL 19 0
+https://google.com
+Anfernee Nance_Jr. NY F Constitution NULL 1999-01-06 NULL House 2024-11-05 NULL 19 0 
+https://google.com
+Dennis Anthony NY M Democratic NULL 1994-02-28 House House 2024-11-05 2025-01-03 20 0
+https://google.com
+Moses Hall NY F Republican NULL 1998-12-27 NULL House 2024-11-05 2027-01-03 20 1
+https://google.com
+Kessler Lillard NY M Democratic NULL 1997-07-04 House House 2024-11-05 2027-01-03 21 1
+https://google.com
+Ben Knox_II NY F Republican NULL 2002-07-30 NULL House 2024-11-05 NULL 21 0
+https://google.com
+Dalano Dort NY M Democratic NULL 1999-07-09 House House 2024-11-05 2027-01-03 22 1
+https://google.com
+Dario Bertans NY F Republican NULL 1990-03-23 NULL House 2024-11-05 NULL 22 0
+https://google.com
+LeBron Thor NY M Democratic NULL 2003-01-09 House House 2024-11-05 2025-01-03 23 0
+https://google.com
+Immanuel Favors NY M Republican NULL 1992-05-04 NULL House 2024-11-05 2027-01-03 23 1
+https://google.com
+E.J. McGruder NY M Democratic NULL 1997-12-02 House House 2024-11-05 2025-01-03 24 0
+https://google.com
+Malik Barlow NY M Republican NULL 1999-05-08 NULL House 2024-11-05 2027-01-03 24 1
+https://google.com
+Mason Caruso NY F Democratic NULL 1999-10-13 House House 2024-11-05 2027-01-03 25 1
+https://google.com
+Shai Wall NY F Republican NULL 2000-03-24 NULL House 2024-11-05 NULL 25 0
+https://google.com
+Victor Achiuwa NY F Democratic NULL 1995-02-22 House House 2024-11-05 2025-01-03 26 0
+https://google.com
+Bruno Hill NY M Republican NULL 2000-10-28 NULL House 2024-11-05 2027-01-03 26 1
+https://google.com
+Dru Sneed NY M Constitution NULL 1998-04-21 NULL House 2024-11-05 NULL 26 0 
+https://google.com
+Day'Ron Lopez NC M Democratic NULL 1994-03-12 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Marvin Oladipo NC M Republican NULL 1995-06-27 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+Nic Champagnie NC F Democratic NULL 1996-02-06 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Feron Taylor NC M Republican NULL 2000-05-15 NULL House 2024-11-05 NULL 2 0
+https://google.com
+Cole Beal NC M Green NULL 2000-06-14 NULL House 2024-11-05 NULL 2 0 
+https://google.com
+E.J. Bouknight NC F Democratic NULL 1990-03-05 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Juan Batum NC M Republican NULL 1993-06-17 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Cameron Herro NC M Democratic NULL 1988-12-14 House House 2024-11-05 2025-01-03 4 0
+https://google.com
+Christian Winslow NC F Republican NULL 1997-05-22 NULL House 2024-11-05 2027-01-03 4 1
+https://google.com
+Sam Batum NC F Democratic NULL 1999-10-20 House House 2024-11-05 2025-01-03 5 0
+https://google.com
+Donovan Ibaka NC M Republican NULL 2003-05-13 NULL House 2024-11-05 2027-01-03 5 1
+https://google.com
+Blake Wood NC F Democratic NULL 1996-06-14 House House 2024-11-05 2025-01-03 6 0
+https://google.com
+Scottie Augustin NC F Republican NULL 1994-05-27 NULL House 2024-11-05 2027-01-03 6 1
+https://google.com
+Xavier Watanabe NC M Democratic NULL 1990-06-21 House House 2024-11-05 2025-01-03 7 0
+https://google.com
+Coby Ingles NC F Republican NULL 2001-09-01 NULL House 2024-11-05 2027-01-03 7 1
+https://google.com
+Shaquille Claxton NC F Libertarian NULL 1999-08-27 NULL House 2024-11-05 NULL 7 0 
+https://google.com
+Ryan Thomas NC M Democratic NULL 2003-08-26 House House 2024-11-05 2027-01-03 8 1
+https://google.com
+DeMar Lofton_Jr. NC F Republican NULL 1997-08-05 NULL House 2024-11-05 NULL 8 0
+https://google.com
+Alex Robinson NC M Democratic NULL 1994-03-22 House House 2024-11-05 2027-01-03 9 1
+https://google.com
+Paolo Morris NC M Republican NULL 1995-09-27 NULL House 2024-11-05 NULL 9 0
+https://google.com
+De'Andre Collins NC F Democratic NULL 1994-11-29 House House 2024-11-05 2025-01-03 10 0
+https://google.com
+Darius Langford NC F Republican NULL 1990-12-19 NULL House 2024-11-05 2027-01-03 10 1
+https://google.com
+Michael Roddy NC F Democratic NULL 2001-12-08 House House 2024-11-05 2027-01-03 11 1
+https://google.com
+Ryan Gibson NC F Republican NULL 1999-08-10 NULL House 2024-11-05 NULL 11 0
+https://google.com
+Payton Cancar NC M Democratic NULL 1999-08-26 House House 2024-11-05 2025-01-03 12 0
+https://google.com
+Darius Johnson NC F Republican NULL 1993-06-17 NULL House 2024-11-05 2027-01-03 12 1
+https://google.com
+Amir Kispert NC F Democratic NULL 2002-12-24 House House 2024-11-05 2025-01-03 13 0
+https://google.com
+Caleb Beal NC M Republican NULL 2003-05-26 NULL House 2024-11-05 2027-01-03 13 1
+https://google.com
+Jonas Landale NC F Democratic NULL 1997-08-30 House House 2024-11-05 2027-01-03 14 1
+https://google.com
+Dario McGowens NC F Republican NULL 1995-02-22 NULL House 2024-11-05 NULL 14 0
+https://google.com
+Lamar Kaminsky NC M Constitution NULL 1995-09-14 NULL House 2024-11-05 NULL 14 0 
+https://google.com
+Christian Chandler ND F Democratic NULL 1997-08-05 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Tyrese Keels ND M Republican NULL 1987-02-20 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Paolo Bates-Diop OH M Democratic NULL 1989-08-26 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Isaac Powell OH M Republican NULL 1999-08-10 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Christian Green OH M Democratic NULL 1995-10-28 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Cade Lewis_Jr. OH F Republican NULL 2001-06-29 NULL House 2024-11-05 NULL 2 0
+https://google.com
+Kawhi Connaughton OH F Democratic NULL 2003-05-11 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Stephen Gabriel OH M Republican NULL 2002-01-21 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Jarrell Dosunmu OH F Democratic NULL 2000-11-16 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Davion Little OH M Republican NULL 2000-01-17 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Bryce Augustin OH M Libertarian NULL 1990-04-16 NULL House 2024-11-05 NULL 4 0 
+https://google.com
+Torrey Capela OH F Democratic NULL 1993-01-06 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Caleb Isaac OH M Republican NULL 1989-08-07 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Mikal Rivers OH M Democratic NULL 2002-09-11 House House 2024-11-05 2027-01-03 6 1
+https://google.com
+Garrett Ibaka OH F Republican NULL 1992-05-06 NULL House 2024-11-05 NULL 6 0
+https://google.com
+Charles Antetokounmpo OH F Democratic NULL 1995-02-22 House House 2024-11-05 2025-01-03 7 0
+https://google.com
+Andre Potter OH M Republican NULL 1988-01-19 NULL House 2024-11-05 2027-01-03 7 1
+https://google.com
+Kevin Green OH F Democratic NULL 1998-01-20 House House 2024-11-05 2025-01-03 8 0
+https://google.com
+Myles Simmons OH F Republican NULL 1996-08-31 NULL House 2024-11-05 2027-01-03 8 1
+https://google.com
+A.J. Murray OH M Democratic NULL 1993-06-07 House House 2024-11-05 2025-01-03 9 0
+https://google.com
+Tre Banchero OH F Republican NULL 2001-11-03 NULL House 2024-11-05 2027-01-03 9 1
+https://google.com
+Marcus Hunt OH F Democratic NULL 1993-06-07 House House 2024-11-05 2025-01-03 10 0
+https://google.com
+Cory Gordon OH M Republican NULL 1997-05-16 NULL House 2024-11-05 2027-01-03 10 1
+https://google.com
+Oshae O'Neale OH M Democratic NULL 1993-06-16 House House 2024-11-05 2027-01-03 11 1
+https://google.com
+Peyton Milton OH F Republican NULL 1999-06-27 NULL House 2024-11-05 NULL 11 0
+https://google.com
+Keita Bertans OH F Democratic NULL 2000-08-23 House House 2024-11-05 2025-01-03 12 0
+https://google.com
+Isaiah Trent_Jr. OH M Republican NULL 2001-11-03 NULL House 2024-11-05 2027-01-03 12 1
+https://google.com
+Terry Clarke OH F Democratic NULL 1999-10-16 House House 2024-11-05 2025-01-03 13 0
+https://google.com
+Torrey Brantley OH F Republican NULL 1995-08-03 NULL House 2024-11-05 2027-01-03 13 1
+https://google.com
+Shaquille Preston OH F Democratic NULL 1998-04-21 House House 2024-11-05 2025-01-03 14 0
+https://google.com
+Kevin Richards OH F Republican NULL 1997-03-26 NULL House 2024-11-05 2027-01-03 14 1
+https://google.com
+James Williams OH M Democratic NULL 1999-07-13 House House 2024-11-05 2027-01-03 15 1
+https://google.com
+Kendrick Johnson OH M Republican NULL 1990-05-02 NULL House 2024-11-05 NULL 15 0
+https://google.com
+Jared Reid OK F Democratic NULL 1996-03-03 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Devin Mobley OK M Republican NULL 1995-11-15 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Jalen Mann OK F Democratic NULL 1992-12-01 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Trevor Hill OK F Republican NULL 1998-09-15 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Reggie Banchero OK F Democratic NULL 1998-09-15 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Jaylen Lamb OK F Republican NULL 1996-10-24 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Brandon Wagner OK F Democratic NULL 1997-11-29 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Marko Williams OK M Republican NULL 1998-06-20 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Jonathan O'Neale OK M Democratic NULL 1997-09-20 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Udonis Merrill OK M Republican NULL 1991-08-20 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Devon Reed OR M Democratic NULL 1998-04-01 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Kira Quickley OR M Republican NULL 1996-09-22 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Andre Reaves OR M Democratic NULL 2003-05-26 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Jonas Birch OR F Republican NULL 2000-02-29 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Kevin Covington OR M Democratic NULL 1998-11-30 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Quenton Gill OR M Republican NULL 1997-05-16 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+Desmond Aldama OR F Democratic NULL 1999-10-15 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Jimmy Simmons OR M Republican NULL 2001-01-26 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Gary Neto OR M Democratic NULL 1999-07-02 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Nikola Simonovic OR F Republican NULL 2000-09-29 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Stephen Murray OR F Democratic NULL 2000-04-20 House House 2024-11-05 2027-01-03 6 1
+https://google.com
+Gabe Lee OR F Republican NULL 1990-09-06 NULL House 2024-11-05 NULL 6 0
+https://google.com
+Mamadi Sabonis PA F Democratic NULL 1999-03-07 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Ja Robinson PA F Republican NULL 2001-06-29 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Vit Joe PA F Democratic NULL 1993-09-15 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Jalen Bane PA M Republican NULL 1987-10-11 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Thomas Simons PA M Democratic NULL 1998-02-03 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Kai Birch PA F Republican NULL 1993-07-20 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Jordan Forrest PA M Democratic NULL 2002-09-11 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Seth Nunn PA M Republican NULL 1998-11-30 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Jonathan Williams PA F Democratic NULL 1993-07-20 House House 2024-11-05 2025-01-03 5 0
+https://google.com
+Damion Osman PA F Republican NULL 1999-06-27 NULL House 2024-11-05 2027-01-03 5 1
+https://google.com
+Trendon Maledon PA M Democratic NULL 1996-09-19 House House 2024-11-05 2025-01-03 6 0
+https://google.com
+JaVale Wright_IV PA M Republican NULL 1995-06-30 NULL House 2024-11-05 2027-01-03 6 1
+https://google.com
+Darius Azubuike PA F Democratic NULL 2002-07-25 House House 2024-11-05 2025-01-03 7 0
+https://google.com
+Chuma Holiday PA F Republican NULL 1997-11-25 NULL House 2024-11-05 2027-01-03 7 1
+https://google.com
+Trae Adams PA M Democratic NULL 2000-12-18 House House 2024-11-05 2027-01-03 8 1
+https://google.com
+Trey Mitchell PA F Republican NULL 1996-06-24 NULL House 2024-11-05 NULL 8 0
+https://google.com
+Isaiah Maxey PA M Democratic NULL 2000-05-04 House House 2024-11-05 2027-01-03 9 1
+https://google.com
+Saddiq Barlow PA M Republican NULL 2000-11-16 NULL House 2024-11-05 NULL 9 0
+https://google.com
+Paul Embiid PA F Democratic NULL 1996-08-15 House House 2024-11-05 2027-01-03 10 1
+https://google.com
+Desmond Warren PA M Republican NULL 1998-12-27 NULL House 2024-11-05 NULL 10 0
+https://google.com
+Wendell Stewart PA F Democratic NULL 1992-10-29 House House 2024-11-05 2025-01-03 11 0
+https://google.com
+Dewayne Wiseman PA M Republican NULL 1998-01-28 NULL House 2024-11-05 2027-01-03 11 1
+https://google.com
+Justin Ntilikina PA M Democratic NULL 1992-10-29 House House 2024-11-05 2025-01-03 12 0
+https://google.com
+Jordan Gray PA M Republican NULL 2002-07-12 NULL House 2024-11-05 2027-01-03 12 1
+https://google.com
+Deandre Nwora PA M Democratic NULL 2000-01-16 House House 2024-11-05 2025-01-03 13 0
+https://google.com
+Gordon Payton_II PA F Republican NULL 1999-09-15 NULL House 2024-11-05 2027-01-03 13 1
+https://google.com
+Jordan Embiid PA M Democratic NULL 2000-09-29 House House 2024-11-05 2027-01-03 14 1
+https://google.com
+Nikola Washington_Jr. PA M Republican NULL 2002-01-14 NULL House 2024-11-05 NULL 14 0
+https://google.com
+Justin Griffin PA M Democratic NULL 1996-07-20 House House 2024-11-05 2025-01-03 15 0
+https://google.com
+Jonas Beauchamp PA F Republican NULL 1995-03-06 NULL House 2024-11-05 2027-01-03 15 1
+https://google.com
+Nickeil Jovic PA M Democratic NULL 1997-08-14 House House 2024-11-05 2027-01-03 16 1
+https://google.com
+Moritz Finney-Smith PA F Republican NULL 1995-07-24 NULL House 2024-11-05 NULL 16 0
+https://google.com
+LeBron McDaniels PA M Democratic NULL 2000-12-18 House House 2024-11-05 2027-01-03 17 1
+https://google.com
+Justise Richards PA M Republican NULL 1997-07-28 NULL House 2024-11-05 NULL 17 0
+https://google.com
+JT Bolmaro RI F Democratic NULL 1998-09-05 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Isaiah Kornet RI M Republican NULL 1999-04-03 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Nerlens Rozier RI M Democratic NULL 1994-11-29 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Michael Simmons RI F Republican NULL 1999-02-20 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Jaren Bouknight SC M Democratic NULL 2001-06-03 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Michael Hernangomez SC M Republican NULL 1998-07-14 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Noah Claxton SC F Democratic NULL 1996-03-26 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Keon DiVincenzo SC F Republican NULL 1991-10-10 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Moritz Wagner SC M Democratic NULL 2000-01-26 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Dejounte Ross SC M Republican NULL 1997-10-03 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+Brandon Hart SC M Democratic NULL 1992-08-01 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Jaden Lowry SC F Republican NULL 1997-03-26 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Royce Thompson SC F Democratic NULL 1992-03-16 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Gary Anunoby SC M Republican NULL 2001-11-28 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Jalen Smith SC M Democratic NULL 2002-11-25 House House 2024-11-05 2025-01-03 6 0
+https://google.com
+JaVale Vincent SC F Republican NULL 2001-03-17 NULL House 2024-11-05 2027-01-03 6 1
+https://google.com
+Garrison Anunoby SC M Democratic NULL 2000-01-09 House House 2024-11-05 2027-01-03 7 1
+https://google.com
+Bryce DiVincenzo SC M Republican NULL 1992-08-01 NULL House 2024-11-05 NULL 7 0
+https://google.com
+Caris Lillard SD M Democratic NULL 2000-08-09 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Willy Ryan SD F Republican NULL 2001-11-15 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Kostas Cooks TN M Democratic NULL 2002-07-05 House House 2024-11-05 2025-01-03 1 0
+https://google.com
+Andre McDermott TN F Republican NULL 1995-09-28 NULL House 2024-11-05 2027-01-03 1 1
+https://google.com
+JaMychal Stewart TN M Democratic NULL 2001-05-22 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Buddy Schofield TN F Republican NULL 1995-10-08 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+RJ Reaves TN M Democratic NULL 1989-09-14 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Landry Kessler TN F Republican NULL 2001-08-27 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Kelly Nesmith TN F Democratic NULL 2001-08-26 House House 2024-11-05 2025-01-03 4 0
+https://google.com
+Leandro Queen TN F Republican NULL 1997-11-29 NULL House 2024-11-05 2027-01-03 4 1
+https://google.com
+Caris Richards TN M Democratic NULL 2003-05-11 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Shaedon Herro TN F Republican NULL 1999-06-17 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Evan Thomas TN F Democratic NULL 1996-09-19 House House 2024-11-05 2025-01-03 6 0
+https://google.com
+Jeremiah Williams_Jr. TN F Republican NULL 2000-05-08 NULL House 2024-11-05 2027-01-03 6 1
+https://google.com
+Bol Harris TN M Democratic NULL 1990-03-23 House House 2024-11-05 2025-01-03 7 0
+https://google.com
+Tim Smart TN F Republican NULL 2001-01-10 NULL House 2024-11-05 2027-01-03 7 1
+https://google.com
+Bojan Holiday TN F Democratic NULL 1996-03-22 House House 2024-11-05 2025-01-03 8 0
+https://google.com
+Chimezie Ivey TN F Republican NULL 2002-01-14 NULL House 2024-11-05 2027-01-03 8 1
+https://google.com
+Amir Aldama TN F Democratic NULL 1995-01-02 House House 2024-11-05 2027-01-03 9 1
+https://google.com
+Peyton Ingram TN F Republican NULL 1997-08-30 NULL House 2024-11-05 NULL 9 0
+https://google.com
+Malcolm George TX F Democratic NULL 1989-09-02 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Max Giddey TX F Republican NULL 1989-09-02 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Orlando Dorsey TX F Democratic NULL 1998-05-09 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Edmond Hield TX M Republican NULL 1995-10-15 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Bobby Green TX F Democratic NULL 1991-08-20 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Yuta Stewart TX M Republican NULL 1986-08-28 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Juan Winslow TX F Constitution NULL 1999-02-12 NULL House 2024-11-05 NULL 3 0 
+https://google.com
+RaiQuan DiVincenzo TX F Democratic NULL 1987-02-20 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Mac Barnes TX M Republican NULL 1999-06-27 NULL House 2024-11-05 NULL 4 0
+https://google.com
+Josh Birch TX M Libertarian NULL 1991-01-06 NULL House 2024-11-05 NULL 4 0 
+https://google.com
+Taurean Smith_Jr. TX M Democratic NULL 1998-07-12 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Mac Williams TX M Republican NULL 2000-12-11 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Cade Beasley TX F Democratic NULL 1995-08-03 House House 2024-11-05 2027-01-03 6 1
+https://google.com
+AJ Conley TX M Republican NULL 1997-05-22 NULL House 2024-11-05 NULL 6 0
+https://google.com
+Russell Brown_III TX F Democratic NULL 1994-03-22 House House 2024-11-05 2027-01-03 7 1
+https://google.com
+Kessler Hart TX M Republican NULL 2002-02-13 NULL House 2024-11-05 NULL 7 0
+https://google.com
+Bojan Taylor TX F Democratic NULL 1991-07-01 House House 2024-11-05 2027-01-03 8 1
+https://google.com
+Obi Lofton_Jr. TX M Republican NULL 1997-12-20 NULL House 2024-11-05 NULL 8 0
+https://google.com
+Talen Morris TX M Libertarian NULL 1994-05-18 NULL House 2024-11-05 NULL 8 0 
+https://google.com
+Cameron Barrett TX M Democratic NULL 1988-10-04 House House 2024-11-05 2027-01-03 9 1
+https://google.com
+Paolo Sneed TX F Republican NULL 1999-09-15 NULL House 2024-11-05 NULL 9 0
+https://google.com
+Sandro Harper_Jr. TX M Democratic NULL 1999-01-02 House House 2024-11-05 2027-01-03 10 1
+https://google.com
+Tony Richardson TX M Republican NULL 1990-06-21 NULL House 2024-11-05 NULL 10 0
+https://google.com
+Haywood Ntilikina TX M Democratic NULL 1993-04-10 House House 2024-11-05 2027-01-03 11 1
+https://google.com
+Vernon Jovic TX M Republican NULL 2000-08-19 NULL House 2024-11-05 NULL 11 0
+https://google.com
+Jalen Okoro TX F Democratic NULL 1997-11-25 House House 2024-11-05 2025-01-03 12 0
+https://google.com
+Thaddeus Huff TX F Republican NULL 1997-02-14 NULL House 2024-11-05 2027-01-03 12 1
+https://google.com
+Bryce Middleton TX F Democratic NULL 2000-11-25 House House 2024-11-05 2025-01-03 13 0
+https://google.com
+Gabe Edwards TX M Republican NULL 2000-01-08 NULL House 2024-11-05 2027-01-03 13 1
+https://google.com
+Gabe Langford TX M Democratic NULL 1993-08-10 House House 2024-11-05 2025-01-03 14 0
+https://google.com
+Stanley Brissett TX F Republican NULL 1990-04-16 NULL House 2024-11-05 2027-01-03 14 1
+https://google.com
+Jose Payton_II TX F Democratic NULL 1995-10-15 House House 2024-11-05 2025-01-03 15 0
+https://google.com
+Obi Ryan TX M Republican NULL 1999-03-03 NULL House 2024-11-05 2027-01-03 15 1
+https://google.com
+Mfiondu Terry TX M Democratic NULL 1998-07-14 House House 2024-11-05 2027-01-03 16 1
+https://google.com
+Cody Springer TX F Republican NULL 1997-12-30 NULL House 2024-11-05 NULL 16 0
+https://google.com
+JaMychal Rhoden TX M Democratic NULL 2001-02-03 House House 2024-11-05 2027-01-03 17 1
+https://google.com
+Luke Olynyk TX M Republican NULL 1999-07-20 NULL House 2024-11-05 NULL 17 0
+https://google.com
+Bennedict Antetokounmpo TX F Democratic NULL 2000-01-08 House House 2024-11-05 2025-01-03 18 0
+https://google.com
+Jordan Green TX F Republican NULL 1999-03-03 NULL House 2024-11-05 2027-01-03 18 1
+https://google.com
+Jake Siakam TX F Democratic NULL 1992-03-23 House House 2024-11-05 2027-01-03 19 1
+https://google.com
+Svi Love TX F Republican NULL 1996-09-26 NULL House 2024-11-05 NULL 19 0
+https://google.com
+Precious Martin_Jr. TX F Democratic NULL 1997-05-22 House House 2024-11-05 2027-01-03 20 1
+https://google.com
+Matt Tatum TX M Republican NULL 1997-12-23 NULL House 2024-11-05 NULL 20 0
+https://google.com
+Wenyen Hunt TX F Constitution NULL 1997-11-20 NULL House 2024-11-05 NULL 20 0 
+https://google.com
+Kyle Valanciunas TX M Democratic NULL 2003-08-26 House House 2024-11-05 2025-01-03 21 0
+https://google.com
+Scotty Williams_Jr. TX M Republican NULL 1996-05-15 NULL House 2024-11-05 2027-01-03 21 1
+https://google.com
+Jayson Irving TX M Democratic NULL 1998-09-01 House House 2024-11-05 2027-01-03 22 1
+https://google.com
+Dorian Tillman TX M Republican NULL 1997-03-26 NULL House 2024-11-05 NULL 22 0
+https://google.com
+Theo Bullock TX M Democratic NULL 1994-03-06 House House 2024-11-05 2027-01-03 23 1
+https://google.com
+Klay Davis TX F Republican NULL 2003-05-30 NULL House 2024-11-05 NULL 23 0
+https://google.com
+Donte DiVincenzo TX M Democratic NULL 1996-04-22 House House 2024-11-05 2027-01-03 24 1
+https://google.com
+Dyson Boeheim TX F Republican NULL 1991-03-16 NULL House 2024-11-05 NULL 24 0
+https://google.com
+Derrick Smith TX F Democratic NULL 2001-09-01 House House 2024-11-05 2025-01-03 25 0
+https://google.com
+Jabari Suggs TX M Republican NULL 1999-02-12 NULL House 2024-11-05 2027-01-03 25 1
+https://google.com
+Jock Bouknight TX M Democratic NULL 1989-08-12 House House 2024-11-05 2027-01-03 26 1
+https://google.com
+Tyus Harris TX F Republican NULL 1999-01-04 NULL House 2024-11-05 NULL 26 0
+https://google.com
+Dennis Murray TX F Democratic NULL 1998-03-03 House House 2024-11-05 2025-01-03 27 0
+https://google.com
+Devon Diakite TX M Republican NULL 1995-03-10 NULL House 2024-11-05 2027-01-03 27 1
+https://google.com
+Aaron Christopher TX M Democratic NULL 1998-09-01 House House 2024-11-05 2027-01-03 28 1
+https://google.com
+Torrey Butler TX M Republican NULL 1994-03-17 NULL House 2024-11-05 NULL 28 0
+https://google.com
+DaQuan Covington TX M Democratic NULL 2001-06-03 House House 2024-11-05 2025-01-03 29 0
+https://google.com
+Jusuf Augustin TX F Republican NULL 1996-05-10 NULL House 2024-11-05 2027-01-03 29 1
+https://google.com
+Josh Young TX F Democratic NULL 1999-01-04 House House 2024-11-05 2025-01-03 30 0
+https://google.com
+Shaquille Lopez TX M Republican NULL 1999-07-20 NULL House 2024-11-05 2027-01-03 30 1
+https://google.com
+Killian Curry TX M Democratic NULL 1995-03-10 House House 2024-11-05 2025-01-03 31 0
+https://google.com
+Blake Brogdon TX M Republican NULL 1995-10-15 NULL House 2024-11-05 2027-01-03 31 1
+https://google.com
+Kevin Walker TX M Democratic NULL 1999-11-11 House House 2024-11-05 2027-01-03 32 1
+https://google.com
+Robin Lillard TX F Republican NULL 1988-07-21 NULL House 2024-11-05 NULL 32 0
+https://google.com
+Trevor Winslow TX M Democratic NULL 1999-11-07 House House 2024-11-05 2027-01-03 33 1
+https://google.com
+Damian Dieng TX F Republican NULL 2002-07-03 NULL House 2024-11-05 NULL 33 0
+https://google.com
+Spencer Bol TX M Democratic NULL 1995-12-31 House House 2024-11-05 2027-01-03 34 1
+https://google.com
+Daishen Saric TX F Republican NULL 1999-07-28 NULL House 2024-11-05 NULL 34 0
+https://google.com
+Ziaire Forbes TX M Democratic NULL 1990-01-18 House House 2024-11-05 2027-01-03 35 1
+https://google.com
+Josh Harper_Jr. TX M Republican NULL 2000-08-25 NULL House 2024-11-05 NULL 35 0
+https://google.com
+Bol Bagley_III TX F Democratic NULL 2001-01-03 House House 2024-11-05 2025-01-03 36 0
+https://google.com
+Franz Irving TX M Republican NULL 2000-11-25 NULL House 2024-11-05 2027-01-03 36 1
+https://google.com
+Michael Brunson TX F Green NULL 1993-04-04 NULL House 2024-11-05 NULL 36 0 
+https://google.com
+Dominick Hart TX M Democratic NULL 1994-08-23 House House 2024-11-05 2027-01-03 37 1
+https://google.com
+Damian Kessler TX F Republican NULL 2001-08-01 NULL House 2024-11-05 NULL 37 0
+https://google.com
+Pat Ryan TX F Libertarian NULL 1993-03-11 NULL House 2024-11-05 NULL 37 0 
+https://google.com
+Jamaree Smith TX F Democratic NULL 1997-07-08 House House 2024-11-05 2025-01-03 38 0
+https://google.com
+Jonas Conley TX F Republican NULL 1997-01-31 NULL House 2024-11-05 2027-01-03 38 1
+https://google.com
+Udonis Green UT M Democratic NULL 1998-07-28 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Jamal Murray UT M Republican NULL 2001-01-06 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Aleksej Walker_IV UT F Democratic NULL 2000-03-16 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Joe Roby UT M Republican NULL 2000-10-28 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Herbert Reid UT M Democratic NULL 2003-05-11 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Wendell Griffin UT F Republican NULL 1995-02-19 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Jakob Thomas UT M Democratic NULL 1998-04-12 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Blake Sharpe UT F Republican NULL 1990-02-08 NULL House 2024-11-05 NULL 4 0
+https://google.com
+LeBron Mann VT F Democratic NULL 1999-09-17 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Dean Harris VT F Republican NULL 1994-09-14 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Luke Russell VA F Democratic NULL 1988-07-12 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Nicolas Ibaka VA F Republican NULL 1998-10-01 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Dominick Kleber VA M Green NULL 1998-05-04 NULL House 2024-11-05 NULL 1 0 
+https://google.com
+Dorian Jones VA F Democratic NULL 1996-08-31 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Bennedict Metu VA M Republican NULL 1988-11-12 NULL House 2024-11-05 NULL 2 0
+https://google.com
+Jaylen Reddish VA M Democratic NULL 1992-03-16 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Jarred Griffin VA M Republican NULL 1992-02-27 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+Joel Seabron VA F Democratic NULL 1999-04-28 House House 2024-11-05 2027-01-03 4 1
+https://google.com
+Santi Bogdanovic VA F Republican NULL 1994-02-28 NULL House 2024-11-05 NULL 4 0
+https://google.com
+KZ Johnson VA F Democratic NULL 2001-05-22 House House 2024-11-05 2027-01-03 5 1
+https://google.com
+Damian Mann VA F Republican NULL 2001-02-07 NULL House 2024-11-05 NULL 5 0
+https://google.com
+Gordon Smith_Jr. VA M Democratic NULL 2002-07-30 House House 2024-11-05 2025-01-03 6 0
+https://google.com
+Evan Simmons VA F Republican NULL 1996-03-26 NULL House 2024-11-05 2027-01-03 6 1
+https://google.com
+Jeremy Dort VA F Democratic NULL 2000-01-09 House House 2024-11-05 2027-01-03 7 1
+https://google.com
+Terry Bridges VA M Republican NULL 1990-03-04 NULL House 2024-11-05 NULL 7 0
+https://google.com
+Tobias Reed VA M Democratic NULL 1993-08-10 House House 2024-11-05 2027-01-03 8 1
+https://google.com
+Kevin Mays VA M Republican NULL 1995-08-19 NULL House 2024-11-05 NULL 8 0
+https://google.com
+Xavier Eason VA F Democratic NULL 2002-10-10 House House 2024-11-05 2027-01-03 9 1
+https://google.com
+Jarred Cauley-Stein VA F Republican NULL 1996-08-31 NULL House 2024-11-05 NULL 9 0
+https://google.com
+Robert Mills VA F Democratic NULL 1997-12-02 House House 2024-11-05 2027-01-03 10 1
+https://google.com
+Juancho Ball VA M Republican NULL 1990-05-02 NULL House 2024-11-05 NULL 10 0
+https://google.com
+Isaiah McConnell VA F Democratic NULL 1998-06-29 House House 2024-11-05 2025-01-03 11 0
+https://google.com
+O.G. Marjanovic VA F Republican NULL 1997-12-23 NULL House 2024-11-05 2027-01-03 11 1
+https://google.com
+Jae Green WA M Democratic NULL 1994-04-22 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Coby Boston_Jr. WA F Republican NULL 1999-02-20 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Cole Winslow WA F Democratic NULL 1994-04-10 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Jalen Thompson WA F Republican NULL 2002-03-10 NULL House 2024-11-05 NULL 2 0
+https://google.com
+Tony Harrison WA F Democratic NULL 1998-12-27 House House 2024-11-05 2027-01-03 3 1
+https://google.com
+Raul Hayward WA M Republican NULL 1999-04-17 NULL House 2024-11-05 NULL 3 0
+https://google.com
+Daniel Watanabe WA M Democratic NULL 2001-01-06 House House 2024-11-05 2025-01-03 4 0
+https://google.com
+Taj Brown WA M Republican NULL 1997-07-24 NULL House 2024-11-05 2027-01-03 4 1
+https://google.com
+Jock Carter-Williams WA M Democratic NULL 1985-06-24 House House 2024-11-05 2025-01-03 5 0
+https://google.com
+Charles George WA F Republican NULL 1992-10-05 NULL House 2024-11-05 2027-01-03 5 1
+https://google.com
+David Collins WA F Democratic NULL 1999-05-23 House House 2024-11-05 2025-01-03 6 0
+https://google.com
+Saben Dowtin_Jr. WA M Republican NULL 1999-09-01 NULL House 2024-11-05 2027-01-03 6 1
+https://google.com
+Jonas Sumner WA F Democratic NULL 1990-01-18 House House 2024-11-05 2027-01-03 7 1
+https://google.com
+Jack Simmons WA F Republican NULL 1993-06-07 NULL House 2024-11-05 NULL 7 0
+https://google.com
+Jordan McDaniels WA F Constitution NULL 2001-01-19 NULL House 2024-11-05 NULL 7 0 
+https://google.com
+Dalen Tatum WA F Democratic NULL 1993-09-20 House House 2024-11-05 2027-01-03 8 1
+https://google.com
+De'Aaron Chandler WA M Republican NULL 1999-09-24 NULL House 2024-11-05 NULL 8 0
+https://google.com
+Chuma LeVert WA F Democratic NULL 1996-02-23 House House 2024-11-05 2027-01-03 9 1
+https://google.com
+D'Angelo Payton_II WA M Republican NULL 1999-06-17 NULL House 2024-11-05 NULL 9 0
+https://google.com
+Alperen Chandler WA F Democratic NULL 1999-01-06 House House 2024-11-05 2027-01-03 10 1
+https://google.com
+Kendall Johnson WA M Republican NULL 1991-09-19 NULL House 2024-11-05 NULL 10 0
+https://google.com
+Romeo Harris WV M Democratic NULL 2000-08-23 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Jaxson Ellis WV M Republican NULL 1996-10-18 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Jalen Jovic WV F Democratic NULL 1993-05-25 House House 2024-11-05 2025-01-03 2 0
+https://google.com
+Brook Thomas WV M Republican NULL 1990-05-02 NULL House 2024-11-05 2027-01-03 2 1
+https://google.com
+Doug Harrell WI M Democratic NULL 2000-08-30 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Jrue Ball WI F Republican NULL 1990-05-02 NULL House 2024-11-05 NULL 1 0
+https://google.com
+Terance Embiid WI F Democratic NULL 2003-05-11 House House 2024-11-05 2027-01-03 2 1
+https://google.com
+Paolo Badji WI F Republican NULL 1998-05-28 NULL House 2024-11-05 NULL 2 0
+https://google.com
+Dylan McLaughlin WI F Democratic NULL 1998-10-23 House House 2024-11-05 2025-01-03 3 0
+https://google.com
+Edmond Todd WI M Republican NULL 1993-10-06 NULL House 2024-11-05 2027-01-03 3 1
+https://google.com
+Stanley Brown WI F Constitution NULL 2001-12-08 NULL House 2024-11-05 NULL 3 0 
+https://google.com
+Jae'Sean Jackson_Jr. WI F Democratic NULL 1996-09-07 House House 2024-11-05 2025-01-03 4 0
+https://google.com
+Terrence Kabengele WI M Republican NULL 2002-10-10 NULL House 2024-11-05 2027-01-03 4 1
+https://google.com
+Mac Haliburton WI F Democratic NULL 1991-09-06 House House 2024-11-05 2025-01-03 5 0
+https://google.com
+Terrence Matthews WI M Republican NULL 1997-10-17 NULL House 2024-11-05 2027-01-03 5 1
+https://google.com
+Jordan Washington_Jr. WI F Democratic NULL 1995-06-30 House House 2024-11-05 2027-01-03 6 1
+https://google.com
+Nick James WI F Republican NULL 1992-04-04 NULL House 2024-11-05 NULL 6 0
+https://google.com
+Trae Lee WI F Democratic NULL 1997-02-14 House House 2024-11-05 2027-01-03 7 1
+https://google.com
+Cade Boston_Jr. WI F Republican NULL 1995-06-11 NULL House 2024-11-05 NULL 7 0
+https://google.com
+Ron Taylor WI F Democratic NULL 1986-06-03 House House 2024-11-05 2025-01-03 8 0
+https://google.com
+Lindy Taylor WI M Republican NULL 2002-03-10 NULL House 2024-11-05 2027-01-03 8 1
+https://google.com
+Moses McGruder WY F Democratic NULL 1997-04-10 House House 2024-11-05 2027-01-03 1 1
+https://google.com
+Taj Joe WY M Republican NULL 1986-05-04 NULL House 2024-11-05 NULL 1 0
+https://google.com
