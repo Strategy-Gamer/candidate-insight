@@ -4,11 +4,38 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import { Candidate } from '@/types/candidate';
 import CandidateCard from '@/components/CandidateCard';
+import CandidatePositions from '@/components/CandidatePositions';
 import { Skeleton } from '@/components/ui/skeleton';
+import { PoliticalCategory, Issue } from '@/types/issues';
+import { politicalCategories } from '@/utils/mockIssues';
+import {Separator} from '@/components/ui/separator';
 
+type ApiCandidate = Candidate & {
+    election_year: string;
+    congressional_district: string;
+    incumbent_position: string;
+    running_for_position: string;
+    election_date: string;
+    term_end_date: string;
+    description: Text;
+};
+
+type ApiPosition = {
+    supports_positon: boolean;
+    position_description: string;
+    issue_name: string;
+    issue_description: string;
+    category_id: string;
+    sources: {
+        tweet?: string;
+        url?: string;
+        date?: string;
+    }[];
+};
+  
 const CandidatePage = () => {
     const { id } = useParams() as { id?: string };
-    const [candidate, setCandidate] = useState<Candidate | null>(null);
+    const [candidate, setCandidate] = useState<ApiCandidate | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -17,13 +44,10 @@ const CandidatePage = () => {
         const fetchCandidate = async () => {
             try {
                 const response = await fetch(`/api/candidates/${id}`);
-                const data = await response.json();
+                if (!response.ok) throw new Error('Failed to fetch');
 
-                if (data.success) {
-                    setCandidate(data.candidate);
-                } else {
-                    console.error(data.error);
-                }
+                const data = await response.json();
+                setCandidate(data);
             } catch (error) {
                 console.error("Error fetching candidate:", error);
             } finally {
@@ -31,7 +55,7 @@ const CandidatePage = () => {
             }
         };
 
-        if (id) fetchCandidate();
+        fetchCandidate();
     }, [id]);
 
     if (loading) {
@@ -67,7 +91,11 @@ const CandidatePage = () => {
     }
 
     return (
-        <CandidateCard candidate={candidate} />
+        <>
+          <CandidateCard candidate={candidate} />
+          <Separator className="my-4 w-4/5 mx-auto" />
+          <CandidatePositions categories={politicalCategories}/>
+        </>
     );
 };
 

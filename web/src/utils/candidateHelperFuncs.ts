@@ -66,7 +66,7 @@ export const stateAbbrevs = {
    so I'm keeping it */
 const stateNames: Record<string, string> = Object.fromEntries(
     Object.entries(stateAbbrevs).map(([full, abbrev]) => [abbrev, full])
-  );
+);
   
   
 export const getStateName = (abbrev: string): string | undefined => {

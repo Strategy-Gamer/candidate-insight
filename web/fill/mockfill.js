@@ -2,7 +2,7 @@ import fs from 'fs';
 import pg from 'pg';
 import env from "dotenv";
 
-env.config({path: '../.env'});
+env.config({path: '../.env.devmock'});
 
 const pool = new pg.Pool({
     user: process.env.DB_USER,
