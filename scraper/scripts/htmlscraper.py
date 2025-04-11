@@ -26,8 +26,8 @@ def extract_content(soup):
     for tag in ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'article']:
         for element in soup.find_all(tag):
             line = element.get_text(separator=' ', strip=True)
-            if len(line.split()) > 3:  # Include only lines with more than 3 words
-                content += line + '\n'
+            # if len(line.split()) > 3:  # Include only lines with more than 3 words
+            #     content += line + '\n'
     return content
 
 # def scrape_website(base_url, visited=set()):
