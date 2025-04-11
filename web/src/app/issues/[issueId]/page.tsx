@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { Issue } from '@/types/issues';
 import CandidateChart from '@/components/CandidateChart';
 import { Source } from '@/types/positions';
-//import "@/styles/issues_depth.css";
+import "@/styles/pages/subissues.css";
 
 type Props = {
   params: { issueId: string };
@@ -88,25 +88,38 @@ export default async function IssueDetail({ params }: Props) {
 
   return (
     <div>
-      <h2>{issue.issue_name} {issue.issue_description}</h2>
-      <div className="flex flex-row gap-20 justify-center items-center">
+      <h1>{issue.issue_name} </h1>
+      <h2>{issue.issue_description}</h2>
+      <div className="flex flex-row gap-12 justify-center items-center">
         <CandidateChart 
           data={getFilteredPositions('Democratic').data} 
           config={getFilteredPositions('Democratic').config}
           party='Democrats'
-          description='Proportion of Democratic candidates that support or oppose this issue'
+          description="Proportion of Democratic candidates that support or oppose this issue."
         />
         <CandidateChart 
           data={getFilteredPositions('Republican').data} 
           config={getFilteredPositions('Republican').config}
           party='Republicans'
-          description='Proportion of Republican candidates that support or oppose this issue'
+          description='Proportion of Republican candidates that support or oppose this issue.'
         />
       </div>
       <div className="positions">
-        {positions.map((position: ApiCandidatePosition, index: number) => (
+        {positions.map((position: ApiCandidatePosition, index: number) =>(
           <div key={index} className="position">
-            <h2>{position.first_name} {position.last_name} {position.position_description}</h2>
+            <p>
+              <span className = "Name">{position.first_name} {position.last_name}</span>
+              <span className = {`party ${position.party_affiliation}`}> ({position.party_affiliation})</span>
+              <span className = {`status ${position.supports_position ? 'yes' : 'no'}`}>{position.supports_position ? " supports " : " opposes "}</span>
+              {issue.issue_name} because {position.position_description}
+            </p>
+            {/*Potential future Code for sources*/}
+            {/* <div className="sources">Sources: {position.sources.map((source, i)=> (
+              <a key={i} href={source.url} target="_blank" rel="noopener noreferrer">
+                "{source.tweet}"
+              </a>
+            ))}
+            </div> */}
           </div>
         ))}
       </div>
