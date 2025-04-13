@@ -6,24 +6,9 @@ import React, { useState, Component, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { PoliticalCategory, Issue } from '@/types/issues';
 import { politicalCategories } from '@/utils/politicalCategories';
-import { issues } from '@/utils/mockIssues';
+/* import { issues } from '@/utils/mockIssues'; */
 import "@/styles/pages/issues.css";
-
-const defaultDescription = {
-  title: "Public Policy",
-  content: `Public policy is a collection of elements such as laws, programs, regulations, and actions that address societal problems. Put more simply, public policy is the combination of what a government decides to do and what it doesn't do regarding a problem. In the United States, public policy is enacted by the government through elected officials on behalf of their constituents. This includes the local, state, and federal government. Policymakers often draft policies that aid the interests for as many groups as possible. For example, tax cuts, while they may be lobbied for by corporations, still grant benefits to the average person.
-
-Before a policy can be implemented, it must be made. The policy making process or cycle can be defined as:
-
-1. Issue identification - sometimes referred to as agenda setting, this is the process of identifying issues that require government attention
-2. Policy formulation - creating the objectives of the policy and outlining how they can be achieved
-3. Legitimation - the process of gathering support for the policy through various means, such as referendums
-4. Implementation - establishing the means in which the policy will be enacted, such as a program, group, or agency
-5. Evaluation - the process of measuring a policy's success
-6. Maintenance - this includes tweaking the policy to aid its success, or the process of deciding to keep or terminate the policy based on its success (or lack thereof)
-
-In practice, policy making is much more complicated, but the above still serves as a good, high-level overview of the process.`
-};
+import PublicPolicySection from '@/components/issue_descriptions/PublicPolicy';
 
 type ApiIssue = Issue & {
   category: string;
@@ -143,15 +128,7 @@ const IssuesPage: NextPage = () => {
               </div>
             ) : (
               <div className="category-description">
-                <h2>{defaultDescription.title}</h2>
-                <div className="description-content whitespace-preserve">
-                  {defaultDescription.content.split('\n').map((line, i) => (
-                    <React.Fragment key={i}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  ))}
-                </div>
+                <PublicPolicySection />
               </div>
             )}
           </div>

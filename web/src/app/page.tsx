@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       <section className="features">
         <div className="feature-box">
           <h3>Policy Comparison</h3>
-          <p>Compare stances on major issues like abortion, gun control, and healthcare.</p>
+          <p>Compare stances on major issues like medicare, gun control, and healthcare.</p>
         </div>
         <div className="feature-box">
           <h3>Background Info</h3>
