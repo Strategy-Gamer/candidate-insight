@@ -6,7 +6,7 @@ BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAAGk1xQEAAAAAR11kwjbQGZHWaBYL4cHuXnTSfBs%3DXN
 
 USERNAME = "gayforcongress"
 
-# Define output file so we can timestamp it before importing tweets 
+# Output file name = X handle
 output_file = "gayforcongress"
 
 # Add a "Scraped on" timestamp at the top of new files
@@ -42,7 +42,7 @@ params = {
     # "max_results": 100,  # Max results per request (10–100)
     "tweet.fields": "created_at,text",  # Additional fields to include
     "start_time": "2024-05-04T00:00:00Z",  # ISO 8601 format
-    "end_time": "2024-10-17T13:09:57.000Z"  
+    "end_time": "2024-06-27T20:46:00.000Z"  
 }
 
 # Pagination loop to fetch all requested tweets
@@ -67,7 +67,7 @@ while True:
     if not next_token:
         break
 
-# Save formatted tweets to a plain text file
+# Save formatted tweets to text file
 with open(output_file, "a", encoding="utf-8") as txtfile:
     for tweet in all_tweets:
         txtfile.write(f"{tweet['created_at']}\n{tweet['text']}\n\n")

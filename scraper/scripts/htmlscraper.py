@@ -30,27 +30,7 @@ def extract_content(soup):
             #     content += line + '\n'
     return content
 
-# def scrape_website(base_url, visited=set()):
-#     """Scrapes the main page and all sub-pages of the given URL."""
-#     try:
-#         response = requests.get(base_url)
-#         response.raise_for_status()
-#     except requests.RequestException as e:
-#         print(f"Error accessing {base_url}: {e}")
-#         return ""
-
-#     visited.add(base_url)
-#     soup = BeautifulSoup(response.text, 'html.parser')
-#     scraped_text = f"Content from: {base_url}\n\n"
-#     scraped_text += soup.get_text(separator='\n', strip=True)
-
-#     for link in soup.find_all('a', href=True):
-#         sub_url = urljoin(base_url, link['href'])
-#         if base_url in sub_url and sub_url not in visited and urlparse(sub_url).netloc == urlparse(base_url).netloc:
-#             scraped_text += scrape_website(sub_url, visited)
-
-#     return scraped_text
-
+## Scrapes a JavaScript-heavy website and its subpages up to a certain depth.
 def scrape_dynamic_website(url, visited=set(), max_depth=1, depth=0):
     """
     Scrapes a JavaScript-heavy website and its subpages up to a certain depth.
