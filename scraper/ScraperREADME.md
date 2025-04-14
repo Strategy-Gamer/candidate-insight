@@ -30,8 +30,17 @@ The scraper this project used for X.com.
 ## htmlscraper.py
 Can scrape several layers of a site. Was used primarly to scrape candidate sites as there were several redirects.
 
-## compact_htmlscraper.py
-Since most websites with interview, debate, or rally transcripts are from news sites, sites hosting several other transcripts, etc, we do not want to scrape deeper than one page. We also might as well compile the results of these into one file to keep things simple. So I created a new script to do this and reformat the output to clearly deliniate the results while staying one file to reduce the number of files while keeping things organized.
+# Other Notes
+- I scraped sites that had quotes from 2+ candidates a separate time for each candidate for the ease of the NLP. Ideally, in future iterations, we will not need to do this to preserve space in our database and the NLP will be able to categorize candidates on its own.
+- For future iterations, we would also like to include news articles and the like to expand our breadth of scraping and only collect words that in quotations from the relevant candidate. 
+- Some candidates were lacking in transcripts so I scraped more X posts in lieu of that and/or decided to transcribe the videos myself with the Whisper library for Python. Our original goal was not to use AI to transcribe due to AI bias, but have determined it would be far more biased to have more information for a candidate's opponent than the candidate themselves due to lack of resources. 
+
+# Similar Sites
+- The American Presidency Project by the University of California, Santa Barbara
+- Ballotpedia
+- OnTheIssues.org
+- govtrack.us
+
 
 
 

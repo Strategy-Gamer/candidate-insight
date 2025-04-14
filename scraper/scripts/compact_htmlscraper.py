@@ -1,6 +1,7 @@
 import os
 import sys
 import time
+import re
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -9,35 +10,37 @@ from urllib.parse import urlparse
 from datetime import datetime
 
 def read_input_file(file_path):
-    """Reads an input file of name/URL pairs and returns a list of tuples."""
     websites = []
     with open(file_path, 'r') as file:
         lines = [line.strip() for line in file if line.strip()]
         if len(lines) % 2 != 0:
-            print("⚠️ Warning: Input file has an uneven number of lines.")
+            # Missing a URL title or URL
+            print("Warning: Input file has an uneven number of lines.")
         for i in range(0, len(lines) - 1, 2):
             name = lines[i]
             url = lines[i + 1]
             websites.append((name, url))
     return websites
 
-def extract_content(soup):
-    """Extracts meaningful content from common readable tags."""
+def extract_content_and_title(soup):
+    """Extracts content and a file name title."""
+    title = soup.title.string.strip() if soup.title else "untitled"
+    title = re.sub(r'[\\/*?:"<>|]', '', title)  # Remove invalid file characters
+
     content = ''
     for tag in ['article', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']:
         for element in soup.find_all(tag):
             line = element.get_text(separator=' ', strip=True)
             if len(line.split()) > 1:
                 content += line + '\n'
-    return content
+    return title, content
 
 def scrape_dynamic_website(url):
-    """Scrapes only the top-level page content of a JavaScript-heavy site."""
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-gpu")
     chrome_options.add_argument("--no-sandbox")
-    service = Service('/usr/local/bin/chromedriver')  # Update if needed
+    service = Service('/usr/local/bin/chromedriver')
 
     driver = webdriver.Chrome(service=service, options=chrome_options)
     try:
@@ -45,21 +48,22 @@ def scrape_dynamic_website(url):
         driver.get(url)
         time.sleep(3)
         soup = BeautifulSoup(driver.page_source, 'html.parser')
-        return extract_content(soup)
+        return extract_content_and_title(soup)
     except Exception as e:
         print(f"Error scraping {url}: {e}")
-        return ""
+        return None, ""
     finally:
         driver.quit()
 
-def append_to_combined_file(file_path, name, url, content):
-    """Appends the scraped result to a combined text file."""
-    with open(file_path, 'a', encoding='utf-8') as file:
-        file.write("=" * 80 + "\n")
+def write_to_individual_file(output_dir, name, url, title, content):
+    filename = f"{title[:100]}.txt"  # Truncate long titles
+    full_path = os.path.join(output_dir, filename)
+
+    with open(full_path, 'w', encoding='utf-8') as file:
         file.write(f"{name}\n")
         file.write(f"URL: {url}\n")
         file.write(f"Scraped on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
-        file.write(content + "\n\n")
+        file.write(content)
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -67,10 +71,10 @@ if __name__ == "__main__":
         sys.exit(1)
 
     input_path = sys.argv[1]
-    combined_output = "combined_scrape.txt"
+    base_filename = os.path.splitext(os.path.basename(input_path))[0]
+    output_folder = os.path.join(os.getcwd(), base_filename)
 
-    # Clear any old content
-    open(combined_output, 'w').close()
+    os.makedirs(output_folder, exist_ok=True)
 
     websites = read_input_file(input_path)
 
@@ -79,10 +83,10 @@ if __name__ == "__main__":
             print(f"⚠️ Skipping invalid URL for: {name}")
             continue
 
-        scraped = scrape_dynamic_website(url)
+        title, scraped = scrape_dynamic_website(url)
 
         if scraped:
-            append_to_combined_file(combined_output, name, url, scraped)
-            print(f"Appended content for: {name}")
+            write_to_individual_file(output_folder, name, url, title, scraped)
+            print(f"✅ Saved: {title}")
         else:
-            print(f"No content scraped for {name}")
+            print(f"❌ No content scraped for {name}")

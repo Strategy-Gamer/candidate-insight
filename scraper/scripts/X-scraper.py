@@ -4,10 +4,10 @@ from datetime import datetime
 
 BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAAGk1xQEAAAAAR11kwjbQGZHWaBYL4cHuXnTSfBs%3DXNPn2guqqztAq1MEqWhJ18TnSPafCnIO2pfyBGB7ykpN4smWPL"
 
-USERNAME = "gayforcongress"
+USERNAME = "EricHovde"
 
 # Output file name = X handle
-output_file = "gayforcongress"
+output_file = "EricHovde"
 
 # Add a "Scraped on" timestamp at the top of new files
 if not os.path.exists(output_file):
@@ -41,8 +41,8 @@ url = f"https://api.twitter.com/2/users/{user_id}/tweets"
 params = {
     # "max_results": 100,  # Max results per request (10–100)
     "tweet.fields": "created_at,text",  # Additional fields to include
-    "start_time": "2024-05-04T00:00:00Z",  # ISO 8601 format
-    "end_time": "2024-06-27T20:46:00.000Z"  
+    "start_time": "2025-03-04T00:00:00Z",  # ISO 8601 format
+    "end_time": "2025-03-06T00:00:00Z"  
 }
 
 # Pagination loop to fetch all requested tweets
