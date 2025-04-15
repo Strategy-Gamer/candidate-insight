@@ -3,34 +3,52 @@ import { notFound } from 'next/navigation';
 //import type { Metadata } from 'next';
 import { Issue } from '@/types/issues';
 import CandidateChart from '@/components/CandidateChart';
-import { Source } from '@/types/positions';
+import { ApiCandidatePosition } from '@/types/positions';
+import Positions from '@/components/Positions';
+import pool from '@/utils/dbconnect';
 import "@/styles/pages/subissues.css";
 
 type Props = {
   params: { issueId: string };
 };
 
-type ApiCandidatePosition = {
-  position_id: number;
-  first_name: string;
-  last_name: string;
-  party_affiliation: string;
-  supports_position: boolean;
-  position_description: string;
-  sources: Source[];
-}
-
+/* Avoid making an API call to get the issueId. */
 async function getIssue(issueId: string) {
+  const db = await pool.connect();
   try {
-    const res = await fetch(process.env.URL + `/api/issues/${decodeURIComponent(issueId).replace(/-/g, ' ')}`);
-    
-    if (!res.ok) {
-      console.error(`API Error: ${res.status} - ${await res.text()}`);
+    const issueData = await db.query(
+      `SELECT issue_id, issue_name, issue_description 
+      FROM Political_Issue 
+      WHERE issue_name = $1`,
+      [decodeURIComponent(issueId).replace(/-/g, ' ')]
+    );
+
+    if (issueData.rowCount === 0) {
       return undefined;
     }
-    
-    const data = await res.json();
-    return [data.positions, data.issue];
+
+    const issue = issueData.rows[0].issue_id;
+
+    const positionData = await db.query(
+      `SELECT 
+        c.first_name, 
+        c.last_name,
+        c.twitter,
+        c.party_affiliation,
+        cp.position_id,  
+        cp.supports_position,
+        cp.position_description
+      FROM Candidate_Position cp
+      JOIN Candidate c ON cp.candidate_id = c.candidate_id
+      WHERE cp.issue_id = $1;`,
+      [issue]
+    );
+
+    if (positionData.rowCount === 0) {
+      return undefined;
+    }
+
+    return [positionData.rows, issueData.rows[0]];
     
   } catch (error) {
     console.error('Fetch error:', error);
@@ -90,7 +108,7 @@ export default async function IssueDetail({ params }: Props) {
     <div>
       <h1>{issue.issue_name} </h1>
       <h2>{issue.issue_description}</h2>
-      <div className="flex flex-row gap-12 justify-center items-center">
+      <div className="flex flex-col md:flex-row gap-12 justify-center items-center">
         <CandidateChart 
           data={getFilteredPositions('Democratic').data} 
           config={getFilteredPositions('Democratic').config}
@@ -104,25 +122,7 @@ export default async function IssueDetail({ params }: Props) {
           description='Proportion of Republican candidates that support or oppose this issue.'
         />
       </div>
-      <div className="positions">
-        {positions.map((position: ApiCandidatePosition, index: number) =>(
-          <div key={index} className="position">
-            <p>
-              <span className = "Name">{position.first_name} {position.last_name}</span>
-              <span className = {`party ${position.party_affiliation}`}> ({position.party_affiliation})</span>
-              <span className = {`status ${position.supports_position ? 'yes' : 'no'}`}>{position.supports_position ? " supports " : " opposes "}</span>
-              {issue.issue_name} because {position.position_description}
-            </p>
-            {/*Potential future Code for sources*/}
-            {/* <div className="sources">Sources: {position.sources.map((source, i)=> (
-              <a key={i} href={source.url} target="_blank" rel="noopener noreferrer">
-                "{source.tweet}"
-              </a>
-            ))}
-            </div> */}
-          </div>
-        ))}
-      </div>
+      <Positions positions={positions} />
     </div>
   );
 }
