@@ -1,0 +1,264 @@
+'use client';
+import { useState, useMemo } from 'react';
+import { ApiCandidatePosition, Source } from '@/types/positions';
+import Tweet from './Tweet';
+import "@/styles/components/Positions.css";
+import { Input } from "@/components/ui/input";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Label } from "@/components/ui/label"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { FilterFilled, SortAscendingOutlined, SortDescendingOutlined } from '@ant-design/icons';
+import { Button } from './ui/button';
+
+interface PositionsProps {
+    positions: ApiCandidatePosition[];
+}
+
+function findStr(str: string, sequence: string) {
+  let index = 0;
+  let isSubsequence = false;
+
+  for (const char of str) {
+    if (char === sequence[index]) {
+      index++;
+    }
+    if (index === sequence.length) {
+      isSubsequence = true;
+      break;
+    }
+  }
+  return str.includes(sequence) || isSubsequence;
+}
+
+const Positions: React.FC<PositionsProps> = ({positions}: PositionsProps) => {
+  const [allPositions] = useState<ApiCandidatePosition[]>(positions);
+  const [positionSources, setPositionSources] = useState<Record<number, Source[]>>({});
+  const [filters, setFilters] = useState({
+    party: 'All',
+    str: '',
+    supports: '',
+    sortVal: 0
+  });
+
+  const filteredPositions = useMemo(() => {
+    const filtered = allPositions.filter((position: ApiCandidatePosition) => {
+      let supportsFilter;
+      if (filters.supports === 'S') {
+        supportsFilter = position.supports_position == true;
+      } else if (filters.supports === 'O') {
+        supportsFilter = position.supports_position == false;
+      } else {
+        supportsFilter = true;
+      }
+  
+      const partyFilter = filters.party !== 'All' ? position.party_affiliation === filters.party : true
+      
+      if (filters.str === '') {
+        return partyFilter && supportsFilter;
+      }
+  
+      const searchString = (position.first_name+position.last_name).toLowerCase();
+      return findStr(searchString, filters.str.toLowerCase().replace(/ /g, '')) && partyFilter && supportsFilter;
+    });
+
+    if (filters.sortVal !== 0) {
+      return filtered.sort((a: ApiCandidatePosition, b: ApiCandidatePosition) => {
+        if (a.first_name < b.first_name) return filters.sortVal * -1;
+        if (a.first_name > b.first_name) return filters.sortVal * 1;
+        
+        // If first names are equal, compare last names
+        if (a.last_name < b.last_name) return filters.sortVal * -1;
+        if (a.last_name > b.last_name) return filters.sortVal * 1;
+        
+        // Names are identical
+        return 0;
+      });
+    }
+    return filtered;
+  }, [allPositions, filters.sortVal, filters.supports, filters.party, filters.str]);
+
+  const handleClearFilters = () => {
+    setFilters({
+      party: 'All',
+      str: '',
+      supports: '',
+      sortVal: 0
+    });
+  }
+
+  const handleSourceClick = async (id: number) => {
+    if (id in positionSources) return;
+
+    try {
+      const res = await fetch(`/api/positions/${id}`);
+      const data = await res.json();
+      
+      setPositionSources(prev => ({
+        ...prev,
+        [id]: data.sources
+      })); 
+    } catch (error) {
+      console.error('Error fetching sources:', error);
+    } 
+  }
+
+  return <>
+    <div className="flex justify-center w-full px-4 pt-10">
+      <div className="flex flex-wrap justify-center gap-2 items-center w-full max-w-3xl">
+        <div className="flex-grow min-w-[200px]">
+          <Input
+            value={filters.str}
+            onChange={(e) => {
+              setFilters(prev => ({
+                ...prev,
+                str: e.target.value
+              }))
+            }}
+            placeholder='Find a candidate...'
+            className="w-full"
+          />
+        </div>
+        <div className="flex gap-2">
+          <Popover>
+            <PopoverTrigger asChild>
+              <Button variant="outline" className="h-10 rounded-none">
+                <FilterFilled />
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-[200px] p-4 rounded-none">
+              <Select
+                value={filters.party}
+                onValueChange={(value) => {
+                  setFilters(prev => ({
+                    ...prev,
+                    party: value
+                  }))
+                }}
+              >
+              <SelectTrigger className="text-sm rounded-none">
+                <SelectValue placeholder="Filter by Party" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="All">All</SelectItem>
+                <SelectItem value="Democratic">Democratic</SelectItem>
+                <SelectItem value="Republican">Republican</SelectItem>
+              </SelectContent>
+              </Select>
+
+              <RadioGroup 
+                defaultValue="option-one" 
+                onValueChange={(value) => {
+                  setFilters(prev => ({
+                    ...prev,
+                    supports: value
+                  }))
+                }}
+                className="mt-3"
+              >
+                <div className="flex justify-between items-center">
+                  <Label htmlFor="option-one">Supports</Label>
+                  <RadioGroupItem 
+                    value="S" 
+                    id="option-one"
+                    checked={filters.supports == 'S' ? true : false} 
+                  />
+                </div>
+                <div className="flex justify-between items-center">
+                  <Label htmlFor="option-two">Opposes</Label>
+                  <RadioGroupItem 
+                    value="O" 
+                    id="option-two" 
+                    checked={filters.supports == 'O' ? true : false}
+                  />
+                </div>
+              </RadioGroup>
+
+              <Button onClick={handleClearFilters} className="mt-3 bg-[#1c1c84] hover:bg-[#b31942] h-10 rounded-none duration-300 ease-in-out w-full">
+                Clear Filters
+              </Button>
+            </PopoverContent>
+          </Popover>
+          <Button 
+            variant={"outline"} 
+            className="h-10 rounded-none"
+            onClick={() => {
+              setFilters(prev => ({
+                ...prev,
+                sortVal: prev.sortVal == 0 || prev.sortVal == -1 ? 1 : -1
+              }))
+            }}
+          >
+            {filters.sortVal == 0 || filters.sortVal == -1 ? <SortAscendingOutlined /> : <SortDescendingOutlined />}  
+          </Button>
+        </div>
+      </div>
+    </div>
+    <section className="position-container">
+      <Accordion type="single" collapsible className="w-full">
+        {filteredPositions.map((position, index) => (
+          <AccordionItem key={index} value={`item-${index}`} className="w-full">
+            <AccordionTrigger onClick={() => handleSourceClick(position.position_id)} className="hover:no-underline w-full">
+              <div className="flex justify-between items-center w-full">
+                <div className="position">
+                  <span className={`Name ${position.party_affiliation}`}>
+                    {position.first_name} {position.last_name}
+                  </span>
+                  <span className={`status ${position.supports_position ? 'yes' : 'no'}`}>
+                    {position.supports_position ? " supports " : " opposes "}
+                  </span>
+                  because {position.position_description}
+                </div>
+                <span className="text-sm md:text-base lg:text-lg hover:underline">Sources</span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent>
+              {position.position_id in positionSources ? (
+                <>
+                  {/* TODO: Web Sources */}
+
+                  {/* Twitter Sources*/}
+                  <h2 className="text-xl font-bold mt-4">Tweets</h2>
+                  <div className="flex flex-col">
+                    {positionSources[position.position_id].filter(source => source.tweet != null).map((source, index) => (
+                      <div key={index} className="flex flex-col gap-2 mb-4">
+                        <Tweet 
+                          key={index}
+                          tweet={source.tweet}
+                          date={source.date}
+                          firstName={position.first_name}
+                          lastName={position.last_name}
+                          username={position.twitter}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <p>Getting sources...</p>
+              )}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </section>
+  </>
+};
+
+export default Positions;
