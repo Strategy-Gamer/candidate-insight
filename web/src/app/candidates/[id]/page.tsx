@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import { Candidate } from '@/types/candidate';
-import CandidateCard from '@/components/CandidateCard';
-import CandidatePositions from '@/components/CandidatePositions';
+import CandidateCard from '@/components/candidate_pages/CandidateCard';
+import CandidatePositions from '@/components/candidate_pages/CandidatePositions';
 import { Skeleton } from '@/components/ui/skeleton';
 import { PoliticalCategory, Issue } from '@/types/issues';
 import { politicalCategories } from '@/utils/mockIssues';
@@ -94,7 +94,7 @@ const CandidatePage = () => {
         <>
           <CandidateCard candidate={candidate} />
           <Separator className="my-4 w-4/5 mx-auto" />
-          <CandidatePositions categories={politicalCategories}/>
+          <CandidatePositions categories={politicalCategories} candidate={id}/>
         </>
     );
 };

@@ -252,8 +252,6 @@ const Candidates: NextPage = () => {
     const response = await fetch(`/api/candidates/${selectedCandidate.first_name}-${selectedCandidate.last_name}`);
     const data = await response.json();
 
-    // will probably need to modify this based on what year the candidate is selected, or perhaps
-    // just allow users to switch between years
     if (data.success) {
       router.push(`/candidates/${selectedCandidate.first_name}-${selectedCandidate.last_name}`);
     } else {

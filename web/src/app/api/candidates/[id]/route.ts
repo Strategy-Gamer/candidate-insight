@@ -1,5 +1,5 @@
 import pool from '../../../../utils/dbconnect';
-import { Candidate } from '@/types/candidate';
+// import { Candidate } from '@/types/candidate';
 import { NextResponse } from 'next/server';
 
 export async function GET(

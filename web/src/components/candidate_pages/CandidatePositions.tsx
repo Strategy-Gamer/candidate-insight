@@ -15,19 +15,21 @@ import {
 } from "@/components/ui/table";
 import { 
   CheckOutlined,
+  CloseOutlined,
 } from "@ant-design/icons"
 import { PoliticalCategory, Issue } from '@/types/issues';
-import { politicalCategories } from '@/utils/politicalCategories';
 import '@/styles/components/candidateposition.css';
+import dynamic from 'next/dynamic';
 
   
 interface Props {
     categories: PoliticalCategory[];
-    // issues: PoliticalIssue[];
-    // positions: CandidatePosition[];
+    candidate: string | undefined; // candidate ID (for API call)
 }
 
-const IssuesAccordionTable = ({ categories }: Props) => {
+const DynamicTable = dynamic(() => import('./PositionsTable'));
+
+const IssuesAccordionTable = ({ categories, candidate }: Props) => {
     return (
       <div className="flex flex-col flex-start justify-center p-10 bg-white m-auto max-w-[80%] overflow-hidden gap-12">
         <h2 className="flex-row text-center font-serif text-[20pt] font-medium text-[#1c1c84]">Political Stances</h2>
@@ -42,36 +44,10 @@ const IssuesAccordionTable = ({ categories }: Props) => {
             <Accordion type="multiple" className="w-full">
                 <AccordionItem key="key" value="value">
                   <AccordionTrigger className="hover:no-underline px-4 py-3 hover:bg-gray-50 rounded-none">
-                    Issue
+                    View Available Stances
                   </AccordionTrigger>                  
                   <AccordionContent className="px-4 pb-4">
-                        <Table className="font-sans">
-                          <TableBody>
-                            <TableRow>
-                              <TableHead className="font-medium w-[120px]">Position</TableHead>
-                              <TableHead>Key Points</TableHead>
-                              <TableHead className="text-right">Source</TableHead>
-                            </TableRow>
-                            <TableRow>
-                              <TableCell className="font-medium">
-                                <CheckOutlined /> Supports
-                              </TableCell>
-                              <TableCell>
-                                <ul>
-                                  <li>Lorem ipsum</li>
-                                  <li>Lorem ipsum</li>
-                                  <li>Lorem ipsum</li>
-                                </ul>
-                              </TableCell>
-                              <TableCell className="text-right">
-                                <ul>
-                                  <li><a href="#" target="_blank">Tweet</a> (2024)</li>
-                                  <li><a href="#" target="_blank">Debate Transcript</a> (2024)</li>
-                                </ul>
-                              </TableCell>
-                            </TableRow>
-                          </TableBody>
-                        </Table>
+                    <DynamicTable category={category.category} candidate={candidate}></DynamicTable>
                   </AccordionContent>
                 </AccordionItem>
             </Accordion>
