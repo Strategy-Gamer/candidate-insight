@@ -2,8 +2,8 @@
 'use client';
 
 import type { NextPage } from 'next';
-import React, { useState, Component, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
 import { PoliticalCategory, Issue } from '@/types/issues';
 import { politicalCategories } from '@/utils/politicalCategories';
 /* import { issues } from '@/utils/mockIssues'; */
@@ -22,7 +22,6 @@ const IssuesPage: NextPage = () => {
   const [issues, setIssues] = useState<ApiIssue[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const router = useRouter();
 
   // fetch the issues first
   useEffect(() => {
@@ -61,13 +60,7 @@ const IssuesPage: NextPage = () => {
 
   const getSubIssues = (categoryId: string): ApiIssue[] => {
     return issues.filter(issue => issue.category === categoryId);
-  }
-  
-  /* change the route in candidates to this format too */
-  const handleIssueClick = (subIssue: ApiIssue) => {
-    const routeName = encodeURIComponent(subIssue.issue_name.trim().replace(/\s+/g, '-'));
-    router.push(`/issues/${routeName}`);
-  };
+  } 
 
   /* replace with shadcn skeleton */
   if (loading) {
@@ -104,10 +97,11 @@ const IssuesPage: NextPage = () => {
                         className="sub-issue-item"
                         onClick={(e) => {
                           e.stopPropagation();
-                          handleIssueClick(subIssue);
                         }}
                       >
-                        <h4 className="sub-issue-title">{subIssue.issue_name}</h4>
+                        <Link href={`/issues/${encodeURIComponent(subIssue.issue_name.trim().replace(/\s+/g, '-'))}`}>
+                          <h4 className="sub-issue-title">{subIssue.issue_name}</h4>
+                        </Link> 
                       </li>
                     ))}
                   </ul>
