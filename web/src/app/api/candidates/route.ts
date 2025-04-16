@@ -15,6 +15,7 @@ export async function GET(request: NextRequest) {
                 c.first_name,
                 c.last_name,
                 c.party_affiliation,
+                c.state,
                 c.profile_image_url,
                 cm.election_year,
                 cm.congressional_district,

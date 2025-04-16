@@ -1,7 +1,7 @@
 // This is the candidates directory page
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -37,10 +37,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { Input } from "@/components/ui/input";
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { getPosition, stateAbbrevs, getStateName } from '@/utils/candidateHelperFuncs';
-import { FilterFilled } from '@ant-design/icons';
+import { FilterFilled, SortAscendingOutlined, SortDescendingOutlined } from '@ant-design/icons';
 
 type ApiCandidate = {
   first_name: string;
@@ -53,6 +54,22 @@ type ApiCandidate = {
   incumbent_position?: string | null;
   running_for_position?: string | null;
 };
+
+function findStr(str: string, sequence: string) {
+  let index = 0;
+  let isSubsequence = false;
+
+  for (const char of str) {
+    if (char === sequence[index]) {
+      index++;
+    }
+    if (index === sequence.length) {
+      isSubsequence = true;
+      break;
+    }
+  }
+  return str.includes(sequence) || isSubsequence;
+}
 
 function getCandidateDescriptor(candidate: ApiCandidate): string {
   const formatDescriptor = (position: string | null | undefined, state: string | null | undefined, district: string | null | undefined): string => {
@@ -114,13 +131,13 @@ const InfoCardButton: React.FC<{ candidate: ApiCandidate; groupByParty: boolean 
 
   return (
     <Card 
-      className={`w-[275px] cursor-pointer rounded-none duration-300 ease-in-out ${bgColor}`}
+      className={`w-[275px] h-[400]cursor-pointer rounded-none duration-300 ease-in-out ${bgColor}`}
     >
-      <CardHeader className="text-center">
-        <CardTitle className="text-white">{`${fullName} (${partyAbbrev})`}</CardTitle>
-        <CardDescription className="text-white">{position}</CardDescription>
+      <CardHeader className="text-center h-24 flex flex-col justify-center px-2">
+        <CardTitle className="text-white leading-tight line-clamp-2">{`${fullName} (${partyAbbrev})`}</CardTitle>
+        <CardDescription className="text-white mt-` line-clamp-1">{position}</CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-col items-center gap-4">
+      <CardContent className="flex flex-col items-center">
         <Image
           src={imgSrc}
           width={200}
@@ -141,6 +158,8 @@ const Candidates: NextPage = () => {
     state: '',
     position: '',
     year: urlYear || '2024',
+    str: '',
+    sortVal: 0,
   });
 
   const [groupByParty, setGroupByParty] = useState(false);
@@ -169,69 +188,106 @@ const Candidates: NextPage = () => {
     }
   };
 
-  // this is for if the year changes and the URL needs to be changed
-  useEffect(() => {
-    const newParams = new URLSearchParams(searchParams.toString());
-
-    if (filters.year !== '2024') {
-      newParams.set('year', filters.year);
-    } else {
-      newParams.delete('year');
-    }
-    
-    router.replace(`?${newParams.toString()}`, { scroll: false });
-  }, [filters.year]);
-
   // here I fetched candidates based on the default year
   useEffect(() => {
     fetchCandidates(filters.year);
   }, [filters.year]);
 
-  // this is for if the URL changes
-  useEffect(() => {
-    const urlYear = searchParams.get('year');
-    if (urlYear && urlYear !== filters.year) {
-      setFilters(prev => ({ ...prev, year: urlYear }));
-    }
-  }, [searchParams]);
-
-  const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement> | { name: string, value: string }) => {
-    const name = 'target' in e ? e.target.name : e.name;
-    const value = 'target' in e ? e.target.value : e.value;
-    setFilters(prev => ({ ...prev, [name]: value }));
-  }
-  
   const toggleGroupByParty = () => {
     setGroupByParty(prevState => !prevState);
   };
 
+  const filteredCandidates = useMemo(() => {
+    const filtered = candidates.filter((candidate) => {
+      const matchesParty = filters.party ? candidate.party_affiliation === filters.party: true;
+
+      const matchesState= (() => {
+        if (!filters.state) return true;
+
+        const state = candidate.state;
+        if (!state || state === "US") return false;
+
+        const stateName = getStateName(state);
+        return (stateAbbrevs as Record<string, string>)[stateName!] === filters.state;
+      })();
+
+      let matchesPosition = true;
+
+      switch (filters.position) {
+        case "house":
+          matchesPosition = candidate.incumbent_position === "Representative" || 
+          candidate.running_for_position === "Represenative";
+          break;
+        case "senate":
+          matchesPosition = candidate.incumbent_position === "Senator" || 
+          candidate.running_for_position === "Senator";
+          break;
+        case "presidential":
+          matchesPosition = candidate.incumbent_position === "President" || 
+          candidate.running_for_position === "President";
+          break;
+        case "gubernatorial":
+          matchesPosition = candidate.incumbent_position === "Governor" || 
+          candidate.running_for_position === "Governor";
+          break;
+      }
+      
+      const searchString = (candidate.first_name + candidate.last_name).toLowerCase();
+      const found = findStr(searchString, filters.str.toLowerCase().replace(/ /g, ''));
+
+      return found && matchesParty && matchesState && matchesPosition;
+    });
+
+    if (filters.sortVal !== 0) {
+      return filtered.sort((a: ApiCandidate, b: ApiCandidate) => {
+        if (a.first_name < b.first_name) return filters.sortVal * -1;
+        if (a.first_name > b.first_name) return filters.sortVal * 1;
+
+        if (a.last_name < b.last_name) return filters.sortVal * -1;
+        if (a.last_name > b.last_name) return filters.sortVal * 1;
+
+        return 0;
+      })
+    }
+    return filtered;
+  }, [candidates, filters.party, filters.state, filters.position, filters.str, filters.sortVal]);
+
+  /*
   const filteredCandidates = candidates.filter(candidate => {
     const matchesParty = filters.party ? candidate.party_affiliation === filters.party: true;
     const matchesState = (() => {
       if (!filters.state) return true;
+
       const state = candidate.state;
       if (!state || state === "US") return false;
 
       const stateName = getStateName(state);
       return (stateAbbrevs as Record<string, string>)[stateName!] === filters.state;
-    })(); // immediately invoked function expression
+    })();
     
     let matchesPosition = true;
-    if (filters.position === "house") {
-      matchesPosition = candidate.incumbent_position === "Representative" || 
-      candidate.running_for_position === "Represenative";
-    } else if (filters.position === "senate") {
-      matchesPosition = candidate.incumbent_position === "Senator" || 
-      candidate.running_for_position === "Senator";
-    } else if (filters.position === "presidential") {
-      matchesPosition = candidate.incumbent_position === "President" || 
-      candidate.running_for_position === "President";
-    } else if (filters.position === "gubernatorial") {
-      matchesPosition = candidate.incumbent_position === "Governor" || 
-      candidate.running_for_position === "Governor";
+
+    switch (filters.position) {
+      case "house":
+        matchesPosition = candidate.incumbent_position === "Representative" || 
+        candidate.running_for_position === "Represenative";
+        break;
+      case "senate":
+        matchesPosition = candidate.incumbent_position === "Senator" || 
+        candidate.running_for_position === "Senator";
+        break;
+      case "presidential":
+        matchesPosition = candidate.incumbent_position === "President" || 
+        candidate.running_for_position === "President";
+        break;
+      case "gubernatorial":
+        matchesPosition = candidate.incumbent_position === "Governor" || 
+        candidate.running_for_position === "Governor";
+        break;
     }
     return matchesParty && matchesState && matchesPosition;
   });
+  */
 
   const handleClearFilters = () => {
     setFilters({
@@ -239,78 +295,27 @@ const Candidates: NextPage = () => {
       state: '',
       position: '',
       year: '',
+      str: '',
+      sortVal: 0,
     });
     setGroupByParty(false);
   };
 
-  const handleClick = async () => {
-    if (!selectedCandidate) {
-      alert('Please select a candidate');
-      return;
-    }
-    
-    const response = await fetch(`/api/candidates/${selectedCandidate.first_name}-${selectedCandidate.last_name}`);
-    const data = await response.json();
-
-    if (data.success) {
-      router.push(`/candidates/${selectedCandidate.first_name}-${selectedCandidate.last_name}`);
-    } else {
-      alert('Candidate not found');
-      console.error(data.error);
-    }
-  };
-
-  if (loading) {
-    return <p>Loading candidates...</p>
-  }
-
-  if (error) {
-    return <p>{error}</p>
-  }
-
   return (    
     <div className="font-sans p-6">
-
       {/* search section */}
       <div className="flex justify-center items-center space-x-4">
-        <Popover open={open} onOpenChange={setOpen}>
-          <PopoverTrigger asChild>
-            <Button
-              variant="outline"
-              role="combobox"
-              aria-expanded={open}
-              className="w-[200px] justify-between rounded-none"
-            >
-              {selectedCandidate 
-                ? `${selectedCandidate.first_name} ${selectedCandidate.last_name}` 
-                : "Find a candidate..."
-              }
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent className="w-[200px] p-0 rounded-none">
-            <Command className="font-sans">
-            <CommandInput placeholder="Search candidates..." className="rounded-none"/>
-              <CommandList>
-                <CommandEmpty>No candidate found.</CommandEmpty>
-                <CommandGroup>
-                  {filteredCandidates.map((candidate) => (
-                    <CommandItem
-                      key={`${candidate.first_name}-${candidate.last_name}`}
-                      value={`${candidate.first_name}-${candidate.last_name}`}
-                      onSelect={() => {
-                        setSelectedCandidate(candidate);
-                        setOpen(false)
-                      }}
-                    >
-                      {candidate.first_name} {candidate.last_name}
-                    </CommandItem>
-                  ))}
-                </CommandGroup>
-              </CommandList>  
-            </Command>
-          </PopoverContent>
-        </Popover>
-
+        <Input
+          value={filters.str}
+          onChange={(e) => {
+            setFilters(prev => ({
+              ...prev,
+              str: e.target.value
+            }))
+          }}
+          placeholder='Find a candidate...'
+          className="w-200 rounded-none"
+        />
         {/* filters */}
         <Popover>
           <PopoverTrigger asChild>
@@ -412,10 +417,17 @@ const Candidates: NextPage = () => {
               </Button>
           </PopoverContent>
         </Popover>
-
-        {/* search button (redirects them) */ }
-        <Button onClick={handleClick} className="bg-[#1c1c84] hover:bg-[#b31942] h-10 rounded-none duration-300 ease-in-out">
-          Search
+        <Button 
+          variant={"outline"} 
+          className="h-10 rounded-none"
+          onClick={() => {
+            setFilters(prev => ({
+              ...prev,
+              sortVal: prev.sortVal == 0 || prev.sortVal == -1 ? 1 : -1
+            }))
+          }}
+        >
+          {filters.sortVal == 0 || filters.sortVal == -1 ? <SortAscendingOutlined /> : <SortDescendingOutlined />}  
         </Button>
       </div>
       
