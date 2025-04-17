@@ -1,6 +1,7 @@
 'use client';
 import { useState, useMemo } from 'react';
 import { ApiCandidatePosition, Source } from '@/types/positions';
+import { Issue } from '@/types/issues';
 import Tweet from './Tweet';
 import "@/styles/components/Positions.css";
 import { Input } from "@/components/ui/input";
@@ -26,9 +27,11 @@ import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { FilterFilled, SortAscendingOutlined, SortDescendingOutlined } from '@ant-design/icons';
 import { Button } from './ui/button';
+import { ScrollArea } from "@/components/ui/scroll-area"
 
 interface PositionsProps {
     positions: ApiCandidatePosition[];
+    issue: Issue;
 }
 
 function findStr(str: string, sequence: string) {
@@ -47,7 +50,7 @@ function findStr(str: string, sequence: string) {
   return str.includes(sequence) || isSubsequence;
 }
 
-const Positions: React.FC<PositionsProps> = ({positions}: PositionsProps) => {
+const Positions: React.FC<PositionsProps> = ({positions, issue}: PositionsProps) => {
   const [allPositions] = useState<ApiCandidatePosition[]>(positions);
   const [positionSources, setPositionSources] = useState<Record<number, Source[]>>({});
   const [filters, setFilters] = useState({
@@ -76,7 +79,7 @@ const Positions: React.FC<PositionsProps> = ({positions}: PositionsProps) => {
   
       const searchString = (position.first_name+position.last_name).toLowerCase();
       return findStr(searchString, filters.str.toLowerCase().replace(/ /g, '')) && partyFilter && supportsFilter;
-    });
+    })
 
     if (filters.sortVal !== 0) {
       return filtered.sort((a: ApiCandidatePosition, b: ApiCandidatePosition) => {
@@ -119,8 +122,15 @@ const Positions: React.FC<PositionsProps> = ({positions}: PositionsProps) => {
     } 
   }
 
-  return <>
-    <div className="flex justify-center w-full px-4 pt-10">
+  return (
+   <div>
+    <h1 className='text-3xl font-bold m-0'>
+      {issue.issue_name}
+    </h1>
+    <h2 className="text-2xl m-0">
+      {issue.issue_description}
+    </h2>
+    <div className="flex justify-center w-full px-4 pt-4">
       <div className="flex flex-wrap justify-center gap-2 items-center w-full max-w-3xl">
         <div className="flex-grow min-w-[200px]">
           <Input
@@ -211,33 +221,33 @@ const Positions: React.FC<PositionsProps> = ({positions}: PositionsProps) => {
       </div>
     </div>
     <section className="position-container">
-      <Accordion type="single" collapsible className="w-full">
-        {filteredPositions.map((position, index) => (
-          <AccordionItem key={index} value={`item-${index}`} className="w-full">
-            <AccordionTrigger onClick={() => handleSourceClick(position.position_id)} className="hover:no-underline w-full">
-              <div className="flex justify-between items-center w-full">
-                <div className="position">
-                  <span className={`Name ${position.party_affiliation}`}>
-                    {position.first_name} {position.last_name}
-                  </span>
-                  <span className={`status ${position.supports_position ? 'yes' : 'no'}`}>
-                    {position.supports_position ? " supports " : " opposes "}
-                  </span>
-                  because {position.position_description}
+      <ScrollArea className="h-[500px] w-full p-4">
+        <Accordion type="single" collapsible className="w-full">
+          {filteredPositions.map((position, index) => (
+            <AccordionItem key={index} value={`item-${index}`} className="w-full">
+              <AccordionTrigger onClick={() => handleSourceClick(position.position_id)} className="hover:no-underline w-full">
+                <div className="flex justify-between items-center w-full">
+                  <div className="position">
+                    <span className={`Name ${position.party_affiliation}`}>
+                      {position.first_name} {position.last_name}
+                    </span>
+                    <span className={`status ${position.supports_position ? 'yes' : 'no'}`}>
+                      {position.supports_position ? " supports " : " opposes "}
+                    </span>
+                    because {position.position_description}
+                  </div>
+                  <span className="text-sm md:text-base lg:text-lg hover:underline">Sources</span>
                 </div>
-                <span className="text-sm md:text-base lg:text-lg hover:underline">Sources</span>
-              </div>
-            </AccordionTrigger>
-            <AccordionContent>
-              {position.position_id in positionSources ? (
-                <>
-                  {/* TODO: Web Sources */}
+              </AccordionTrigger>
+              <AccordionContent className="bg-gray-50 p-4 rounded-none">
+                {position.position_id in positionSources ? (
+                  <>
+                    {/* TODO: Web Sources */}
 
-                  {/* Twitter Sources*/}
-                  <h2 className="text-xl font-bold mt-4">Tweets</h2>
-                  <div className="flex flex-col">
-                    {positionSources[position.position_id].filter(source => source.tweet != null).map((source, index) => (
-                      <div key={index} className="flex flex-col gap-2 mb-4">
+                    {/* Twitter Sources*/}
+                    <h2 className="text-xl font-bold mt-4">Tweets</h2>
+                    <div className="flex flex-col gap-1">
+                      {positionSources[position.position_id].filter(source => source.tweet != null).map((source, index) => (
                         <Tweet 
                           key={index}
                           tweet={source.tweet}
@@ -246,19 +256,20 @@ const Positions: React.FC<PositionsProps> = ({positions}: PositionsProps) => {
                           lastName={position.last_name}
                           username={position.twitter}
                         />
-                      </div>
-                    ))}
-                  </div>
-                </>
-              ) : (
-                <p>Getting sources...</p>
-              )}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <p>Getting sources...</p>
+                )}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </ScrollArea>
     </section>
-  </>
+   </div>
+  );
 };
 
 export default Positions;

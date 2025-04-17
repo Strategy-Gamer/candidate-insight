@@ -106,23 +106,23 @@ export default async function IssueDetail({ params }: Props) {
 
   return (
     <div>
-      <h1>{issue.issue_name} </h1>
-      <h2>{issue.issue_description}</h2>
-      <div className="flex flex-col md:flex-row gap-12 justify-center items-center">
-        <CandidateChart 
-          data={getFilteredPositions('Democratic').data} 
-          config={getFilteredPositions('Democratic').config}
-          party='Democrats'
-          description="Proportion of Democratic candidates that support or oppose this issue."
-        />
-        <CandidateChart 
-          data={getFilteredPositions('Republican').data} 
-          config={getFilteredPositions('Republican').config}
-          party='Republicans'
-          description='Proportion of Republican candidates that support or oppose this issue.'
-        />
+      <div className="flex flex-col items-center justify-evenly md:flex-row gap-12 items-center p-3">
+        <div className="flex flex-col gap-4 justify-center items-center">
+          <CandidateChart 
+            data={getFilteredPositions('Democratic').data} 
+            config={getFilteredPositions('Democratic').config}
+            party='Democrats'
+            description="Proportion of Democratic candidates that support or oppose this issue."
+          />
+          <CandidateChart 
+            data={getFilteredPositions('Republican').data} 
+            config={getFilteredPositions('Republican').config}
+            party='Republicans'
+            description='Proportion of Republican candidates that support or oppose this issue.'
+          />
+        </div>
+        <Positions positions={positions} issue={issue} />
       </div>
-      <Positions positions={positions} />
     </div>
   );
 }
