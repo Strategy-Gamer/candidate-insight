@@ -306,6 +306,7 @@ async function insertPositions(issues, percentage, candidates) {
         positionSourcePromises.push(db.query(positionSourceQuery, [positionId, sourceIds[sourceIndex % sourceIds.length]]));
         positionSourcePromises.push(db.query(positionSourceQuery, [positionId, sourceIds[(sourceIndex+1) % sourceIds.length]]));
         positionSourcePromises.push(db.query(positionSourceQuery, [positionId, sourceIds[(sourceIndex+2) % sourceIds.length]]));
+        sourceIndex += 3;
     }
     await Promise.all(positionSourcePromises);
 

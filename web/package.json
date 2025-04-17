@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "dev:mock": "dotenv -e .env.devmock next dev --turbopack",
     "dev:real": "dotenv -e .env.devreal next dev --turbopack",
     "build:prod": "dotenv -e .env.prodreal next build",
@@ -19,6 +19,7 @@
     "@radix-ui/react-label": "^2.1.2",
     "@radix-ui/react-popover": "^1.1.6",
     "@radix-ui/react-radio-group": "^1.2.4",
+    "@radix-ui/react-scroll-area": "^1.2.4",
     "@radix-ui/react-select": "^2.1.6",
     "@radix-ui/react-separator": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.2",
