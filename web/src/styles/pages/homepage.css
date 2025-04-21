@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 30vh;
+    height: 25vh;
     background-color: #e9ecef;
     text-align: center;
     padding: 20px;
@@ -72,8 +72,9 @@ footer p {
 }
   
 .featured-carousel {
-    max-width: 1200px;
+    max-width: 90vw;
     margin: 0 auto;
+    position: relative;
 }
 
 .carousel-slide h3 {
@@ -88,8 +89,10 @@ footer p {
 .carousel-slide {
     display: flex;
     flex-direction: column;
-    min-height: 400px;
-    height: 50vh;
+    /* min-height: 400px; */
+    height: 60vh;
+    min-width: 400px;
+    width: 90vw;
   }
   
 .carousel-slide img {

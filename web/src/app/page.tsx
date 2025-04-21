@@ -13,7 +13,7 @@ import {
 import "@/styles/pages/homepage.css";
 import Autoplay from 'embla-carousel-autoplay';
 import CapitolPhoto from '../../../photos/Homepage/Capitol1.jpg';
-import WhiteHousePhoto from '../../../photos/Homepage/WhiteHouse1.jpg';
+import WhiteHousePhoto from '../../../photos/Homepage/WhiteHouse2.jpg';
 import SkylinePhoto from '../../../photos/Homepage/Skyline1.jpg';
 import LincolnPhoto from '../../../photos/Homepage/LincolnMemorial1.jpg';
 
@@ -21,13 +21,13 @@ import LincolnPhoto from '../../../photos/Homepage/LincolnMemorial1.jpg';
 const Home: NextPage = () => {
   return (
     <div className="text-center font-sans">
-      <section className="hero">
+      {/* <section className="hero">
         <h1>Candidate Insight</h1>
         <h2>Understand Policy Positions & Compare Candidates</h2>
         <Button className="explore-button">
           <Link href="/candidates">Explore Candidates</Link>
         </Button>
-      </section>
+      </section> */}
 
       <section className="carousel-section">
         <Carousel 
@@ -44,15 +44,17 @@ const Home: NextPage = () => {
           <CarouselContent>
             <CarouselItem>
               <div className="carousel-slide">
+                <h3>Policy Comparison</h3>
+                <p>Compare stances on major issues like medicare, gun control, and healthcare.</p> 
                 <div className="image-container">
                   <Image
                     src={WhiteHousePhoto}
                     alt={`White House Photo`}
-                    style={{width: "auto", height: "auto"}}
+                    style={{width: "100%", height: "100%"}}
                     loading="lazy"
                   />
                 </div>
-              </div>
+              </div> 
             </CarouselItem>
             <CarouselItem>
               <div className="carousel-slide">
@@ -90,7 +92,7 @@ const Home: NextPage = () => {
         </Carousel>
       </section>
 
-      <section className="features">
+      {/* <section className="features">
         <div className="feature-box">
           <h3>Policy Comparison</h3>
           <p>Compare stances on major issues like medicare, gun control, and healthcare.</p>
@@ -107,7 +109,7 @@ const Home: NextPage = () => {
           <h3>Neutral Analysis</h3>
           <p>Gain knowledge about candidates and political issues with as little bias as possible.</p>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
