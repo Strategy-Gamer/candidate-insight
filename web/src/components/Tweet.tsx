@@ -1,6 +1,5 @@
 import { CheckCircleTwoTone } from "@ant-design/icons";
 import Image from 'next/image';
-import "@/styles/components/Tweet.css";
 
 interface TweetProps {
   tweet: string;
@@ -12,7 +11,7 @@ interface TweetProps {
 
 const Tweet = (props: TweetProps) => {
   return <>
-    <div className="flex gap-2 bg-white p-4 rounded-lg shadow-md">
+    <div className="flex gap-2 bg-white p-3 hover:bg-gray-50 border-t border-gray-125">
       <div className="min-w-10 min-h-10 w-10 h-10 rounded-full flex-shrink-0">
        <Image
           src='/images/Rect_NonID_Grey.png'
@@ -22,22 +21,23 @@ const Tweet = (props: TweetProps) => {
           className="w-full h-full rounded-full object-cover"
         />
       </div>
-      <div className="tweet-container">
-        <div className="tweet-header">
+      <div className="flex flex-col text-[15px] w-full max-w-[600px] break-words gap-[2px] sm:text-[15px] text-[13px]">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-2 gap-1">
           <h3 className="font-semibold">{`${props.firstName} ${props.lastName}`}</h3>
-          <CheckCircleTwoTone twoToneColor="#1DA1F2"/>
-          <div className="flex gap-1">
-            <p className="text-gray-500 pt-0">{props.username}</p>
-            <span className="text-gray-500">·</span>
-            <p className="text-gray-500 text-sm pt-0">{new Date(props.date).toLocaleDateString("en-US", {
+          <CheckCircleTwoTone twoToneColor="#1DA1F2" />
+          <div className="flex gap-1 text-gray-500 text-sm">
+            <p className="m-0 p-0">{props.username}</p>
+            <span>·</span>
+            <p className="m-0 p-0">
+              {new Date(props.date).toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "short",
                 day: "numeric"
-            })}
+              })}
             </p>
           </div>
         </div>
-        <p className="text-gray-800 pt-0">{props.tweet}</p>
+        <p className="text-gray-900">{props.tweet}</p>
       </div>
     </div>
   </>

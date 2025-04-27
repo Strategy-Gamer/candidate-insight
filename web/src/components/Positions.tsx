@@ -28,6 +28,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { FilterFilled, SortAscendingOutlined, SortDescendingOutlined } from '@ant-design/icons';
 import { Button } from './ui/button';
 import { ScrollArea } from "@/components/ui/scroll-area"
+import Link from 'next/link';
 
 interface PositionsProps {
     positions: ApiCandidatePosition[];
@@ -239,14 +240,33 @@ const Positions: React.FC<PositionsProps> = ({positions, issue}: PositionsProps)
                   <span className="text-sm md:text-base lg:text-lg hover:underline">Sources</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="bg-gray-50 p-4 rounded-none">
+              <AccordionContent className="p-2 rounded-none md:p-4">
                 {position.position_id in positionSources ? (
+                  
                   <>
                     {/* TODO: Web Sources */}
+                    <div className="flex justify-evenly w-full flex-wrap">
+                      {positionSources[position.position_id].filter(source => source.tweet == null).map((source, index) => (
+                        <Link
+                            href={source.url}
+                            key={index}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline"
+                        >
+                            View Source
+                            {source.date && (
+                                <span className="text-gray-400 ml-1">
+                                    ({new Date(source.date).toLocaleDateString()})
+                                </span>
+                            )}
+                        </Link>
+                      ))}
+                    </div>
 
                     {/* Twitter Sources*/}
                     <h2 className="text-xl font-bold mt-4">Tweets</h2>
-                    <div className="flex flex-col gap-1">
+                    <div className="flex flex-col border-l border-r border-b border-gray-125">
                       {positionSources[position.position_id].filter(source => source.tweet != null).map((source, index) => (
                         <Tweet 
                           key={index}

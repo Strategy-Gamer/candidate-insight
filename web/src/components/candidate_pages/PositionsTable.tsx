@@ -14,10 +14,14 @@ import {
   CloseOutlined,
 } from "@ant-design/icons"
 import Link from 'next/link';
+import { XOutlined } from '@ant-design/icons';
+import { Button } from '../ui/button';
+import TweetModal from './TweetModal';
+import { ApiCandidate } from '@/types/candidate';
 
 interface Props {
     category: string;
-    candidate: string | undefined;
+    candidate: ApiCandidate;
 }
 
 type ApiPosition = {
@@ -34,6 +38,8 @@ type ApiPosition = {
 const PositionsTable = ({ category, candidate}: Props) => {
     const [loading, setLoading] = useState(true);
     const [tableData, setTableData] = useState<ApiPosition []>([]);
+    const [selectedTweets, setSelectedTweets] = useState([]);
+    const [tweetsOpen, setTweetsOpen] = useState(false);
     
     // we need to fetch all available positions and sources for the candidate
     // on the category
@@ -42,7 +48,7 @@ const PositionsTable = ({ category, candidate}: Props) => {
 
         const fetchPositions = async () => {
             try {
-                const response = await fetch(`/api/candidates/${candidate}/categories/${category}`);
+                const response = await fetch(`/api/candidates/${candidate.candidate_id}/categories/${category}`);
                 if (!response.ok) throw new Error('Failed to fetch');
 
                 const data = await response.json();
@@ -63,7 +69,12 @@ const PositionsTable = ({ category, candidate}: Props) => {
         )
     }
 
-    return (
+    const handleTweetClick = (tweets) => {
+        setSelectedTweets(tweets);
+        setTweetsOpen(true);
+    }
+
+    return <>
         <Table className="font-sans">
             <TableHeader>
                 <TableRow>
@@ -98,7 +109,7 @@ const PositionsTable = ({ category, candidate}: Props) => {
                     </TableCell>
                     <TableCell className="text-right">
                         <ul className="space-y-1">
-                            {position.sources.map((source, index) => (
+                            {position.sources.filter(source => source.tweet == null).map((source, index) => (
                                 <li key={`${index}-${source.date}`} className="text-sm">
                                     {source.url ? (
                                         <Link
@@ -107,7 +118,7 @@ const PositionsTable = ({ category, candidate}: Props) => {
                                             rel="noopener noreferrer"
                                             className="text-blue-600 hover:underline"
                                         >
-                                            {source.tweet ? 'View Tweet' : 'View Source'}
+                                            View Source
                                             {source.date && (
                                                 <span className="text-gray-400 ml-1">
                                                     ({new Date(source.date).toLocaleDateString()})
@@ -119,13 +130,32 @@ const PositionsTable = ({ category, candidate}: Props) => {
                                     )}
                                 </li>
                             ))}
+                            {position.sources.some(source => source.tweet != null) &&
+                                <li>
+                                    <Button 
+                                      onClick={() => handleTweetClick(position.sources.filter(source => source.tweet != null))}
+                                      className='bg-clear text-blue-600 hover:bg-clear'
+                                    >
+                                        View Tweets
+                                        <XOutlined/>
+                                    </Button>
+                                </li>
+                            }
                         </ul>
                     </TableCell>
                 </TableRow>
             ))}
             </TableBody>
         </Table>
-    )
+        <TweetModal 
+          tweets={selectedTweets} 
+          firstName={candidate.first_name} 
+          lastName={candidate.last_name} 
+          username={candidate.twitter || "username"}
+          open={tweetsOpen}
+          setOpen={setTweetsOpen}
+        />
+    </>
 }
 
 export default PositionsTable;

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
-import { Candidate } from '@/types/candidate';
+import { Candidate, ApiCandidate } from '@/types/candidate';
 import CandidateCard from '@/components/candidate_pages/CandidateCard';
 import CandidatePositions from '@/components/candidate_pages/CandidatePositions';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -10,15 +10,6 @@ import { PoliticalCategory, Issue } from '@/types/issues';
 import { politicalCategories } from '@/utils/mockIssues';
 import {Separator} from '@/components/ui/separator';
 
-type ApiCandidate = Candidate & {
-    election_year: string;
-    congressional_district: string;
-    incumbent_position: string;
-    running_for_position: string;
-    election_date: string;
-    term_end_date: string;
-    description: Text;
-};
 
 type ApiPosition = {
     supports_positon: boolean;
@@ -94,9 +85,12 @@ const CandidatePage = () => {
         <>
           <CandidateCard candidate={candidate} />
           <Separator className="my-4 w-4/5 mx-auto" />
-          <CandidatePositions categories={politicalCategories} candidate={id}/>
+          <CandidatePositions 
+            categories={politicalCategories} 
+            candidate={candidate}
+          />
         </>
-    );
-};
+    )
+}
 
 export default CandidatePage;

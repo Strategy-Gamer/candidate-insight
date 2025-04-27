@@ -5,29 +5,12 @@ export const revalidate = 3600;
 
 export async function GET(
     request: Request,
-    { params }: { params: Promise<{ id: string; category: string }> }
+    { params }: { params: Promise<{ id: number; category: string }> }
   ) {
     const db = await pool.connect();
     try {
         
         const { id, category } = await params;
-        const [firstName, lastName] = id.split('-');
-
-        const candidateRes = await db.query(
-            `SELECT c.candidate_id FROM candidate c
-             WHERE LOWER(c.first_name) = LOWER($1)
-             AND LOWER(c.last_name) = LOWER($2)`,
-            [firstName, lastName]
-        );
-
-        if (candidateRes.rowCount === 0) {
-            return NextResponse.json(
-              { error: 'Candidate not found' }, 
-              { status: 404 }
-            );
-        }
-      
-        const candidateId = candidateRes.rows[0].candidate_id;
 
         const result = await db.query(`
             SELECT 
@@ -51,9 +34,15 @@ export async function GET(
             JOIN political_category pc ON pi.category_id = pc.category
             WHERE p.candidate_id = $1
               AND pc.category = $2
-          `, [candidateId, category]);
+          `, [id, category]);
   
       return NextResponse.json(result.rows);
+    } catch (error) {
+        console.error('Error fetching candidate positions:', error);
+        return NextResponse.json(
+          { error: 'Database error' },
+          { status: 500 }
+        );
     } finally {
       db.release();
     }

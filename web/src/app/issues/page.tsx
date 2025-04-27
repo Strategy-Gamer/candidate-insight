@@ -72,7 +72,7 @@ const IssuesPage: NextPage = () => {
   }
 
   return (
-    <main className="issues-page">
+    <section className="issues-page">
       
       <section className="categories-section">
         <ul className="horizontal-menu">
@@ -127,7 +127,7 @@ const IssuesPage: NextPage = () => {
             )}
           </div>
       </section>
-    </main>
+    </section>
   );
 };
 

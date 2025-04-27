@@ -10,3 +10,13 @@ export type Candidate = {
   twitter?: string | null;
   dob?: string | null;
 };
+
+export type ApiCandidate = Candidate & {
+  election_year: string;
+  congressional_district: string;
+  incumbent_position: string;
+  running_for_position: string;
+  election_date: string;
+  term_end_date: string;
+  description: Text;
+};

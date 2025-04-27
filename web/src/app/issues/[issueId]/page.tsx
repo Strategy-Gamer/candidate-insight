@@ -69,7 +69,7 @@ export default async function IssueDetail({ params }: Props) {
   const getFilteredPositions = (party: string) => {
     const byParty = positions.filter((position: ApiCandidatePosition) => position.party_affiliation == party);
     const supports: number = byParty.filter((position: ApiCandidatePosition) => position.supports_position == true).length;
-    const opposes: number = byParty.filter((position: ApiCandidatePosition) => position.supports_position == false).length;
+    const opposes: number = byParty.length - supports;
   
     const config = {
       Supporters: {
@@ -105,24 +105,22 @@ export default async function IssueDetail({ params }: Props) {
   };
 
   return (
-    <div>
-      <div className="flex flex-col items-center justify-evenly md:flex-row gap-12 items-center p-3">
-        <div className="flex flex-col gap-4 justify-center items-center">
-          <CandidateChart 
-            data={getFilteredPositions('Democratic').data} 
-            config={getFilteredPositions('Democratic').config}
-            party='Democrats'
-            description="Proportion of Democratic candidates that support or oppose this issue."
-          />
-          <CandidateChart 
-            data={getFilteredPositions('Republican').data} 
-            config={getFilteredPositions('Republican').config}
-            party='Republicans'
-            description='Proportion of Republican candidates that support or oppose this issue.'
-          />
-        </div>
-        <Positions positions={positions} issue={issue} />
+    <div className="flex flex-col items-center justify-evenly gap-6 p-1 md:flex-row md:p-3">
+      <div className="flex flex-col gap-4 justify-center items-center">
+        <CandidateChart 
+          data={getFilteredPositions('Democratic').data} 
+          config={getFilteredPositions('Democratic').config}
+          party='Democrats'
+          description="Proportion of Democratic candidates that support or oppose this issue."
+        />
+        <CandidateChart 
+          data={getFilteredPositions('Republican').data} 
+          config={getFilteredPositions('Republican').config}
+          party='Republicans'
+          description='Proportion of Republican candidates that support or oppose this issue.'
+        />
       </div>
+      <Positions positions={positions} issue={issue} />
     </div>
   );
 }

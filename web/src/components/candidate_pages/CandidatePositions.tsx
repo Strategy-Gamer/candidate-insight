@@ -6,25 +6,15 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion";
-import {
-    Table,
-    TableBody,
-    TableCell,
-    TableRow,
-    TableHead,
-} from "@/components/ui/table";
-import { 
-  CheckOutlined,
-  CloseOutlined,
-} from "@ant-design/icons"
 import { PoliticalCategory, Issue } from '@/types/issues';
 import '@/styles/components/candidateposition.css';
 import dynamic from 'next/dynamic';
+import { ApiCandidate } from "@/types/candidate";
 
   
 interface Props {
     categories: PoliticalCategory[];
-    candidate: string | undefined; // candidate ID (for API call)
+    candidate: ApiCandidate;
 }
 
 const DynamicTable = dynamic(() => import('./PositionsTable'));
@@ -52,7 +42,7 @@ const IssuesAccordionTable = ({ categories, candidate }: Props) => {
                 </AccordionItem>
             </Accordion>
           </section>
-        ))};
+        ))}
       </div>
     );
   };
