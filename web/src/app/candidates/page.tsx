@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { NextPage } from 'next';
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Card,
   CardContent,
@@ -274,28 +275,7 @@ const Candidates: NextPage = () => {
 
   return (    
     <div className="font-sans p-6">
-      {/* years */}
-      <Select
-        value={filters.year}
-        onValueChange={(value) => {
-          setFilters(prev => ({
-            ...prev,
-            year: value
-          }));
-        }}
-      >
-        <SelectTrigger className="w-32 text-sm rounded-none">
-          <SelectValue placeholder="Election Year" />
-        </SelectTrigger>
-        <SelectContent>
-          {electionYears.map(year => (
-            <SelectItem key={year} value={year}>
-              {year}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-
+      
       <h1 className="text-3xl text-center font-bold mb-6 text-[#1c1c84]">{filters.year} Candidates</h1>
     
       {/* search section */}
@@ -311,6 +291,28 @@ const Candidates: NextPage = () => {
           placeholder='Find a candidate...'
           className="w-200 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0"
         />
+        {/* years */}
+        <Select
+          value={filters.year}
+          onValueChange={(value) => {
+            setFilters(prev => ({
+              ...prev,
+              year: value
+            }));
+          }}
+        >
+          <SelectTrigger className="w-32 text-sm rounded-none">
+            <SelectValue placeholder="Election Year" />
+          </SelectTrigger>
+          <SelectContent>
+            {electionYears.map(year => (
+              <SelectItem key={year} value={year}>
+                {year}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
         {/* filters */}
         <Popover>
           <PopoverTrigger asChild>
@@ -457,6 +459,7 @@ const Candidates: NextPage = () => {
       </div>
       
       {/* candidate cards */}
+      <ScrollArea className="h-[600px] w-full rounded-none">
       <div className="flex flex-col gap-8 p-4">
         {groupByParty ? (
           // group by party
@@ -505,6 +508,7 @@ const Candidates: NextPage = () => {
           </div>
         )}
       </div>
+      </ScrollArea>
     </div>
   );
 };
