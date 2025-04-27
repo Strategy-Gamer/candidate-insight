@@ -2,10 +2,9 @@
 'use client';
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Candidate } from '@/types/candidate';
 import type { NextPage } from 'next';
 import {
   Card,
@@ -16,14 +15,6 @@ import {
 } from "@/components/ui/card"
 import { Button } from '@/components/ui/button';
 import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from '@/components/ui/command';
-import {
   Popover,
   PopoverContent,
   PopoverTrigger,
@@ -33,14 +24,12 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
 import { Input } from "@/components/ui/input";
 import { Checkbox } from '@/components/ui/checkbox';
-import { Label } from '@/components/ui/label';
-import { getPosition, stateAbbrevs, getStateName } from '@/utils/candidateHelperFuncs';
+import { stateAbbrevs, getStateName } from '@/utils/candidateHelperFuncs';
 import { FilterFilled, SortAscendingOutlined, SortDescendingOutlined } from '@ant-design/icons';
 
 type ApiCandidate = {
@@ -49,6 +38,7 @@ type ApiCandidate = {
   party_affiliation?: string | null;
   state?: string | null;
   profile_image_url?: string | null;
+  dob?: string | null;
   election_year: string;
   congressional_district?: string | null;
   incumbent_position?: string | null;
@@ -153,24 +143,24 @@ const Candidates: NextPage = () => {
   const searchParams = useSearchParams();
   const urlYear = searchParams.get('year');
   
+  const electionYears = ["2028", "2026", "2024", "2022"];
   const [filters, setFilters] = useState({
     party: '',
     state: '',
     position: '',
     year: urlYear || '2024',
     str: '',
-    sortVal: 0,
+    sortAlph: 0,
+    sortDOB: 0,
   });
 
   const [groupByParty, setGroupByParty] = useState(false);
-  const [open, setOpen] = React.useState(false);
-  const [selectedCandidate, setSelectedCandidate] = useState<ApiCandidate | null>(null);
   const [candidates, setCandidates] = useState<ApiCandidate []>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const router = useRouter();
 
   const fetchCandidates = async (year: string = filters.year) => {
+    setLoading(true);
     try {
       const response = await fetch(`/api/candidates?year=${year}`);
       const data = await response.json();
@@ -188,7 +178,7 @@ const Candidates: NextPage = () => {
     }
   };
 
-  // here I fetched candidates based on the default year
+  // fetch candidates when the year changes
   useEffect(() => {
     fetchCandidates(filters.year);
   }, [filters.year]);
@@ -216,7 +206,7 @@ const Candidates: NextPage = () => {
       switch (filters.position) {
         case "house":
           matchesPosition = candidate.incumbent_position === "Representative" || 
-          candidate.running_for_position === "Represenative";
+          candidate.running_for_position === "Representative";
           break;
         case "senate":
           matchesPosition = candidate.incumbent_position === "Senator" || 
@@ -238,71 +228,76 @@ const Candidates: NextPage = () => {
       return found && matchesParty && matchesState && matchesPosition;
     });
 
-    if (filters.sortVal !== 0) {
+    if (filters.sortAlph !== 0) {
       return filtered.sort((a: ApiCandidate, b: ApiCandidate) => {
-        if (a.first_name < b.first_name) return filters.sortVal * -1;
-        if (a.first_name > b.first_name) return filters.sortVal * 1;
+        if (a.first_name < b.first_name) return filters.sortAlph * -1;
+        if (a.first_name > b.first_name) return filters.sortAlph * 1;
 
-        if (a.last_name < b.last_name) return filters.sortVal * -1;
-        if (a.last_name > b.last_name) return filters.sortVal * 1;
+        if (a.last_name < b.last_name) return filters.sortAlph * -1;
+        if (a.last_name > b.last_name) return filters.sortAlph * 1;
 
         return 0;
       })
     }
-    return filtered;
-  }, [candidates, filters.party, filters.state, filters.position, filters.str, filters.sortVal]);
 
-  /*
-  const filteredCandidates = candidates.filter(candidate => {
-    const matchesParty = filters.party ? candidate.party_affiliation === filters.party: true;
-    const matchesState = (() => {
-      if (!filters.state) return true;
+    if (filters.sortDOB !== 0) {
+      return filtered.sort((a: ApiCandidate, b: ApiCandidate) => {
+        // handle missing dates
+        if (!a.dob && !b.dob) return 0;
+        if (!a.dob) return 1;
+        if (!b.dob) return -1;
 
-      const state = candidate.state;
-      if (!state || state === "US") return false;
+        const date1 = new Date(a.dob!).getTime();
+        const date2 = new Date(b.dob!).getTime();
 
-      const stateName = getStateName(state);
-      return (stateAbbrevs as Record<string, string>)[stateName!] === filters.state;
-    })();
-    
-    let matchesPosition = true;
-
-    switch (filters.position) {
-      case "house":
-        matchesPosition = candidate.incumbent_position === "Representative" || 
-        candidate.running_for_position === "Represenative";
-        break;
-      case "senate":
-        matchesPosition = candidate.incumbent_position === "Senator" || 
-        candidate.running_for_position === "Senator";
-        break;
-      case "presidential":
-        matchesPosition = candidate.incumbent_position === "President" || 
-        candidate.running_for_position === "President";
-        break;
-      case "gubernatorial":
-        matchesPosition = candidate.incumbent_position === "Governor" || 
-        candidate.running_for_position === "Governor";
-        break;
+        if (date1 < date2) return filters.sortDOB * -1;
+        if (date1 > date2) return filters.sortDOB * 1;        
+        return 0;
+      });
     }
-    return matchesParty && matchesState && matchesPosition;
-  });
-  */
+
+    return filtered;
+  }, [candidates, filters.party, filters.state, filters.position, filters.str, filters.sortAlph]);
 
   const handleClearFilters = () => {
     setFilters({
       party: '',
       state: '',
       position: '',
-      year: '',
+      year: filters.year, // keep it current
       str: '',
-      sortVal: 0,
+      sortAlph: 0,
+      sortDOB: 0,
     });
     setGroupByParty(false);
   };
 
   return (    
     <div className="font-sans p-6">
+      {/* years */}
+      <Select
+        value={filters.year}
+        onValueChange={(value) => {
+          setFilters(prev => ({
+            ...prev,
+            year: value
+          }));
+        }}
+      >
+        <SelectTrigger className="w-32 text-sm rounded-none">
+          <SelectValue placeholder="Election Year" />
+        </SelectTrigger>
+        <SelectContent>
+          {electionYears.map(year => (
+            <SelectItem key={year} value={year}>
+              {year}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+
+      <h1 className="text-3xl text-center font-bold mb-6 text-[#1c1c84]">{filters.year} Candidates</h1>
+    
       {/* search section */}
       <div className="flex justify-center items-center space-x-4">
         <Input
@@ -314,7 +309,7 @@ const Candidates: NextPage = () => {
             }))
           }}
           placeholder='Find a candidate...'
-          className="w-200 rounded-none"
+          className="w-200 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0"
         />
         {/* filters */}
         <Popover>
@@ -411,10 +406,32 @@ const Candidates: NextPage = () => {
                 </SelectGroup>
               </SelectContent>
             </Select>
+            
+            <Select
+              value={filters.sortDOB === 1 ? "ascending" : filters.sortDOB === -1 ? "descending" : ""}
+              onValueChange={(value) => {
+                setFilters(prev => ({
+                  ...prev,
+                  sortDOB: value === "ascending" ? 1 : value === "descending" ? -1 : 0
+                }))
+              }}
+            >
+              <SelectTrigger className="text-sm mt-3 rounded-none">
+                <SelectValue placeholder="Filter by DOB" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectItem value="Any">Any</SelectItem>
+                  <SelectItem value="ascending">Youngest to Oldest</SelectItem>
+                  <SelectItem value="descending">Oldest to Youngest</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
 
-              <Button onClick={handleClearFilters} className="mt-3 bg-[#1c1c84] hover:bg-[#b31942] h-10 rounded-none duration-300 ease-in-out">
-                Clear Filters
-              </Button>
+            <Button onClick={handleClearFilters} className="mt-3 bg-[#1c1c84] hover:bg-[#b31942] h-10 rounded-none duration-300 ease-in-out">
+              Clear Filters
+            </Button>
+
           </PopoverContent>
         </Popover>
         <Button 
@@ -423,12 +440,20 @@ const Candidates: NextPage = () => {
           onClick={() => {
             setFilters(prev => ({
               ...prev,
-              sortVal: prev.sortVal == 0 || prev.sortVal == -1 ? 1 : -1
+              sortAlph: prev.sortAlph == 0 || prev.sortAlph == -1 ? 1 : -1
             }))
           }}
         >
-          {filters.sortVal == 0 || filters.sortVal == -1 ? <SortAscendingOutlined /> : <SortDescendingOutlined />}  
+          {filters.sortAlph == 0 || filters.sortAlph == -1 ? <SortAscendingOutlined /> : <SortDescendingOutlined />}  
         </Button>
+      </div>
+
+      <div className="text-center mb-6">
+        {loading && <p className="text-gray-500 mt-2">Loading candidates...</p>}
+        {error && <p className="text-red-500 mt-2">{error}</p>}
+        {!loading && filteredCandidates.length === 0 && (
+          <p className="text-gray-500 mt-2">No candidates found for the selected filters.</p>
+        )}
       </div>
       
       {/* candidate cards */}

@@ -17,24 +17,15 @@ import WhiteHousePhoto from '../../../photos/Homepage/WhiteHouse2.jpg';
 import SkylinePhoto from '../../../photos/Homepage/Skyline1.jpg';
 import LincolnPhoto from '../../../photos/Homepage/LincolnMemorial1.jpg';
 
-
 const Home: NextPage = () => {
   return (
     <div className="text-center font-sans">
-      {/* <section className="hero">
-        <h1>Candidate Insight</h1>
-        <h2>Understand Policy Positions & Compare Candidates</h2>
-        <Button className="explore-button">
-          <Link href="/candidates">Explore Candidates</Link>
-        </Button>
-      </section> */}
-
-      <section className="carousel-section">
-        <Carousel 
-          className="featured-carousel"
+      <section className="fullscreen-carousel">
+        <Carousel
+          className="featured-carousel h-screen w-full"
           plugins={[
             Autoplay({
-              delay: 5000,
+              delay: 6000,
             })
           ]}
           opts={{
@@ -43,73 +34,85 @@ const Home: NextPage = () => {
         >
           <CarouselContent>
             <CarouselItem>
-              <div className="carousel-slide">
-                <h3>Policy Comparison</h3>
-                <p>Compare stances on major issues like medicare, gun control, and healthcare.</p> 
-                <div className="image-container">
-                  <Image
-                    src={WhiteHousePhoto}
-                    alt={`White House Photo`}
-                    style={{width: "100%", height: "100%"}}
-                    loading="lazy"
-                  />
+              <div className="carousel-slide relative h-screen w-full">
+                <Image
+                  src={WhiteHousePhoto}
+                  alt="White House Photo"
+                  fill
+                  style={{objectFit: "cover"}}
+                  priority
+                />
+                <div className="caption-overlay absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 text-white p-8">
+                  <h1 className="text-5xl font-bold mb-4">Candidate Insight</h1>
+                  <p className="text-xl mb-8">Compare stances on major issues like medicare, gun control, and healthcare.</p>
+                  <Button className="explore-button bg-[#1c1c84] hover:bg-blue-700 text-lg py-2 px-6">
+                    <Link href="/candidates">Explore Candidates</Link>
+                  </Button>
                 </div>
-              </div> 
+              </div>
             </CarouselItem>
+            
             <CarouselItem>
-              <div className="carousel-slide">
+              <div className="carousel-slide relative h-screen w-full">
                 <Image
                   src={SkylinePhoto}
-                  alt={`Skyline Photo`}
-                  style={{width: "auto", height: "auto"}}
+                  alt="Skyline Photo"
+                  fill
+                  style={{objectFit: "cover"}}
                   loading="lazy"
                 />
+                <div className="caption-overlay absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 text-white p-8">
+                  <h2 className="text-4xl font-bold mb-4">Background Info</h2>
+                  <p className="text-xl mb-8">Get to know candidates and explore their policies.</p>
+                  <Button className="explore-button bg-[#1c1c84] hover:bg-blue-700 text-lg py-2 px-6">
+                    <Link href="/candidates">Explore Candidates</Link>
+                  </Button>
+                </div>
               </div>
             </CarouselItem>
+            
             <CarouselItem>
-              <div className="carousel-slide">
+              <div className="carousel-slide relative h-screen w-full">
                 <Image
                   src={LincolnPhoto}
-                  alt={`Lincoln Memorial Photo`}
-                  style={{width: "auto", height: "auto"}}
+                  alt="Lincoln Memorial Photo"
+                  fill
+                  style={{objectFit: "cover"}}
                   loading="lazy"
                 />
+                <div className="caption-overlay absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 text-white p-8">
+                  <h2 className="text-4xl font-bold mb-4">Data-driven Insights</h2>
+                  <p className="text-xl mb-8">Make informed decisions with factual information on key political issues.</p>
+                  <Button className="explore-button bg-[#1c1c84] hover:bg-blue-700 text-lg py-2 px-6">
+                    <Link href="/candidates">Explore Candidates</Link>
+                  </Button>
+                </div>
               </div>
             </CarouselItem>
+            
             <CarouselItem>
-              <div className="carousel-slide">
+              <div className="carousel-slide relative h-screen w-full">
                 <Image
                   src={CapitolPhoto}
-                  alt={`Capitol Photo`}
-                  style={{width: "auto", height: "auto"}}
+                  alt="Capitol Photo"
+                  fill
+                  style={{objectFit: "cover"}}
                   loading="lazy"
                 />
+                <div className="caption-overlay absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 text-white p-8">
+                  <h2 className="text-4xl font-bold mb-4">Neutral Analysis</h2>
+                  <p className="text-xl mb-8">Gain knowledge about candidates and political issues with minimal bias.</p>
+                  <Button className="explore-button bg-[#1c1c84] hover:bg-blue-700 text-lg py-2 px-6">
+                    <Link href="/candidates">Explore Candidates</Link>
+                  </Button>
+                </div>
               </div>
             </CarouselItem>
           </CarouselContent>
-          <CarouselPrevious className="carousel-nav" />
-          <CarouselNext className="carousel-nav" />
+          <CarouselPrevious className="carousel-nav absolute left-4 z-10" />
+          <CarouselNext className="carousel-nav absolute right-4 z-10" />
         </Carousel>
       </section>
-
-      {/* <section className="features">
-        <div className="feature-box">
-          <h3>Policy Comparison</h3>
-          <p>Compare stances on major issues like medicare, gun control, and healthcare.</p>
-        </div>
-        <div className="feature-box">
-          <h3>Background Info</h3>
-          <p>Get to know candidates and explore their policies.</p>
-        </div>
-        <div className="feature-box">
-          <h3>Data-driven Insights</h3>
-          <p>Make informed decisions with data-driven insights on candidates.</p>
-        </div>
-        <div className="feature-box">
-          <h3>Neutral Analysis</h3>
-          <p>Gain knowledge about candidates and political issues with as little bias as possible.</p>
-        </div>
-      </section> */}
     </div>
   );
 };
