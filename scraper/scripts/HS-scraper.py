@@ -1,3 +1,6 @@
+# ---------------------------------------------------------------------------- #
+#                 HS scraper: house.gov and senate.gov scraper                 #
+# ---------------------------------------------------------------------------- #
 import os
 import sys
 import re
@@ -11,6 +14,13 @@ from datetime import datetime
 # Change as needed based on usage. 
 MAX_DEPTH = 5 # Maximum depth for crawling subpages
 
+# To scrape only the most relevant pages
+KEYWORDS = [
+    "policy", "issues", "support", "oppose", "bill",
+    "platform", "priorities", "legislation", "agenda", "plans", "reform", "vote"
+]
+
+
 def read_input_file(file_path):
     """Reads the input file and returns a list of (name, URL) tuples."""
     websites = []
@@ -23,11 +33,31 @@ def read_input_file(file_path):
     return websites
 
 def extract_content(soup):
-    """Extracts meaningful content from tags, ignoring short lines."""
+    """Extracts meaningful content by focusing on main content areas."""
     content = ''
+
+    # Try to find the main block first
+    main = soup.find('main') or soup.find('div', id='main-content') or soup.find('div', role='main')
+    search_area = main if main else soup  # fallback to full page
+
+    # Scrape text from main content area
     for tag in ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'article']:
-        for element in soup.find_all(tag):
+        for element in search_area.find_all(tag):
             line = element.get_text(separator=' ', strip=True)
+            if line:  
+                content += line + '\n'
+    
+    # Scrape tables 
+    for table in search_area.find_all('table'):
+        for row in table.find_all('tr'):
+            row_text = []
+            for cell in row.find_all(['td', 'th']):
+                cell_text = cell.get_text(separator=' ', strip=True)
+                if cell_text:
+                    row_text.append(cell_text)
+            if row_text:
+                content += ' | '.join(row_text) + '\n'
+    
     return content
 
 def create_driver():
@@ -58,7 +88,7 @@ def scrape_dynamic_website(url, visited=None, max_depth=MAX_DEPTH, depth=0):
         print(f"Scraping {url} at depth {depth}...")
         driver.set_page_load_timeout(30)
         driver.get(url)
-        time.sleep(3)  # Allow JavaScript content to load
+        time.sleep(7)  # Allow JavaScript content to load
 
         visited.add(url)
         soup = BeautifulSoup(driver.page_source, 'html.parser')
@@ -67,12 +97,17 @@ def scrape_dynamic_website(url, visited=None, max_depth=MAX_DEPTH, depth=0):
         # Crawl internal subpages
         for link in soup.find_all('a', href=True):
             sub_url = urljoin(url, link['href'])
+            sub_url_lower = sub_url.lower()
+
             if sub_url not in visited and urlparse(sub_url).netloc == urlparse(url).netloc:
-                try:
-                    content += scrape_dynamic_website(sub_url, visited, max_depth, depth + 1)
-                except Exception as e:
-                    print(f"Skipping subpage {sub_url} due to error: {e}")
-                    continue
+                if any(keyword in sub_url_lower for keyword in KEYWORDS):
+                    try:
+                        content += scrape_dynamic_website(sub_url, visited, max_depth, depth + 1)
+                    except Exception as e:
+                        print(f"⚠️ Skipping subpage {sub_url} due to error: {e}")
+                        continue
+                else:
+                    print(f"Skipping irrelevant page: {sub_url}")
 
         return content
     except Exception as e:
