@@ -12,12 +12,9 @@ import {
 } from '@/components/ui/carousel';
 import "@/styles/pages/homepage.css";
 import Autoplay from 'embla-carousel-autoplay';
-import CapitolPhoto from '../../../photos/Homepage/Capitol1.jpg';
-import WhiteHousePhoto from '../../../photos/Homepage/WhiteHouse2.jpg';
-import SkylinePhoto from '../../../photos/Homepage/Skyline1.jpg';
-import LincolnPhoto from '../../../photos/Homepage/LincolnMemorial1.jpg';
 
 const Home: NextPage = () => {
+
   return (
     <div className="text-center font-sans">
       <section className="fullscreen-carousel">
@@ -36,7 +33,7 @@ const Home: NextPage = () => {
             <CarouselItem>
               <div className="carousel-slide relative h-screen w-full">
                 <Image
-                  src={WhiteHousePhoto}
+                  src="/images/Capitol1.jpg"
                   alt="White House Photo"
                   fill
                   style={{objectFit: "cover"}}
@@ -55,7 +52,7 @@ const Home: NextPage = () => {
             <CarouselItem>
               <div className="carousel-slide relative h-screen w-full">
                 <Image
-                  src={SkylinePhoto}
+                  src="/images/Skyline1.jpg"
                   alt="Skyline Photo"
                   fill
                   style={{objectFit: "cover"}}
@@ -74,7 +71,7 @@ const Home: NextPage = () => {
             <CarouselItem>
               <div className="carousel-slide relative h-screen w-full">
                 <Image
-                  src={LincolnPhoto}
+                  src="/images/LincolnMemorial1.jpg"
                   alt="Lincoln Memorial Photo"
                   fill
                   style={{objectFit: "cover"}}
@@ -93,7 +90,7 @@ const Home: NextPage = () => {
             <CarouselItem>
               <div className="carousel-slide relative h-screen w-full">
                 <Image
-                  src={CapitolPhoto}
+                  src="/images/WhiteHouse2.jpg"
                   alt="Capitol Photo"
                   fill
                   style={{objectFit: "cover"}}
