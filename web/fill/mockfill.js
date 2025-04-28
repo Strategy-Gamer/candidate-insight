@@ -3,7 +3,7 @@ import pg from 'pg';
 import env from "dotenv";
 import policyData from './issues.js';
 
-env.config({path: '../.env'});
+env.config({path: '../.env.devmock'});
 
 const pool = new pg.Pool({
     user: process.env.DB_USER,
@@ -164,8 +164,8 @@ async function insertMeta(candidates) {
     2028: "2028-11-08",
   };
 
-  const incumbentPositions = ["Governor", "Representative", "Senator", "President"];
-  const runningForPositions = ["Representative", "Senator", "President"];
+  const incumbentPositions = ["Governor", "House", "Senator", "President"];
+  const runningForPositions = ["House", "Senator", "President"];
   const stateCodes = [
     "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", 
     "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", 

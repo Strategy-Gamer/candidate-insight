@@ -28,12 +28,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import Pages from "@/components/Pages";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from '@/components/ui/checkbox';
 import { stateAbbrevs, getStateName } from '@/utils/candidateHelperFuncs';
 import { FilterFilled, SortAscendingOutlined, SortDescendingOutlined } from '@ant-design/icons';
+import { parse } from 'path';
 
 type ApiCandidate = {
+  candidate_id: number;
   first_name: string;
   last_name: string;
   party_affiliation?: string | null;
@@ -45,22 +48,6 @@ type ApiCandidate = {
   incumbent_position?: string | null;
   running_for_position?: string | null;
 };
-
-function findStr(str: string, sequence: string) {
-  let index = 0;
-  let isSubsequence = false;
-
-  for (const char of str) {
-    if (char === sequence[index]) {
-      index++;
-    }
-    if (index === sequence.length) {
-      isSubsequence = true;
-      break;
-    }
-  }
-  return str.includes(sequence) || isSubsequence;
-}
 
 function getCandidateDescriptor(candidate: ApiCandidate): string {
   const formatDescriptor = (position: string | null | undefined, state: string | null | undefined, district: string | null | undefined): string => {
@@ -140,6 +127,8 @@ const InfoCardButton: React.FC<{ candidate: ApiCandidate; groupByParty: boolean 
   );
 };
 
+const LIMIT = 32;
+
 const Candidates: NextPage = () => {
   const searchParams = useSearchParams();
   const urlYear = searchParams.get('year');
@@ -150,23 +139,57 @@ const Candidates: NextPage = () => {
     state: '',
     position: '',
     year: urlYear || '2024',
-    str: '',
-    sortAlph: 0,
-    sortDOB: 0,
+    str: ''
   });
+  const [sortValue, setSortValue] = useState<number>(0);
 
   const [groupByParty, setGroupByParty] = useState(false);
   const [candidates, setCandidates] = useState<ApiCandidate []>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [totalCandidates, setTotalCandidates] = useState(null);
+  const [page, setPage] = useState(1);
+
+  const sortedCandidates = useMemo(() => {
+    const sorted = [...candidates]; // always copy first to avoid mutating
+
+    if (sortValue !== 0) {
+      if (sortValue === 1 || sortValue === -1) {
+        sorted.sort((a, b) => {
+          const dateA = new Date(a.dob || '');
+          const dateB = new Date(b.dob || '');
+          return sortValue === -1 ? dateA.getTime() - dateB.getTime() : dateB.getTime() - dateA.getTime();
+        });
+      }
+      else if (sortValue === 2 || sortValue === -2) {
+        sorted.sort((a, b) => {
+          const nameA = `${a.first_name} ${a.last_name}`.toLowerCase();
+          const nameB = `${b.first_name} ${b.last_name}`.toLowerCase();
+          return sortValue === 2 ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+        });
+      }
+    }
+
+    return sorted;
+  }, [candidates, sortValue]);
 
   const fetchCandidates = async (year: string = filters.year) => {
     setLoading(true);
     try {
-      const response = await fetch(`/api/candidates?year=${year}`);
+      const url = `
+      /api/candidates?page=${page}&limit=${LIMIT}&year=${year}&state=${filters.state}&party=${filters.party}&position=${filters.position}&search=${filters.str.toLowerCase().replace(/ /g, '')}`;
+      const response = await fetch(url);
       const data = await response.json();
 
       if (data.success) {
+        const count = data.total;
+        // Don't display invalid page numbers
+        if (count > 0) {
+          if (Math.ceil(count / LIMIT) < page)
+            setPage(Math.ceil(count / LIMIT));
+          setTotalCandidates(count);
+        }
+
         setCandidates(data.candidates);
       } else {
         setError('Failed to load candidates');
@@ -179,86 +202,15 @@ const Candidates: NextPage = () => {
     }
   };
 
-  // fetch candidates when the year changes
+  // fetch candidates when filters change
   useEffect(() => {
     fetchCandidates(filters.year);
-  }, [filters.year]);
+  }, [filters.year, page, filters.state, filters.party, filters.position, filters.str]);
+
 
   const toggleGroupByParty = () => {
     setGroupByParty(prevState => !prevState);
   };
-
-  const filteredCandidates = useMemo(() => {
-    const filtered = candidates.filter((candidate) => {
-      const matchesParty = filters.party ? candidate.party_affiliation === filters.party: true;
-
-      const matchesState= (() => {
-        if (!filters.state) return true;
-
-        const state = candidate.state;
-        if (!state || state === "US") return false;
-
-        const stateName = getStateName(state);
-        return (stateAbbrevs as Record<string, string>)[stateName!] === filters.state;
-      })();
-
-      let matchesPosition = true;
-
-      switch (filters.position) {
-        case "house":
-          matchesPosition = candidate.incumbent_position === "Representative" || 
-          candidate.running_for_position === "Representative";
-          break;
-        case "senate":
-          matchesPosition = candidate.incumbent_position === "Senator" || 
-          candidate.running_for_position === "Senator";
-          break;
-        case "presidential":
-          matchesPosition = candidate.incumbent_position === "President" || 
-          candidate.running_for_position === "President";
-          break;
-        case "gubernatorial":
-          matchesPosition = candidate.incumbent_position === "Governor" || 
-          candidate.running_for_position === "Governor";
-          break;
-      }
-      
-      const searchString = (candidate.first_name + candidate.last_name).toLowerCase();
-      const found = findStr(searchString, filters.str.toLowerCase().replace(/ /g, ''));
-
-      return found && matchesParty && matchesState && matchesPosition;
-    });
-
-    if (filters.sortAlph !== 0) {
-      return filtered.sort((a: ApiCandidate, b: ApiCandidate) => {
-        if (a.first_name < b.first_name) return filters.sortAlph * -1;
-        if (a.first_name > b.first_name) return filters.sortAlph * 1;
-
-        if (a.last_name < b.last_name) return filters.sortAlph * -1;
-        if (a.last_name > b.last_name) return filters.sortAlph * 1;
-
-        return 0;
-      })
-    }
-
-    if (filters.sortDOB !== 0) {
-      return filtered.sort((a: ApiCandidate, b: ApiCandidate) => {
-        // handle missing dates
-        if (!a.dob && !b.dob) return 0;
-        if (!a.dob) return 1;
-        if (!b.dob) return -1;
-
-        const date1 = new Date(a.dob!).getTime();
-        const date2 = new Date(b.dob!).getTime();
-
-        if (date1 < date2) return filters.sortDOB * -1;
-        if (date1 > date2) return filters.sortDOB * 1;        
-        return 0;
-      });
-    }
-
-    return filtered;
-  }, [candidates, filters.party, filters.state, filters.position, filters.str, filters.sortAlph]);
 
   const handleClearFilters = () => {
     setFilters({
@@ -266,10 +218,9 @@ const Candidates: NextPage = () => {
       state: '',
       position: '',
       year: filters.year, // keep it current
-      str: '',
-      sortAlph: 0,
-      sortDOB: 0,
+      str: ''
     });
+    setSortValue(0); 
     setGroupByParty(false);
   };
 
@@ -401,31 +352,10 @@ const Candidates: NextPage = () => {
               <SelectContent>
                 <SelectGroup>
                   <SelectItem value="All">All</SelectItem>
-                  <SelectItem value="house">House</SelectItem>
-                  <SelectItem value="senate">Senate</SelectItem>
-                  <SelectItem value="presidential">Presidential</SelectItem>
+                  <SelectItem value="House">House</SelectItem>
+                  <SelectItem value="Senator">Senate</SelectItem>
+                  <SelectItem value="President">Presidential</SelectItem>
                   <SelectItem value="gubernatorial">Governor</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-            
-            <Select
-              value={filters.sortDOB === 1 ? "ascending" : filters.sortDOB === -1 ? "descending" : ""}
-              onValueChange={(value) => {
-                setFilters(prev => ({
-                  ...prev,
-                  sortDOB: value === "ascending" ? 1 : value === "descending" ? -1 : 0
-                }))
-              }}
-            >
-              <SelectTrigger className="text-sm mt-3 rounded-none">
-                <SelectValue placeholder="Filter by DOB" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectItem value="Any">Any</SelectItem>
-                  <SelectItem value="ascending">Youngest to Oldest</SelectItem>
-                  <SelectItem value="descending">Oldest to Youngest</SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>
@@ -436,24 +366,34 @@ const Candidates: NextPage = () => {
 
           </PopoverContent>
         </Popover>
-        <Button 
-          variant={"outline"} 
-          className="h-10 rounded-none"
-          onClick={() => {
-            setFilters(prev => ({
-              ...prev,
-              sortAlph: prev.sortAlph == 0 || prev.sortAlph == -1 ? 1 : -1
-            }))
-          }}
+        <Select
+          onValueChange={(value) => setSortValue(parseInt(value))}
         >
-          {filters.sortAlph == 0 || filters.sortAlph == -1 ? <SortAscendingOutlined /> : <SortDescendingOutlined />}  
-        </Button>
+          <SelectTrigger className="w-32 text-sm rounded-none">
+            <SelectValue placeholder="Sort By" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectItem value="0">Any</SelectItem>
+              <SelectItem value="1">Youngest to Oldest</SelectItem>
+              <SelectItem value="-1">Oldest to Youngest</SelectItem>
+              <SelectItem value="2">A-Z</SelectItem>
+              <SelectItem value="-2">Z-A</SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+        <Pages 
+          page={page} 
+          limit={LIMIT} 
+          total={totalCandidates || 1} 
+          onPageChange={setPage}
+        />
       </div>
 
       <div className="text-center mb-6">
         {loading && <p className="text-gray-500 mt-2">Loading candidates...</p>}
         {error && <p className="text-red-500 mt-2">{error}</p>}
-        {!loading && filteredCandidates.length === 0 && (
+        {!loading && sortedCandidates.length === 0 && (
           <p className="text-gray-500 mt-2">No candidates found for the selected filters.</p>
         )}
       </div>
@@ -464,21 +404,21 @@ const Candidates: NextPage = () => {
         {groupByParty ? (
           // group by party
           ["Democratic", "Republican", "Independent", "Green", "Constitution", "Libertarian"].map((party) => {
-            const candidates = filteredCandidates.filter((c) => c.party_affiliation === party);
-            if (candidates.length === 0) return null;
+            const groupedCandidates = sortedCandidates.filter((c) => c.party_affiliation === party);
+            if (groupedCandidates.length === 0) return null;
 
             return (
               <section key={party} className="font-sans p-6 rounded-none border-2 border-gray-300 bg-gray-100">
                 <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">{party} Party</h2>
                 <div className="flex flex-wrap justify-center gap-4">
-                  {candidates.map((candidate) => (
+                  {groupedCandidates.map((candidate) => (
                     <Link
-                    key={`${candidate.first_name}-${candidate.last_name}`}
+                    key={candidate.candidate_id}
                     href={`/candidates/${candidate.first_name}-${candidate.last_name}`}
                     className="parent"
                   >
                     <InfoCardButton 
-                      key={`${candidate.first_name}-${candidate.last_name}`} 
+                      key={candidate.candidate_id} 
                       candidate={candidate} 
                       groupByParty={false}
                     />
@@ -492,14 +432,14 @@ const Candidates: NextPage = () => {
           
           // simply display all candidates
           <div className="flex flex-wrap justify-center gap-4">
-            {filteredCandidates.map((candidate) => (
+            {sortedCandidates.map((candidate) => (
               <Link
-                key={`${candidate.first_name}-${candidate.last_name}`}
+                key={candidate.candidate_id}
                 href={`/candidates/${candidate.first_name}-${candidate.last_name}`}
                 className="parent"
               >
                 <InfoCardButton 
-                  key={`${candidate.first_name}-${candidate.last_name}`} 
+                  key={candidate.candidate_id} 
                   candidate={candidate} 
                   groupByParty={false}
                 />
