@@ -63,7 +63,7 @@ issue_stance_phrases = {
     "Carbon Emissions Controls": {"support": [], "oppose": []},
     "Pollutant Controls": {"support": [], "oppose": []},
 
-    # Gun Control
+    # Civil Liberties
     "Background Checks": {"support": [], "oppose": []},
     "Assault Weapons Ban": {"support": [], "oppose": []},
     "Gun Ownership": {"support": [], "oppose": []},
@@ -209,7 +209,7 @@ issue_trigger_phrases = {
         "air pollution", "clean water", "toxic waste", "industrial runoff", "environmental protection"
     ],
 
-    # Gun Control
+    # Civil Liberties
     "Background Checks": [
         "background checks", "universal background checks", "gun show loophole", "firearm purchase checks"
     ],
@@ -1598,7 +1598,9 @@ def detect_stance_for_issue(text, issue, issue_stance_phrases, cached_vectors, n
 
 
 def handle_text(text):
-    doc = nlp(text)
+    cleaned = text.replace("\n", ". ")
+    doc = nlp(cleaned)
+    policy_sentences = []
     for sent in doc.sents:
         if len(sent) < 6: continue
         sentence = sent.text
@@ -1606,8 +1608,9 @@ def handle_text(text):
         issue_result = detect_issue(sentence, issue_trigger_phrases, cached_issue_vectors, nlp)
 
         if issue_result:
-            print(sentence)
-            print(issue_result)
+            # print(sentence)
+            policy_sentences.append(sentence)
+            # print(issue_result)
             issue = issue_result["issue"]
             stance_result = detect_stance_for_issue(
                 sentence, issue, issue_stance_phrases, cached_stance_vectors, nlp
@@ -1615,27 +1618,43 @@ def handle_text(text):
                       
             if stance_result:
                 policy_counts[issue][stance_result["stance"]] += stance_result["confidence"]
-                print(stance_result)
+                # print(stance_result)
+    return policy_sentences
+
+def extract_sentences_with_fake_periods(text, nlp, min_length=20):
+    sentences = []
+    cleaned = text.replace("\n", ". ")
+    doc = nlp(cleaned)
+    for sent in doc.sents:
+        sentences.append(sent.text)
+    return sentences
+
+def export_sentences_to_txt(sentences, output_path):
+    with open(output_path, "w", encoding="utf-8") as f:
+        for i, sent in enumerate(sentences, 1):
+            f.write(f"{i:03d}. {sent.strip()}\n")
 
 # Main
 print("Beginning NLP")
 nlp = spacy.load("en_core_web_lg")
-phrase = nlp(text="hi")
 
 # Cache vectors (just has to be done once. Takes about 4s)
 print("Caching Vectors")
-cached_stance_vectors = precompute_phrase_vectors(issue_stance_phrases, nlp)
-cached_issue_vectors = precompute_issue_vectors(issue_trigger_phrases, nlp)
+# cached_stance_vectors = precompute_phrase_vectors(issue_stance_phrases, nlp)
+# cached_issue_vectors = precompute_issue_vectors(issue_trigger_phrases, nlp)
 
 policy_counts = defaultdict(lambda: {"support": 0.0, "oppose": 0.0})
 candidate = "Tammy Baldwin"
-text = db_handling.get_scraped_file_from_database("TammyBaldwin/tammy_baldwin_wi_senate.txt")
+text = db_handling.get_scraped_file_from_database("People/TammyBaldwin/tammy_baldwin_wi_senate.txt")
 # handle_file("TammyBaldwin/tammy_baldwin_wi_senate.txt")
 # handle_file("TammyBaldwin/tammy_baldwin_campaign_site.txt")
 # handle_file("TammyBaldwin/SenatorBaldwin.txt")
 
 print("Handling Text")
-handle_text(text)
+# sentences = extract_sentences_with_fake_periods(text, nlp)
+cleaned = text.replace("\n", ". ")
+print(cleaned)
+# export_sentences_to_txt(sentences, "statements.txt")
 
 # Determine Position based on counts
 #file = open(candidate[0].lower() + "_" + candidate[1].lower() + "_positions.txt", "w")
