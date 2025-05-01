@@ -62,6 +62,7 @@ const Positions: React.FC<PositionsProps> = ({positions, issue}: PositionsProps)
   });
 
   const filteredPositions = useMemo(() => {
+    const normalizedStr = filters.str.toLowerCase().replace(/ /g, '');
     const filtered = allPositions.filter((position: ApiCandidatePosition) => {
       let supportsFilter;
       if (filters.supports === 'S') {
@@ -79,7 +80,7 @@ const Positions: React.FC<PositionsProps> = ({positions, issue}: PositionsProps)
       }
   
       const searchString = (position.first_name+position.last_name).toLowerCase();
-      return findStr(searchString, filters.str.toLowerCase().replace(/ /g, '')) && partyFilter && supportsFilter;
+      return findStr(searchString, normalizedStr) && partyFilter && supportsFilter;
     })
 
     if (filters.sortVal !== 0) {
@@ -222,7 +223,7 @@ const Positions: React.FC<PositionsProps> = ({positions, issue}: PositionsProps)
       </div>
     </div>
     <section className="position-container">
-      <ScrollArea className="h-[500px] w-full p-4">
+      <ScrollArea className="scroll">
         <Accordion type="single" collapsible className="w-full">
           {filteredPositions.map((position, index) => (
             <AccordionItem key={index} value={`item-${index}`} className="w-full">
@@ -240,7 +241,7 @@ const Positions: React.FC<PositionsProps> = ({positions, issue}: PositionsProps)
                   <span className="text-sm md:text-base lg:text-lg hover:underline">Sources</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="p-2 rounded-none md:p-4">
+              <AccordionContent className="p-1 pb-2 md:p-4">
                 {position.position_id in positionSources ? (
                   
                   <>

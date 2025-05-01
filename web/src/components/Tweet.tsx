@@ -25,7 +25,7 @@ const Tweet = (props: TweetProps) => {
         <div className="flex flex-wrap items-center gap-2 sm:gap-2 gap-1">
           <h3 className="font-semibold">{`${props.firstName} ${props.lastName}`}</h3>
           <CheckCircleTwoTone twoToneColor="#1DA1F2" />
-          <div className="flex gap-1 text-gray-500 text-sm">
+          <div className="flex gap-1 text-gray-500">
             <p className="m-0 p-0">{props.username}</p>
             <span>·</span>
             <p className="m-0 p-0">
@@ -37,7 +37,7 @@ const Tweet = (props: TweetProps) => {
             </p>
           </div>
         </div>
-        <p className="text-gray-900">{props.tweet}</p>
+        <p className="text-gray-900 p-0">{props.tweet}</p>
       </div>
     </div>
   </>
