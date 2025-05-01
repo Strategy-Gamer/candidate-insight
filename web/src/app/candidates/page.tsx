@@ -31,8 +31,9 @@ import {
 import Pages from "@/components/Pages";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from '@/components/ui/checkbox';
-import { stateAbbrevs, getStateName } from '@/utils/candidateHelperFuncs';
-import { FilterFilled, SortAscendingOutlined, SortDescendingOutlined } from '@ant-design/icons';
+import {Separator} from '@/components/ui/separator';
+import { stateAbbrevs } from '@/utils/candidateHelperFuncs';
+import { FilterFilled, SearchOutlined } from '@ant-design/icons';
 import { parse } from 'path';
 
 type ApiCandidate = {
@@ -49,43 +50,32 @@ type ApiCandidate = {
   running_for_position?: string | null;
 };
 
-function getCandidateDescriptor(candidate: ApiCandidate): string {
-  const formatDescriptor = (position: string | null | undefined, state: string | null | undefined, district: string | null | undefined): string => {
-    if (!position) return '';
-    
-    if (position === 'Representative') {
-      return `${position} (${district})`
-    }
-    
-    // handle other positions
-    switch(position) {
-      case 'Senator':
-      case 'Governor':
-        return state ? `${position} (${state})` : position;
-      default:
-        return position; // for other positions if we add those
-    }
-  };
+const formatDate = (isoDate: string) => {
+  const date = new Date(isoDate);
+  const month = String(date.getMonth() + 1).padStart(2, '0'); // 0-padded
+  const day = String(date.getDate()).padStart(2, '0');
+  const year = String(date.getFullYear()).slice(-2); // Last 2 digits
+  return `${month}/${day}/${year}`;
+};
 
-  // case 1: incumbent running for different position
-  if (candidate.incumbent_position && candidate.running_for_position) {
-    const current = formatDescriptor(candidate.incumbent_position, candidate.state, candidate.congressional_district);
-    const runningFor = formatDescriptor(candidate.running_for_position, candidate.state, candidate.congressional_district);
-    return `${current} running for ${runningFor}`;
+function getAge(birthDate: Date | string): number {
+  // Handle string input
+  const birth = typeof birthDate === 'string' ? new Date(birthDate) : birthDate;
+  const today = new Date();
+  
+  // Calculate raw age
+  let age = today.getFullYear() - birth.getFullYear();
+  const monthDiff = today.getMonth() - birth.getMonth();
+  
+  // Adjust if birthday hasn't occurred yet this year
+  if (
+    monthDiff < 0 || 
+    (monthDiff === 0 && today.getDate() < birth.getDate())
+  ) {
+    age--;
   }
   
-  // case 2: non-incumbent running for position
-  if (candidate.running_for_position) {
-    return formatDescriptor(candidate.running_for_position, candidate.state, candidate.congressional_district);
-  }
-  
-  // case 3: incumbent not running (or unknown)
-  if (candidate.incumbent_position) {
-    return formatDescriptor(candidate.incumbent_position, candidate.state, candidate.congressional_district);
-  }
-
-  // default case
-  return 'Candidate';
+  return age;
 }
 
 const InfoCardButton: React.FC<{ candidate: ApiCandidate; groupByParty: boolean }> = ({ candidate, groupByParty }) => {
@@ -99,23 +89,33 @@ const InfoCardButton: React.FC<{ candidate: ApiCandidate; groupByParty: boolean 
   };
   
   const imgSrc = candidate.profile_image_url ?? '/images/Rect_NonID_Grey.png';
-  
   const party = candidate.party_affiliation ?? "Independent";
   const partyAbbrev = party.slice(0, 1);
   const fullName = `${candidate.first_name} ${candidate.last_name}`;
-  let position = getCandidateDescriptor(candidate);
-  
+  let runningForPosition = candidate.running_for_position ? `${candidate.running_for_position} (${candidate.state})` : "Not Running";
+  let incumbentPosition = candidate.incumbent_position ? `${candidate.incumbent_position} (${candidate.state})` : "Not Holding Office";
+
   const bgColor = groupByParty ? partyColors[party] || "bg-gray-500" : "bg-gray-700 hover:bg-gray-900";
 
   return (
     <Card 
-      className={`w-[275px] h-[400]cursor-pointer rounded-none duration-300 ease-in-out ${bgColor}`}
+      className={`w-[275px] h-[425px] cursor-pointer rounded-none duration-300 ease-in-out ${bgColor}`}
     >
-      <CardHeader className="text-center h-24 flex flex-col justify-center px-2">
-        <CardTitle className="text-white leading-tight line-clamp-2">{`${fullName} (${partyAbbrev})`}</CardTitle>
-        <CardDescription className="text-white mt-` line-clamp-1">{position}</CardDescription>
+      <CardHeader className="text-center h-24 flex flex-col justify-center items-center px-2">
+        <CardTitle className="text-white">{fullName}</CardTitle>
+        <CardDescription className="text-white flex flex-row items-center gap-2 mt-1">
+          <span>({partyAbbrev})</span>
+          <Separator orientation="vertical" className="h-4 w-px bg-white/50" />
+          <span>Age: {getAge(candidate.dob!)}</span>
+          <Separator orientation="vertical" className="h-4 w-px bg-white/50" />
+          <span>Born: {formatDate(candidate.dob!)}</span>
+        </CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-col items-center">
+      <CardContent className="flex flex-col items-center justify-center gap-4 text-center">
+        <div className="text-white">
+          <h2 className="font-medium">Running For: {runningForPosition}</h2>
+          <h2 className="italic">Currently: {incumbentPosition}</h2>
+        </div>
         <Image
           src={imgSrc}
           width={200}
@@ -230,18 +230,23 @@ const Candidates: NextPage = () => {
       <h1 className="text-3xl text-center font-bold mb-6 text-[#1c1c84]">{filters.year} Candidates</h1>
     
       {/* search section */}
-      <div className="flex justify-center items-center space-x-4">
-        <Input
-          value={filters.str}
-          onChange={(e) => {
-            setFilters(prev => ({
-              ...prev,
-              str: e.target.value
-            }))
-          }}
-          placeholder='Find a candidate...'
-          className="w-200 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0"
-        />
+      <div className="flex justify-between items-center mb-4 px-8">
+        <div className="flex items-center space-x-4">
+          <div className="relative">
+            <Input
+              value={filters.str}
+              onChange={(e) => {
+                setFilters(prev => ({
+                  ...prev,
+                  str: e.target.value
+                }))
+              }}
+              placeholder='Find a candidate...'
+              className="w-200 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0"
+            />
+            <SearchOutlined className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
+          </div>
+
         {/* years */}
         <Select
           value={filters.year}
@@ -382,12 +387,15 @@ const Candidates: NextPage = () => {
             </SelectGroup>
           </SelectContent>
         </Select>
-        <Pages 
-          page={page} 
-          limit={LIMIT} 
-          total={totalCandidates || 1} 
-          onPageChange={setPage}
-        />
+        </div>
+        <div>
+            <Pages 
+              page={page} 
+              limit={LIMIT} 
+              total={totalCandidates || 1} 
+              onPageChange={setPage}
+            />
+        </div>
       </div>
 
       <div className="text-center mb-6">
@@ -400,7 +408,7 @@ const Candidates: NextPage = () => {
       
       {/* candidate cards */}
       <ScrollArea className="h-[600px] w-full rounded-none">
-      <div className="flex flex-col gap-8 p-4">
+      <div className="flex flex-col gap-8 px-4 py-4">
         {groupByParty ? (
           // group by party
           ["Democratic", "Republican", "Independent", "Green", "Constitution", "Libertarian"].map((party) => {
@@ -420,7 +428,7 @@ const Candidates: NextPage = () => {
                     <InfoCardButton 
                       key={candidate.candidate_id} 
                       candidate={candidate} 
-                      groupByParty={false}
+                      groupByParty={true}
                     />
                   </Link>
                   ))}

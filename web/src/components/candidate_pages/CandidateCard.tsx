@@ -3,11 +3,8 @@ import Image from 'next/image';
 import '@/styles/components/candidatecard.css';
 import { Candidate } from '@/types/candidate';
 import { 
-  getPartyAbbreviation,
   getStateName,
   appendOrdinalToDistrict,
-  getParty,
-  getPosition,
 } from '@/utils/candidateHelperFuncs';
 import {
   XOutlined,

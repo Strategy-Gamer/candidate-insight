@@ -51,28 +51,40 @@ const CandidatePage = () => {
 
     if (loading) {
         return (
-            <div className="flex flex-row p-10 mx-auto max-w-[80%] rounded-lg shadow gap-12">
+            <div className="flex flex-row flex-start justify-center p-10 bg-white m-auto max-w-4/5 overflow-hidden gap-12">
+              <div className="flex flex-col">
                 {/* image skeleton */}
-                <Skeleton className="h-[500px] w-[400px] object-cover mr-12" />
+                <Skeleton className="h-[500px] w-[400px] object-cover rounded-none mr-12" />
 
-                {/* details skeleton */}
-                <div className="flex flex-col max-w-[600px] space-y-6">
-                    <div className= "flex flex-col items-center space-y-4">
-                        <Skeleton className="h-[50px] w-[400px]" /> {/* name */}
-                        <Skeleton className="h-[30px] w-[300px]" /> {/* position */}
-                    </div>
-
-                    {/* description lines */}
-                    <Skeleton className="h-[20px] w-[600px]" />
-                    <Skeleton className="h-[20px] w-[600px]" />
-                    <Skeleton className="h-[20px] w-[600px]" />
-
-                    { /* social media links */ }
-                    <div className="flex justify-center space-x-6 mt-6">
-                        <Skeleton className="h-[40px] w-[40px] rounded-full" />
-                        <Skeleton className="h-[40px] w-[40px] rounded-full" />
-                    </div>
+                { /* social media links */ }
+                <div className="flex justify-center space-x-4 mt-4">
+                  <Skeleton className="h-[40px] w-[40px] rounded-full" />
+                  <Skeleton className="h-[40px] w-[40px] rounded-full" />
                 </div>
+
+              </div>
+
+              {/* details skeleton */}
+              <div className="flex flex-col max-w-[600px] space-y-6">
+                <div className= "flex flex-col items-center space-y-4">
+                  <Skeleton className="h-[50px] w-[400px]" /> {/* name */}
+                  <Skeleton className="h-[30px] w-[300px]" /> {/* position */}
+                </div>
+
+                {/* description lines */}
+                <Skeleton className="h-[20px] w-[600px]" />
+                <Skeleton className="h-[20px] w-[600px]" />
+                <Skeleton className="h-[20px] w-[400px]" />
+
+                <br></br>
+                <Skeleton className="h-[20px] w-[500px]" />
+
+                {/* separator */}
+                <Skeleton className="h-[4px]" /> 
+
+                <Skeleton className="h-[30px] w-[200px]" /> 
+                <Skeleton className="h-[20px] w-[300px]" />              
+              </div>
             </div>
         );
     }
