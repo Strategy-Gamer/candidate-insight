@@ -55,7 +55,6 @@ header nav {
 
 header nav a {
     margin-left: 24px;
-    text-decoration: underline;
     text-underline-offset: 5px;
     color: #1c1c84;
     font-size: 14pt;
@@ -65,6 +64,7 @@ header nav a {
 
 header nav a:hover {
     color: #b31942;
+    text-decoration: underline;
 }
 
 header button {

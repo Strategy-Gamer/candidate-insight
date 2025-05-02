@@ -29,9 +29,11 @@ const Navbar: React.FC = () => {
           alt="Candidate Insight Logo"
           className="logo"
         />
-        <h1>
-          <Link href="/">Candidate Insight</Link>
-        </h1>
+
+      <h1 className={`transition-opacity duration-300 ${isMenuOpen ? "opacity-0" : "opacity-100"}`}>
+        <Link href="/">Candidate Insight</Link>
+      </h1>
+
       </div>
       
       <button
