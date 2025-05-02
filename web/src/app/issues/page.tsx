@@ -1,4 +1,3 @@
-// This is the initial issues page
 'use client';
 
 import type { NextPage } from 'next';
@@ -6,14 +5,19 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { PoliticalCategory, Issue } from '@/types/issues';
 import { politicalCategories } from '@/utils/politicalCategories';
-/* import { issues } from '@/utils/mockIssues'; */
 import "@/styles/pages/issues.css";
 import PublicPolicySection from '@/components/issue_descriptions/PublicPolicy';
+import ImmigrationPolicySection from '@/components/issue_descriptions/Immigration';
 
 type ApiIssue = Issue & {
   category: string;
   category_description: string;
   icon?: string;
+};
+
+const PolicySections: Record<string, React.FC> = {
+  "Public Policy": PublicPolicySection,
+  "Immigration": ImmigrationPolicySection,
 };
 
 const IssuesPage: NextPage = () => {
@@ -60,7 +64,28 @@ const IssuesPage: NextPage = () => {
 
   const getSubIssues = (categoryId: string): ApiIssue[] => {
     return issues.filter(issue => issue.category === categoryId);
-  } 
+  }
+
+  const renderPolicySection = () => {
+    if (!selectedCategory) {
+      return <PublicPolicySection />;
+    }
+
+    const CategoryComponent = PolicySections[selectedCategory.category];
+    
+    if (CategoryComponent) {
+      return <CategoryComponent />;
+    }
+    
+    return (
+      <div className="category-description">
+        <h2>{selectedCategory.category}</h2>
+        <div className="description-content">
+          {selectedCategory.category_description}
+        </div>
+      </div>
+    );
+  };
 
   /* replace with shadcn skeleton */
   if (loading) {
@@ -111,21 +136,9 @@ const IssuesPage: NextPage = () => {
           ))}
         </ul>
         
-        {/* will change to individual components probably */}
-        <div className="description-container">
-            {selectedCategory ? (
-              <div className="category-description">
-                <h2>{selectedCategory.category}</h2>
-                <div className="description-content">
-                  {selectedCategory.category_description}
-                </div>
-              </div>
-            ) : (
-              <div className="category-description">
-                <PublicPolicySection />
-              </div>
-            )}
-          </div>
+        <div className="description-container mt-8 mb-8">
+          {renderPolicySection()}
+        </div>
       </section>
     </section>
   );

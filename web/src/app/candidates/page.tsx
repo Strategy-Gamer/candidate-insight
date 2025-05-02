@@ -35,6 +35,7 @@ import {Separator} from '@/components/ui/separator';
 import { stateAbbrevs } from '@/utils/candidateHelperFuncs';
 import { FilterFilled, SearchOutlined } from '@ant-design/icons';
 import { parse } from 'path';
+import { Skeleton } from '@/components/ui/skeleton';
 
 type ApiCandidate = {
   candidate_id: number;
@@ -204,7 +205,12 @@ const Candidates: NextPage = () => {
 
   // fetch candidates when filters change
   useEffect(() => {
-    fetchCandidates(filters.year);
+    const delayBounce = setTimeout(() => {
+      fetchCandidates(filters.year);
+    }, 300);
+    
+    return () => clearTimeout(delayBounce);
+    // fetchCandidates(filters.year);
   }, [filters.year, page, filters.state, filters.party, filters.position, filters.str]);
 
 
@@ -399,7 +405,19 @@ const Candidates: NextPage = () => {
       </div>
 
       <div className="text-center mb-6">
-        {loading && <p className="text-gray-500 mt-2">Loading candidates...</p>}
+        {loading && (
+          <div className="flex flex-col gap-8 px-4 py-4">
+            <p className="text-gray-500 mt-2">Loading candidates...</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              {Array.from({ length: 32 }).map((_, index) => (
+                <Skeleton
+                  key={index}
+                  className="w-[275px] h-[425px] rounded-none"
+                />
+              ))}
+            </div>
+          </div>        
+        )}
         {error && <p className="text-red-500 mt-2">{error}</p>}
         {!loading && sortedCandidates.length === 0 && (
           <p className="text-gray-500 mt-2">No candidates found for the selected filters.</p>
