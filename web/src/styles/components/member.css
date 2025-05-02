@@ -1,0 +1,40 @@
+.member-card {
+     border-radius: 10px;
+     padding: 2rem;
+     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+     text-align: center;
+
+     width: 100%;
+     min-width: 250px;
+     max-width: 600px;
+     margin: 0 auto;
+}
+
+.full-name {
+     font-size: 1.8rem;
+     font-weight: 200;
+     margin: 0 0 0.5rem 0;
+     color: #1c1c84;
+}
+
+.role {
+     font-size: 1.2rem;
+     color: #393980;
+     margin: 0 0 1.5rem 0;
+}
+
+.social-links {
+     display: flex;
+     justify-content: center;
+     gap: 1.5rem;
+}
+
+.media-icon {
+     transition: transform 0.2s;
+     width: 100px;
+     height: 100px;
+}
+
+.media-icon:hover {
+     transform: scale(1.1);
+}
