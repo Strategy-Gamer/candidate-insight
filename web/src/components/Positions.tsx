@@ -267,17 +267,19 @@ const Positions: React.FC<PositionsProps> = ({positions, issue}: PositionsProps)
 
                     {/* Twitter Sources*/}
                     <h2 className="text-xl font-bold mt-4">Tweets</h2>
-                    <div className="flex flex-col border-l border-r border-b border-gray-125">
-                      {positionSources[position.position_id].filter(source => source.tweet != null).map((source, index) => (
-                        <Tweet 
-                          key={index}
-                          tweet={source.tweet}
-                          date={source.date}
-                          firstName={position.first_name}
-                          lastName={position.last_name}
-                          username={position.twitter}
-                        />
-                      ))}
+                    <div className="flex justify-center w-full">
+                      <div className="flex flex-col border-l border-r border-b border-gray-125 w-full max-w-[650px]">
+                        {positionSources[position.position_id].filter(source => source.tweet != null).map((source, index) => (
+                          <Tweet 
+                            key={index}
+                            tweet={source.tweet}
+                            date={source.date}
+                            firstName={position.first_name}
+                            lastName={position.last_name}
+                            username={position.twitter}
+                          />
+                        ))}
+                      </div>
                     </div>
                   </>
                 ) : (

@@ -1,5 +1,6 @@
 import { CheckCircleTwoTone } from "@ant-design/icons";
 import Image from 'next/image';
+import { MessageCircle, Repeat, Heart, BarChart2, Share } from 'lucide-react';
 
 interface TweetProps {
   tweet: string;
@@ -38,6 +39,14 @@ const Tweet = (props: TweetProps) => {
           </div>
         </div>
         <p className="text-gray-900 p-0">{props.tweet}</p>
+        {/* "Interaction" buttons */}
+        <div className="flex justify-between text-gray-500 text-sm pt-2 max-w-[600px] w-full">
+            <MessageCircle size={16} />
+            <Repeat size={16}/>
+            <Heart size={16} />
+            <BarChart2 size={16} />
+            <Share size={16}/>
+        </div>
       </div>
     </div>
   </>
