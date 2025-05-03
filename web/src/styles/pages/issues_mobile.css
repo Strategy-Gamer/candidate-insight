@@ -1,0 +1,77 @@
+/* issues.css additions */
+.accordion-menu {
+     width: 100%;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding-top: 16px;
+     padding-bottom: 16px;
+ }
+ 
+ .accordion-item {
+     background-color: #374151;
+     margin-bottom: 4px;
+     border-radius: 4px;
+     overflow: hidden;
+ }
+ 
+ .accordion-header {
+     width: 100%;
+     padding: 16px;
+     text-align: left;
+     background-color: #374151;
+     border: none;
+     color: white;
+     font-family: 'Source Sans Pro', sans-serif;
+     font-weight: 600;
+     font-size: 1rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     cursor: pointer;
+     transition: background-color 0.2s ease;
+ }
+ 
+ .accordion-header:hover {
+     background-color: #4b5563;
+ }
+ 
+ .accordion-icon {
+     font-size: 1.2em;
+     margin-left: 8px;
+ }
+ 
+ .accordion-content {
+     background-color: #9EA7B5;
+     padding: 0 16px;
+ }
+ 
+ .sub-issues-list {
+     list-style: none;
+     padding: 8px 0;
+     margin: 0;
+ }
+ 
+ .sub-issue-item {
+     padding: 12px 0;
+ }
+ 
+ .sub-issue-item a {
+     color: #1f2937;
+     text-decoration: none;
+     display: block;
+     transition: color 0.2s ease;
+ }
+ 
+ .sub-issue-item a:hover {
+     color: #111827;
+     text-decoration: underline;
+ }
+
+ .accordion-content {
+     transition: max-height 0.3s ease-out, opacity 0.2s ease;
+     opacity: 1;
+ }
+ 
+ .accordion-item:not(.active) .accordion-content {
+     opacity: 0;
+ }
