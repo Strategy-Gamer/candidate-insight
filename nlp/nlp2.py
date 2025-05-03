@@ -1,6 +1,8 @@
 import db_handling
 import spacy
 import numpy as np
+import json
+from datetime import datetime
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from spacy.matcher import PhraseMatcher
@@ -9,6 +11,7 @@ from ollama import chat
 from ollama import ChatResponse
 import pandas as pd
 import re
+import os
 
 #####################
 ### --- Setup --- ###
@@ -235,6 +238,212 @@ issue_trigger_phrases = {
     ]
 }
 
+source_urls = {
+    "Kamala Harris": "https://kamalaharris.com",
+    "Donald Trump": "https://www.donaldjtrump.com",
+    "Ruben Gallego": "http://gallegoforarizona.com/",
+    "Kari Lake": "https://karilake.com ",
+    "Elissa Slotkin": "https://elissaslotkin.org ",
+    "Mike Rogers": "https://rogersforsenate.com",
+    "Jacky Rosen": "https://www.rosen.senate.gov",
+    "Sam Brown": "https://www.captainsambrown.com",
+    "Dave McCormick": "https://www.davemccormickpa.com",
+    "Bob Casey": "https://bobcasey.com",
+    "Tammy Baldwin": "https://www.tammybaldwin.com",
+    "Marsha Blackburn": "https://www.marshablackburn.com",
+    "Gloria Johnson": "https://www.votegloriajohnson.com",
+    "Rick Scott": "https://rickscott.com",
+    "Debbie Mucarsel-Powell": "https://www.debbieforflorida.com",
+    "Steven Cohen": "http://cohenforcongress.com",
+    "Charlotte Bergmann": "https://electbergmann.com",
+    "Tim Burchett": "https://www.burchettforcongress.com",
+    "Jane George": "https://janegeorgetn.com",
+    "John Rose": "https://johnrose.com",
+    "Lore Bergman": "https://lorebergman.org/platform/",
+    "Andy Ogles": "https://andyogles.com",
+    "Mark Green": "https://markgreentn.com",
+    "Marjorie Taylor Greene": "https://www.mtgforamerica.com",
+    "Shawn Harris": "https://www.shawnforgeorgia.com",
+    "Don Davis": "https://votedondavis.com",
+    "Laurie Buckhout": "https://www.lauriebuckhoutforcongress.com",
+    "Gay Valimont": "https://gayforcongress.com",
+}
+candidate_sources = {
+    "Andy Ogles": [
+        {"path": "campaign-sites/andy_ogles_tn_house.txt", "type": "Campaign Website", "url": "https://andyogles.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website", "url": "http://ogles.house.gov"},
+    ],
+    "Bob Casey": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://bobcasey.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Charlotte Bergmann": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://electbergmann.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Dave Mccormick": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://davemccormickpa.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Debbie Murcasel Powell": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://debbieforflorida.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Don Davis": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://votedondavis.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Donald Trump": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://donaldjtrump.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Elissa Slotkin": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://elissaslotkin.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Gay Valimont": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://gayforcongress.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Gloria Johnson": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://votegloriajohnson.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Jacky Rosen": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://rosen.senate.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Jane George": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://janegeorgetn.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "John Rose": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://johnrose.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Kamala Harris": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://kamalaharris.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Kari Lake": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://karilake.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Laurie Buckhout": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://bobcasey.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Lore Bergman": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://bobcasey.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Marjorie Taylor Greene": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://bobcasey.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Mark Green": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://bobcasey.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Marsha Blackburn": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://bobcasey.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Megan Barry": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://bobcasey.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Mike Rogers": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://bobcasey.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Rick Scott": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://bobcasey.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Ruben Gallego": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://bobcasey.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Sam Brown": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://bobcasey.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Shawn Harris": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://bobcasey.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Steven Cohen": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://bobcasey.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Tammy Baldwin": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://bobcasey.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+    "Tim Burchett": [
+        {"path": "campaign-sites/bob_casey_pa_senate.txt", "type": "Campaign Website", "url": "https://bobcasey.com" },
+        {"path": "X-sites/AndyOgles.txt", "type": "Tweet"},
+        {"path": "HS-sites/andy_ogles_house.gov", "type": "Gov Website"},
+        {"path": "Candidates/Bob-Casey/interview_fox.txt", "type": "Interview"},
+    ],
+}
+
 def precompute_issue_vectors(trigger_dict, nlp):
     issue_vectors = []
     for issue, phrases in trigger_dict.items():
@@ -299,6 +508,7 @@ def check_policy_statement(statement):
     {issue_list}
 
     If it is a policy relevant statement, reply "Yes", otherwise if it is irrelevant (so if it's about fundraising or legal disclaimers or something else) reply "No".
+    Also, reply "No" if this is about attacking someone else's policy. Also reply "No" if the sentence appears to be cut short.
 
     State Yes/No below: 
     """
@@ -367,107 +577,118 @@ def make_policy_phrase_matcher(nlp, keyword_list):
 ### --- Determining Position --- ###
 ####################################
 
-def determine_positions(sentences):
+def determine_positions(sentences, tweet=False):
     policy_positions = []
 
     for sentence in sentences:
         raw = classify_policy_statement(sentence)
         issue, stance, confidence = parse_llm_response(raw)
 
-        # try:
-        #     fconf = float(confidence)
-        # except ValueError as e:
-        #     continue
+        if issue == None or issue.lower() == "none":
+            continue
+        if stance == None or stance.lower() == "none":
+            continue
+        if confidence == None or confidence == 0:
+            continue
 
         if issue != "None" and stance != "None" and confidence > 0.5:
+            if tweet:
+                confidence /= 3
+
             policy_positions.append((sentence, issue, stance, confidence))
     return policy_positions
 
 
 examples = """
-Example 1:
-Sentence: "With so much at stake, from families struggling with rising costs to a ban on reproductive freedom, Wisconsinites need someone who can show up, go to work, and get the job done."
-Issue: Abortion
-Stance: support
-Confidence: 0.7
+    Example 1:
+    Sentence: "With so much at stake, from families struggling with rising costs to a ban on reproductive freedom, Wisconsinites need someone who can show up, go to work, and get the job done."
+    Issue: Abortion
+    Stance: support
+    Confidence: 0.7
 
-Example 2:
-Sentence: "Chip in to our reelection campaign today to help her defend this battleground seat and keep Wisconsin blue. Click on an option to get started."
-Issue: None
-Stance: None
-Confidence: 0.0
+    Example 2:
+    Sentence: "Chip in to our reelection campaign today to help her defend this battleground seat and keep Wisconsin blue. Click on an option to get started."
+    Issue: None
+    Stance: None
+    Confidence: 0.0
 
-Example 3:
-Sentence: "If you've saved your payment information with ActBlue Express, your donation will go through immediately"
-Issue: None
-Stance: None
-Confidence: 0.0
+    Example 3:
+    Sentence: "If you've saved your payment information with ActBlue Express, your donation will go through immediately"
+    Issue: None
+    Stance: None
+    Confidence: 0.0
 
-Example 4:
-Sentence: "I’ll fight to restore your rights until you can make your own medical decisions without a politician or a judge standing in your way."
-Issue: Abortion
-Stance: support
-Confidence: 0.5
+    Example 4:
+    Sentence: "I’ll fight to restore your rights until you can make your own medical decisions without a politician or a judge standing in your way."
+    Issue: Abortion
+    Stance: support
+    Confidence: 0.5
 
-Example 5:
-Sentence: "She stands up for our workers, our veterans, our students and our small business owners who need someone in Washington working for them"
-Issue: Regulations
-Stance: support
-Confidence: 0.3
+    Example 5:
+    Sentence: "She stands up for our workers, our veterans, our students and our small business owners who need someone in Washington working for them"
+    Issue: Regulations
+    Stance: support
+    Confidence: 0.3
 
-Example 6:
-Sentence: "He is leading the fight for stronger Made in America rules so our roads, bridges, and pipes are made with American iron and steel"
-Issue: Tariffs
-Stance: support
-Confidence: 0.5
+    Example 6:
+    Sentence: "He is leading the fight for stronger Made in America rules so our roads, bridges, and pipes are made with American iron and steel"
+    Issue: Tariffs
+    Stance: support
+    Confidence: 0.5
 
-Example 7:
-Sentence: "He knows firsthand about the need to combat the opioid crisis."
-Issue: None
-Stance: None
-Confidence: 0.0
+    Example 7:
+    Sentence: "He knows firsthand about the need to combat the opioid crisis."
+    Issue: None
+    Stance: None
+    Confidence: 0.0
 
-Example 8:
-Sentence: "But no matter how much they throw against her, we will keep fighting as hard as ever for our families."
-Issue: None
-Stance: None
-Confidence: 0.0
+    Example 8:
+    Sentence: "But no matter how much they throw against her, we will keep fighting as hard as ever for our families."
+    Issue: None
+    Stance: None
+    Confidence: 0.0
 
-Example 9:
-Sentence: "Winning the Competition With China."
-Issue: China
-Stance: oppose
-Confidence: 0.8
+    Example 9:
+    Sentence: "Winning the Competition With China."
+    Issue: China
+    Stance: oppose
+    Confidence: 0.8
 
-Example 10:
-Sentence: ""
-Issue: None
-Stance: None
-Confidence: 0.0
+    Example 10:
+    Sentence: "It’s unconscionable for Kamala Harris to claim she’s serious about border security when, as Border Czar, she has allowed our nation to be invaded.. ."
+    Issue: Illegal/Undocumented Migrants
+    Stance: Oppose
+    Confidence: 0.6
 
-Example 11:
-Sentence: "hen you post or otherwise share User Content on or through our Site, you understand that your User Content and any associated information (such as your username or profile photo) may be visible to others."
-Issue: None
-Stance: None
-Confidence: 0.0
+    Example 11:
+    Sentence: "hen you post or otherwise share User Content on or through our Site, you understand that your User Content and any associated information (such as your username or profile photo) may be visible to others."
+    Issue: None
+    Stance: None
+    Confidence: 0.0
 
-Example 12:
-Sentence: "The Site, including the text, graphics, images, photographs, videos, illustrations and other content contained therein, are owned by the Committee or our licensors and are protected under both United States and foreign laws."
-Issue: None
-Stance: None
-Confidence: 0.0
+    Example 12:
+    Sentence: "The Site, including the text, graphics, images, photographs, videos, illustrations and other content contained therein, are owned by the Committee or our licensors and are protected under both United States and foreign laws."
+    Issue: None
+    Stance: None
+    Confidence: 0.0
 
-Example 13:
-Sentence: "Baldwin pointed to a recent victory she and other members of the Health, Education, Labor and Pensions Committee claimed after investigating the price gouging practices of top manufacturers of inhalers — three of the four companies later agreed to lower patients’ out-of-pocket costs by more than $100 per inhaler.."
-Issue: Limits on Prescription Drug Prices
-Stance: support
-Confidence: 0.9
+    Example 13:
+    Sentence: "Baldwin pointed to a recent victory she and other members of the Health, Education, Labor and Pensions Committee claimed after investigating the price gouging practices of top manufacturers of inhalers — three of the four companies later agreed to lower patients’ out-of-pocket costs by more than $100 per inhaler.."
+    Issue: Limits on Prescription Drug Prices
+    Stance: support
+    Confidence: 0.9
 
-Example 14:
-Sentence: "I just think you can't be a Wisconsinite and not be deeply caring about our water."
-Issue: Pollutant Controls
-Stance: support
-Confidence: 0.6
+    Example 14:
+    Sentence: "I just think you can't be a Wisconsinite and not be deeply caring about our water."
+    Issue: Pollutant Controls
+    Stance: support
+    Confidence: 0.6
+
+    Example 15:
+    Sentence: "He fights to secure our border"
+    Issue: Border Patrol
+    Stance: support
+    Confidence: 0.7
 """
 
 def classify_policy_statement(statement):
@@ -493,7 +714,7 @@ def classify_policy_statement(statement):
     Stance: None
     Confidence: 0.0
 
-    Do not be afriad to label data as having no issue. Much of what will be provided will be effectively noise.
+    Be certain that the issue matches. Much of what will be provided will be effectively noise, so do not make mistakes.
 
     Begin your response below:
     Issue: 
@@ -509,6 +730,7 @@ def classify_policy_statement(statement):
 def parse_llm_response(response):
     issue = None
     stance = None
+    confidence = None
 
     # Try pattern-based first
     issue_match = re.search(r"Issue:\s*(.+)", response, re.IGNORECASE)
@@ -549,9 +771,307 @@ def parse_llm_response(response):
 ### --- Adding Context --- ###
 ##############################
 
+def get_all_sources_by_type(candidate_name, candidate_folder):
+    """
+    Iterate through a candidate's folder and gather all files by source type.
+    Each source type (Campaign Website, Gov Website, Tweet, Other) is a subfolder.
+    """
+    valid_types = ["Campaign Website", "Gov Website", "Tweet", "Other"]
+    all_sources = []
+
+    for source_type in valid_types:
+        type_folder = os.path.join(candidate_folder, source_type)
+        if not os.path.exists(os.path.join('../scraper/', type_folder)):
+            continue
+
+        for filename in os.listdir(os.path.join('../scraper/', type_folder)):
+            file_path = os.path.join(type_folder, filename)
+            if not filename.endswith(".txt"):
+                continue
+
+            all_sources.append({
+                "candidate": candidate_name,
+                "path": file_path,
+                "type": source_type
+            })
+
+    return all_sources
+
+def define_metadata(text, type, nlp, path, candidate, source_urls={}):
+    lines = text.strip().splitlines()
+    metadata = {
+        "type": type,
+        "url": None,
+        "tweet": None,
+        "date": None,
+        "scraped_on": None,
+    }
+
+    if type == "Campaign Website":
+        # Use predefined source list
+        if candidate and candidate in source_urls:
+            metadata["url"] = source_urls[candidate]
+        else:
+            metadata["url"] = None
+        
+        for line in lines:
+            if line.lower().startswith("scraped on:"):
+                metadata["scraped_on"] = line.split(":",1)[1].strip()
+                metadata["date"] = metadata["scraped_on"]
+
+    elif type == "Other":
+        # First line has title + date, second line is URL
+        date_match = re.search(r'\((.*?)\)', lines[0])
+        if date_match:
+            metadata["date"] = date_match.group(1)
+
+        if len(lines) > 1 and "http" in lines[1]:
+            metadata["url"] = lines[1].split("http", 1)[1].strip()
+            metadata["url"] = "http" + metadata["url"]
+
+        for line in lines:
+            if line.lower().startswith("scraped on:"):
+                metadata["scraped_on"] = line.split(":", 1)[1].strip()
+    
+    elif type == "Gov Website":
+        for line in lines:
+            if line.lower().startswith("scraped on:"):
+                metadata["scraped_on"] = line.split(":", 1)[1].strip()
+                metadata["date"] = metadata["scraped_on"]
+
+            elif line.lower().startswith("website:"):
+                metadata["url"] = line.split(":", 1)[1].strip()
+
+    return metadata
+
+def process_source(candidate, path, type, nlp, matcher):
+    print("Processing:", path)
+
+    if type == "Tweet":
+        return process_tweets(candidate, path, nlp, matcher)
+
+    text = db_handling.get_scraped_file_from_database(path)
+    metadata = define_metadata(text, type, nlp, path, candidate, source_urls)
+
+    print("Extracting...")
+    sentences = extract_sentences(text, nlp)
+    print("Filtering...")
+    sentences = filter_policy_statements(sentences, nlp, candidate, matcher, 3)
+    print("Parsing...")
+    statements = determine_positions(sentences)
+
+    data = []
+    for statement in statements:
+        data.append((statement, metadata))
+
+    return data
+
+
+def extract_tweets(text):
+    tweets = []
+    current_date = None
+    current_tweet_lines = []
+    scraped_on = None
+
+    for line in text.strip().splitlines():
+        if line.lower().startswith("scraped on:"):
+            scraped_on = line.split(":", 1)[1].strip()
+        elif re.match(r"\d{4}-\d{2}-\d{2}T", line):
+            # Save the previous tweet
+            if current_tweet_lines:
+                tweets.append((
+                    "\n".join(current_tweet_lines).strip(),
+                    {
+                        "type": "Tweet",
+                        "url": None,
+                        "tweet": "\n".join(current_tweet_lines).strip(),
+                        "date": current_date,
+                        "scraped_on": scraped_on
+                    }
+                ))
+                current_tweet_lines = []
+            current_date = line.strip()
+        else:
+            current_tweet_lines.append(line)
+
+    if current_tweet_lines:
+        tweets.append((
+            "\n".join(current_tweet_lines).strip(),
+            {
+                "type": "Tweet",
+                "url": None,
+                "tweet": "\n".join(current_tweet_lines).strip(),
+                "date": current_date,
+                "scraped_on": scraped_on
+            }
+        ))
+
+    return tweets
+
+def process_tweets(candidate, path, nlp, matcher):
+    print("Processing tweets from:", path)
+    text = db_handling.get_scraped_file_from_database(path)
+    tweet_entries = extract_tweets(text)
+
+    results = []
+
+    i = 0
+    for tweet_text, metadata in tweet_entries:
+        i += 1
+        print("Processing tweet:", i)
+        sentences = extract_sentences(tweet_text, nlp)
+        sentences = filter_policy_statements(sentences, nlp, candidate, matcher, 3)
+        statements = determine_positions(sentences, True)
+
+        for statement in statements:
+            results.append((statement, metadata))
+
+    return results
+
+def gather_descr_sentences(issue_scores, sentence_data, policy):
+    relevant = []
+    hyper_relevant = []
+    for sentence, issue, stance, confidence, meta in sentence_data:
+        if issue.lower() != policy.lower():
+            continue
+        if issue_scores[issue]["stance"] != stance:
+            continue
+        
+        relevant.append(sentence)
+
+        if not any(phrase.lower() in sentence.lower() for phrase in issue_trigger_phrases.get(issue, [])):
+            continue
+        if confidence < 0.8:
+            continue
+        
+        hyper_relevant.append(sentence)
+    
+    selected = hyper_relevant if len(hyper_relevant) > 2 else relevant
+    return selected
+        
+def get_descr(issue_scores, candidate, sentence_data, policy):
+    selected_sentences = gather_descr_sentences(issue_scores, sentence_data, policy)
+    if len(selected_sentences) < 3:
+        return "Insufficient Data"
+    
+    joined = "\n\n".join(selected_sentences)
+    system_prompt = f"""
+    Summarize {candidate}'s stance on {policy} in 1-5 sentences. Summarize it as if it were part of a description.
+
+    For example, in regards to balancing the budget:
+    John Doe has put forth policy proposals to tighten the budget. He supports passing an amendment to limit government spending during peacetime. He also supports DOGE, stating that 'to increase the efficiency of government is a good idea.'
+
+    If you are not provided anything, if the data is insufficient to properly summarize their position, or if not enough data is relevant to the policy to warrant a summary, merely reply (without adding any words):
+    Insufficient Data.
+
+    {joined}
+    """
+
+    response = chat(model='llama3.2', messages=[
+        { 'role': 'user', 'content': system_prompt }
+    ])
+
+    return response.message.content.strip()
+
 ######################
 ### --- Export --- ###
 ######################
+def do_candidate(candidate_name, output_path, nlp, matcher):
+    print("Candidate", candidate_name, "started:")
+    per_issue_scores = defaultdict(lambda: {"support": 0.0, "oppose": 0.0})
+
+    sources = get_all_sources_by_type(candidate_name, "Candidates/" + candidate_name)
+    all_data = []
+    for source in sources:
+        data = process_source(candidate_name, source["path"], source["type"], nlp, matcher)
+        for statement, metadata in data:
+            sent, issue, stance, conf = statement
+            if issue == None:
+                continue
+            if stance != "support" and stance != "oppose":
+                continue
+            if conf == 0.0:
+                continue
+            per_issue_scores[issue][stance] += conf
+            all_data.append((sent, issue, stance, conf, metadata))
+            # print(sent, "\n", issue, stance, conf)
+
+    export_to_json(candidate_name, per_issue_scores, all_data, output_path)
+    print("Candidate Done!")
+
+def export_to_json(candidate_name, issue_scores, sentence_data, output_path):
+    """
+    Export structured stance data to JSON in the exact desired format.
+
+    Parameters:
+    - candidate_name: str
+    - issue_scores: support/oppose scores for each issue
+    - sentence_data: list of dicts or tuples in format:
+        (sentence, issue, stance, confidence, metadata_dict)
+    - output_path: str
+    """
+
+    output = {
+        "candidate": candidate_name,
+        "positions": []
+    }
+
+    for issue, counts in issue_scores.items():
+        support = counts['support']
+        oppose = counts['oppose']
+        issue_scores[issue]["stance"] = "neutral"
+
+        stance_bool = False
+        if support > oppose + 2 and support > oppose * 2:
+            issue_scores[issue]["stance"] = "support"
+            stance_bool = True
+        elif oppose > support + 2 and oppose > support * 2:
+            issue_scores[issue]["stance"] = "oppose"
+        else:
+            continue
+
+        # Create source data
+        unique_sources = set()
+        for sentence, policy, stance, confidence, meta in sentence_data:
+            if policy.lower() != issue.lower():
+                continue
+            if stance != issue_scores[issue]["stance"]:
+                continue
+
+            # Create a unique key for the source
+            source_key = (
+                meta.get("type", "Unknown"),
+                meta.get("url", None),
+                meta.get("tweet", None),
+                meta.get("date", None),
+                meta.get("scraped_on", None)
+            )
+            unique_sources.add(source_key)
+
+        # Convert back to dicts for JSON
+        source_dicts = [
+            {
+                "type": s[0],
+                "url": s[1],
+                "tweet": s[2],
+                "date": s[3],
+                "scraped_on": s[4]
+            }
+            for s in unique_sources
+        ]
+
+        issue_group = {
+            "issue": issue,
+            "stance": stance_bool,
+            "desc": get_descr(issue_scores, candidate_name, sentence_data, issue),
+            "sources": source_dicts
+        }
+        
+        output["positions"].append(issue_group)
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(output, f, indent=2)
+
 
 
 ################################################################################################
@@ -561,7 +1081,6 @@ def parse_llm_response(response):
 ### --- Setup --- ###
 print("Beginning NLP")
 nlp = spacy.load("en_core_web_lg")
-text = db_handling.get_scraped_file_from_database("campaign-sites/tammy_baldwin_wi_senate.txt")
 
 policy_keywords = {
     "abortion", "medicare", "healthcare", "nato", "carbon", "minimum wage", "tax",
@@ -573,26 +1092,59 @@ policy_keywords = policy_keywords.union(get_policy_keywords(issue_trigger_phrase
 matcher = make_policy_phrase_matcher(nlp, policy_keywords)
 cached_issue_vectors = precompute_issue_vectors(issue_trigger_phrases, nlp)
 
-per_issue_scores = defaultdict(lambda: {"support": 0.0, "oppose": 0.0})
+candidates = [
+    "Ruben Gallego",
+    "Kari Lake",
+    "Elissa Slotkin",
+    "Mike Rogers",
+    "Jacky Rosen",
+    "Sam Brown",
+    "Dave McCormick",
+    "Bob Casey",
+    "Tammy Baldwin",
+    "Marsha Blackburn",
+    "Gloria Johnson",
+    "Rick Scott",
+    "Debbie Mucarsel-Powell",
+    "Steven Cohen",
+    "Charlotte Bergmann",
+    "Tim Burchett",
+    "Jane George",
+    "John Rose",
+    "Lore Bergman",
+    "Andy Ogles",
+    "Mark Green",
+    "Marjorie Taylor Greene",
+    "Shawn Harris",
+    "Don Davis",
+    "Laurie Buckhout",
+    "Gay Valimont"
+]
 
-sources = [("Campaign Website", "https://www.tammybaldwin.com"), ("Tweet", "I have a lot to say.")]
+for candidate_name in candidates:
+    do_candidate(candidate_name, candidate_name.replace(" ", "_").lower() + ".json", nlp, matcher)
+
+# results = process_tweets("Andy Ogles", "dest-txt/X-sites/AndyOgles.txt", nlp, matcher)
+# for result in results:
+#     print(result[0], "\n")
 
 ### --- Sentence Extraction --- ###
-sentences = extract_sentences(text, nlp)
+# metadata = source
+# sentences = extract_sentences(text, nlp)
 
-### --- Filtering for Policies, Attribution --- ###
-print("Sentence Count Before Filtering:", len(sentences))
-sentences = filter_policy_statements(sentences, nlp, "Tammy Baldwin", matcher, 3)
-print("Sentence Count After Filtering:", len(sentences))
+# ### --- Filtering for Policies, Attribution --- ###
+# print("Sentence Count Before Filtering:", len(sentences))
+# sentences = filter_policy_statements(sentences, nlp, "Tammy Baldwin", matcher, 3)
+# print("Sentence Count After Filtering:", len(sentences))
 
-### --- Determining Policy & Position --- ###
-statements = determine_positions(sentences)
-print("Policy Statements:", len(statements))
+# ### --- Determining Policy & Position --- ###
+# statements = determine_positions(sentences)
+# print("Policy Statements:", len(statements))
 
-### --- Aggregate Statements --- ###
-for sent, issue, stance, conf in statements:
-    per_issue_scores[issue][stance] += conf
-    print(sent, "\n", issue, stance, conf)
+# ### --- Aggregate Statements --- ###
+# for sent, issue, stance, conf in statements:
+#     per_issue_scores[issue][stance] += conf
+#     print(sent, "\n", issue, stance, conf)
 
 # for issue, counts in per_issue_scores.items():
 #     support = counts['support']
@@ -614,5 +1166,5 @@ for sent, issue, stance, conf in statements:
 
 
 ### --- Export --- ###
-export_sentences_to_txt(sentences, "statements.txt")
+# export_sentences_to_txt(sentences, "statements.txt")
 print("Done")

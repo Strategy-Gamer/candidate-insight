@@ -1,0 +1,985 @@
+{
+  "candidate": "Tammy Baldwin",
+  "positions": [
+    {
+      "issue": "Public Healthcare",
+      "stance": true,
+      "desc": "This is a lengthy speech by Representative Tammy Baldwin (D-WI) on various issues affecting her constituents, particularly working families and rural communities. Here are some key points from the speech:\n\n1. **Social Security and Medicare**: She emphasizes the need to protect these critical programs, which have been essential for millions of Americans.\n2. **Affordable Healthcare**: Baldwin advocates for preserving the Affordable Care Act (ACA) and ensuring that all Americans have access to affordable healthcare, regardless of income or location.\n3. **Housing Costs**: She highlights the pressing issue of housing affordability and supports legislation to build and preserve affordable housing units nationwide.\n4. **Child Care**: Baldwin emphasizes the importance of investing in child care to support working families and promote economic development.\n5. **Education**: She advocates for accessible education, including post-high school training programs, to help workers acquire skills and reduce debt burdens.\n6. **Rural Communities**: Baldwin mentions her efforts to support rural communities, particularly farmers and small businesses, through initiatives such as reducing prescription medication costs.\n7. **Opioid Crisis**: She expresses concern about the opioid epidemic in Wisconsin and advocates for stronger support for local prevention, treatment, and recovery efforts.\n8. **Voting Rights**: Although not explicitly stated, Baldwin likely implies that protecting voting rights is essential to ensure working families have a voice in Washington.\n\nSome of her policy priorities include:\n\n1. Expanding affordable healthcare options\n2. Reducing prescription medication costs for rural communities\n3. Supporting education and training programs\n4. Preserving Social Security and Medicare\n5. Addressing the opioid crisis through stronger support for local efforts\n\nOverall, Representative Baldwin's speech emphasizes her commitment to supporting working families, rural communities, and vulnerable populations in Wisconsin and across the country.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I\u2019m happy that the funding I delivered will help Wisconsinites get the high-quality training they need to land family-supporting jobs \u2014 all while filling the demand for skilled workers in our health care sector! https://t.co/qMismJd8BR",
+          "date": "2024-07-18T18:17:18.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Great news! Over 45,000 Wisconsin small business owners have received health care coverage through the Affordable Care Act. For too long, our entrepreneurs struggled to find affordable health care and I\u2019m proud to have worked to change that! https://t.co/9NjRyWSRCW",
+          "date": "2024-09-25T19:14:18.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Investing in infrastructure means investing in opportunity for union workers like Cami, businesses like Earth Rider Brewery, and families across the Northland.\n\nWith the Infrastructure Law, we\u2019re investing in the next generation of workers, businesses, and Wisconsinites. https://t.co/AZexugjLTt",
+          "date": "2024-08-29T18:55:20.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": ".@AmeriCorps not only sets up thousands of young people with the skills they need to enter the workforce but ignites a lifelong passion for public service. I\u2019m proud to work in Congress to support their critical mission. Thank you, Voices of National Service for this honor. https://t.co/VxvPV3L0Da",
+          "date": "2024-05-12T22:30:13.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Wisconsin is in a maternal mortality crisis, and we need to do more to support new and expecting mothers and their babies. Proud to partner with @RepGwenMoore to help more new mothers get the mental health and wellness support they need to stay healthy.\nhttps://t.co/56Vdgt0ZwQ",
+          "date": "2024-05-21T23:09:27.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I\u2019ll always fight to keep our manufacturing jobs here in America, but if a company does wrong to our workers, I am fighting to ensure they have the resources and tools to land on their feet.\nhttps://t.co/sG3QUAOV7q",
+          "date": "2024-07-01T18:21:19.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Our Infrastructure Law is doing more than fixing the darn roads \u2013 it\u2019s growing our economy and creating good paying jobs upgrading the infrastructure families rely on to get to work and school every day. https://t.co/0q1GACwiLK",
+          "date": "2024-08-28T13:47:14.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Revolutionizing health care as we know it! \ud83c\udfe5\n\nOur Tech Hub paired with Wisconsin\u2019s world-class research institutions and thriving private sector will make our state a leader in personalized medicine, helping patients get specialized care faster, so they can live healthy lives. https://t.co/sfwhbdyzl3",
+          "date": "2024-07-03T22:30:11.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "My childhood illness that left me with nowhere to get insurance inspired my work to help write the Affordable Care Act and expand care and lower costs.\n\nNow, I\u2019m fighting to make sure costs aren\u2019t jacked up on thousands of hardworking Wisconsin families. https://t.co/NH6OJPwDmf",
+          "date": "2024-09-26T19:05:51.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "With this federal funding I fought to bring home, we will build on Wisconsin\u2019s rich history of innovation and manufacturing legacy by putting a Tech Hub in our backyard!\n\nA thread on what this means for the Badger State: \ud83e\uddf5 https://t.co/64hg3gb6jn",
+          "date": "2024-07-03T22:30:10.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Wisconsinites deserve the opportunity to live in the communities they love, but too many families struggle to find affordable housing where they want to live &amp; raise a family. I was proud to deliver funding to help WI tribes expand affordable housing.\nhttps://t.co/D8prEQtRKr",
+          "date": "2024-08-01T14:05:10.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I\u2019m proud to bring home this investment to improve the health of our Great Lakes, protect our communities in Ozaukee County from flooding, and build more resilient infrastructure that our families and Made in Wisconsin businesses can rely on. https://t.co/zP99H4wKea",
+          "date": "2024-07-23T14:58:11.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "NEWS: 50 million Americans have been connected to high-quality health care through the Affordable Care Act marketplace! It\u2019s been my mission to expand coverage &amp; lower costs, &amp; I\u2019m proud the ACA has made huge progress for families.\nhttps://t.co/FnlhcWLQKQ",
+          "date": "2024-09-10T17:59:29.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "For 52 years, the #CleanWaterAct has:\n\n\u2623\ufe0fSafeguarded our lakes, rivers, &amp; streams from pollution\n\ud83d\udeb0Expanded access to clean drinking water\n\ud83c\udfde\ufe0fProtected our environment &amp; Wisconsin way of life\n\nToday, we continue our work to build a future where everyone has access to clean water.",
+          "date": "2024-10-18T16:36:26.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I'm working to fight the opioid crisis in any way I can \u2014 and that means ensuring treatment and recovery resources are available because it can be a life-or-death difference for someone struggling with addiction. https://t.co/HpwAy86oXl",
+          "date": "2024-10-09T16:27:21.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Wisconsin still hasn\u2019t expanded Medicaid \u2014 denying tens of thousands of Wisconsinites access to affordable health care. I joined @SenatorWarnock in introducing legislation to finally help change that, expanding access to care &amp; lowering health care costs for families.",
+          "date": "2024-07-11T20:04:07.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The start of the school year should be a time to celebrate, not mourn. My heart is with the students, families, &amp; Winder community grieving &amp; those forever scarred from this senseless act.\n\nMake no mistake: It doesn\u2019t have to be this way. We must do more to prevent gun violence. https://t.co/DN8S7vh0lg",
+          "date": "2024-09-04T19:30:54.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Clean school buses are a win-win for taxpayers who are saving money and for kids who are breathing cleaner air. This is yet another way our Infrastructure Law is making life safer and healthier for Wisconsinites. https://t.co/iHGnnDYzfw",
+          "date": "2024-06-02T18:45:05.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Every family deserves access to affordable housing and the opportunity to thrive. I was happy to support the Concordia 27 project because it will do just that \u2014 put affordable housing within reach, provide career development, and keep families healthy. https://t.co/prg9tMmVhf",
+          "date": "2024-06-30T16:34:06.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Instead of putting Social Security and Medicare on the chopping block, I stand on the side of safeguarding and strengthening these critical lifelines that millions of seniors rely on. I\u2019ll always fight to protect what Wisconsinites worked hard to earn.",
+          "date": "2024-05-08T21:59:40.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Bringing a Tech Hub to the Badger State has been a long journey and I\u2019m proud to have fought every step of the way to get the job done. This will:\n\ud83e\uddd1\u200d\ud83c\udfed Create good-paying jobs\n\ud83c\udfe5 Improve our health care system\n\ud83d\udcc8 Grow our Wisconsin economy!\nhttps://t.co/SKFB6Qyiv5",
+          "date": "2024-11-01T19:11:32.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Whether it\u2019s helping a local cheese processor triple production, or a seventh-generation dairy farm add value to its operations, I\u2019m proud of my work to support Wisconsin farmers and dairy businesses. https://t.co/nkzuH5jc94",
+          "date": "2024-10-10T15:44:47.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Ruth Bader Ginsburg was the definition of a trailblazer, fighting for gender equality and shaping our country for the better. Today, as we remember Justice Ginsburg\u2019s legacy, we continue her work to restore and protect the rights that so many Americans depend on. https://t.co/L3EdgXd7ua",
+          "date": "2024-09-18T14:40:09.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I fought hard to bring home funding for the Appleton Transit Center and I\u2019m proud that this investment will:\n\nExpand affordable housing \ud83c\udfe0\nRebuild outdated infrastructure \ud83c\udfd7\ufe0f\nMake public transportation more convenient \ud83d\ude8d https://t.co/2dVQrmLWGO",
+          "date": "2024-07-25T17:30:37.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.tammybaldwin.com",
+          "tweet": null,
+          "date": null,
+          "scraped_on": "2025-04-15 14:12:24"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Millions of people worked hard for their Social Security benefits, and we need to strengthen this critical lifeline \u2014 not slash it. I met with @OMalleySSA to discuss the improvements we\u2019re making to ensure Americans can retire with dignity and peace of mind. https://t.co/4xUEFbxkJg",
+          "date": "2024-06-14T15:30:25.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "From housing assistance to crisis intervention, 211 connects people to the resources they need, and I\u2019m glad this funding will make getting help easier for families across Wisconsin. https://t.co/1mtiLIrWM7",
+          "date": "2024-09-30T18:55:11.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "As we celebrate our brave police officers this National Police Week, I\u2019m saying thank you to all our Wisconsin law enforcement for the sacrifices you make to protect and serve our communities every day. https://t.co/5bpmg0kTrX",
+          "date": "2024-05-15T15:19:51.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Big news! Prescription drug costs are being cut! I\u2019m proud to have done my part in making this possible with our Inflation Reduction Act to allow Medicare to negotiate lower costs, and I couldn\u2019t be happier that Wisconsinites will be saving BIG on the medications they need! https://t.co/jDGAaI7d2P",
+          "date": "2024-08-15T17:28:46.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Today, we celebrate 89 years of Social Security! This critical program has been a lifeline for our seniors, giving them the retirement they earned and the peace of mind they deserve. That\u2019s why I\u2019ll never stop fighting to protect Wisconsinites\u2019 hard-earned benefits. https://t.co/huJX5nGiqq",
+          "date": "2024-08-14T14:36:22.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Investing in child care is not only an investment in our children\u2019s future, it\u2019s an investment in our Made in Wisconsin economy. I\u2019m happy this funding will help get parents back to work and lower child care costs for Wisconsin families. https://t.co/vPJ2nMYPFq",
+          "date": "2024-06-17T15:14:04.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Prices slashed. Money saved. Families healthy.\n\nThis is what putting people over profits looks like and I\u2019m proud to be cutting the cost of the medications Wisconsinites need to live healthy lives. https://t.co/GX6ANhfSF1",
+          "date": "2024-09-13T14:42:02.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Our country makes a sacred commitment to have our servicemembers\u2019 backs when they come home from service. After years of Wisconsin veterans being denied the care they needed, I was proud to fight to ensure the VA held up its end of the bargain.\nhttps://t.co/jEBvgPpvb2",
+          "date": "2024-09-18T21:30:27.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Other",
+          "url": "https://shepherdexpress.com/news/features/interview-with-tammy-baldwin/",
+          "tweet": null,
+          "date": "Sept 9, 2024",
+          "scraped_on": "2025-04-15 14:12:32"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Every Wisconsinite deserves a fair chance to succeed &amp; I\u2019m dedicated to making that possible. Whether it be lowering prescription drug costs, expanding affordable housing, or boosting opportunities to land a good-paying job, I\u2019m committed to ensuring Wisconsinites can get ahead.",
+          "date": "2024-10-28T20:39:09.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "This infrastructure funding I brought home will help families in Northeast Wisconsin get where they need to go safely, build more affordable housing, and spur economic growth. https://t.co/C2lUQb3jaO",
+          "date": "2024-07-10T19:42:14.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Today, I was honored to receive the Friend of Farm Bureau award! It\u2019s been my mission to fight on behalf of our Wisconsin farmers and dairy producers because they are the lifeline of our Wisconsin economy, and I\u2019m always proud to have their backs. Thank you, @FarmBureau! https://t.co/50FAuxqKzd",
+          "date": "2024-10-08T21:21:33.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "My mother struggled with addiction for many years, and I saw firsthand the impact of quality treatment and recovery resources. We can and must do more to combat the opioid epidemic and this funding will help us in our fight against this crisis. https://t.co/KueWelUEJb",
+          "date": "2024-10-04T18:29:25.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I\u2019m proud to have taken on Big Pharma and won. Now, seniors on Medicare will have:\n\u2705Free vaccines\n\u2705Insulin capped at $35/month\n\u2705Out of pocket costs capped at $2k/year",
+          "date": "2024-08-20T21:02:05.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "It\u2019s been two years since our Inflation Reduction Act was signed into law! Today, I\u2019m celebrating:\n\u2705Lower prescription drug costs\n\u2705Capping the cost of insulin\n\u2705Growing our Made in WI economy https://t.co/p77bLIYEN7",
+          "date": "2024-08-16T15:55:27.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Happy 59th Birthday, Medicare and Medicaid! \ud83c\udf82 https://t.co/ny2m80OjXx",
+          "date": "2024-07-30T14:15:07.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Wisconsin farmers and small businesses are the backbone of our rural communities, and I\u2019m proud to help them cut costs, innovate, and grow for the future. https://t.co/cIQCKg3Zzc",
+          "date": "2024-06-27T19:49:41.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        }
+      ]
+    },
+    {
+      "issue": "Pollutant Controls",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "On #NationalFentanylAwarenessDay, we remember the lives lost to fentanyl and recommit ourselves to tackling this epidemic on all fronts. From passing my bill to cut off chemical suppliers to working with local law enforcement, I\u2019m committed to ending this crisis and saving lives. https://t.co/cDqP26JXcy",
+          "date": "2024-05-07T15:24:41.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Buying a home is out of reach for too many Milwaukeeans because of a lack of supply, racial discrimination, and wealthy out-of-state investors gobbling up the inventory we have. I was proud to bring home funding to help build more affordable housing and lower costs for families. https://t.co/ZK5yhJrkKL",
+          "date": "2024-07-01T22:14:03.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Like too many, I know what it's like to have family that struggles with addiction. I\u2019m fighting the opioid &amp; fentanyl crisis on all fronts \u2013 from helping boost prevention &amp; treatment efforts to stopping the production of dangerous drugs abroad. https://t.co/2tq08r5T6u",
+          "date": "2024-06-20T19:31:01.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Families should trust that the water coming out of their faucets is safe to drink, but that\u2019s not the case for too many Wisconsinites. Together, we're going to remove lead pipes, address dangerous chemicals like PFAS, &amp; deliver clean water to families across the Badger State. https://t.co/h3qXjJKyIj",
+          "date": "2024-10-23T20:08:45.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "This is what our Bipartisan Infrastructure Law is all about. We\u2019re rebuilding the 60-year-old bridges over the Wisconsin River in Columbia County, keeping families safe, ensuring goods make it on shelves &amp; tourists make it to their destinations on time, &amp; investing in our future. https://t.co/8rEXSC4rDr",
+          "date": "2024-05-13T21:18:21.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "From protecting our agricultural land from foreign investment to delivering resources to grow our dairy industry economy, I\u2019m proud to be fighting to make sure Wisconsin farmers and rural communities aren\u2019t left behind. https://t.co/gkZoGfM9eq",
+          "date": "2024-10-16T21:25:53.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I know firsthand the heartbreak of watching a loved one struggle with addiction to opioids. That\u2019s why I fight day in and day out to ensure our communities are equipped with the resources they need to fight the fentanyl and opioid crisis and save lives. https://t.co/NmaAVcluxV",
+          "date": "2024-05-09T22:48:31.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I was grateful to hear from Brown County law enforcement about their fight against the fentanyl crisis. I was proud to share the good news that our FEND Off Fentanyl Act is now law, cracking down on chemical suppliers &amp; cartels to help ease the burden of those on the front lines. https://t.co/XBTMbw8CYu",
+          "date": "2024-05-30T15:55:28.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Our local airports are economic powerhouses, supporting thousands of Wisconsin jobs &amp; businesses while getting passengers to their destinations. This funding will be crucial in ensuring they can increase capacity, keep people safe, &amp; serve our communities for years to come. https://t.co/pMba6PRkNf",
+          "date": "2024-09-10T21:42:22.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Other",
+          "url": "https://shepherdexpress.com/news/features/interview-with-tammy-baldwin/",
+          "tweet": null,
+          "date": "Sept 9, 2024",
+          "scraped_on": "2025-04-15 14:12:32"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Access to clean water shouldn\u2019t be a luxury, it\u2019s a necessity. That\u2019s why I was proud to vote for legislation that is putting access to clean drinking water within reach for more Wisconsin families.\nhttps://t.co/2vQkgJZHWE",
+          "date": "2024-10-25T22:10:13.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        }
+      ]
+    },
+    {
+      "issue": "Abortion",
+      "stance": true,
+      "desc": "Tammy Baldwin is a strong advocate for reproductive rights and women's freedom, championing equal access to abortion throughout the United States through her Women's Health Protection Act. She supports codifying Roe v. Wade and has successfully passed legislation like the Respect for Marriage Act following the Dobbs decision. Her stance prioritizes individual autonomy and health care decisions over government restrictions. Baldwin is committed to protecting women's rights and freedoms, particularly in the face of restrictive laws and court decisions.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "(4/6) While we\u2019ve made progress to restore reproductive rights in Wisconsin, women in the Badger State currently still live under a 20-week ban, are forced to undergo a medically unnecessary 24-hour waiting period, &amp; abortion care isn\u2019t available in 69 of Wisconsin\u2019s 72 counties. https://t.co/CaaOz2UqME",
+          "date": "2024-09-05T17:56:32.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "We\u2019ve lost too many lives to the fentanyl and opioid epidemic. Whether it\u2019s cracking down on Chinese chemical suppliers or making it easier for our first responders to give overdose-reversal drugs, I\u2019m committed to doing all I can to end this epidemic.\n\nhttps://t.co/bXQGCTnKvv",
+          "date": "2024-07-23T20:36:48.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "When a Wisconsin company makes parmesan cheese, they should be able to sell it by its name anywhere in world. Unfortunately, bad trade deals can forbid it, hurting Wisconsin businesses and our economy.\n\nI\u2019m fighting for these Wisconsin companies.\nhttps://t.co/yfwjctIEkf",
+          "date": "2024-08-29T14:56:59.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "While half of Americans will experience menopause in their lifetime, under-investment in research and education has left too many women with limited treatment options and oftentimes debilitating symptoms. I\u2019m fighting to change that &amp; get Americans the care they deserve. https://t.co/ST7sgxqGQR",
+          "date": "2024-05-06T21:48:41.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "With fentanyl, one pill can kill. I\u2019m fighting back with my FEND Off Fentanyl Act. Learn more about this new law here \u27a1\ufe0f https://t.co/rqG0Yo16vC https://t.co/LfznMP0nCa",
+          "date": "2024-05-04T22:19:55.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "(1/6) Today, I released a report on the state of reproductive rights in Wisconsin after the fall of Roe v. Wade &amp; women were stripped of their freedom to make their own health care decisions. \n\nHere\u2019s what we found: \ud83e\uddf5 https://t.co/FhgAUZwcyX",
+          "date": "2024-09-05T17:56:31.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Women in states like mine where reproductive rights are under attack deserve to know who supports their right to control their bodies &amp; futures. I know where I stand: I will always fight for women\u2019s reproductive rights &amp; freedoms.\nhttps://t.co/H5lmtj7uMf",
+          "date": "2024-07-19T14:54:48.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "In the two years since Republicans overturned Roe v. Wade, Wisconsinites have said loud and clear: they want their rights back.\n \nBut, the freedom for women to control their bodies and futures remains under attack.\n\nI'm fighting back.\nhttps://t.co/Mc6cqDe63B",
+          "date": "2024-06-24T14:26:28.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Wisconsin families like Justine\u2019s were made whole thanks to IVF, but unfortunately, the overturning of Roe v. Wade put that right in jeopardy. Americans deserve to start a family on their own terms which is why I won\u2019t stop fighting to safeguard the right to IVF. https://t.co/3mY78O6wlW",
+          "date": "2024-09-20T15:33:36.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "104 years ago, women nationwide won the right to vote. On this Women\u2019s Equality Day, we remember the trailblazers who came before us and the work we have left to do to protect and restore women\u2019s rights and freedoms. https://t.co/qOuVpkg8HR",
+          "date": "2024-08-26T16:45:47.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Since the overturning of Roe v. Wade, women across America have been forced to travel across state lines to exercise their right to decide \u2014 which is costly, time-consuming, and just flat-out wrong.\n\nI\u2019m going to the floor to pass my bill to alleviate some of these barriers \u2b07\ufe0f https://t.co/JtWveNXAMm",
+          "date": "2024-09-24T22:44:18.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Judges shouldn\u2019t be making health care decisions for women.\n\nDoctors shouldn\u2019t be living in fear of prosecution for doing their jobs.\n\nWomen shouldn\u2019t be living with fewer rights than their mothers &amp; grandmothers.\n\nIt\u2019s way past time to pass my bill to restore Roe v. Wade. https://t.co/N1GbW1utRB",
+          "date": "2024-05-31T20:49:06.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The lives of women across our country have been put in jeopardy since the moment Roe v. Wade was overturned. No woman should have to be on death\u2019s doorstep to get the lifesaving care she needs. We must pass my bill to end this chaos and give women their freedoms back. https://t.co/gsd3Vas7nm",
+          "date": "2024-09-23T15:10:49.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "On my way to protect Americans\u2019 right to build a family on their own terms, not the government\u2019s. https://t.co/E1bohmagKT",
+          "date": "2024-06-13T17:38:39.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Today, the landmark Loving v. Virginia case that legalized interracial marriage turns 57. \n\nAfter SCOTUS opened the door for the right to interracial marriage to be stripped away, I passed my bill to protect interracial marriages &amp; give Americans the freedom they deserve. https://t.co/oj2wbBOLpT",
+          "date": "2024-06-12T15:14:36.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "IVF has given Wisconsinites the freedom to grow their families on their own terms but now that right is at risk.\n \nThis week, the Senate will vote on whether Americans deserve the right to IVF, and I will be voting YES (again) because I trust women to control their own futures.",
+          "date": "2024-09-16T22:20:51.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Not on my watch. Wisconsin women deserve the freedom to make their own health care choices \u2014 including if and when to have an abortion. It\u2019s as simple as that. https://t.co/p4r9H1GDzy",
+          "date": "2024-08-12T16:06:23.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Attacks on a woman\u2019s freedom to decide will not stop until we pass my bill to make Roe law of the land and protect the right of women to control their bodies.\nhttps://t.co/hZSZpUlfC0",
+          "date": "2024-05-28T14:48:54.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Losing a child to fentanyl is something no one should ever have to go through. Sadly, I've heard from parents who have experienced this type of heartbreak. The crisis must end now. I\u2019m calling for action against China for putting American lives at risk. https://t.co/H2J7K3xfUP",
+          "date": "2024-10-25T17:17:23.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.tammybaldwin.com",
+          "tweet": null,
+          "date": null,
+          "scraped_on": "2025-04-15 14:12:24"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Today, yet another state will start enforcing a 6-week abortion ban \u2014 often before women even know they are pregnant. These are the dangerous consequences of Roe v. Wade being overturned. We have to restore Roe and a woman\u2019s right to choose, now.\nhttps://t.co/NCpfXXw9i1",
+          "date": "2024-07-29T13:13:51.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Access to safe, effective abortion medication shouldn\u2019t have ever been up for debate but overturning Roe opened the floodgates to attacks on women\u2019s reproductive rights.\n\nThese attacks on our freedoms will not stop. \n\nWe must protect a woman\u2019s right to choose \u2014 everywhere. https://t.co/uodUhF8vTV",
+          "date": "2024-06-13T14:48:14.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Regardless of where you live in Wisconsin, everyone deserves access to affordable health care, but too often our rural communities have been left behind. I\u2019m happy to support this funding to help expand women\u2019s health services to Western Wisconsinites. https://t.co/nefWpEmYm2",
+          "date": "2024-09-07T17:12:58.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "While I\u2019m passing the phone today, I\u2019m fighting every day to pass my bill to restore women\u2019s reproductive rights and freedoms. https://t.co/876ZxiQwW0",
+          "date": "2024-06-25T21:41:59.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Today, the Senate will vote on whether women deserve the right to contraception, and the stakes to protect women\u2019s reproductive rights have never been higher. \n\nI will be voting YES because our future, our freedoms, and our bodily autonomy depends on it.",
+          "date": "2024-06-05T14:51:08.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "In the 21st century, something as simple as the right to contraception should not be up for debate. Women, not the government, should decide what\u2019s best for their bodies &amp; I trust women to control their families \u2014 including access to contraception. https://t.co/DYurUQu0AT",
+          "date": "2024-06-11T14:45:30.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Millions of families have been made whole because of IVF but look no further than states like Alabama to see that the right to this essential family planning tool is in jeopardy. I will not stop fighting to protect women\u2019s freedom to grow their families with IVF. https://t.co/DBGA2Kw3pm",
+          "date": "2024-06-18T18:21:55.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "My colleagues claim to support IVF, but actions speak louder than words.\n\nToday, the Senate will vote on the Right to IVF Act &amp; this is where the rubber meets the road.\n\nI\u2019m voting YES to protect this essential family planning tool &amp; I hope my Republican colleagues do too.",
+          "date": "2024-06-13T17:08:48.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Watching a loved one battle an opioid addiction is a struggle that I and many Wisconsin families know all too well. That\u2019s why I\u2019m fighting, and will keep fighting, to make sure help is available for those who need it. https://t.co/pzxkMx2ZeP",
+          "date": "2024-10-05T22:18:46.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I\u2019ve heard Republicans say again &amp; again that they support Americans\u2019 right to IVF but this week\u2019s vote proved otherwise. We had a simple, commonsense bill to protect this right &amp; Republicans voted to block it.\n\nI\u2019ll keep fighting to protect IVF. https://t.co/5rIbhZdiTY",
+          "date": "2024-06-15T18:27:46.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Under Georgia\u2019s cruel 6-week abortion ban, women like Amber Thurman have died. Make no mistake, this is what \"leave it to the states\u201d really means.\n\nI lead the bill to restore Roe and it's time to pass it because women want their rights and freedoms back. https://t.co/R7HCleMZQx",
+          "date": "2024-10-07T20:11:23.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Other",
+          "url": "https://shepherdexpress.com/news/features/interview-with-tammy-baldwin/",
+          "tweet": null,
+          "date": "Sept 9, 2024",
+          "scraped_on": "2025-04-15 14:12:32"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Women and their doctors should decide what is best for them \u2014 not the Supreme Court, not politicians.\n\nMy statement on the Supreme Court's decision on emergency abortion care: https://t.co/txGhjWM74D",
+          "date": "2024-06-27T16:39:32.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "\u201cA living nightmare\u201d is not what Wisconsin women should have to say about exercising their right to control their bodies and get the health care they need. It\u2019s time to pass my bill to restore Roe and give women their reproductive rights back.\nhttps://t.co/8GWDVwla4z",
+          "date": "2024-10-21T14:55:19.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "From abortion bans to attacks on IVF services and contraception, there is no denying that there is a war against women\u2019s freedoms right now and it must stop.\n\nI have a few bills that would fix this mess that extremist Republicans have created and give women their reproductive https://t.co/cVqoNrHgSS",
+          "date": "2024-06-20T13:55:53.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "This has always been simple to me: If taxpayers are paying for it, we should be using American products and American workers. \n \nI will always fight to Make it in America. \ud83c\uddfa\ud83c\uddf8",
+          "date": "2024-08-19T16:08:10.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "(3/6) Traveling out-of-state doubled the drive times women in Wisconsin faced to access comprehensive reproductive care \u2014 from elective abortion to miscarriage management. https://t.co/BqqyvJDhTF",
+          "date": "2024-09-05T17:56:32.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "My statement on Republicans blocking our bill to protect the right to IVF: https://t.co/YeL5yIfjKo",
+          "date": "2024-06-13T21:12:07.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "#NationalWomensHealthWeek is a grim reminder that women\u2019s freedom to get the health care they need is under attack. Every woman should have access to comprehensive health care \u2014 including abortion. My bill will do just that &amp; ensure women can control their health care &amp; futures. https://t.co/APmGWvwAqm",
+          "date": "2024-05-14T15:40:37.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "For years, I fought the big drug companies that are jacking up costs for Wisconsinites. I\u2019m proud we made some real progress and cut prices of prescription drugs for Wisconsin seniors.\nhttps://t.co/Y1GJBBenRr",
+          "date": "2024-08-27T17:30:48.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Today, I voted to protect access to contraception &amp; send a message to Americans that I support their right to control their bodies.\n\nA bunch of Republicans voted no &amp; sent a chilling message to women that they don\u2019t support that freedom.\n\nIt\u2019s wrong &amp; this fight is far from over. https://t.co/IiYeHISnlX",
+          "date": "2024-06-05T21:36:44.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "(5/6) Women in Wisconsin are still feeling the aftershock of the 1849 criminal abortion ban, with the number of safe abortions cut in half from pre-Dobbs levels. https://t.co/u1dCe5BDZB",
+          "date": "2024-09-05T17:56:33.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Abortion care is not available in 69 of Wisconsin\u2019s 72 counties &amp; Republicans are plotting to further strip away Wisconsin women\u2019s right to choose. I\u2019m fighting to guarantee the freedom for women to control their bodies everywhere across America &amp; I won\u2019t stop until it\u2019s the law.",
+          "date": "2024-07-08T14:48:57.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        }
+      ]
+    },
+    {
+      "issue": "Illegal/Undocumented Migrants",
+      "stance": false,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "While this is encouraging news, we know that fentanyl is still coming into our country by cars, planes, trains, and boats. I have a bill that would give our law enforcement the tools they need to detect and stop fentanyl from coming into our country.\nhttps://t.co/u7kFtrzEH2",
+          "date": "2024-10-06T22:55:49.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "LIVE: I\u2019m leading a hearing to examine @USCG\u2019s role in stopping dangerous drugs from entering our country and our work to support their efforts to protect our communities and save lives.\n\nTune in now \u2b07\ufe0f\nhttps://t.co/76e0ceW1gr",
+          "date": "2024-09-19T14:00:55.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Other",
+          "url": "https://shepherdexpress.com/news/features/interview-with-tammy-baldwin/",
+          "tweet": null,
+          "date": "Sept 9, 2024",
+          "scraped_on": "2025-04-15 14:12:32"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Ending the fentanyl crisis starts with preventing it from entering our country. I introduced a bill that will give law enforcement the resources they need to stop drug traffickers from using American airports, roads, rail, and ports to smuggle fentanyl into our communities. https://t.co/MxVAWPXX8s",
+          "date": "2024-10-02T17:00:02.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        }
+      ]
+    },
+    {
+      "issue": "Limits on Prescription Drug Prices",
+      "stance": true,
+      "desc": "Tammy Baldwin supports capping insulin prices at $35 per month for seniors and cracking down on pharmaceutical companies that increase prescription drug costs, reflecting her commitment to reducing the financial burden of medication for vulnerable populations.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Everyone knows that big drug companies have been ripping off families for too long.\n\nI am proud to have done something about it. I fought to lower inhaler costs to $35/month and now Wisconsinites like these in La Crosse will have their costs cut and can enjoy peace of mind. https://t.co/ucbO1m6Ebc",
+          "date": "2024-05-30T22:23:19.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Thanks to our legislation, we are growing our clean energy economy by:\n\ud83c\udfd7\ufe0fRebuilding crumbling infrastructure\n\ud83c\udf0eBolstering cleaner, cheaper energy solutions\n\ud83d\udc77Creating thousands of good-paying jobs\n\nThis is what building for the future looks like!",
+          "date": "2024-09-27T15:38:59.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Ending the fentanyl crisis starts with preventing it from entering our country. I introduced a bill that will give law enforcement the resources they need to stop drug traffickers from using American airports, roads, rail, and ports to smuggle fentanyl into our communities. https://t.co/MxVAWPXX8s",
+          "date": "2024-10-02T17:00:02.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Tackling the fentanyl crisis on all fronts means ensuring our communities are equipped with the tools to prevent opioid poisonings and overdoses. My bill will do just that and give our local communities the resources they need to save lives. https://t.co/AI646kh5po",
+          "date": "2024-05-11T19:03:40.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Today, on #OverdoseAwarenessDay, I'm thinking of all the families with an empty seat at their dinner table. I'm committed to stopping the scourge of overdoses and fentanyl poisonings \u2013 from cracking down on chemical suppliers abroad to boosting access to overdose-reversal drugs. https://t.co/Nmrh1xaTrJ",
+          "date": "2024-08-31T17:42:59.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "This is what prioritizing people over profits looks like! I\u2019m proud to have taken on big drug companies to cut prescription drug prices for Wisconsinites! https://t.co/WW2ue7kEQr",
+          "date": "2024-08-16T19:02:31.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "My childhood illness that left me with nowhere to get insurance inspired my work to help write the Affordable Care Act and expand care and lower costs.\n\nNow, I\u2019m fighting to make sure costs aren\u2019t jacked up on thousands of hardworking Wisconsin families. https://t.co/NH6OJPwDmf",
+          "date": "2024-09-26T19:05:51.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I was grateful to hear from Brown County law enforcement about their fight against the fentanyl crisis. I was proud to share the good news that our FEND Off Fentanyl Act is now law, cracking down on chemical suppliers &amp; cartels to help ease the burden of those on the front lines. https://t.co/XBTMbw8CYu",
+          "date": "2024-05-30T15:55:28.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "While we\u2019ve made great progress in cutting health care costs for Wisconsin seniors, every American should be protected from big drug companies' price-gouging tactics. My bill will ensure that more Wisconsin families can get the medication they need at a price they can afford. https://t.co/XYUBAY5EJ8",
+          "date": "2024-07-28T21:06:40.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Too many Wisconsinites know the unfortunate reality that one pill can kill. Now that my FEND Off Fentanyl Act is law, we are curbing fentanyl from crossing our border, but I know we have more work to do to support our officers and first responders. https://t.co/iUhuQoXvMJ",
+          "date": "2024-06-03T21:57:02.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "For years, I fought the big drug companies that are jacking up costs for Wisconsinites. I\u2019m proud we made some real progress and cut prices of prescription drugs for Wisconsin seniors.\nhttps://t.co/Y1GJBBenRr",
+          "date": "2024-08-27T17:30:48.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I\u2019ve always believed that no American should go broke just to get the medication they need to live a healthy life. Capping inhaler prices to $35/month will be much needed relief for Wisconsinites who will have costs cut from lower inhaler prices.\nhttps://t.co/z0VtEOAAdM",
+          "date": "2024-05-31T18:26:46.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Other",
+          "url": "https://shepherdexpress.com/news/features/interview-with-tammy-baldwin/",
+          "tweet": null,
+          "date": "Sept 9, 2024",
+          "scraped_on": "2025-04-15 14:12:32"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I was proud to take on big pharma and cap seniors' prescription drug costs with our Inflation Reduction Act. Now, we are taking these efforts one step further to cap prescription drug costs for millions of American families \u2013 including 3.3 million Wisconsinites! https://t.co/SGL5DalqEW",
+          "date": "2024-07-24T16:31:26.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.tammybaldwin.com",
+          "tweet": null,
+          "date": null,
+          "scraped_on": "2025-04-15 14:12:24"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Every Wisconsinite deserves a fair chance to succeed &amp; I\u2019m dedicated to making that possible. Whether it be lowering prescription drug costs, expanding affordable housing, or boosting opportunities to land a good-paying job, I\u2019m committed to ensuring Wisconsinites can get ahead.",
+          "date": "2024-10-28T20:39:09.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        }
+      ]
+    },
+    {
+      "issue": "Renewable Energy",
+      "stance": true,
+      "desc": "Senator Tammy Baldwin supports growing a clean energy economy through legislation that bolsters cleaner, cheaper energy solutions and addresses climate change. Her efforts aim to create good-paying jobs, reduce emissions, and promote Wisconsin's rural communities by making operations more efficient and cost-effective.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Wisconsin farmers and small businesses power our rural communities, and I\u2019m proud to help them make their operations more efficient, cut costs, and get the tools they need to adapt to our changing climate. https://t.co/TXIREKTiz4",
+          "date": "2024-05-15T19:43:46.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I am so proud to bring home this investment in Wisconsin because it means:\n\ud83d\udcb042% lower energy costs\n\ud83d\udc77Good-paying union jobs\n\ud83c\udf1eClean energy &amp; taking on climate change\n\nhttps://t.co/k1Wqjdq6tI",
+          "date": "2024-09-05T20:48:54.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Thanks to our legislation, we are growing our clean energy economy by:\n\ud83c\udfd7\ufe0fRebuilding crumbling infrastructure\n\ud83c\udf0eBolstering cleaner, cheaper energy solutions\n\ud83d\udc77Creating thousands of good-paying jobs\n\nThis is what building for the future looks like!",
+          "date": "2024-09-27T15:38:59.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "This will help give Wisconsinites more options to travel to and from work and school, cut emissions, and boost families\u2019 health, all while creating good-paying jobs in our state\u2019s growing clean energy sector. https://t.co/3FneOF7ZsO",
+          "date": "2024-08-26T21:20:31.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Happy 2nd Birthday to our CHIPS &amp; Science Act!\ud83c\udf82\n\nIn just 2 years, we have:\n\ud83d\udc77Created good-paying jobs\n\u2699\ufe0fStrengthened supply chains\n\ud83d\udd2cBoosted research &amp; innovation\n\ud83c\uddfa\ud83c\uddf2Brought manufacturing back home\n\nI\u2019m excited to keep building on our progress to grow our Made in America economy!",
+          "date": "2024-08-09T20:31:29.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Other",
+          "url": "https://shepherdexpress.com/news/features/interview-with-tammy-baldwin/",
+          "tweet": null,
+          "date": "Sept 9, 2024",
+          "scraped_on": "2025-04-15 14:12:32"
+        }
+      ]
+    },
+    {
+      "issue": "Gun Ownership",
+      "stance": true,
+      "desc": "Tammy Baldwin's stance on Gun Ownership is one of strong support for stricter gun safety legislation, prioritizing the protection of children, families, and communities from gun violence. She advocates for expanding background checks, boosting mental health resources, and passing further legislation to prevent senseless shootings and save lives. Her commitment to ending the scourge of gun violence is evident in her efforts to create a safer community for everyone.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "On #GunViolenceAwarenessDay, I\u2019m thinking of all the families who have lost friends and loved ones to gun violence. We can and must do everything we can to stop senseless gun violence in our communities and save lives.",
+          "date": "2024-06-07T18:06:29.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The start of the school year should be a time to celebrate, not mourn. My heart is with the students, families, &amp; Winder community grieving &amp; those forever scarred from this senseless act.\n\nMake no mistake: It doesn\u2019t have to be this way. We must do more to prevent gun violence. https://t.co/DN8S7vh0lg",
+          "date": "2024-09-04T19:30:54.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "No parent should have to lose a child to gun violence. This month is #GunViolenceAwarenessMonth and I was happy to meet with advocates from @MomsDemand to discuss common sense legislation to stop gun violence in our communities and keep our kids safe. https://t.co/VByiTxudRi",
+          "date": "2024-06-11T22:22:44.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Today is the anniversary of the Pulse Nightclub Shooting that left our country &amp; the LGBTQ+ community with lasting scars. As we honor the 49 lives tragically lost, we recommit ourselves to ending the scourge of gun violence &amp; creating an accepting, safe community \u2013 for everyone. https://t.co/cNLxHlWg7J",
+          "date": "2024-06-12T16:59:26.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Today\u2019s ruling is yet another reminder we can\u2019t trust this extremist Supreme Court to protect Americans. It\u2019s high time Congress pass further gun safety legislation to protect our children, families, and communities from gun violence. https://t.co/v7ZJsHTU5v",
+          "date": "2024-06-14T17:51:32.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "2 years ago, our fight against gun violence took a major step forward when our Bipartisan Safer Communities Act became law. From expanding background checks to boosting mental health resources, we\u2019ve made good progress but there\u2019s more to do to stop gun violence &amp; save lives. https://t.co/bBREullPUs",
+          "date": "2024-06-25T16:32:15.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        }
+      ]
+    },
+    {
+      "issue": "Progressive Taxation",
+      "stance": true,
+      "desc": "Here is a summary of Tammy Baldwin's stance on Progressive Taxation:\n\nAs a strong advocate for progressive taxation, Tammy Baldwin supports a fairer tax system where corporations and the wealthy contribute their fair share to support vital public services and programs. She believes that eliminating special breaks and loopholes for big corporations and private equity firms will help level the playing field and ensure that everyone pays their fair share of taxes. Additionally, she aims to make the tax filing process more affordable and accessible for individuals and families by offering free tax filing for Wisconsinites.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Wisconsin, we just made filing your taxes easier and WAY cheaper! Instead of padding the profits of big third-party tax-prep companies, I\u2019m proud to be lowering costs by making filing taxes FREE for Wisconsinites!\nhttps://t.co/bfNMyyYU9B",
+          "date": "2024-08-23T18:03:42.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Other",
+          "url": "https://shepherdexpress.com/news/features/interview-with-tammy-baldwin/",
+          "tweet": null,
+          "date": "Sept 9, 2024",
+          "scraped_on": "2025-04-15 14:12:32"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Wisconsinites just want a fair shot to get ahead and I\u2019m working hard to give them one. I\u2019m fighting to cut the cost of everyday life like prescription drugs, housing, and childcare, create good-paying jobs, and make sure billionaires and big corporations pay their fair share.",
+          "date": "2024-08-28T18:00:50.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I was proud to vote for a bipartisan tax cut to help working families get some breathing room, our small businesses grow, and expand affordable housing. I remain committed to working with Republicans and Democrats to create a tax code that is fair for Wisconsinites. https://t.co/yDu9llpCE7",
+          "date": "2024-08-01T19:50:43.000Z",
+          "scraped_on": "2025-03-26 19:02:52"
+        }
+      ]
+    }
+  ]
+}

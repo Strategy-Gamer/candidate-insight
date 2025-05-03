@@ -1,0 +1,761 @@
+{
+  "candidate": "Elissa Slotkin",
+  "positions": [
+    {
+      "issue": "Progressive Taxation",
+      "stance": true,
+      "desc": "Elissa Slotkin supports progressive taxation, advocating for a tax system that is \"fair for people who don't happen to make a billion dollars.\" She co-sponsored legislation aimed at restoring workers' deductions from their taxes and ending corporate tax breaks for anti-union activity. Her stance prioritizes fairness over benefiting only the wealthy, emphasizing the need for a tax system that supports working-class Americans.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I\u2019ve also co-sponsored the Tax Fairness for Workers Act \u2013 which would restore workers\u2019 ability to deduct expenses related to work from their taxes \u2013 and the No Tax Deductions for Union Busting Act \u2013 which would end corporate tax breaks for anti-union activity. 3/4",
+          "date": "2024-09-02T13:34:41.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.pbs.org/newshour/politics/read-sen-elissa-slotkins-full-democratic-response-to-trumps-joint-address-to-congress",
+          "tweet": null,
+          "date": "March 5, 2025",
+          "scraped_on": "2025-04-15 13:46:55"
+        },
+        {
+          "type": "Gov Website",
+          "url": "https://www.slotkin.senate.gov",
+          "tweet": null,
+          "date": "2025-04-27 23:51:25",
+          "scraped_on": "2025-04-27 23:51:25"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "It\u2019s critical that we defend this essential program \u2013 paid into by Americans each time they get a paycheck \u2013 from those who wish to cut it or allow it to be privatized by Wall Street. We simply cannot play games with Americans\u2019 retirement. 2/3",
+          "date": "2024-08-14T13:55:02.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        }
+      ]
+    },
+    {
+      "issue": "Tariffs",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Other",
+          "url": "https://www.pbs.org/newshour/politics/read-sen-elissa-slotkins-full-democratic-response-to-trumps-joint-address-to-congress",
+          "tweet": null,
+          "date": "March 5, 2025",
+          "scraped_on": "2025-04-15 13:46:55"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "America is investing big time in our auto industry \u2014 and our auto industry needs to invest in America. I stand with UAW members at Stellantis who are pushing for the company to keep its commitments.\nhttps://t.co/IC6UyNDpCV",
+          "date": "2024-09-20T12:55:44.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I just formally introduced two new bills to provide @CommerceGov the ability to conduct a national security review of connected vehicles and other technology from our adversaries and ban any products that pose a threat to the United States. 1/5 https://t.co/hq2zLNQYof",
+          "date": "2024-06-14T15:03:18.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Because China subsidizes these vehicles, they can flood foreign markets. I flagged this threat on the House floor earlier this month, and called for these vehicles to be vetted through a national security process BEFORE they ever arrive on our shores. 2/2\nhttps://t.co/FHu9ySrTyM",
+          "date": "2024-05-23T22:21:10.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Gov Website",
+          "url": "https://www.slotkin.senate.gov",
+          "tweet": null,
+          "date": "2025-04-27 23:51:25",
+          "scraped_on": "2025-04-27 23:51:25"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "In June, I introduced legislation to do just that. The Connected Vehicle National Security Review Act would create a formal national security review for connected vehicles and components built by companies from China or other adversaries. https://t.co/hq2zLNRwdN",
+          "date": "2024-10-08T19:34:01.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        }
+      ]
+    },
+    {
+      "issue": "Illegal/Undocumented Migrants",
+      "stance": false,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Last month, I wrote a letter to President Biden urging him to take action on the crisis at our southern border, so it's progress to see this move giving him the authority to shut down the border &amp; impose strict consequences on those who cross unlawfully. \nhttps://t.co/Wr2RyibHlt",
+          "date": "2024-06-04T20:08:32.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "This week, we voted on a number of border security and immigration bills brought by GOP leadership: two bills that, while not the greatest policy, largely repeated existing law, and once again, a non-binding resolution that says a lot and does nothing. 1/5",
+          "date": "2024-05-17T20:52:54.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Other",
+          "url": "https://abcnews.go.com/Politics/week-transcript-11-17-24-senator-elect-elissa/story?id=115934655",
+          "tweet": null,
+          "date": "November 17, 2024",
+          "scraped_on": "2025-04-15 13:47:04"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.pbs.org/newshour/politics/read-sen-elissa-slotkins-full-democratic-response-to-trumps-joint-address-to-congress",
+          "tweet": null,
+          "date": "March 5, 2025",
+          "scraped_on": "2025-04-15 13:46:55"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Congressional majorities and administrations of both parties have used border security and immigration as a political football for years. I've worked to break that cycle, having introduced bipartisan bills on the issue, and the GOP should do the same. https://t.co/WCTJx5wGPn",
+          "date": "2024-05-23T20:26:13.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "We are in touch with the State Department and are asking them to expedite the vetting and visa process for family members that could be in danger.",
+          "date": "2024-10-03T00:25:02.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Gov Website",
+          "url": "https://www.slotkin.senate.gov",
+          "tweet": null,
+          "date": "2025-04-27 23:51:25",
+          "scraped_on": "2025-04-27 23:51:25"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.pbs.org/newshour/show/michigan-rep-slotkin-on-what-issues-are-driving-crucial-midwest-voters",
+          "tweet": null,
+          "date": "August 20, 2024",
+          "scraped_on": "2025-04-15 13:47:38"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.rev.com/transcripts/kamala-harris-campaign-rally-in-east-lansing-michigan",
+          "tweet": null,
+          "date": "November 3, 2024",
+          "scraped_on": "2025-04-15 13:47:47"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Antisemitism is on the rise in Michigan \u2014 from vandalism at elected officials\u2019 homes and workplaces, to antisemitic fliers papering our small towns, to support for armed violence at public conferences. 1/2 https://t.co/vWcxUV0cIj",
+          "date": "2024-06-05T10:43:19.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "But at the 11th hour, former President Trump intervened and told his GOP leaders to stand down. He didn\u2019t want action on the border, but to instead use the problem in his reelection campaign. After that, negotiations on any real solutions collapsed. 4/5 https://t.co/zgy6u8KH5Z",
+          "date": "2024-05-17T20:52:55.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        }
+      ]
+    },
+    {
+      "issue": "Abortion",
+      "stance": true,
+      "desc": "Elissa Slotkin supports protecting reproductive rights, as evident from her stance on abortion, where she has expressed commitment to safeguarding access to safe and legal abortion services.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Last September, amendments were added to the House-passed version of the @USDA funding bill \u2013 which includes the @US_FDA \u2013 targeting trained staff at the FDA with the goal of eliminating access to the safe and effective abortion drug Mifepristone. 4/10",
+          "date": "2024-06-24T14:05:35.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "This January, we voted on a bill that would make it more difficult for higher education institutions to provide accurate and complete information about an abortion in on-campus clinics, or risk their federal funding. 5/10",
+          "date": "2024-06-24T14:05:35.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.nbcnews.com/podcast/inside-impeachment/transcript-facing-voters-n1103971",
+          "tweet": null,
+          "date": "December 18, 2019",
+          "scraped_on": "2025-04-15 13:47:11"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "In the past, issues like contraception access for service members rarely came up in this process, but everything changed when Roe was overturned, and it\u2019s now imperative that we take steps to protect the reproductive health of service members. 3/4",
+          "date": "2024-05-24T20:28:32.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "In case you were ready to believe the GOP now supports IVF\u2026 https://t.co/QqtxmG5Q0l https://t.co/mib9VA80RI",
+          "date": "2024-06-27T18:49:46.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "When taken together, these votes paint a clear picture of an all-out campaign to chip away at a woman\u2019s right to choose wherever possible with an end-goal of eliminating abortion access nationwide. 6/10",
+          "date": "2024-06-24T14:05:36.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "\ud83e\uddf5Happy Labor Day! Michigan has the greatest workers in the world. Today we honor them and the idea that it\u2019s only right they earn a fair wage that allows them to lead a decent, middle-class life. 1/4",
+          "date": "2024-09-02T13:34:39.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I started my day at a Silence the Violence gun safety event in Detroit &amp; end it on the phone with the same officials who responded to the Oxford shooting &amp; provided aid during the MSU shooting. Tonight they\u2019re once again trying to help a community that will never be the same. 1/3",
+          "date": "2024-06-16T03:01:09.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Gov Website",
+          "url": "https://www.slotkin.senate.gov",
+          "tweet": null,
+          "date": "2025-04-27 23:51:25",
+          "scraped_on": "2025-04-27 23:51:25"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "In these two years, the House has voted on 17 different measures aimed squarely at taking away a woman\u2019s right to choose, not to mention the numerous anti-choice bills that have been introduced and amendments offered in committee. Here are a few: 2/10",
+          "date": "2024-06-24T14:05:34.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "On a day where the Supreme Court threw out a challenge to the availability of the safe and effective abortion drug Mifepristone, the GOP House majority is using the historically bipartisan defense bill to restrict choice for service women. Watch what they do, not what they say. https://t.co/Xq0LjlPOVU",
+          "date": "2024-06-13T23:45:00.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.rev.com/transcripts/kamala-harris-campaign-rally-in-east-lansing-michigan",
+          "tweet": null,
+          "date": "November 3, 2024",
+          "scraped_on": "2025-04-15 13:47:47"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "It\u2019s therefore critical that we carefully read any and all legislation, and don\u2019t give an inch to those who wish to turn back the clock on a woman\u2019s right to choose. 5/5",
+          "date": "2024-06-05T21:29:19.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        }
+      ]
+    },
+    {
+      "issue": "Public Healthcare",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "And a reminder: if you or your loved one is having trouble with Social Security my team has dedicated caseworkers with years of experience that can help. Just visit my website at the link below or call (517) 993-0510. 3/3 https://t.co/KvoRtUxn4F",
+          "date": "2024-08-14T13:55:02.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "At the federal level, the @HASCDemocrats are using hard power to address PFAS. Last month, we passed the yearly defense bill with my provision to ensure DoD medical personnel are trained on the effects of PFAS, which will go to the floor this week. 5/6\nhttps://t.co/Q62nCwEe4F",
+          "date": "2024-06-11T23:41:10.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.fox17online.com/news/politics/down-to-the-wire-elissa-slotkin-gives-candid-look-at-life-on-the-campaign-trail",
+          "tweet": null,
+          "date": "October 24, 2024",
+          "scraped_on": "2025-04-15 13:47:30"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "It was a packed house in my office this week when @MICreditUnions brought plenty of Michiganders to the Capitol. Great as always to discuss how our credit unions help expand access to capital for MI businesses and families and drive investment in our communities. https://t.co/04yD7S3aL1",
+          "date": "2024-09-12T18:12:08.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.pbs.org/newshour/politics/read-sen-elissa-slotkins-full-democratic-response-to-trumps-joint-address-to-congress",
+          "tweet": null,
+          "date": "March 5, 2025",
+          "scraped_on": "2025-04-15 13:46:55"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "That\u2019s why I have cosponsored bills to expand access to mental health care for students in school, military families, and underserved communities. 2/3\nhttps://t.co/zxkoMENAJU",
+          "date": "2024-05-29T20:41:07.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I\u2019ve advocated in Congress for ways to address those challenges, having secured funding in the federal budget for police departments in our district and led legislation to invest in small police departments for training, equipment, and officer support. 4/5\nhttps://t.co/vUX87sGr5A",
+          "date": "2024-05-17T13:22:56.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "These professionals provide essential care to patients after completing years of advance schooling, but we fall short in treating them the same as other providers. That\u2019s why I\u2019ve supported legislation like the Improving Care and Access to Nurses Act.",
+          "date": "2024-08-19T15:56:18.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Gov Website",
+          "url": "https://www.slotkin.senate.gov",
+          "tweet": null,
+          "date": "2025-04-27 23:51:25",
+          "scraped_on": "2025-04-27 23:51:25"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I\u2019ve heard from Michiganders about how low-income families need help with home repairs to become eligible for federal assistance to lower their energy costs, and the result is a home-grown bill I\u2019m cosponsoring with @RepMarcyKaptur and @RepPaulTonko. 1/4 https://t.co/GBiJY2liMD",
+          "date": "2024-06-20T20:45:23.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.rev.com/transcripts/kamala-harris-campaign-rally-in-east-lansing-michigan",
+          "tweet": null,
+          "date": "November 3, 2024",
+          "scraped_on": "2025-04-15 13:47:47"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.pbs.org/newshour/show/michigan-rep-slotkin-on-what-issues-are-driving-crucial-midwest-voters",
+          "tweet": null,
+          "date": "August 20, 2024",
+          "scraped_on": "2025-04-15 13:47:38"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "That includes joining some of my Michigan colleagues on the Accountability of Leaders in Education to Report Title IX Investigations (ALERT) Act. 2/3\nhttps://t.co/eVGSEAqdM0",
+          "date": "2024-06-23T15:43:56.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The Lansing interns briefed a bill to expand access to affordable housing, while the D.C. interns pitched bills relating to AI regulation, school paraprofessional pay, improving community mental health services, and a Congressional Gold Medal for the original Freedom Riders. 4/5",
+          "date": "2024-09-05T14:29:32.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        }
+      ]
+    },
+    {
+      "issue": "Balancing the Budget",
+      "stance": false,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Other",
+          "url": "https://www.pbs.org/newshour/politics/read-sen-elissa-slotkins-full-democratic-response-to-trumps-joint-address-to-congress",
+          "tweet": null,
+          "date": "March 5, 2025",
+          "scraped_on": "2025-04-15 13:46:55"
+        },
+        {
+          "type": "Gov Website",
+          "url": "https://www.slotkin.senate.gov",
+          "tweet": null,
+          "date": "2025-04-27 23:51:25",
+          "scraped_on": "2025-04-27 23:51:25"
+        }
+      ]
+    },
+    {
+      "issue": "Limits on Prescription Drug Prices",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Specialty crops are critical to Michigan agriculture, which is why supporting our specialty crop farmers is one of my top priorities for this week\u2019s Farm Bill markup. We may not be as fancy-pants as Idaho potatoes, but we\u2019re supplying one of America\u2019s favorite snack foods! 4/4",
+          "date": "2024-05-21T17:08:40.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.rev.com/transcripts/kamala-harris-campaign-rally-in-east-lansing-michigan",
+          "tweet": null,
+          "date": "November 3, 2024",
+          "scraped_on": "2025-04-15 13:47:47"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The SHIELD Act, which I am cosponsoring with @RepHaleyStevens, would set up a program to train service members to identify hostile influence operations and separate them from reliable journalism, while also helping them protect personal and sensitive information online. 2/3",
+          "date": "2024-06-21T16:54:57.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "There is a reason that I and so many of my colleagues in Congress fought to give Medicare the ability to negotiate drug prices \u2013 because it would put money back in the pockets of our seniors and taxpayers.\nhttps://t.co/CnVnkHi1gr",
+          "date": "2024-08-15T20:33:02.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The legislation would require federally funded colleges &amp; universities to submit an annual certification to the Sec. of Education affirming that the school\u2019s leadership reviewed all sexual abuse investigations involving an employee reported to the Title IX coordinator. 3/3",
+          "date": "2024-06-23T15:43:57.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "It may seem hard to believe, but big drug companies actually get generous tax breaks for the horrible ads you see on TV. I introduced the No Tax Breaks for Drug Ads Act because it\u2019s time for those tax breaks to stop so companies prioritize real innovation. https://t.co/eFBZcfPvDZ",
+          "date": "2024-07-12T19:46:02.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The Weatherization Enhancement and Readiness Act would expand the current assistance program to cover home repairs for structural issues like plumbing, roofing, and electrical issues, as well as environmental hazards like asbestos or lead paint. 2/4",
+          "date": "2024-06-20T20:45:24.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.pbs.org/newshour/politics/read-sen-elissa-slotkins-full-democratic-response-to-trumps-joint-address-to-congress",
+          "tweet": null,
+          "date": "March 5, 2025",
+          "scraped_on": "2025-04-15 13:46:55"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "In case you missed it: Two amendments \u2013 from @RepSherrill and @RepEscobar \u2013 to expand access to contraception for female service members were added to this year\u2019s NDAA with bipartisan support. 1/4 https://t.co/YnDVRjIMF6",
+          "date": "2024-05-24T20:28:30.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Gov Website",
+          "url": "https://www.slotkin.senate.gov",
+          "tweet": null,
+          "date": "2025-04-27 23:51:25",
+          "scraped_on": "2025-04-27 23:51:25"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "A few years ago, I wrote a law that requires the DOD to make publicly available the data it collects from samplings near military installations. You can find that information at the link below, including for Oscoda, Grayling, Marquette &amp; Grand Ledge. 6/10\nhttps://t.co/T4FFkqZ1zO",
+          "date": "2024-09-18T11:58:26.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "As the only Michigander on the House Ag Committee and Co-Chair of the Bipartisan Specialty Crop Caucus, I\u2019m committed to supporting specialty crop farmers, and led the Specialty Crop Security Act to expand the program that supplied this funding. 2/2 https://t.co/8gxXMmuOQo",
+          "date": "2024-08-23T17:57:32.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "If COVID taught us anything, it\u2019s that we can\u2019t be dependent on other countries for life-saving prescription drugs.\n\nMy bipartisan American Made Pharmaceuticals Act would reduce that dependence, bring jobs back, &amp; help protect patients from drug shortages.\nhttps://t.co/rbtVTOdrWr",
+          "date": "2024-08-08T20:52:13.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "As a Member of Congress, I am a proud cosponsor of the PRO Act \u2013 legislation to protect workers\u2019 right to organize and form a union so they can negotiate for better pay, benefits and working conditions. 2/4",
+          "date": "2024-09-02T13:34:40.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I introduced the No Tax Breaks for Drug Ads Act because Michigan taxpayers shouldn\u2019t have to foot the bill for TV ads by the richest pharmaceutical companies in the world. https://t.co/n9V62CryNX",
+          "date": "2024-07-15T16:11:47.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        }
+      ]
+    },
+    {
+      "issue": "China",
+      "stance": false,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "If we want the U.S. to lead on the next generation of vehicles and prevent others like the CCP from getting a foothold in the U.S. \u2013 another national security risk \u2013 we need to act and act now. 4/4",
+          "date": "2024-08-15T20:24:02.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.pbs.org/newshour/politics/read-sen-elissa-slotkins-full-democratic-response-to-trumps-joint-address-to-congress",
+          "tweet": null,
+          "date": "March 5, 2025",
+          "scraped_on": "2025-04-15 13:46:55"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.nbcnews.com/podcast/inside-impeachment/transcript-facing-voters-n1103971",
+          "tweet": null,
+          "date": "December 18, 2019",
+          "scraped_on": "2025-04-15 13:47:11"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "2/ China clearly has a plan when it comes to cars: flood global markets with heavily subsidized EVs, under-sell local car makers with rock-bottom prices, and dominate markets for future generations of cars and trucks.",
+          "date": "2024-10-30T17:05:18.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "This isn\u2019t just about economic security \u2013 it\u2019s a national security issue. One thing we can do immediately? Congress can pass a defense authorization bill with my amendment to ban Chinese connected vehicles from our military bases. 2/4 https://t.co/hBbEtqaxNn",
+          "date": "2024-08-15T20:24:01.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "6/ It\u2019s also why I led a group of colleagues asking Mexico\u2019s newly elected president to take action against the national security threat to both our countries if China pushes further into the North American market.\nhttps://t.co/jl9uoNscSy",
+          "date": "2024-10-30T17:05:20.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "During our April Armed Services Committee hearings, I asked @SecDef and @SecArmy if they would be OK with an adversary like China having video, 3D mapping, and other data on sites like critical infrastructure and military bases. They said absolutely not. https://t.co/YySONtS1zB",
+          "date": "2024-10-08T19:33:59.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "And last month, @CommerceGov and @SecRaimondo announced they were using the authority my legislation would write into law to take action restricting the import or sale of connected vehicles with ties to China on national security grounds. https://t.co/wIHBrSX5Sj",
+          "date": "2024-10-08T19:34:01.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "\ud83e\uddf5There is a quiet battle going on for the future of the auto industry. I want the cars of the future to be made in the USA \u2013 in Michigan \u2013 not in China. We need to keep helping our automakers invest in auto innovation, because China won\u2019t stop. 1/4 https://t.co/aqrI6EVDiJ",
+          "date": "2024-08-15T20:24:01.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Gov Website",
+          "url": "https://www.slotkin.senate.gov",
+          "tweet": null,
+          "date": "2025-04-27 23:51:25",
+          "scraped_on": "2025-04-27 23:51:25"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "This is a threat to U.S. jobs and companies \u2014 but China isn\u2019t just an economic competitor. It\u2019s also a potential adversary. So this isn\u2019t just an economic issue, it\u2019s a national security challenge. 4/4 https://t.co/Qil8V3tix6",
+          "date": "2024-05-31T18:18:11.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "7/ And it\u2019s certainly why we can't surrender to China in the fight to build next-generation vehicles. Federal investments like the grant for GM\u2019s Lansing Grand River plant are part of how we fight back against China\u2019s strategy &amp; preserve jobs.\nhttps://t.co/1cLpdc28c8",
+          "date": "2024-10-30T17:05:20.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "From subsidizing Chinese electric vehicle manufacturing to flooding our markets with cheap goods in small packages, the Chinese Communist Party has tried time and again to undercut American workers and businesses. It\u2019s critical that we push back and level the playing field. 2/2",
+          "date": "2024-09-12T16:49:47.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        }
+      ]
+    },
+    {
+      "issue": "Ukraine War",
+      "stance": false,
+      "desc": "Elissa Slotkin, a US Representative from Michigan, supports providing Ukraine with meaningful security guarantees against potential Russian aggression. She believes that Russia's past actions demonstrate a lack of trustworthiness and that robust assurances are necessary to prevent future attacks. Her stance is rooted in her commitment to upholding human rights and promoting global stability.",
+      "sources": [
+        {
+          "type": "Other",
+          "url": "https://abcnews.go.com/Politics/week-transcript-11-17-24-senator-elect-elissa/story?id=115934655",
+          "tweet": null,
+          "date": "November 17, 2024",
+          "scraped_on": "2025-04-15 13:47:04"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "This announcement prohibiting the sale of software made by a Russian cyber company in the U.S. is an important example of the tools @CommerceGov has to protect our data and privacy from adversary nations \u2013 tools I\u2019m working to strengthen in law. 1/2 https://t.co/YfAa8AqoCP",
+          "date": "2024-06-26T15:49:34.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.pbs.org/newshour/politics/read-sen-elissa-slotkins-full-democratic-response-to-trumps-joint-address-to-congress",
+          "tweet": null,
+          "date": "March 5, 2025",
+          "scraped_on": "2025-04-15 13:46:55"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.nbcnews.com/podcast/inside-impeachment/transcript-facing-voters-n1103971",
+          "tweet": null,
+          "date": "December 18, 2019",
+          "scraped_on": "2025-04-15 13:47:11"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "For the second time in six months, the Iranian regime has launched a reckless, state-on-state missile attack against Israel. My statement: https://t.co/F2WffqFqfS",
+          "date": "2024-10-01T20:20:39.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "As our adversaries work day and night to target Americans \u2013 including service members \u2013 to undermine our nation and our democratic values, it\u2019s critical that we take measures to protect ourselves. 3/3",
+          "date": "2024-06-21T16:54:57.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "\ud83e\uddf5Today, I got an update on the ceasefire negotiations from the White House, and separately met again with families of Americans held hostage by Hamas. 1/3",
+          "date": "2024-06-04T16:40:06.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        }
+      ]
+    },
+    {
+      "issue": "Border Patrol",
+      "stance": true,
+      "desc": "Elissa Slotkin supports strengthening Border Patrol efforts, emphasizing the need for comprehensive immigration reform that includes securing the border, vetting and approving immigrants before they arrive, and upholding America's values as a nation of immigrants.",
+      "sources": [
+        {
+          "type": "Other",
+          "url": "https://abcnews.go.com/Politics/week-transcript-11-17-24-senator-elect-elissa/story?id=115934655",
+          "tweet": null,
+          "date": "November 17, 2024",
+          "scraped_on": "2025-04-15 13:47:04"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.pbs.org/newshour/politics/read-sen-elissa-slotkins-full-democratic-response-to-trumps-joint-address-to-congress",
+          "tweet": null,
+          "date": "March 5, 2025",
+          "scraped_on": "2025-04-15 13:46:55"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "House Republicans declared the deal \"dead on arrival\" despite claiming that the border was their #1 concern. There is only one way to actually address this issue: legislators from both parties need to lock themselves in a room and hash out comprehensive, bipartisan legislation.",
+          "date": "2024-06-04T20:08:33.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The security situation in the Middle East \u2013 including Israel and Lebanon \u2013 is increasingly serious. American citizens and all those in Israel or Lebanon should take steps now to keep safe.\ud83e\uddf5",
+          "date": "2024-10-01T17:12:46.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "We need a package that secures our border, reforms our system so that immigrants can be vetted and approved before they hit our borders, and upholds our values as a nation of immigrants.\nhttps://t.co/Bc7rGfp7Vz",
+          "date": "2024-06-04T20:08:34.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I support the President\u2019s actions today to secure the border \u2014 it\u2019s a last ditch effort given that House Republicans declared a tough bipartisan border security deal \u201cdead on arrival\u201d. https://t.co/vo1itiCAWJ",
+          "date": "2024-06-05T00:23:58.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        }
+      ]
+    },
+    {
+      "issue": "Diversity, Equity, Inclusion",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I also had a chance to connect with our state House and state Senate leaders. It was a great discussion on everything from black maternal health, corrections officers incentives and health equity and access to lift up our minority communities. 2/2",
+          "date": "2024-09-17T20:05:35.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Today\u2019s outcome only renews the pain for Sam\u2019s family and those of us who loved and valued her. While we will have to continue waiting for justice, we should hold even more tightly to the values she lived her life by: tolerance, inclusion and compassion. https://t.co/dTJFCCm0RC",
+          "date": "2024-07-19T00:42:27.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        },
+        {
+          "type": "Other",
+          "url": "https://abcnews.go.com/Politics/week-transcript-11-17-24-senator-elect-elissa/story?id=115934655",
+          "tweet": null,
+          "date": "November 17, 2024",
+          "scraped_on": "2025-04-15 13:47:04"
+        }
+      ]
+    },
+    {
+      "issue": "Assault Weapons Ban",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Other",
+          "url": "https://www.pbs.org/newshour/politics/read-sen-elissa-slotkins-full-democratic-response-to-trumps-joint-address-to-congress",
+          "tweet": null,
+          "date": "March 5, 2025",
+          "scraped_on": "2025-04-15 13:46:55"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Any group shouting \u201cguillotine, guillotine\u201d on campus fits into that category. It creates a climate of fear for Jewish students and shouldn\u2019t be tolerated. 4/5",
+          "date": "2024-05-04T23:39:12.000Z",
+          "scraped_on": "2025-03-17 10:55:48"
+        }
+      ]
+    }
+  ]
+}

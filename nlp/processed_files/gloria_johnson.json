@@ -1,0 +1,404 @@
+{
+  "candidate": "Gloria Johnson",
+  "positions": [
+    {
+      "issue": "Abortion",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "This ticket, w/Marsha in tow, is a nightmare for TN women and girls. An adjudicated rapist, a man who thinks women should stay with their abuser and wants a federal abortion ban, and a woman who supports a federal abortion ban and voted AGAINST the Violence Against Women Act. https://t.co/nxTcpUa6hP",
+          "date": "2024-10-02T20:31:21.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Marsha Blackburn won\u2019t vote for the CHILD TAX CREDIT but I certainly will. We need policies that help every day families and this one does! https://t.co/4RyB9ZWXPk",
+          "date": "2024-08-17T20:48:19.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Women in TN should be able to access affordable prescriptions and healthcare (including reproductive healthcare), be free from domestic violence, receive equal pay for equal work, have access to contraception and IVF and you voted against every one of these things. https://t.co/NXZM4cAduQ",
+          "date": "2024-10-05T23:05:01.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Marsha talks about freedom, but politicians in our doctors' offices taking away our rights and putting women's lives in danger isn't freedom.\n\nIn the Senate, I will fight to get our freedoms back. https://t.co/y53YSjoTLD",
+          "date": "2024-11-03T19:43:30.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@piper4missouri Ob/Gyns coming to TN as residents have dropped by 21% since the Dobbs decision. We have 43 counties with no Ob/Gyns. With fewer Ob/Gyn residents, in the next few years it will get worse and worse. Already 46% of counties have NO Ob/gyn, it won\u2019t be long until 50%, 60%, 70%\u2026",
+          "date": "2024-10-17T19:17:19.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @GIFFORDS_org: TONIGHT: Gun violence prevention will be front and center at the @DemConvention as @KamalaHarris continues to prioritize\u2026",
+          "date": "2024-08-22T15:56:52.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Of course TN Senator Blackburn blocks access to IVF while 90% of Tennesseans support it. https://t.co/xmZS1mOHas",
+          "date": "2024-09-17T22:32:53.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@haleakela19 Probably the biggest concerns I hear about are abortion care for women, ending gun violence, access to affordable healthcare and prescriptions, and raising the wage.",
+          "date": "2024-09-01T22:00:12.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @RachelBitecofer: My son and millions of other disabled Americans are counting on your vote to protect them from Trump\u2019s cruelty to the\u2026",
+          "date": "2024-10-21T21:05:51.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.knoxnews.com/story/news/politics/elections/2024/10/14/tennessee-knox-county-voter-guide-2024-senate-congress-candidates/75477138007/",
+          "tweet": null,
+          "date": "October 14, 2024",
+          "scraped_on": "2025-04-15 13:48:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @RachelBitecofer: Women are dying from miscarriages because of Trump abortion bans. https://t.co/y8zaGCuf9L",
+          "date": "2024-11-01T15:51:22.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@Vivian_E_Jones My bill last year would have broken up this monopoly and required more oversight for Ballad Health. Every Republican voted against it.",
+          "date": "2024-09-18T22:15:34.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        }
+      ]
+    },
+    {
+      "issue": "Illegal/Undocumented Migrants",
+      "stance": false,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @KamalaHQ: Here is a montage of Republicans pointing out that the border is not solved because Donald Trump killed the border deal https\u2026",
+          "date": "2024-09-27T15:28:19.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @Mad_as_heII: Hey Marsha, why no debate? I would love to know why you voted NO to Increase the Federal Minimum Wage to $15 an Hour.\n\nFol\u2026",
+          "date": "2024-09-09T01:48:42.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Does Marsha want to end the agriculture work visa program? No. She\u2019s just spreading hate because she thinks it\u2019s good for an election.",
+          "date": "2024-10-23T18:36:07.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Let\u2019s talk about Marsha Blackburn\u2019s priorities! Big Pharma, Big Oil, Insurance CEOs, Billionaires\u2026 She hasn\u2019t done anything for Tennesseans so all she does is lie. https://t.co/AzK7lr2rva",
+          "date": "2024-10-04T19:53:45.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @TheTNHoller: The legacy of @GovBillLee will be taking money from public schools to give coupons to wealthy private school kids (aka \"sc\u2026",
+          "date": "2024-08-12T15:11:13.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @ChrisMurphyCT: What has this country come to if the revelation that Trump secretly sent COVID testing machines to Putin while thousands\u2026",
+          "date": "2024-10-09T17:04:08.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "CoreCivic consistently fails to meet its obligations to TN taxpayers. But they keep getting paid because the corporation is also an ATM for corrupt politicians who ignore their failures and look the other way when people die.\n\nIt\u2019s past time to end the private prison industry.",
+          "date": "2024-08-22T15:29:51.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "All I can think when I look at Stephen Miller is wow, racism sure does age a person. https://t.co/41ekmPUwQz",
+          "date": "2024-10-09T03:57:09.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "It appears Skrmetti lied to Tennesseans to sow division and hate during an election. What other reason is there to lie about these immigrants, to lie the Governor wasn\u2019t informed, to lie they were a safety risk?\n\nWe need to fix our immigration system, but these lies don\u2019t help. https://t.co/ZrTnfSGzMU",
+          "date": "2024-10-25T18:20:46.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @Victorshi2020: Oh my goodness. This is Cardi B's high school teacher responding to attacks on Cardi B for being with Kamala Harris at a\u2026",
+          "date": "2024-11-02T03:44:24.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @ezralevin: \"This is an extremely simple situation: JD Vance is lying about the military service of a fellow veteran for political gain.\u2026",
+          "date": "2024-08-09T02:04:17.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@philbutta Not in TN where GOP electeds are trying hard to pretend undocumented folks are trying to vote. The Sec of State actually sent letters to naturalized citizens threatening they may be committing a felony by voting, then invited them to remove their names from the voting rolls.",
+          "date": "2024-09-09T20:05:54.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @MurphyJenCubs: When six people died in a Nashville school shooting, Gloria Johnson stood in the TN Statehouse to speak for the children\u2026",
+          "date": "2024-08-14T16:25:53.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Not trying to hide their racism are they. This man is a hardworking family man and a veteran, TNGOP are completely lacking in moral fabric. https://t.co/wetvOy6LU6",
+          "date": "2024-10-03T18:20:08.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "You know this is a result of Republican policy, the TN GOP not expanding Medicaid, right? Refusing to accept the $1.4 billion from TN taxpayers coming back to our state. Refusing it means hospitals or hospital services will continue to close. https://t.co/Xao8l5XFfS",
+          "date": "2024-09-25T17:55:05.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        }
+      ]
+    },
+    {
+      "issue": "Public Healthcare",
+      "stance": true,
+      "desc": "Gloria Johnson supports expanding public healthcare, including lowering prescription drug costs and ensuring all hardworking Tennessee families have access to a livable wage. She also prioritizes protecting women's reproductive rights and making healthcare decisions free from government interference. Additionally, she advocates for affordable childcare and paid family leave to support working families.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@Msgtsally8 Me? I\u2019m sponsoring legislation to raise the wage, for affordable healthcare, for paid family leave, cosponsoring removing sales tax from groceries, sponsoring legislation for affordable, high-quality child care; you know, bills that help families afford homes.",
+          "date": "2024-08-18T02:39:13.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@suzieqeue Because GOP policy keeps people poor and working 2 or 3 jobs and they don\u2019t have time to follow politics like some of us do. With a $7.25 minimum wage and no Medicaid expansion, folks are just trying to keep the lights on and food on the table.",
+          "date": "2024-09-26T10:49:05.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@joy_gimbel Because GOP policy keeps people poor and working 2 or 3 jobs and they don\u2019t have time to follow politics like some of us do. With a $7.25 minimum wage and no Medicaid expansion, folks are just trying to keep the lights on and food on the table.",
+          "date": "2024-09-26T10:50:23.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@dtheavenger @MaryKeithBare1 Because GOP policy keeps people poor and working 2 or 3 jobs and they don\u2019t have time to follow politics like some of us do. With a $7.25 minimum wage and no Medicaid expansion, folks are just trying to keep the lights on and food on the table.",
+          "date": "2024-09-26T10:50:12.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "So it\u2019s a threat to Marsha\u2019s \u201cway of life\u201d for TN families to earn a living wage for a 40 hour week, have access to affordable healthcare/prescription drugs, have their kids attend a well resourced public school, make medical decisions w/out a Senator in ur doc\u2019s office?\nGot it\ud83d\ude44 https://t.co/VmPQaFa93r",
+          "date": "2024-09-20T15:06:25.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Enjoyed breakfast with labor groups from across Memphis this morning!\n\nOur unions are the backbone of our economy, especially here in Shelby County. They fight so every Tennessean can have a good job, with good wages, and good benefits so their families can thrive. https://t.co/rM2ovn03nE",
+          "date": "2024-10-09T17:26:14.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Because we want folks to have access to affordable healthcare, good wages, and good public schools for their kids? #Weird https://t.co/jrIxlOY1wl",
+          "date": "2024-08-16T02:37:51.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Not even a high schooler can make a living off minimum wage, but Marsha Blackburn believes $7.25 an hour is perfectly fine.\n\nIt is past time we raise the minimum wage to ensure every Tennessean family can put a roof over their heads, provide food, and live in dignity. https://t.co/LcLvv7CiyN",
+          "date": "2024-11-01T16:53:45.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@Charlot85737881 I am a Democrat that fights for hardworking TN families.",
+          "date": "2024-10-09T21:52:25.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Expanding Medicaid resulted in a decrease of 19-29% of violent crime in states that expanded and a decrease of 25-41% of drug crime. It saved states 1-5 billion dollars. Remember having access to healthcare includes mental healthcare.",
+          "date": "2024-10-13T03:56:30.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.knoxnews.com/story/news/politics/elections/2024/10/14/tennessee-knox-county-voter-guide-2024-senate-congress-candidates/75477138007/",
+          "tweet": null,
+          "date": "October 14, 2024",
+          "scraped_on": "2025-04-15 13:48:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@RoseMusicGroup I worked with emotionally disturbed teens and some school programs can get Medicaid funding.",
+          "date": "2024-10-13T16:42:55.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Great day back on the road visiting with voters across Tennessee!\n\nI started out my day joining the picket line and standing in solidarity with @CWAUnion workers.\n\nOur unions fight for fair wages and prosperity for Tennesseans. I'm proud to stand with them. https://t.co/4QwSsM4Cs5",
+          "date": "2024-09-04T01:05:41.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        }
+      ]
+    },
+    {
+      "issue": "Public School Funding",
+      "stance": true,
+      "desc": "Gloria Johnson's stance on Public School Funding is described as follows: Gloria Johnson supports eliminating school vouchers and reducing or removing school lunch fees for all students. She also aims to increase funding for public schools, particularly those serving disadvantaged communities. Johnson believes that public schools should prioritize student safety and well-being, and has co-sponsored legislation supporting local efforts to improve physical security measures in schools.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @TheTNHoller: DYER COUNTY \u2014 LEE\u2019S VOUCHER SCAM THREATENS TEACHER RAISES: Resistance on the school board to giving teachers 8% raises, in\u2026",
+          "date": "2024-09-06T19:46:52.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "You can vote Becky Massy out  and vote for @Domonica4TN  who will fight for TN kids and families and our public schools.\nWe can\u2019t wait for January to start organizing against vouchers, organizing starts now with your vote!",
+          "date": "2024-10-25T19:37:34.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@LarryWriter13 @GovBillLee Are you going to tell me a kid from a family with little or no resources is going to do better at a school across town, with no free lunch, no transportation, no social workers, no special programs, no guidance counselors? You\u2019ve been scammed Larry, it hasn\u2019t worked yet.",
+          "date": "2024-08-13T07:09:21.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.knoxnews.com/story/news/politics/elections/2024/10/14/tennessee-knox-county-voter-guide-2024-senate-congress-candidates/75477138007/",
+          "tweet": null,
+          "date": "October 14, 2024",
+          "scraped_on": "2025-04-15 13:48:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "It\u2019s taken a while to even post about the school shooting in Georgia. I was on the road in upper East TN and was without service the majority of the day. Folks at my tour stops told me about the shooting, but it was impossible to keep up throughout the day due to lack of service.",
+          "date": "2024-09-05T03:55:36.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        }
+      ]
+    },
+    {
+      "issue": "Gun Ownership",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "We want universal background checks, safe storage, and to keep guns from dangerous people. I\u2019m a gun owner and understand we can put protections in place to protect families.\n\nDo you think people should store their guns safely? Do you think dangerous people should have firearms?",
+          "date": "2024-09-07T20:59:39.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "It was great to have this convo with the amazing @shannonrwatts. We talked about the state of gun violence and racism in TN and how to fight back! We also talked about the importance of electing #HarrisWalz2024! Thank you @EmergeAmerica @themeteor \n\nhttps://t.co/IyvRL4KmUY",
+          "date": "2024-08-27T01:15:00.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Yes, I mentioned prevention in the solutions, because wouldn\u2019t preventing 30-40% of the problem be the smartest way to address the issue of gun violence, while also saving billions of dollars? https://t.co/sCaMZAwK4i",
+          "date": "2024-10-13T16:39:08.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "My friends at TSU are hurting tonight. Another mass shooting where folks should expect to be safe.\n\nWe aren\u2019t helpless in the face of gun violence, and I will never accept this as any kind of normal.",
+          "date": "2024-10-13T04:04:19.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @Eriklavier: We LOVE @VoteGloriaJ! She\u2019s one of the #TennesseeThree! We will never forget her allyship, her bravery, her stance on gun c\u2026",
+          "date": "2024-09-25T18:22:45.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.knoxnews.com/story/news/politics/elections/2024/10/14/tennessee-knox-county-voter-guide-2024-senate-congress-candidates/75477138007/",
+          "tweet": null,
+          "date": "October 14, 2024",
+          "scraped_on": "2025-04-15 13:48:52"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Gun sense legislation like enhanced universal background checks, safe storage laws, require carry permits, reporting lost and stolen firearms, and red flag laws.",
+          "date": "2024-10-13T03:56:32.000Z",
+          "scraped_on": "2025-03-27 01:17:51"
+        }
+      ]
+    }
+  ]
+}

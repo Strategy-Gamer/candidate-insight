@@ -1,0 +1,537 @@
+{
+  "candidate": "Ruben Gallego",
+  "positions": [
+    {
+      "issue": "Pollutant Controls",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Gov Website",
+          "url": "Ruben Gallego Senate.Gov",
+          "tweet": null,
+          "date": "2025-04-27 23:48:43",
+          "scraped_on": "2025-04-27 23:48:43"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": ".@ValleyPartners understands that the next 10 years will shape the next 100 years of our state's future. \n\nFrom water to housing, we will continue working towards bipartisan solutions. https://t.co/TzDBbroHP6",
+          "date": "2024-09-13T21:50:38.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Other",
+          "url": "https://ga.pbs-video.pbs.org/captions/az-votes-2024/5b7fe532-8708-495e-abbd-00c749b0f01c/captions/ZY52uK_caption_en.txt",
+          "tweet": null,
+          "date": "Ruben Gallego, Kari Lake",
+          "scraped_on": "2025-04-15 14:00:02"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The fight for freedom cannot be won in isolation.\u00a0\n\nI\u2019ll always fight to protect Arizonans, our interests, and our allies abroad.",
+          "date": "2024-05-07T17:00:57.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The Havasupai people have lived in the Grand Canyon for centuries.\n\nTheir history is Arizona\u2019s history and I will always fight to protect it. https://t.co/0GLp8Lph1J",
+          "date": "2024-10-17T22:07:30.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        }
+      ]
+    },
+    {
+      "issue": "Abortion",
+      "stance": true,
+      "desc": "Ruben Gallego supports protecting and codifying abortion rights in the US Constitution. He emphasizes the importance of ensuring access to essential reproductive healthcare for Arizonans and vows not to pass a federal abortion ban or approve funding for such a ban. Instead, he prioritizes state-level decisions on abortion laws and wants to preserve the existing lack of an abortion ban in Arizona.",
+      "sources": [
+        {
+          "type": "Gov Website",
+          "url": "Ruben Gallego Senate.Gov",
+          "tweet": null,
+          "date": "2025-04-27 23:48:43",
+          "scraped_on": "2025-04-27 23:48:43"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @RubenGallego: We can\u2019t trust Kari Lake to protect IVF. She doesn\u2019t even know what it\u2019s called. https://t.co/OvBRWWaYK3",
+          "date": "2024-10-11T05:28:07.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Across the country, women are dying because they cannot get the healthcare they need.\n\nThink it couldn\u2019t happen here in Arizona? Just listen to Kari Lake: https://t.co/UBkRfsJPYq",
+          "date": "2024-10-30T17:42:15.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The choice in this election couldn\u2019t be clearer. Kari Lake wants to ban abortion. I want to protect abortion rights.\u00a0\n\nWith your help, we\u2019re going to win this Senate race.",
+          "date": "2024-09-29T16:39:15.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Our \u201cWomen for Gallego\u201d coalition is ready to go!\n\nWe\u2019re turning out the vote to stop Kari Lake \u2013 an abortion-banning extremist. https://t.co/1j5xhVx1se",
+          "date": "2024-10-21T18:12:39.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I\u2019m a dad and I\u2019m running for Senate to give my kids (and yours!) the best future possible. \n\nThat means a world where our daughters have abortion rights, affordable housing, and an economy that works for them (and their parents too!)",
+          "date": "2024-05-09T17:37:39.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Arizona, mail-in ballots are arriving, and in-person Early Vote Centers are open.\u00a0\n\nIt\u2019s us vs Kari Lake. The choice couldn\u2019t be more clear. I\u2019m fighting to protect abortion rights, lower costs, and tackle the border crisis. Kari Lake will do or say anything to gain power.\n\nMake\u2026 https://t.co/aJ7TIufTHf",
+          "date": "2024-10-09T14:07:59.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "It\u2019s simple: I\u2019ll protect abortion rights.\nKari Lake will take them away.\n\nThat's the choice in this election.",
+          "date": "2024-05-07T19:48:24.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": ".@MurrayCampaign knows how important it is to have leaders in the Senate who will protect abortion rights. \n\nProud to have her at @reproforall\u2019s reproductive rights round table where I made it clear: I\u2019m ready to do just that. https://t.co/0R7NqVMDGP",
+          "date": "2024-10-09T21:17:30.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Arizonans are fired up because we have 24 days until we protect abortion rights once and for all! https://t.co/nM7J5fYqyH",
+          "date": "2024-10-13T02:56:07.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "When Kari Lake isn\u2019t calling for an abortion ban, she\u2019s pushing conspiracy theories and denying elections.\n\nNow she wants to be your voice. She doesn\u2019t get us, and she sure shouldn\u2019t represent us.",
+          "date": "2024-09-24T20:01:25.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Arizona, we\u2019re at a crossroads. Defending abortion access, securing the border, protecting Social Security and Medicare, and fighting for housing affordability \u2014 it\u2019s all on the line.\n\nWe can come together - or we can let cynical leaders like Kari Lake try to tear us apart.",
+          "date": "2024-10-28T16:17:36.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Growing up poor, the child tax credit would have been a lifeline for my mom, who raised four kids on a secretary\u2019s pay.\n\nThat\u2019s why I\u2019ll never stop fighting for Arizona\u2019s hardworking families.",
+          "date": "2024-05-06T22:00:01.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Young voters are done with politicians who strip away their rights.\n\nI\u2019ll tell you what I told them. Get out, vote, and I\u2019ll fight like hell to protect abortion rights in Arizona and across the country. https://t.co/RHf0ciFi8j",
+          "date": "2024-09-24T16:47:29.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Other",
+          "url": "https://ga.pbs-video.pbs.org/captions/az-votes-2024/5b7fe532-8708-495e-abbd-00c749b0f01c/captions/ZY52uK_caption_en.txt",
+          "tweet": null,
+          "date": "Ruben Gallego, Kari Lake",
+          "scraped_on": "2025-04-15 14:00:02"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @CaptMarkKelly: .@RubenGallego is the leader Arizona needs to fight for abortion rights, protect Social Security, and lower costs for Ar\u2026",
+          "date": "2024-10-10T04:20:20.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Despite politicians like Kari Lake supporting Arizona\u2019s Civil War-era ban, this archaic law is finally off the books. It's a good step, but it\u2019s not enough. This November we will protect abortion rights once and for all. https://t.co/uqZL3m7hvJ",
+          "date": "2024-09-14T19:02:44.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Arizona is ground zero for the fight for abortion rights.\n\nSo here\u2019s what we are going to do: Defeat Kari Lake and pass Prop 139 to protect abortion rights once and for all. https://t.co/n0EvTS0mCs",
+          "date": "2024-10-13T22:02:59.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Kari Lake called abortion the \u201cultimate sin.\u201d\n\nShe called Arizona\u2019s near-total abortion ban without exceptions a \u201cgreat law.\u201d \n\nShe wanted sheriffs to enforce it. https://t.co/Rs0eQ7V9uF",
+          "date": "2024-10-17T20:03:00.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Arizona, we are at a crossroads. \n\nProtecting abortion access, tackling housing affordability, securing our water supply, defending our democracy \u2014 all of this and more is on the line.",
+          "date": "2024-09-28T01:20:57.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I refuse to let power-hungry politicians like Kari Lake destroy Social Security &amp; Medicare.\n\nAs long as I\u2019m in the fight, Arizona seniors will get the benefits they have earned.",
+          "date": "2024-10-10T21:40:16.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Thank you, Sun Devils!\n\nIncredible energy at the Repro Freedom Bus Tour reminding students to vote with @CaptMarkKelly, @GabbyGiffords, and @SophiaBush.\n\nLet\u2019s get out there and vote to protect reproductive rights! https://t.co/4Zx5N64qfD",
+          "date": "2024-11-04T22:32:31.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        }
+      ]
+    },
+    {
+      "issue": "Illegal/Undocumented Migrants",
+      "stance": false,
+      "desc": "Ruben Gallego supports providing asylum to undocumented immigrants, and has expressed opposition to deporting Dreamers, a term used for certain undocumented immigrants brought to the US as children. He advocates for addressing border issues and restoring the country's immigration system, rather than targeting specific groups of individuals. His stance prioritizes compassion and fairness in handling migrant situations.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "We need stricter asylum laws, more Border Patrol agents, and better technology to crack down on fentanyl trafficking. \n\nWe had a bipartisan bill - endorsed by Border Patrol agents - that did just that. Kari Lake rejected it without reading one word. She wants border problems, not\u2026 https://t.co/7ze33rvWl1",
+          "date": "2024-10-10T01:09:30.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "If Kari Lake was in the Senate, she would have voted against protecting the right to IVF today. Arizona families deserve better than extremists like her making healthcare decisions for their families.\nhttps://t.co/jVrtdUikPO",
+          "date": "2024-09-17T21:04:20.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Gov Website",
+          "url": "Ruben Gallego Senate.Gov",
+          "tweet": null,
+          "date": "2025-04-27 23:48:43",
+          "scraped_on": "2025-04-27 23:48:43"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "WATCH: Kari Lake said she wouldn't support ANY of the bipartisan border deal.\n\nKari Lake doesn't want solutions, she just wants power. https://t.co/sczCDUsRlo",
+          "date": "2024-10-10T01:23:58.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Despite politicians like Kari Lake supporting Arizona\u2019s Civil War-era ban, this archaic law is finally off the books. It's a good step, but it\u2019s not enough. This November we will protect abortion rights once and for all. https://t.co/uqZL3m7hvJ",
+          "date": "2024-09-14T19:02:44.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "For the first time in months, a poll has Kari Lake leading us by one point.\n\nWith your help we can fight back and turn the tide in Arizona. RUSH a donation!\n\nhttps://t.co/jlCnp7SBYa",
+          "date": "2024-10-29T19:35:10.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "https://t.co/xYxmQVOH14\n\nThere is a reason so many border mayors have endorsed our campaign. San Luis. Nogales. Somerton. They all want a better future for their residents.\n\nInstead of working to fix the border crisis, Kari will exploit it for her own political gain, even if it\u2026 https://t.co/GOL3o8o5ru",
+          "date": "2024-10-15T18:20:58.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Other",
+          "url": "https://ga.pbs-video.pbs.org/captions/az-votes-2024/5b7fe532-8708-495e-abbd-00c749b0f01c/captions/ZY52uK_caption_en.txt",
+          "tweet": null,
+          "date": "Ruben Gallego, Kari Lake",
+          "scraped_on": "2025-04-15 14:00:02"
+        }
+      ]
+    },
+    {
+      "issue": "Housing Solutions",
+      "stance": true,
+      "desc": "Supports innovative solutions to address housing shortages by exploring opportunities to develop federal land, prioritizing transparency and community input in the process.",
+      "sources": [
+        {
+          "type": "Gov Website",
+          "url": "Ruben Gallego Senate.Gov",
+          "tweet": null,
+          "date": "2025-04-27 23:48:43",
+          "scraped_on": "2025-04-27 23:48:43"
+        }
+      ]
+    },
+    {
+      "issue": "Public Healthcare",
+      "stance": true,
+      "desc": "Senator Ruben Gallego advocates for affordable and accessible healthcare, prioritizing the needs of Arizona families. He supports expanding opportunities for all Arizonans and protecting essential programs like Medicare and Social Security. Gallego also aims to make healthcare more affordable and is committed to fighting for every individual who has ever felt counted out.",
+      "sources": [
+        {
+          "type": "Other",
+          "url": "https://ga.pbs-video.pbs.org/captions/az-votes-2024/5b7fe532-8708-495e-abbd-00c749b0f01c/captions/ZY52uK_caption_en.txt",
+          "tweet": null,
+          "date": "Ruben Gallego, Kari Lake",
+          "scraped_on": "2025-04-15 14:00:02"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Arizona seniors are ready for a Senator they can trust to protect Medicare and Social Security. In 13 days they'll have one in me. https://t.co/WWYpXAnZTq",
+          "date": "2024-10-23T21:01:04.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "It\u2019s time we protect the promise of a safe and secure retirement for every hardworking Arizonan.",
+          "date": "2024-09-26T16:22:10.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I know what it's like to grow up in a family that has to stretch every dollar.\n\nIt\u2019s time we expand the Child Tax Credit and put money back in the pockets of Arizona families.",
+          "date": "2024-10-05T20:47:27.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Gov Website",
+          "url": "Ruben Gallego Senate.Gov",
+          "tweet": null,
+          "date": "2025-04-27 23:48:43",
+          "scraped_on": "2025-04-27 23:48:43"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": ".@ibtlu104 have always had my back because they know that in the Senate I\u2019ll fight for working families every day.\u00a0\n\nLet\u2019s get out there and vote! https://t.co/dxn1xyiyuy",
+          "date": "2024-11-03T00:09:44.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Growing up poor, the child tax credit would have been a lifeline for my mom, who raised four kids on a secretary\u2019s pay.\n\nThat\u2019s why I\u2019ll never stop fighting for Arizona\u2019s hardworking families.",
+          "date": "2024-05-06T22:00:01.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I know what it's like to beat the odds. I'm running for Senate to fight for every Arizonan who\u2019s ever felt counted out.",
+          "date": "2024-09-12T23:03:28.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Thanks to the leadership of Mayor Dickey and Mayor Bien-Willner, Fountain Hills and Paradise Valley are growing and thriving. \n\nI look forward to partnering with them in the Senate to lower costs, protect freedoms, and promote public safety for all Arizonans. https://t.co/251wXZuE1M",
+          "date": "2024-09-18T19:28:45.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Arizona here is my promise: I will always protect Social Security and Medicare 100%. \nhttps://t.co/NKTE4pQpkc",
+          "date": "2024-09-24T23:21:43.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Pharmacy Benefit Managers think they can rig the system and pocket the profits while Arizonans suffer.\n\nI\u2019ll continue to fight to make healthcare more affordable for every Arizonan. https://t.co/Hd0ne1gYFF",
+          "date": "2024-09-18T23:21:59.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I don't care if you're a Democrat, a Republican, or an Independent \u2014 I'm going to fight for you.\n\nWe're building a movement for all Arizonans.",
+          "date": "2024-05-08T17:01:48.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The AAPI community is vital to Phoenix\u2019s growth. As your next Senator, I\u2019ll work to expand opportunities for every Arizonan. https://t.co/dvdRTSij9O",
+          "date": "2024-10-04T22:52:57.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Arizona Seniors, like the ones I met with in the West Valley, deserve a Senator who will protect Medicare and Social Security. \n\nI\u2019m going to be that Senator. https://t.co/TiwGJ8vCUj",
+          "date": "2024-09-22T00:06:27.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        }
+      ]
+    },
+    {
+      "issue": "Renewable Energy",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Gov Website",
+          "url": "Ruben Gallego Senate.Gov",
+          "tweet": null,
+          "date": "2025-04-27 23:48:43",
+          "scraped_on": "2025-04-27 23:48:43"
+        },
+        {
+          "type": "Other",
+          "url": "https://ga.pbs-video.pbs.org/captions/az-votes-2024/5b7fe532-8708-495e-abbd-00c749b0f01c/captions/ZY52uK_caption_en.txt",
+          "tweet": null,
+          "date": "Ruben Gallego, Kari Lake",
+          "scraped_on": "2025-04-15 14:00:02"
+        }
+      ]
+    },
+    {
+      "issue": "Ukraine War",
+      "stance": false,
+      "desc": "Ruben Gallego supports providing significant financial aid to Ukraine in its conflict with Russia, and would prefer a larger allocation of funds ($260 billion) compared to the proposed $60 billion.",
+      "sources": [
+        {
+          "type": "Gov Website",
+          "url": "Ruben Gallego Senate.Gov",
+          "tweet": null,
+          "date": "2025-04-27 23:48:43",
+          "scraped_on": "2025-04-27 23:48:43"
+        },
+        {
+          "type": "Other",
+          "url": "https://ga.pbs-video.pbs.org/captions/az-votes-2024/5b7fe532-8708-495e-abbd-00c749b0f01c/captions/ZY52uK_caption_en.txt",
+          "tweet": null,
+          "date": "Ruben Gallego, Kari Lake",
+          "scraped_on": "2025-04-15 14:00:02"
+        }
+      ]
+    },
+    {
+      "issue": "Balancing the Budget",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Gov Website",
+          "url": "Ruben Gallego Senate.Gov",
+          "tweet": null,
+          "date": "2025-04-27 23:48:43",
+          "scraped_on": "2025-04-27 23:48:43"
+        }
+      ]
+    },
+    {
+      "issue": "Limits on Prescription Drug Prices",
+      "stance": true,
+      "desc": "Ruben Gallego's stance on Limits on Prescription Drug Prices can be described as follows: As a supporter of capping prescription drug prices at $35, Ruben Gallego has expressed his support for legislation that aims to make prescription medication more affordable, particularly for seniors.",
+      "sources": [
+        {
+          "type": "Gov Website",
+          "url": "Ruben Gallego Senate.Gov",
+          "tweet": null,
+          "date": "2025-04-27 23:48:43",
+          "scraped_on": "2025-04-27 23:48:43"
+        },
+        {
+          "type": "Other",
+          "url": "https://ga.pbs-video.pbs.org/captions/az-votes-2024/5b7fe532-8708-495e-abbd-00c749b0f01c/captions/ZY52uK_caption_en.txt",
+          "tweet": null,
+          "date": "Ruben Gallego, Kari Lake",
+          "scraped_on": "2025-04-15 14:00:02"
+        }
+      ]
+    },
+    {
+      "issue": "Border Patrol",
+      "stance": true,
+      "desc": "Ruben Gallego has expressed support for increasing the capacity of Border Patrol by signing a bill that makes it easier for federal law enforcement to join the agency. He has also acknowledged the importance of securing the border, stating that the wall is effective in keeping the country safe. Additionally, Gallego has worked with Republicans to help veterans join Border Patrol, showing his willingness to collaborate across party lines on this issue.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Kari Lake needs border drama.\n\nArizonans need border solutions.",
+          "date": "2024-09-13T16:40:16.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Proud to have to have @KateWGallego as Chair of Mayors for Gallego! She\u2019s been a powerhouse for Phoenix, and together, we\u2019re ready to fight for ALL of Arizona. Let\u2019s get it done! https://t.co/ngMXFYd2i7",
+          "date": "2024-10-25T22:33:04.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Supervisor Reyes has been a fierce advocate for Southern Arizona for decades. With his endorsement, I look forward to continuing to work together to secure our border and ensure a prosperous cross-border economy. https://t.co/COcmhYkHiw",
+          "date": "2024-09-05T23:18:41.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I\u2019ll never stop fighting for the community that made me \u2014 from the 4 Latinas who raised me to the bravest Latino Marines I served with.\n\nThis #HispanicHeritageMonth, we celebrate our many contributions that make Arizona exceptional. https://t.co/ZKK7Bqp6sD",
+          "date": "2024-09-15T16:27:50.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "San Luis is ready for a Senator who will work across the aisle to secure a better future for our border communities.\n\nThank you Mayor Riedel for being in that fight with me! https://t.co/g0ldFchLId",
+          "date": "2024-10-29T21:25:12.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "There\u2019s a reason I\u2019ve been endorsed by more border mayors than Kari Lake.\n\nThey want a leader who\u2019s focused on securing the border, not a talking point. https://t.co/MjyVOHxTj3",
+          "date": "2024-10-29T17:58:11.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I\u2019m working for bipartisan, common sense border solutions. Because that\u2019s what Arizona really needs. https://t.co/DtUGa4tZjQ",
+          "date": "2024-09-11T16:15:00.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "https://t.co/xYxmQVOH14\n\nThere is a reason so many border mayors have endorsed our campaign. San Luis. Nogales. Somerton. They all want a better future for their residents.\n\nInstead of working to fix the border crisis, Kari will exploit it for her own political gain, even if it\u2026 https://t.co/GOL3o8o5ru",
+          "date": "2024-10-15T18:20:58.000Z",
+          "scraped_on": "2025-02-28 00:38:40"
+        },
+        {
+          "type": "Other",
+          "url": "https://ga.pbs-video.pbs.org/captions/az-votes-2024/5b7fe532-8708-495e-abbd-00c749b0f01c/captions/ZY52uK_caption_en.txt",
+          "tweet": null,
+          "date": "Ruben Gallego, Kari Lake",
+          "scraped_on": "2025-04-15 14:00:02"
+        }
+      ]
+    }
+  ]
+}

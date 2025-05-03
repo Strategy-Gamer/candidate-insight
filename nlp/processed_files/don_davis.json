@@ -1,0 +1,54 @@
+{
+  "candidate": "Don Davis",
+  "positions": [
+    {
+      "issue": "Public Healthcare",
+      "stance": true,
+      "desc": "Congressman Don Davis supports public healthcare as a vital aspect to keeping rural hospitals open, making healthcare accessible to those in need, and improving treatment for victims of addiction. He aims to expand access to affordable care for North Carolinians, particularly through initiatives such as cosponsoring the COVER Now Act and relaunching the State Medicaid Expansion Caucus.",
+      "sources": [
+        {
+          "type": "Gov Website",
+          "url": "https://dondavis.house.gov",
+          "tweet": null,
+          "date": "2025-04-27 23:39:07",
+          "scraped_on": "2025-04-27 23:39:07"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Our energetic and dynamic campaign coalition, consisting of Democrats, Republicans, and independents, continues to gain momentum. Donors and volunteers are coming out and supporting our ongoing fight for the well-being of eastern NC families. #ncpol  #NC01 https://t.co/aIflfa8dGZ",
+          "date": "2024-07-16T13:00:31.000Z",
+          "scraped_on": "2025-04-02 22:11:16"
+        }
+      ]
+    },
+    {
+      "issue": "Military Spending",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Gov Website",
+          "url": "https://dondavis.house.gov",
+          "tweet": null,
+          "date": "2025-04-27 23:39:07",
+          "scraped_on": "2025-04-27 23:39:07"
+        }
+      ]
+    },
+    {
+      "issue": "Limits on Prescription Drug Prices",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Gov Website",
+          "url": "https://dondavis.house.gov",
+          "tweet": null,
+          "date": "2025-04-27 23:39:07",
+          "scraped_on": "2025-04-27 23:39:07"
+        }
+      ]
+    }
+  ]
+}

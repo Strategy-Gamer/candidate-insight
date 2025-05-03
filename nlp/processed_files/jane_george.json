@@ -1,0 +1,705 @@
+{
+  "candidate": "Jane George",
+  "positions": [
+    {
+      "issue": "Gun Ownership",
+      "stance": true,
+      "desc": "As a Priority Gun Sense Candidate, Jane George advocates for common-sense gun safety laws to prevent gun violence in her community. She supports expanding the Bipartisan Safer Communities Act and increasing funding for gun violence prevention and mental health programs. Despite being a gun owner herself, she believes that protecting children's lives is crucial and will work to implement enhanced background checks and address domestic abuser access to firearms while respecting constitutional rights.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Yet my opponent said, \u201cWe\u2019re not going to fix it,\u201d in response to gun violence.\n\nThis attitude is unacceptable. We need leaders who will fight for common-sense gun safety laws to keep our kids safe, not throw their hands up. I will be that leader.\nhttps://t.co/6q9GXV1Ajv",
+          "date": "2024-08-29T17:36:10.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "My heart aches for all the victims of this tragic and senseless shooting at Tennessee State University. Our communities deserve better than to live in fear of gun violence. We need to take real, effective action to end this cycle of violence and make our schools and public spaces",
+          "date": "2024-10-13T14:42:22.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I am proud to announce that I have been awarded the 2024 Moms Demand Action Gun Sense Candidate distinction! I am committed to advocating for common-sense gun safety and preventing gun violence in our communities. #GunSenseCandidate #EndGunViolence #JaneGeorge2024 https://t.co/1JuVvGOEJP",
+          "date": "2024-07-05T18:01:13.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@BCross052422 Your story is heart wrenching.  I cannot image the depth of your loss.  We have to elect leaders that understand our children have a right to live their lives without the constant fear of gun violence.  I am so sorry that you and your family are going through this.  Sending you",
+          "date": "2024-05-24T18:49:57.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.knoxnews.com/story/news/politics/elections/2024/10/14/tennessee-knox-county-voter-guide-2024-senate-congress-candidates/75477138007/",
+          "tweet": null,
+          "date": "October 14, 2024",
+          "scraped_on": "2025-04-15 13:53:18"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Today's Supreme Court decision to overturn the bump stock ban is deeply disappointing. As your representative, I will fight for common-sense gun laws that protect our communities. The safety of our children and families should always come first. We need Congress to act now.",
+          "date": "2024-06-14T14:28:45.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Great time with Moms Demand Action at Holston River Park\u2019s family potluck! Proud to join the first National Elections Weekend of Action and Knox Co. fall kickoff. As a Priority Gun Sense Candidate, I\u2019m excited for the work ahead! Thanks to everyone building momentum with us! https://t.co/0h7IgWmHe3",
+          "date": "2024-09-15T12:05:41.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        }
+      ]
+    },
+    {
+      "issue": "Abortion",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @PPact: Our hearts are with patients like Kaitlyn \u2014 amid these bans, she and others in need of emergency abortion care are being denied\u2026",
+          "date": "2024-09-28T20:32:44.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "New data reveals a continued decline in MD residency applications to states with abortion bans. Since the Dobbs decision, applications have significantly dropped, especially in specialties like OB/GYN. States with abortion bans saw a 4.2% decrease in applicants, compared to just",
+          "date": "2024-06-23T21:21:00.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@NOH8Campaign We wrapped up the weekend with a Candidate Meet &amp; Greet at Morristown Landing, where a standing-room-only crowd of voters greeted us. I connected with over a hundred people, discussing the critical importance of fighting to restore Women\u2019s Reproductive Rights. The energy and https://t.co/FaBLnTBFI4",
+          "date": "2024-05-20T21:13:18.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Senate Democrats are fighting back against the GOP\u2019s assault on reproductive rights with the Right to IVF Act. This powerful package will protect and expand access to IVF, essential for millions of Americans. Two years after Roe v. Wade\u2019s repeal, we must stand up for the right to",
+          "date": "2024-06-04T13:17:28.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I am proud to announce that I have been awarded the 2024 Moms Demand Action Gun Sense Candidate distinction! I am committed to advocating for common-sense gun safety and preventing gun violence in our communities. #GunSenseCandidate #EndGunViolence #JaneGeorge2024 https://t.co/1JuVvGOEJP",
+          "date": "2024-07-05T18:01:13.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Candi Miller\u2019s death, caused by Georgia\u2019s abortion ban, is a tragic reminder of what\u2019s at stake. I am fighting to protect reproductive rights in Tennessee and ensure this never happens again. Send me to Congress because I will stand up for your freedoms. #TennesseeWeSeeYou",
+          "date": "2024-09-19T01:34:17.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Women deserve to have SAFE AND LEGAL HEALTHCARE!!!  We must stop the assault on our bodies. https://t.co/YmTeCZFhLT",
+          "date": "2024-08-20T23:49:21.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "It's time for new leadership in Tennessee's 2nd District! Tim Burchett has had his chance. We're committed to prioritizing women's healthcare, with access to comprehensive services and reproductive rights. Send me to Congress, and I'll be your advocate. \nhttps://t.co/WSf49vOfst",
+          "date": "2024-05-17T13:43:20.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The Supreme Court has unanimously rejected a bid to restrict access to the abortion pill mifepristone, ensuring it remains widely available. This is a critical win for reproductive rights and women's healthcare access. We must continue to protect and expand these essential",
+          "date": "2024-06-13T14:06:46.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "TN has one of the highest maternal mortality rates in the U.S., with 62.4 deaths per 100,000 live births? We must act now! Send me to Congress to fight for women's rights. Donate $5 today to get me there!\nhttps://t.co/QzL3FR5uxZ https://t.co/zFROOW0xSb",
+          "date": "2024-06-07T15:05:46.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "It's deeply troubling to see Louisiana's governor sign a bill classifying abortion pills as controlled substances. This dangerous legislation puts women's health and autonomy at risk, further stigmatizing and criminalizing reproductive choices. Abortion pills are a safe,",
+          "date": "2024-05-26T16:11:19.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Walking with my sisters from Ossoli Circle, the oldest Federation of Women\u2019s Clubs in the South! Today, we put our focus on Alzheimer\u2019s, a disease that takes so many lives every day in our country. These women tirelessly dedicate their time, energy, and dollars to support our https://t.co/J2XU9P77Jp",
+          "date": "2024-09-21T16:08:04.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "A recent KFF survey confirms what we already know: The majority of women across political lines, especially those aged 18-49, support a nationwide right to abortion and oppose leaving it to the states. #VoteJaneGeorge\nhttps://t.co/h7Zp1R8ICd",
+          "date": "2024-08-16T19:45:37.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @PPact: Imagine an anti-abortion politician saying that a title of a hearing is more dangerous than the actual laws in place that are pu\u2026",
+          "date": "2024-09-28T20:34:43.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Abortion bans in Tennessee force rape survivors into unwanted pregnancies. I stand for choice and compassion.\n#TennesseeWeSeeYou https://t.co/afw3iJL1BM",
+          "date": "2024-10-17T20:42:40.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I am running to get into Congress to protect women's healthcare access. Help me get there! \nhttps://t.co/CvtHhJ6vz8",
+          "date": "2024-06-13T14:20:16.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Access to contraception is under threat, with potential restrictions on the horizon. As your candidate for Congress, I fully support the Senate's efforts to protect contraception as a fundamental right. Let\u2019s ensure our reproductive freedoms are safeguarded.",
+          "date": "2024-05-29T19:22:55.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @PPact: \ud83d\udea8 2 in 5 young voters \u2014 and a majority of women under 30 \u2014 now list abortion as their top issue this election. \n\nAbortion is on\u2026",
+          "date": "2024-10-14T21:30:52.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Women make up 51% of the population but only about 28% of Congress. It\u2019s time to change that. This election, we will bring more women\u2019s voices to the table\u2014from reproductive rights to equal pay. We must close the gap to ensure our government truly reflects the people it serves. https://t.co/BK2Jdw2u6T",
+          "date": "2024-09-20T12:09:25.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Rep. Burchett voted against the America Rescue Plan Act, which provided $53M for mental health &amp; substance abuse services in Tennessee, and opposed funding increases for these services. We need a representative who will fight for Tennesseans. I promise to be that advocate.",
+          "date": "2024-05-08T15:34:38.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "His comment trivializes the serious and personal decisions people make about their health. This isn\u2019t about \u201cswag\u201d - it\u2019s about protecting the right to choose and ensuring everyone has access to the care they need. We deserve leaders who respect our choices. https://t.co/riaUdxK4Cv",
+          "date": "2024-08-20T14:48:08.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Since Roe v. Wade was overturned, seven states have voted on abortion access. Every measure to protect it has passed, and all measures to restrict it have failed. Voters are making it clear that they support reproductive rights and access to healthcare.",
+          "date": "2024-05-29T01:23:11.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "When I was 20 years old and learned that I was pregnant, my father assured me that he supported whatever decision I made. My Dad, the Baptist Sunday school teacher, explained that NO ONE could destroy a soul that God made. If I chose to terminate the pregnancy, that perfect soul https://t.co/NZJ7pj6On5",
+          "date": "2024-06-16T18:03:52.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "We can prevent assault against women by choosing:  equal pay for equal work, paid family leave, healthcare access, discrimination laws, public safety and the right to make decisions about how our bodies are used by government &amp; religion.  VOTE BLUE #TennesseeWeSeeYou #wecandothis https://t.co/fsFkRvs3Zo",
+          "date": "2024-10-25T12:46:14.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Thank you!  We can do this with your support.  The women and girls of our country need legislators to protect them, not destroy their lives.  I will fight every\u2026single\u2026day to make sure that women have full access to healthcare, affordable childcare and elder care and that the",
+          "date": "2024-07-22T23:44:38.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "As headlines focus on Trump's conviction, let's not miss the Texas Supreme Court's ruling against 20 women seeking medically necessary abortions. This decision underscores the harsh realities of restrictive abortion laws. We must continue to fight for reproductive rights.",
+          "date": "2024-06-02T17:27:06.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @ReproRights: GOOD NEWS: A Tennessee court has issued a preliminary ruling in our case, temporarily BLOCKING the state\u2019s total abortion\u2026",
+          "date": "2024-10-18T17:43:55.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "On this day in 1965, the Supreme Court decided Griswold v. Connecticut, affirming the right to marital privacy and striking down state bans on contraception. This landmark ruling paved the way for reproductive rights and privacy protections. Today, these protections are at risk",
+          "date": "2024-06-07T20:28:19.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Dr. Brooks shares why she no longer practices in Tennessee\u2014because of the state\u2019s extreme abortion ban. The attack on women\u2019s healthcare has real consequences, as doctors are forced to leave and patients lose access to essential care. Tennessee, we see you. It\u2019s time to stand up https://t.co/9kRm7SxFhe",
+          "date": "2024-10-10T17:59:33.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "74% of reproductive-age women in the U.S. believe abortion should be legal in most or all cases. It's clear: Women are united in their stance against a national abortion ban. Let's protect their rights and keep fighting for justice!\nhttps://t.co/DFhiyDcALu",
+          "date": "2024-08-16T19:45:37.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The 2024 election is critical for reproductive rights! Ballot initiatives are just the start. Even without direct propositions, elections up and down the ballot will shape abortion policies. Legislatures &amp; courts will decide on new protections, &amp; federal threats loom large.",
+          "date": "2024-06-09T17:28:03.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Two years after the Dobbs decision, the reckless actions of extremist lawmakers have led to a patchwork of harsh abortion laws across the U.S. States like Tennessee have implemented near-total bans, endangering women\u2019s health and stripping away essential reproductive rights. This",
+          "date": "2024-06-23T01:14:20.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "As your candidate for TN-02, I believe in protecting reproductive rights. Together, we can turn voter anger into action and ensure our voices are heard this November. Let's fight for our freedoms!",
+          "date": "2024-06-05T20:30:05.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I'm excited to speak at the Knoxville Women's Rally on Saturday, June 8th! Join me at Concord Park as we discuss how we can support and advocate for women's reproductive rights right here in Knoxville. Your presence and voice are crucial. Let's make a difference together!\n\ud83d\udcc5 https://t.co/Zlz00HCAju",
+          "date": "2024-06-02T00:10:39.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "\ud83d\uddf3\ufe0fIt's time to stand up for women's rights!\ud83d\uddf3\ufe0f\n\nRepublicans have repeatedly voted against crucial legislation that protects and empowers women. It's time for change.\n\n\ud83c\udf1fElect me, Jane George, a voice for women's rights!\ud83c\udf1f\n\n\ud83d\udc49DONATE TODAY to support a candidate who will truly https://t.co/8Mad4UIkKr",
+          "date": "2024-06-20T18:41:15.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "\ud83d\udea8Exciting News!\ud83d\udea8 I am thrilled to announce that I have been endorsed by the National Women's Political Caucus (@NWPCNational)! Their mission to support and empower pro-choice women aligns perfectly with my vision for our District. Women are coming!\nhttps://t.co/WSf49vONi1 https://t.co/xdxtMoQVNe",
+          "date": "2024-07-25T18:26:47.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Tennessee families deserve fair prices at the grocery store. I stand with Sen. @CharlaneOliver  and Rep. @AftynBehn in urging our AG to join the fight against corporate price gouging. Let's protect working families from unfair hikes and ensure economic fairness for all.",
+          "date": "2024-08-21T15:10:09.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Abortion bans don't just affect women\u2014they endanger families. Men are stepping up after watching their loved ones face life-threatening pregnancy complications due to restrictive laws. This fight is about protecting our rights, our health, and our families.",
+          "date": "2024-09-08T00:37:54.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "As an OB-GYN, she knows the real impact that policies have on women\u2019s health and lives. This election is about protecting reproductive rights and ensuring access to quality healthcare for all. Vote like it matters\u2014because it does. Tennessee, we see you, and together we can fight https://t.co/CvuURIMmRf",
+          "date": "2024-10-03T12:32:53.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Like HR 986:  Protecting Americans with Preexisting Conditions Act of 2019 that you voted against? https://t.co/yx7dd58Q2X",
+          "date": "2024-08-14T15:20:46.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.knoxnews.com/story/news/politics/elections/2024/10/14/tennessee-knox-county-voter-guide-2024-senate-congress-candidates/75477138007/",
+          "tweet": null,
+          "date": "October 14, 2024",
+          "scraped_on": "2025-04-15 13:53:18"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "With Iowa\u2019s new restrictive abortion law taking effect, this election is about saving lives and protecting our rights. Visit https://t.co/SMMg3ugWu5 for essential resources and information. Stand with us for #ReproductiveJustice and #WomensRights.",
+          "date": "2024-07-29T17:40:59.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Proud to see Tennessee taking action on maternal health disparities! Thanks to @SenatorLamar  and @HaroldLoveJr for championing the Maternal Health Equity Advisory Committee Act. Expanding access to prenatal and postnatal care is crucial in saving lives.\nhttps://t.co/bqWEbeVBod",
+          "date": "2024-06-24T14:26:20.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "As the Supreme Court revisits abortion laws, we must remember: Access to safe and legal abortions is critical for women's health. Let's stand together to protect reproductive rights and oppose extreme restrictions.",
+          "date": "2024-06-10T15:10:48.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "A clear argument for the GA ruling on abortion. https://t.co/4oy287oh0v",
+          "date": "2024-10-01T08:56:15.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "RT @PPact: You literally exist in the context, Donald. \ud83d\ude44\n\nBecause of YOU, 44% of women live in 22 states with abortion bans. YOU created th\u2026",
+          "date": "2024-09-03T14:11:03.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@timburchett Please support my campaign. It\u2019s time for change. I am that change. We can do better. It\u2019s Time! https://t.co/VTAImI5hM2",
+          "date": "2024-08-17T03:27:30.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The extreme Project 2025 plan threatens emergency abortion care protections, putting all women at risk. We must stand against any rollback of these vital protections and uphold the health and lives of all individuals.",
+          "date": "2024-06-28T22:02:35.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "If you want to keep your healthcare; vote for Jane George for US Congress! https://t.co/la35vq4oBS",
+          "date": "2024-08-08T02:07:08.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        }
+      ]
+    },
+    {
+      "issue": "Election Integrity",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Thrilled to attend the DNC next week and join so many amazing events! I\u2019m looking forward to meeting some great voices shaping our future. We\u2019ll continue fighting for progress and making a difference in Tennessee\u2019s 2nd District! \ud83d\udc99 #DNC2024 #VoteJaneGeorge",
+          "date": "2024-08-15T21:30:02.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Clearly Tim does not understand that different states have different regulations regarding WHEN the vote count can begin. https://t.co/nMgPvearMG",
+          "date": "2024-10-22T14:36:33.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": ".@Melanie_hutsell, a proud Tennessean and former SNL star, knows the importance of using your voice for change. She\u2019s standing with us to remind Tennessee that this election is about shaping our future and fighting for what\u2019s right. Tennessee, we see you\u2014let\u2019s make sure your https://t.co/4pr8CFhfsw",
+          "date": "2024-10-02T13:13:41.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "First Lady Jill Biden recently said, \"We have to meet this moment as if our rights are at stake, because they are. As if democracy is on the line, because it is.\" \nI stand ready to fight for our rights and protect our democracy in Congress.",
+          "date": "2024-05-21T21:03:28.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Share and join the conversation to advocate for affordable and accessible child care in our community! Elect me, and I will fight for you in Congress!\nhttps://t.co/RwiqVllXJp",
+          "date": "2024-06-03T23:49:36.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Our District deserves a representative who fights for the people, not AFP's corporate agenda. I am committed to doing just that. Join us to reject this dangerous alliance and bring real representation to Tennessee's 2nd District. \nhttps://t.co/3ZRS6xpSPx\n(6/6)",
+          "date": "2024-09-27T14:56:29.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "As voters in Tennessee's 2nd District, we deserve a representative who fights for our values\u2014not the interests of billionaires and extremist organizations. Yet, Tim Burchett's deep ties to Americans for Prosperity (AFP) show his loyalties lie elsewhere. #TennesseeWeSeeYou (1/6)",
+          "date": "2024-09-27T14:56:27.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        }
+      ]
+    },
+    {
+      "issue": "Public Healthcare",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@Chris_Stubb To be clear, I am a licensed physician in the state of TN.  Although I am active in supporting womens healthcare, I do not have a PhD (or in your words a \u201cdr. of womens studies\u201d.  We had a great meeting with some of TN\u2019s finest physicians from UT\u2019s medical school.  Leading them",
+          "date": "2024-08-30T20:53:27.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Across Tennessee, qualified women are stepping up to run for office. We are fighting for healthcare, education, workers\u2019 rights, and so much more. Their leadership is exactly what our state needs right now. Let\u2019s support them, lift them up, and ensure their voices are heard at https://t.co/x2eh93bDQD",
+          "date": "2024-10-02T21:37:19.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Women\u2019s LIVES ARE AT RISK due to these draconian laws!  We must elect candidates that will fight for safe and legal healthcare!  I am one of those candidates for US Congress TN District 2.  Help me get to Congress!  https://t.co/D1orxLITRJ https://t.co/sLDhm2sYWs",
+          "date": "2024-08-13T23:14:52.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "When they call us WOKE, they forget that means they are still ASLEEP.  I will fight for healthcare access FOR ALL TENNESSEANS and save America money while doing it.  #TennesseeWeSeeYou https://t.co/7ZqIqiibc3",
+          "date": "2024-09-02T14:06:10.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I\u2019ve been endorsed by the Committee to Protect Health Care (@ctphealthcare) in my campaign for Tennessee\u2019s 2nd District! This endorsement reflects our commitment to addressing the critical healthcare issues affecting people across the U.S., from affordable coverage and high https://t.co/xUfrrqH95t",
+          "date": "2024-08-15T21:40:39.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Today on #WorldContraceptionDay, we recognize the importance of access to safe, affordable, and reliable contraceptive options for all. Reproductive health is a right, not a privilege. Let\u2019s continue the fight for comprehensive healthcare and protect access to contraception for https://t.co/KJVj13JcOz",
+          "date": "2024-09-26T22:49:34.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Today marks the 89th anniversary of the Social Security Act, signed into law by President Roosevelt in 1935. For nearly nine decades, this crucial program has supported millions of Americans. Let\u2019s recommit to protecting and strengthening Social Security for current and future",
+          "date": "2024-08-14T18:53:57.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The Restoring Hope for Mental Health &amp; Well-Being Act aimed to expand access to vital care &amp; support families. It would've bolstered community mental health services, expanded substance use disorder treatment, improved crisis intervention, supported children's mental health, &amp;",
+          "date": "2024-05-10T19:19:53.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "The bottom line? Dobbs is decimating reproductive health care and training for generations to come. We must fight back to protect patients, providers, and the future of healthcare. Elect me and I will fight for all women. 6/6\nhttps://t.co/tlSCyERsXd",
+          "date": "2024-08-12T13:52:07.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Other",
+          "url": "https://www.tennessean.com/story/opinion/editorials/2024/07/01/tennessee-election-congress-jane-george-house-district-2/74270162007/",
+          "tweet": null,
+          "date": "July 1, 2024",
+          "scraped_on": "2025-04-15 13:53:09"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Pharmacy closures across the country are leaving millions without access to essential medications. Pharmacy Benefit Managers\u2013 the middlemen driving up costs \u2013 are part of the problem. We need a healthcare system that puts patients before profit. \nhttps://t.co/2NpeBv2oaF",
+          "date": "2024-10-20T14:44:32.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Child hunger, healthcare access, and rural hospital closures are challenges we must address. I\u2019m committed to tackling these issues and building a stronger, healthier Tennessee. Together, we can make it happen. Tennessee, I see you. #JaneSeesYou #JaneGeorgeForCongress https://t.co/RiG1UgkZoz",
+          "date": "2024-10-07T15:16:46.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "In the 2022 midterm elections, less than 13% of young voters (ages 18-29) turned out in Tennessee. Imagine the impact if we raised that number! Your vote will be the difference in shaping your future\u2014from fighting for climate action to affordable healthcare. #TennesseeWeSeeYou https://t.co/IyTDxL2ykd",
+          "date": "2024-09-19T21:00:00.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Here in TN, 1 in 4 have medical debt on their credit reports and yet we refuse federal funds, returning our tax dollars, specifically for covered medical care.  1/10 don\u2019t even have health insurance!  I will fight for accessible healthcare.  #TennesseeWeSeeyou",
+          "date": "2024-09-16T13:37:52.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Tim Burchett has supported budget cuts that impact essential conservation programs vital to our farmers. These cuts hurt small and family-owned farms that rely on these resources. I will champion policies that truly support every farmer in Tennessee. https://t.co/oAdSOdZun1",
+          "date": "2024-08-19T21:01:04.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Rural TN women are losing access to vital healthcare\u2014breast exams, cancer screenings, hormone treatments. This crisis is creeping into our cities too. Healthcare is a right, not a privilege. I\u2019m fighting for YOU. #JaneSeesYou #HealthcareForAll #TennesseeWeSeeYou https://t.co/iZOvUgan0H",
+          "date": "2024-10-07T14:47:15.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "We are at a critical point in our campaign, with only 5 days left until the end of the quarter. This is a massive deadline for us, and we need your help to ensure we have the resources to fight for a future where every person has the right to make their own healthcare decisions. https://t.co/0h28Pvhu3M",
+          "date": "2024-06-26T20:40:01.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Together, we will make history in Tennessee's 2nd District! Our campaign is about standing up for women's rights, better healthcare for our children and veterans, and protecting our environment. Your time, energy, and donations are vital. Join us in this fight! #VoteJaneGeorge https://t.co/STMolAGZ0P",
+          "date": "2024-08-03T21:52:32.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        }
+      ]
+    },
+    {
+      "issue": "Diversity, Equity, Inclusion",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Tim Burchett\u2019s hateful rhetoric is dangerous and un-American. His claim that immigrants are turning small towns into 'killing grounds' is not just false\u2014it's fear-mongering at its worst. Our communities are built on the values of acceptance and inclusion, not division and hate.",
+          "date": "2024-09-03T20:23:25.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "It's heartbreaking to see a 4-year-old feel ugly. We must challenge harmful beauty standards and promote toys and messages celebrating diversity and strength. Let's raise confident, self-assured kids.\nhttps://t.co/zuvLQ66mGq",
+          "date": "2024-05-30T15:01:36.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Women face discrimination &amp; inequality in every country in the world, including the United States. The UN Convention defines discrimination against women as any distinction, exclusion, or restriction based on sex that prevents women from enjoying the same human rights as men.\ud83e\uddf5/4",
+          "date": "2024-08-15T13:19:55.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@mkraju Hi Manu,\n\nI\u2019m running against Tim Burchett in Tennessee's 2nd District and would love the opportunity to respond to his comments today about DEI hires.\n\nBest regards,\nJane",
+          "date": "2024-07-22T22:50:19.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "@mkraju Hi Manu,\n\nI\u2019m running against Tim Burchett in Tennessee's 2nd District and would love the opportunity to respond to his comments today about DEI hires.  \n\nBest regards, \nJane",
+          "date": "2024-07-22T22:57:22.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Today marks the anniversary of the Brown v. Board of Education ruling. This decision 70 years ago took a stand against racial segregation in schools and paved the way for a more inclusive and just education system. Let\u2019s continue the fight for equality and justice for all.",
+          "date": "2024-05-17T17:16:36.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Celebrating Garba Night with our Hindu community reminded me of Tennessee's strength\u2014our diversity. While others divide, I choose unity. I will fight for a future where every Tennessean is seen, heard, and included. Let\u2019s build that future together. #JaneSeesYou https://t.co/wJN0R20uS4",
+          "date": "2024-10-09T14:26:33.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Tim Burchett calling Kamala Harris a \u201cDEI hire\u201d is peak hypocrisy from someone with a long history of financial missteps and mediocrity. His mean-spirited attacks based on race and gender reveal more about his character than hers. This election, let's demand better. https://t.co/aIPLhsic7s",
+          "date": "2024-07-29T21:37:57.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        }
+      ]
+    },
+    {
+      "issue": "Public School Funding",
+      "stance": true,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Other",
+          "url": "https://www.knoxnews.com/story/news/politics/elections/2024/10/14/tennessee-knox-county-voter-guide-2024-senate-congress-candidates/75477138007/",
+          "tweet": null,
+          "date": "October 14, 2024",
+          "scraped_on": "2025-04-15 13:53:18"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "I was thrilled to support CASA of East Tennessee at their gala. At CASA, every child\u2019s right to a safe and loving home takes center stage. Together, we\u2019re advocating for brighter futures and stronger communities. https://t.co/TYW3RDutu2",
+          "date": "2024-05-13T17:14:49.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        },
+        {
+          "type": "Tweet",
+          "url": null,
+          "tweet": "Unions are the backbone of fair wages, safe working conditions, and workers\u2019 rights. Your vote is a stand for every worker and family who depends on these protections. Tennessee, we see you\u2014let\u2019s ensure unions stay strong and continue fighting for all of us. #TennesseeWeSeeYou https://t.co/ZHXBefMJBN",
+          "date": "2024-09-28T23:25:57.000Z",
+          "scraped_on": "2025-03-30 20:48:46"
+        }
+      ]
+    },
+    {
+      "issue": "China",
+      "stance": false,
+      "desc": "Insufficient Data.",
+      "sources": [
+        {
+          "type": "Other",
+          "url": "https://www.tennessean.com/story/opinion/editorials/2024/07/01/tennessee-election-congress-jane-george-house-district-2/74270162007/",
+          "tweet": null,
+          "date": "July 1, 2024",
+          "scraped_on": "2025-04-15 13:53:09"
+        }
+      ]
+    }
+  ]
+}
