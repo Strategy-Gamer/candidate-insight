@@ -1,5 +1,4 @@
 import React from "react";
-// Import the DefinableTerm component
 import DefinableTerm from "./DefinableTerm";
 
 const ImmigrationPolicySection: React.FC = () => {

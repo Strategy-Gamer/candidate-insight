@@ -22,8 +22,8 @@ export const politicalCategories: PoliticalCategory[] = [
       icon: 'education_icon.png',
     },
     {
-      category: 'Gun Control',
-      category_description: 'Regulations regarding firearm ownership and use.',
+      category: 'Civil Liberties',
+      category_description: 'Issues related to civil liberties like gun ownership',
       icon: 'gun_control_icon.png',
     },
     {

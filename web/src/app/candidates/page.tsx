@@ -278,7 +278,7 @@ const Candidates: NextPage = () => {
         {/* filters */}
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant="outline" className="h-10 rounded-none">
+            <Button variant="outline" aria-label="filters button" className="h-10 rounded-none">
               <FilterFilled />
             </Button>
           </PopoverTrigger>
