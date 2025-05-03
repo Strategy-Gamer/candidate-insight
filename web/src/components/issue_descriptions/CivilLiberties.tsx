@@ -4,7 +4,8 @@ import DefinableTerm from "./DefinableTerm";
 const CivilLibertiesPolicySection: React.FC = () => {
     return (
         <section className="max-w-6xl mx-auto font-sans text-gray-800">
-            <h3 className="text-3xl font-bold text-center mb-6">Civil Liberties</h3>
+            <h3 className="text-3xl font-bold text-center text-[#1c1c84] mb-6">Civil Liberties</h3>
+            <h4 className="text-xl text-center text-[#b31942] mb-6">Issues related to civil liberties like gun ownership.</h4>
 
             <div className="mb-6">
                 <p className="text-lg text-justify mb-4">

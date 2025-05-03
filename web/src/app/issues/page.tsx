@@ -12,6 +12,11 @@ import PublicPolicySection from '@/components/issue_descriptions/PublicPolicy';
 import ImmigrationPolicySection from '@/components/issue_descriptions/Immigration';
 import CivilLibertiesPolicySection from '@/components/issue_descriptions/CivilLiberties';
 import ForeignPolicySection from '@/components/issue_descriptions/ForeignPolicy';
+import HealthcarePolicySection from '@/components/issue_descriptions/Healthcare';
+import EconomyPolicySection from '@/components/issue_descriptions/Economy';
+import EnvironmentPolicySection from '@/components/issue_descriptions/Environment';
+import EducationPolicySection from '@/components/issue_descriptions/Education';
+import SocialIssuesPolicySection from '@/components/issue_descriptions/SocialIssues';
 
 type ApiIssue = Issue & {
   category: string;
@@ -21,9 +26,14 @@ type ApiIssue = Issue & {
 
 const PolicySections: Record<string, React.FC> = {
   "Public Policy": PublicPolicySection,
-  "Immigration": ImmigrationPolicySection,
+  "Healthcare": HealthcarePolicySection,
+  "Economy": EconomyPolicySection,
+  "Environment": EnvironmentPolicySection,
+  "Education": EducationPolicySection,
   "Civil Liberties": CivilLibertiesPolicySection,
   "Foreign Policy": ForeignPolicySection,
+  "Immigration": ImmigrationPolicySection,
+  "Social Issues": SocialIssuesPolicySection,
 };
 
 const IssuesPage: NextPage = () => {

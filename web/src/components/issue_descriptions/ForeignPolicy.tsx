@@ -4,7 +4,8 @@ import DefinableTerm from "./DefinableTerm";
 const ForeignPolicySection: React.FC = () => {
     return (
         <section className="max-w-6xl mx-auto font-sans text-gray-800">
-            <h3 className="text-3xl font-bold text-center mb-6">Foreign Policy</h3>
+            <h3 className="text-3xl font-bold text-center text-[#1c1c84] mb-6">Foreign Policy</h3>
+            <h4 className="text-xl text-center text-[#b31942] mb-6">Diplomatic and military strategies.</h4>
 
             <p className="text-lg text-justify mb-4">
                 Foreign Policy describes the way a national government interacts with other nations. Governments can enforce 
