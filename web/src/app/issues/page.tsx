@@ -57,7 +57,7 @@ const IssuesPage: NextPage = () => {
 
     // Check if mobile on mount and on resize
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+      setIsMobile(window.innerWidth <= 768);
     };
 
     checkIfMobile();
