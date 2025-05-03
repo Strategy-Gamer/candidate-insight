@@ -236,9 +236,11 @@ const Candidates: NextPage = () => {
       <h1 className="text-3xl text-center font-bold mb-6 text-[#1c1c84]">{filters.year} Candidates</h1>
     
       {/* search section */}
-      <div className="flex justify-between items-center mb-4 px-8">
-        <div className="flex items-center space-x-4">
-          <div className="relative">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 px-4 md:px-8 w-full gap-4">
+        {/* Search & filters - stacks on mobile, horizontal on larger screens */}
+        <div className="flex flex-col w-full md:w-auto md:flex-row md:items-center gap-3 md:space-x-4">
+          {/* Search input - full width on mobile */}
+          <div className="relative w-full md:w-auto">
             <Input
               value={filters.str}
               onChange={(e) => {
@@ -248,159 +250,166 @@ const Candidates: NextPage = () => {
                 }))
               }}
               placeholder='Find a candidate...'
-              className="w-200 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0"
+              className="w-full md:w-64 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0"
             />
             <SearchOutlined className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
           </div>
 
-        {/* years */}
-        <Select
-          value={filters.year}
-          onValueChange={(value) => {
-            setFilters(prev => ({
-              ...prev,
-              year: value
-            }));
-          }}
-        >
-          <SelectTrigger className="w-32 text-sm rounded-none">
-            <SelectValue placeholder="Election Year" />
-          </SelectTrigger>
-          <SelectContent>
-            {electionYears.map(year => (
-              <SelectItem key={year} value={year}>
-                {year}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-
-        {/* filters */}
-        <Popover>
-          <PopoverTrigger asChild>
-            <Button variant="outline" aria-label="filters button" className="h-10 rounded-none">
-              <FilterFilled />
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent className="w-[200px] p-4 rounded-none">
-            {/* checkbox for partying by group */}
-            <div className="mb-3">
-              <label className="flex items-center">
-                <Checkbox 
-                  id="groupByParty" 
-                  checked={groupByParty}
-                  onCheckedChange={toggleGroupByParty}
-                  className="rounded-none"
-                />
-                <span className="font-sans ml-2">Group By Party</span>
-              </label>
-            </div>
-
-            {/* party filter section */}
+          {/* Top row of filters on mobile - Year and Party/Group filters */}
+          <div className="flex flex-row w-full md:w-auto gap-2">
+            {/* Year dropdown */}
             <Select
-              value={filters.party}
+              value={filters.year}
               onValueChange={(value) => {
                 setFilters(prev => ({
                   ...prev,
-                  party: value === "All" ? "" : value // store empty string for "All"
+                  year: value
                 }));
               }}
             >
-              <SelectTrigger className="text-sm rounded-none">
-                <SelectValue placeholder="Filter by Party" />
+              <SelectTrigger className="w-full md:w-32 text-sm rounded-none">
+                <SelectValue placeholder="Election Year" />
               </SelectTrigger>
               <SelectContent>
-                <SelectGroup>
-                  <SelectItem value="All">All</SelectItem>
-                  <SelectItem value="Democratic">Democratic</SelectItem>
-                  <SelectItem value="Republican">Republican</SelectItem>
-                  <SelectItem value="Constitution">Constitution</SelectItem>
-                  <SelectItem value="Green">Green</SelectItem>
-                  <SelectItem value="Libertarian">Libertarian</SelectItem>
-                  <SelectItem value="Independent">Independent</SelectItem>
-                </SelectGroup>
+                {electionYears.map(year => (
+                <SelectItem key={year} value={year}>
+                  {year}
+                </SelectItem>
+              ))}
               </SelectContent>
             </Select>
 
-            {/* state filter section*/}
+            {/* Advanced filters popover */}
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button variant="outline" aria-label="filters button" className="h-10 rounded-none">
+                  <FilterFilled />
+                  <span className="ml-2 hidden sm:inline">Filters</span>
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-64 p-4 rounded-none">
+                {/* checkbox for partying by group */}
+                <div className="mb-3">
+                  <label className="flex items-center">
+                    <Checkbox 
+                      id="groupByParty" 
+                      checked={groupByParty}
+                      onCheckedChange={toggleGroupByParty}
+                      className="rounded-none"
+                    />
+                    <span className="font-sans ml-2">Group By Party</span>
+                  </label>
+                </div>
+
+                {/* party filter section */}
+                <Select
+                  value={filters.party}
+                  onValueChange={(value) => {
+                    setFilters(prev => ({
+                      ...prev,
+                      party: value === "All" ? "" : value // store empty string for "All"
+                    }));
+                  }}
+                >
+                  <SelectTrigger className="text-sm rounded-none">
+                    <SelectValue placeholder="Filter by Party" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="All">All</SelectItem>
+                      <SelectItem value="Democratic">Democratic</SelectItem>
+                      <SelectItem value="Republican">Republican</SelectItem>
+                      <SelectItem value="Constitution">Constitution</SelectItem>
+                      <SelectItem value="Green">Green</SelectItem>
+                      <SelectItem value="Libertarian">Libertarian</SelectItem>
+                      <SelectItem value="Independent">Independent</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+
+                {/* state filter section*/}
+                <Select
+                  value={filters.state}
+                  onValueChange={(value) => {
+                    setFilters(prev => ({
+                      ...prev,
+                      state: value === "All" ? "" : value // store empty string for "All"
+                    }));
+                  }}
+                >
+                  <SelectTrigger className="text-sm mt-3 rounded-none">
+                    <SelectValue placeholder="Filter by State" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="All">All</SelectItem>
+                      {Object.entries(stateAbbrevs).map(([stateName, abbrev]) => (
+                        <SelectItem key={abbrev} value={abbrev}>
+                          {stateName}
+                        </SelectItem>
+                      ))}
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+                
+                {/* position filter section*/}
+                <Select
+                  value={filters.position}
+                  onValueChange={(value) => {
+                    setFilters(prev => ({
+                      ...prev,
+                      position: value === "All" ? "" : value // store empty string for "All"
+                    }));
+                  }}
+                >
+                  <SelectTrigger className="text-sm mt-3 rounded-none">
+                    <SelectValue placeholder="Filter by Position" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="All">All</SelectItem>
+                      <SelectItem value="House">House</SelectItem>
+                      <SelectItem value="Senator">Senate</SelectItem>
+                      <SelectItem value="President">Presidential</SelectItem>
+                      <SelectItem value="gubernatorial">Governor</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+
+                <Button onClick={handleClearFilters} className="mt-3 w-full bg-[#1c1c84] hover:bg-[#b31942] h-10 rounded-none duration-300 ease-in-out">
+                  Clear Filters
+                </Button>
+              </PopoverContent>
+            </Popover>
+
+            {/* Sort dropdown */}
             <Select
-              value={filters.state}
-              onValueChange={(value) => {
-                setFilters(prev => ({
-                  ...prev,
-                  state: value === "All" ? "" : value // store empty string for "All"
-                }));
-              }}
+              onValueChange={(value) => setSortValue(parseInt(value))}
             >
-              <SelectTrigger className="text-sm mt-3 rounded-none">
-                <SelectValue placeholder="Filter by State" />
+              <SelectTrigger className="w-full md:w-32 text-sm rounded-none">
+                <SelectValue placeholder="Sort By" />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                  <SelectItem value="All">All</SelectItem>
-                    {Object.entries(stateAbbrevs).map(([stateName, abbrev]) => (
-                      <SelectItem key={abbrev} value={abbrev}>
-                        {stateName}
-                      </SelectItem>
-                    ))}
+                  <SelectItem value="0">Any</SelectItem>
+                  <SelectItem value="1">Youngest to Oldest</SelectItem>
+                  <SelectItem value="-1">Oldest to Youngest</SelectItem>
+                  <SelectItem value="2">A-Z</SelectItem>
+                  <SelectItem value="-2">Z-A</SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>
-            
-            {/* position filter section*/}
-            <Select
-              value={filters.position}
-              onValueChange={(value) => {
-                setFilters(prev => ({
-                  ...prev,
-                  position: value === "All" ? "" : value // store empty string for "All"
-                }));
-              }}
-            >
-              <SelectTrigger className="text-sm mt-3 rounded-none">
-                <SelectValue placeholder="Filter by Position" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectItem value="All">All</SelectItem>
-                  <SelectItem value="House">House</SelectItem>
-                  <SelectItem value="Senator">Senate</SelectItem>
-                  <SelectItem value="President">Presidential</SelectItem>
-                  <SelectItem value="gubernatorial">Governor</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-
-            <Button onClick={handleClearFilters} className="mt-3 bg-[#1c1c84] hover:bg-[#b31942] h-10 rounded-none duration-300 ease-in-out">
-              Clear Filters
-            </Button>
-
-          </PopoverContent>
-        </Popover>
-        <Select
-          onValueChange={(value) => setSortValue(parseInt(value))}
-        >
-          <SelectTrigger className="w-32 text-sm rounded-none">
-            <SelectValue placeholder="Sort By" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              <SelectItem value="0">Any</SelectItem>
-              <SelectItem value="1">Youngest to Oldest</SelectItem>
-              <SelectItem value="-1">Oldest to Youngest</SelectItem>
-              <SelectItem value="2">A-Z</SelectItem>
-              <SelectItem value="-2">Z-A</SelectItem>
-            </SelectGroup>
-          </SelectContent>
-        </Select>
+          </div>
         </div>
-        <div>
-            <Pages 
-              page={page} 
-              limit={LIMIT} 
-              total={totalCandidates || 1} 
-              onPageChange={setPage}
-            />
+        
+        {/* Pagination - full width on mobile */}
+        <div className="w-full md:w-auto flex justify-center md:justify-end mt-2 md:mt-0">
+          <Pages 
+            page={page} 
+            limit={LIMIT} 
+            total={totalCandidates || 1} 
+            onPageChange={setPage}
+          />
         </div>
       </div>
 
