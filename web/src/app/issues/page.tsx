@@ -7,6 +7,7 @@ import { PoliticalCategory, Issue } from '@/types/issues';
 import { politicalCategories } from '@/utils/politicalCategories';
 import "@/styles/pages/issues.css";
 import "@/styles/pages/issues_mobile.css";
+import { Skeleton } from '@/components/ui/skeleton';
 import PublicPolicySection from '@/components/issue_descriptions/PublicPolicy';
 import ImmigrationPolicySection from '@/components/issue_descriptions/Immigration';
 import CivilLibertiesPolicySection from '@/components/issue_descriptions/CivilLiberties';
@@ -113,7 +114,33 @@ const IssuesPage: NextPage = () => {
   };
 
   if (loading) {
-    return <p>Loading issues...</p>
+    return (
+      <div className="loading-container">
+        {isMobile ? (
+          <p>Loading candidates...</p>
+        ) : (
+          <div className="pt-[32px] max-w-[1200px] mx-auto space-y-8">
+            <Skeleton className="h-[50px] rounded-none w-full" />
+
+            <div className="space-y-4">
+              <Skeleton className="h-10 mx-auto w-[300px]" />
+
+              <div className="space-y-2">
+                <Skeleton className="h-4 w-full" />
+                <Skeleton className="h-4 w-[90%]" />
+                <Skeleton className="h-4 w-[80%]" />
+                <Skeleton className="h-4 w-[70%]" />
+
+                <Skeleton className="h-4 w-full" />
+                <Skeleton className="h-4 w-[90%]" />
+                <Skeleton className="h-4 w-[90%]" />
+                <Skeleton className="h-4 w-[80%]" />
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    );
   }
 
   if (error) {
