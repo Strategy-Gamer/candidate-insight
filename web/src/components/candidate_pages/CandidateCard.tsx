@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import '@/styles/components/candidatecard.css';
-import { ApiCandidate } from '@/types/candidate';
+import { Candidate } from '@/types/candidate';
 import { 
   getStateName,
   appendOrdinalToDistrict,
@@ -11,6 +11,16 @@ import {
   GoogleOutlined,
 } from '@ant-design/icons';
 import {Separator} from '@/components/ui/separator';
+
+type ApiCandidate = Candidate & {
+  election_year: string;
+  congressional_district: string;
+  incumbent_position: string;
+  running_for_position: string;
+  election_date: string;
+  term_end_date: string;
+  description: Text;
+};
 
 interface CandidateProps {
   candidate: ApiCandidate
@@ -36,9 +46,9 @@ const getIncumbentInformation = (candidate: ApiCandidate): string => {
   let incumbentDetails: string = "";
 
   switch (candidate.incumbent_position) {
-    case "House":
+    case "Representative":
       incumbentDetails = `${fullName} is a member of the U.S House, representing ${stateName}'s 
-      ${appendOrdinalToDistrict(candidate.congressional_district || 0)} district.`;
+      ${appendOrdinalToDistrict(candidate.congressional_district)} district.`;
       break;
     case "Senator":
       incumbentDetails = `${fullName} is a member of the U.S. Senate, representing ${stateName}.`;
@@ -52,13 +62,7 @@ const getIncumbentInformation = (candidate: ApiCandidate): string => {
   }
 
   incumbentDetails = incumbentDetails + ` A member of the ${candidate.party_affiliation} Party, ${pronounLower} took office on ${officeDate}.`
-  
-  if (candidate.term_end_date) {
-    incumbentDetails = incumbentDetails + ` ${pronounUpper} current term ends on ${endDate}.`
-  } else {
-    const realPronounLower = pronounLower[0].toUpperCase() + pronounLower.slice(1);
-    incumbentDetails = incumbentDetails + ` ${realPronounLower} lost the election and is not currently holding office.`
-  }
+  incumbentDetails = incumbentDetails + ` ${pronounUpper} current term ends on ${endDate}.`
 
   return incumbentDetails;
 }
@@ -80,7 +84,7 @@ const getRunningInformation = (candidate: ApiCandidate): string => {
 
     let positionString = "";
     switch (candidate.running_for_position) {
-      case "House":
+      case "Representative":
         positionString = `the U.S. House${candidate.congressional_district ? ` in ${stateName}'s ${appendOrdinalToDistrict(candidate.congressional_district)} district` : ''}`;
         break;
       case "Senator":
@@ -120,16 +124,13 @@ const getRunningInformation = (candidate: ApiCandidate): string => {
 }
 
 const getBirthdayInfo = (candidate: ApiCandidate): string => {
-  if (candidate.dob === null || candidate.dob === undefined) {
-    return "No birthday information available.";
-  }
   const pronoun = candidate.gender === 'M' ? "He" : "She";
   let birthDate = "";
   if (candidate.dob !== null || candidate.dob !== undefined) {
     birthDate = formatDate(candidate.dob!);
   }
-
-
+  
+  
   let info = "";
 
   if (birthDate.length !== 0) {
@@ -146,6 +147,8 @@ const CandidateCard: React.FC<CandidateProps> = (props) => {
   const incumbentDesc = getIncumbentInformation(props.candidate);
   const runningDesc = getRunningInformation(props.candidate);
   const birthdayInfo = getBirthdayInfo(props.candidate);
+
+
 
   return (
     <div className="flex flex-col md:flex-row flex-start justify-center p-4 md:p-10 bg-white m-auto max-w-4/5 overflow-hidden gap-4 md:gap-12">

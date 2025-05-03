@@ -14,7 +14,7 @@ Jacky Rosen NV F Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-im
 https://www.rosen.senate.gov @RosenforNevada
 Sam Brown NV M Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/SamBrown.png 1983-10-15 NULL Senator 2024-11-05 NULL NULL 0
 https://www.captainsambrown.com @SamBrownForNV
-Dave McCormick PA M Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/DavidMcCormick.png 1965-08-17 NULL Senator 2024-11-05 2031-01-03 NULL 1
+Dave McCormick PA M Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/DaveMcCormick.png 1965-08-17 NULL Senator 2024-11-05 2031-01-03 NULL 1
 https://www.davemccormickpa.com @SenMcCormickPA
 Bob Casey PA M Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/BobCasey.png 1960-04-13 Senator Senator 2024-11-05 2025-01-03 NULL 0
 https://bobcasey.com @SenBobCasey
@@ -28,9 +28,9 @@ Gloria Johnson TN F Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate
 https://www.votegloriajohnson.com @VoteGloriaJ
 Rick Scott FL M Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/RickScott.png 1952-12-01 Senator Senator 2024-11-05 2031-01-03 NULL 1
 https://rickscott.com @ScottforFlorida
-Debbie Mucarsel#Powell FL F Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/DebbieMucarselPowell.png 1971-01-18 NULL Senator 2024-11-05 NULL NULL 0
+Debbie Mucarsel-Powell FL F Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/DebbieMucarselPowell.png 1971-01-18 NULL Senator 2024-11-05 NULL NULL 0
 https://www.debbieforflorida.com @DebbieforFL
-Steven Cohen TN M Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/SteveCohen.png 1949-05-24 House House 2024-11-05 2027-01-03 9 1
+Steven Cohen TN M Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/StevenCohen.png 1949-05-24 House House 2024-11-05 2027-01-03 9 1
 http://cohenforcongress.com NULL
 Charlotte Bergmann TN F Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/CharlotteBergmann.png 0000-03-30 NULL House 2024-11-05 NULL 9 0
 https://electbergmann.com @ElectBergmann
@@ -50,7 +50,7 @@ Mark Green TN M Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-ima
 https://markgreentn.com @DrMarkGreen4TN
 Megan Barry TN F Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/MeganBarry.png 1963-09-22 NULL House 2024-11-05 NULL 7 0
 NULL @MeganCBarry
-Marjorie Taylor#Greene GA F Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/MarjorieTaylorGreene.png 1974-05-27 House House 2024-11-05 2027-01-03 14 1
+Marjorie Taylor-Greene GA F Republican https://cdn.jsdelivr.net/gh/logannick02/candidate-images/MarjorieTaylorGreene.png 1974-05-27 House House 2024-11-05 2027-01-03 14 1
 https://www.mtgforamerica.com @mtgreenee
 Shawn Harris GA M Democratic https://cdn.jsdelivr.net/gh/logannick02/candidate-images/ShawnHarris.png 0000-09-22 NULL House 2024-11-05 NULL 14 0
 https://www.shawnforgeorgia.com @ShawnForGeorgia

@@ -74,10 +74,12 @@ export const getStateName = (abbrev: string): string | undefined => {
 };
   
 
-export const appendOrdinalToDistrict = (district: number): string => {
+export const appendOrdinalToDistrict = (district: string): string => {
+    // extract district number
+    const districtNumber = district.split("-")[1];
 
     // remove leading 0s
-    const index = district;
+    const index = parseInt(districtNumber, 10);
 
     // Determine the correct ordinal suffix
     let ordinal: string;

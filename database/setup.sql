@@ -39,14 +39,15 @@ CREATE TABLE Candidate_Meta (
 
 -- Political_Issue Table
 CREATE TABLE Political_Category (
-    category VARCHAR(50) PRIMARY KEY,
-    category_description TEXT NOT NULL
+    category VARCHAR(25) PRIMARY KEY,
+    category_description TEXT NOT NULL,
+    icon VARCHAR(25)
 );
 
 CREATE TABLE Political_Issue (
     issue_id SERIAL PRIMARY KEY,
-    issue_name VARCHAR(50),
-    category_id VARCHAR(50) REFERENCES Political_Category(category) ON DELETE CASCADE,
+    issue_name VARCHAR(25),
+    category_id VARCHAR(25) REFERENCES Political_Category(category) ON DELETE CASCADE,
     issue_description TEXT NOT NULL
 );
 
@@ -63,11 +64,9 @@ CREATE TABLE Candidate_Position (
 -- Sources Table
 CREATE TABLE Sources (
     source_id SERIAL PRIMARY KEY,
-    source_type VARCHAR(50) NOT NULL,
     tweet TEXT DEFAULT NULL,
     url TEXT,
-    date DATE,
-    scraped_on DATE
+    date DATE
 );
 
 -- Position_Sources Table

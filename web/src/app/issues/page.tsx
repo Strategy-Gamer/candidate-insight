@@ -118,7 +118,6 @@ const IssuesPage: NextPage = () => {
     setSelectedCategory(category);
     setOpenCategories(prev => {
       const next = new Set(prev);
-      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       next.has(categoryName) ? next.delete(categoryName) : next.add(categoryName);
       return next;
     });
