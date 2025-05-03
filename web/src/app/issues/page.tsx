@@ -5,7 +5,8 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { PoliticalCategory, Issue } from '@/types/issues';
 import { politicalCategories } from '@/utils/politicalCategories';
-import "@/styles/pages/issues.css";
+// import "@/styles/pages/issues.css";
+import "@/styles/pages/issues_mobile.css";
 import PublicPolicySection from '@/components/issue_descriptions/PublicPolicy';
 import ImmigrationPolicySection from '@/components/issue_descriptions/Immigration';
 
@@ -26,6 +27,9 @@ const IssuesPage: NextPage = () => {
   const [issues, setIssues] = useState<ApiIssue[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  // Change to track multiple open states
+  const [openCategories, setOpenCategories] = useState<Set<string>>(new Set());
 
   // fetch the issues first
   useEffect(() => {
@@ -87,6 +91,15 @@ const IssuesPage: NextPage = () => {
     );
   };
 
+  const handleAccordionClick = (category1: PoliticalCategory, category2: string) => {
+    setSelectedCategory(category1);
+    setOpenCategories(prev => {
+      const next = new Set(prev);
+      next.has(category2) ? next.delete(category2) : next.add(category2);
+      return next;
+    });
+  };
+
   /* replace with shadcn skeleton */
   if (loading) {
     return <p>Loading issues...</p>
@@ -97,45 +110,92 @@ const IssuesPage: NextPage = () => {
   }
 
   return (
-    <section className="issues-page">
+    // <section className="issues-page">
       
+    //   <section className="categories-section">
+    //     <ul className="horizontal-menu">
+    //       {politicalCategories.map((category) => (
+    //         <li 
+    //           key={category.category}
+    //           className={`menu-item ${selectedCategory?.category === category.category ? 'active' : ''}`}
+    //           onClick={() => handleCategoryClick(category)}
+    //           onMouseEnter={() => handleMouseEnter(category.category)}
+    //           onMouseLeave={handleMouseLeave}
+    //         >
+    //           <button className={`menu-button ${selectedCategory?.category === category.category ? 'active' : ''}`}>
+    //             {category.category}
+    //           </button>
+              
+    //           {activeDropdown === category.category && (
+    //             <div className="dropdown-content">
+    //               <ul className="sub-issues-list">
+    //                 {getSubIssues(category.category).map((subIssue) => (
+    //                   <li 
+    //                     key={`${subIssue.category_id}-${subIssue.issue_name}`}
+    //                     className="sub-issue-item"
+    //                     onClick={(e) => {
+    //                       e.stopPropagation();
+    //                     }}
+    //                   >
+    //                     <Link href={`/issues/${encodeURIComponent(subIssue.issue_name.trim().replace(/\s+/g, '-'))}`}>
+    //                       <h4 className="sub-issue-title">{subIssue.issue_name}</h4>
+    //                     </Link> 
+    //                   </li>
+    //                 ))}
+    //               </ul>
+    //             </div>
+    //           )}
+    //         </li>
+    //       ))}
+    //     </ul>
+        
+    //     <div className="description-container mt-8 mb-8">
+    //       {renderPolicySection()}
+    //     </div>
+    //   </section>
+    // </section>
+
+    <section className="issues-page">
       <section className="categories-section">
-        <ul className="horizontal-menu">
+        <ul className="accordion-menu">
           {politicalCategories.map((category) => (
-            <li 
+            <div 
               key={category.category}
-              className={`menu-item ${selectedCategory?.category === category.category ? 'active' : ''}`}
-              onClick={() => handleCategoryClick(category)}
-              onMouseEnter={() => handleMouseEnter(category.category)}
-              onMouseLeave={handleMouseLeave}
+              className={`accordion-item ${openCategories.has(category.category) ? 'active' : ''}`}
             >
-              <button className={`menu-button ${selectedCategory?.category === category.category ? 'active' : ''}`}>
+              <button 
+                className="accordion-header"
+                onClick={() => handleAccordionClick(category, category.category)}
+                aria-expanded={openCategories.has(category.category)}
+                aria-controls={`accordion-content-${category.category}`} 
+              >
                 {category.category}
+                <span className="accordion-icon">{openCategories.has(category.category) ? '-' : '+'}</span>
               </button>
               
-              {activeDropdown === category.category && (
-                <div className="dropdown-content">
-                  <ul className="sub-issues-list">
-                    {getSubIssues(category.category).map((subIssue) => (
-                      <li 
-                        key={`${subIssue.category_id}-${subIssue.issue_name}`}
-                        className="sub-issue-item"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                        }}
-                      >
-                        <Link href={`/issues/${encodeURIComponent(subIssue.issue_name.trim().replace(/\s+/g, '-'))}`}>
-                          <h4 className="sub-issue-title">{subIssue.issue_name}</h4>
-                        </Link> 
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </li>
+              <div
+                id={`accordion-content-${category.category}`}
+                className="accordion-content"
+                style={{
+                  maxHeight: openCategories.has(category.category) ? '1000px' : '0px',
+                  overflow: 'hidden',
+                  transition: 'max-height 0.3s ease-out'
+                }}
+              >
+                <ul className = "sub-issues-list">
+                  {getSubIssues(category.category).map((subIssue) => (
+                    <li key={subIssue.issue_name} className="sub-issue-item">
+                      <Link href={`issues/${encodeURIComponent(subIssue.issue_name.trim().replace(/\s+/g, '-'))}`}>
+                        {subIssue.issue_name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           ))}
-        </ul>
-        
+          </ul>
+
         <div className="description-container mt-8 mb-8">
           {renderPolicySection()}
         </div>
