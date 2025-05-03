@@ -42,4 +42,27 @@
     margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+    .details h2 {
+      font-size: clamp(24pt, 8vw, 36pt);
+      margin-bottom: 8px;
+    }
   
+    .details h3 {
+      font-size: clamp(14pt, 5vw, 20pt);
+      margin-bottom: 8px;
+    }
+  
+    .details h4 {
+      font-size: clamp(12pt, 4vw, 16pt);
+    }
+  
+    .details p {
+      font-size: clamp(12pt, 3.5vw, 14pt);
+      margin-bottom: 16px;
+    }
+  }
+
+  .flex-col {
+    transition: all 0.3s ease-in-out;
+  }

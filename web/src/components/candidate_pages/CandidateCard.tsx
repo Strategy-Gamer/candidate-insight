@@ -151,14 +151,14 @@ const CandidateCard: React.FC<CandidateProps> = (props) => {
 
 
   return (
-    <div className="flex flex-row flex-start justify-center p-10 bg-white m-auto max-w-4/5 overflow-hidden gap-12">
-      <div className="flex flex-col">
+    <div className="flex flex-col md:flex-row flex-start justify-center p-4 md:p-10 bg-white m-auto max-w-4/5 overflow-hidden gap-4 md:gap-12">
+      <div className="flex flex-col order-1 md:order-none w-full md:w-[400px]">
         <Image
           src={profileImage}
           width={400}
           height={500}
           alt={`${props.candidate.first_name} ${props.candidate.last_name}'s Photo`}
-          className="object-cover rounded-none"
+          className="object-cover rounded-none w-full h-auto md:w-[400px] md:h-[500px]"
         />
         <div className="flex justify-center space-x-4 mt-4">
           <a href={url} className="text-[#1c1c84]" target="_blank" rel="noopener noreferrer">
@@ -169,7 +169,7 @@ const CandidateCard: React.FC<CandidateProps> = (props) => {
           </a>
         </div>
       </div>
-      <div className="details">
+      <div className="details order-2 md:order-none w-full max-w-[600px] mx-auto px-4 md:px-0">
         <h2>{props.candidate.first_name} {props.candidate.last_name}</h2>
         <h3>
           {props.candidate.incumbent_position === undefined || props.candidate.incumbent_position === null ? "Not Holding Office" : props.candidate.incumbent_position}
