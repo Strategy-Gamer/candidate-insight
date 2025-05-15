@@ -6,7 +6,7 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion";
-import { PoliticalCategory, Issue } from '@/types/issues';
+import { PoliticalCategory } from '@/types/issues';
 import '@/styles/components/candidateposition.css';
 import dynamic from 'next/dynamic';
 import { ApiCandidate } from "@/types/candidate";

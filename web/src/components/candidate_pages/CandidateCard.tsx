@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import '@/styles/components/candidatecard.css';
-import { Candidate } from '@/types/candidate';
+import { ApiCandidate } from '@/types/candidate';
 import { 
   getStateName,
   appendOrdinalToDistrict,
@@ -11,16 +11,6 @@ import {
   GoogleOutlined,
 } from '@ant-design/icons';
 import {Separator} from '@/components/ui/separator';
-
-type ApiCandidate = Candidate & {
-  election_year: string;
-  congressional_district: string;
-  incumbent_position: string;
-  running_for_position: string;
-  election_date: string;
-  term_end_date: string;
-  description: Text;
-};
 
 interface CandidateProps {
   candidate: ApiCandidate
@@ -46,9 +36,9 @@ const getIncumbentInformation = (candidate: ApiCandidate): string => {
   let incumbentDetails: string = "";
 
   switch (candidate.incumbent_position) {
-    case "Representative":
+    case "House":
       incumbentDetails = `${fullName} is a member of the U.S House, representing ${stateName}'s 
-      ${appendOrdinalToDistrict(candidate.congressional_district)} district.`;
+      ${appendOrdinalToDistrict(candidate.congressional_district || 0)} district.`;
       break;
     case "Senator":
       incumbentDetails = `${fullName} is a member of the U.S. Senate, representing ${stateName}.`;
@@ -62,7 +52,13 @@ const getIncumbentInformation = (candidate: ApiCandidate): string => {
   }
 
   incumbentDetails = incumbentDetails + ` A member of the ${candidate.party_affiliation} Party, ${pronounLower} took office on ${officeDate}.`
-  incumbentDetails = incumbentDetails + ` ${pronounUpper} current term ends on ${endDate}.`
+  
+  if (candidate.term_end_date) {
+    incumbentDetails = incumbentDetails + ` ${pronounUpper} current term ends on ${endDate}.`
+  } else {
+    const realPronounLower = pronounLower[0].toUpperCase() + pronounLower.slice(1);
+    incumbentDetails = incumbentDetails + ` ${realPronounLower} lost the election and is not currently holding office.`
+  }
 
   return incumbentDetails;
 }
@@ -84,7 +80,7 @@ const getRunningInformation = (candidate: ApiCandidate): string => {
 
     let positionString = "";
     switch (candidate.running_for_position) {
-      case "Representative":
+      case "House":
         positionString = `the U.S. House${candidate.congressional_district ? ` in ${stateName}'s ${appendOrdinalToDistrict(candidate.congressional_district)} district` : ''}`;
         break;
       case "Senator":
@@ -124,13 +120,16 @@ const getRunningInformation = (candidate: ApiCandidate): string => {
 }
 
 const getBirthdayInfo = (candidate: ApiCandidate): string => {
+  if (candidate.dob === null || candidate.dob === undefined) {
+    return "No birthday information available.";
+  }
   const pronoun = candidate.gender === 'M' ? "He" : "She";
   let birthDate = "";
   if (candidate.dob !== null || candidate.dob !== undefined) {
     birthDate = formatDate(candidate.dob!);
   }
-  
-  
+
+
   let info = "";
 
   if (birthDate.length !== 0) {
@@ -144,15 +143,16 @@ const CandidateCard: React.FC<CandidateProps> = (props) => {
   const url = props.candidate.website_url ?? undefined;
   const xUrl = `https://x.com/${props.candidate.twitter}`;
   const profileImage = props.candidate.profile_image_url ?? '/images/Rect_NonID_Grey.png';
-  const incumbentDesc = getIncumbentInformation(props.candidate);
-  const runningDesc = getRunningInformation(props.candidate);
+  const incumbentDesc = props.candidate.incumbent_position ? getIncumbentInformation(props.candidate) : "They are not currently holding office.";
+  const runningDesc = props.candidate.running_for_position ? getRunningInformation(props.candidate) : "They are up not up for re-election";
   const birthdayInfo = getBirthdayInfo(props.candidate);
-
+  const pronounLower = props.candidate.gender === 'M' ? "he" : "she";
+  const pronounUpper = pronounLower[0].toUpperCase() + pronounLower.slice(1); 
 
 
   return (
-    <div className="flex flex-col md:flex-row flex-start justify-center p-4 md:p-10 bg-white m-auto max-w-4/5 overflow-hidden gap-4 md:gap-12">
-      <div className="flex flex-col order-1 md:order-none w-full md:w-[400px]">
+    <div className="flex flex-row flex-start justify-center p-10 bg-white m-auto max-w-4/5 overflow-hidden gap-12">
+      <div className="flex flex-col">
         <Image
           src={profileImage}
           width={400}
@@ -169,7 +169,7 @@ const CandidateCard: React.FC<CandidateProps> = (props) => {
           </a>
         </div>
       </div>
-      <div className="details order-2 md:order-none w-full max-w-[600px] mx-auto px-4 md:px-0">
+      <div className="details ml-12">
         <h2>{props.candidate.first_name} {props.candidate.last_name}</h2>
         <h3>
           {props.candidate.incumbent_position === undefined || props.candidate.incumbent_position === null ? "Not Holding Office" : props.candidate.incumbent_position}

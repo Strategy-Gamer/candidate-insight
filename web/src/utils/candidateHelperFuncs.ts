@@ -74,12 +74,13 @@ export const getStateName = (abbrev: string): string | undefined => {
 };
   
 
-export const appendOrdinalToDistrict = (district: string): string => {
-    // extract district number
-    const districtNumber = district.split("-")[1];
+export const appendOrdinalToDistrict = (district: number | null): string => {
 
     // remove leading 0s
-    const index = parseInt(districtNumber, 10);
+    const index = district;
+    if (index === null || index === undefined) {
+        return "";
+    }
 
     // Determine the correct ordinal suffix
     let ordinal: string;
@@ -108,7 +109,7 @@ export const getParty = (party: string): string | undefined => {
 }
 
 export const getPosition = (
-    district: string | null | undefined, 
+    district: number | null | undefined, 
     party: string | null | undefined, 
     state: string | null | undefined
   ): string => {

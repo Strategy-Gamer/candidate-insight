@@ -34,7 +34,6 @@ import { Checkbox } from '@/components/ui/checkbox';
 import {Separator} from '@/components/ui/separator';
 import { stateAbbrevs } from '@/utils/candidateHelperFuncs';
 import { FilterFilled, SearchOutlined } from '@ant-design/icons';
-import { parse } from 'path';
 import { Skeleton } from '@/components/ui/skeleton';
 
 type ApiCandidate = {
@@ -51,7 +50,8 @@ type ApiCandidate = {
   running_for_position?: string | null;
 };
 
-const formatDate = (isoDate: string) => {
+const formatDate = (isoDate: string | null) => {
+  if (!isoDate) return "N/A"; // Handle null or undefined date
   const date = new Date(isoDate);
   const month = String(date.getMonth() + 1).padStart(2, '0'); // 0-padded
   const day = String(date.getDate()).padStart(2, '0');
@@ -59,7 +59,8 @@ const formatDate = (isoDate: string) => {
   return `${month}/${day}/${year}`;
 };
 
-function getAge(birthDate: Date | string): number {
+function getAge(birthDate: Date | string | null): number | string {
+  if (!birthDate) return "N/A"; // Handle null or undefined date
   // Handle string input
   const birth = typeof birthDate === 'string' ? new Date(birthDate) : birthDate;
   const today = new Date();
@@ -93,8 +94,8 @@ const InfoCardButton: React.FC<{ candidate: ApiCandidate; groupByParty: boolean 
   const party = candidate.party_affiliation ?? "Independent";
   const partyAbbrev = party.slice(0, 1);
   const fullName = `${candidate.first_name} ${candidate.last_name}`;
-  let runningForPosition = candidate.running_for_position ? `${candidate.running_for_position} (${candidate.state})` : "Not Running";
-  let incumbentPosition = candidate.incumbent_position ? `${candidate.incumbent_position} (${candidate.state})` : "Not Holding Office";
+  const runningForPosition = candidate.running_for_position ? `${candidate.running_for_position} (${candidate.state})` : "Not Running";
+  const incumbentPosition = candidate.incumbent_position ? `${candidate.incumbent_position} (${candidate.state})` : "Not Holding Office";
 
   const bgColor = groupByParty ? partyColors[party] || "bg-gray-500" : "bg-gray-700 hover:bg-gray-900";
 
@@ -103,7 +104,7 @@ const InfoCardButton: React.FC<{ candidate: ApiCandidate; groupByParty: boolean 
       className={`w-[275px] h-[425px] cursor-pointer rounded-none duration-300 ease-in-out ${bgColor}`}
     >
       <CardHeader className="text-center h-24 flex flex-col justify-center items-center px-2">
-        <CardTitle className="text-white">{fullName}</CardTitle>
+        <CardTitle className="text-white">{fullName.replace(/#/g, ' ')}</CardTitle>
         <CardDescription className="text-white flex flex-row items-center gap-2 mt-1">
           <span>({partyAbbrev})</span>
           <Separator orientation="vertical" className="h-4 w-px bg-white/50" />
@@ -134,7 +135,6 @@ const Candidates: NextPage = () => {
   const searchParams = useSearchParams();
   const urlYear = searchParams.get('year');
   
-  const electionYears = ["2028", "2026", "2024", "2022"];
   const [filters, setFilters] = useState({
     party: '',
     state: '',
@@ -235,7 +235,7 @@ const Candidates: NextPage = () => {
       
       <h1 className="text-3xl text-center font-bold mb-6 text-[#1c1c84]">{filters.year} Candidates</h1>
     
-      {/* search section */}
+     {/* search section */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 px-4 md:px-8 w-full gap-4">
         {/* Search & filters - stacks on mobile, horizontal on larger screens */}
         <div className="flex flex-col w-full md:w-auto md:flex-row md:items-center gap-3 md:space-x-4">
@@ -271,11 +271,9 @@ const Candidates: NextPage = () => {
                 <SelectValue placeholder="Election Year" />
               </SelectTrigger>
               <SelectContent>
-                {electionYears.map(year => (
-                <SelectItem key={year} value={year}>
-                  {year}
-                </SelectItem>
-              ))}
+                  <SelectItem value="2024">
+                    2024
+                  </SelectItem>
               </SelectContent>
             </Select>
 
@@ -449,7 +447,7 @@ const Candidates: NextPage = () => {
                   {groupedCandidates.map((candidate) => (
                     <Link
                     key={candidate.candidate_id}
-                    href={`/candidates/${candidate.first_name}-${candidate.last_name}`}
+                    href={`/candidates/${candidate.first_name}-${candidate.last_name.replace(/#/g, '_')}-${candidate.candidate_id}`}
                     className="parent"
                   >
                     <InfoCardButton 
@@ -470,7 +468,7 @@ const Candidates: NextPage = () => {
             {sortedCandidates.map((candidate) => (
               <Link
                 key={candidate.candidate_id}
-                href={`/candidates/${candidate.first_name}-${candidate.last_name}`}
+                href={`/candidates/${candidate.first_name}-${candidate.last_name.replace(/#/g, '_')}-${candidate.candidate_id}`}
                 className="parent"
               >
                 <InfoCardButton 

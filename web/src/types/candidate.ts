@@ -13,10 +13,11 @@ export type Candidate = {
 
 export type ApiCandidate = Candidate & {
   election_year: string;
-  congressional_district: string;
+  congressional_district: number | null;
   incumbent_position: string;
   running_for_position: string;
   election_date: string;
   term_end_date: string;
-  description: Text;
+  won_election: boolean;
+  description?: Text;
 };

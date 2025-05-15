@@ -2,27 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
-import { Candidate, ApiCandidate } from '@/types/candidate';
+import { ApiCandidate } from '@/types/candidate';
 import CandidateCard from '@/components/candidate_pages/CandidateCard';
 import CandidatePositions from '@/components/candidate_pages/CandidatePositions';
 import { Skeleton } from '@/components/ui/skeleton';
-import { PoliticalCategory, Issue } from '@/types/issues';
 import { politicalCategories } from '@/utils/mockIssues';
 import {Separator} from '@/components/ui/separator';
-
-
-type ApiPosition = {
-    supports_positon: boolean;
-    position_description: string;
-    issue_name: string;
-    issue_description: string;
-    category_id: string;
-    sources: {
-        tweet?: string;
-        url?: string;
-        date?: string;
-    }[];
-};
   
 const CandidatePage = () => {
     const { id } = useParams() as { id?: string };
@@ -34,7 +19,8 @@ const CandidatePage = () => {
 
         const fetchCandidate = async () => {
             try {
-                const response = await fetch(`/api/candidates/${id}`);
+                const candidateId = id.split('-')[2]; 
+                const response = await fetch(`/api/candidates/${candidateId}`);
                 if (!response.ok) throw new Error('Failed to fetch');
 
                 const data = await response.json();

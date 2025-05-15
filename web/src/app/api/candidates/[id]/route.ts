@@ -12,7 +12,6 @@ export async function GET(
 
     // will need to adjust for metadata (i.e year)
     const { id } = await params;
-    const [firstName, lastName] = id.split('-');
     
     const candidateQuery = `
       SELECT
@@ -23,12 +22,11 @@ export async function GET(
       JOIN 
         candidate_meta cm ON c.candidate_id = cm.candidate_id
       WHERE
-        LOWER(c.first_name) = LOWER($1)
-        AND LOWER(c.last_name) = LOWER($2)
+        c.candidate_id = $1
         AND cm.election_year = '2024'
     `;
 
-    const result = await db.query(candidateQuery, [firstName, lastName]);
+    const result = await db.query(candidateQuery, [parseInt(id)]);
     
     if (result.rowCount === 0) {
       return NextResponse.json(
