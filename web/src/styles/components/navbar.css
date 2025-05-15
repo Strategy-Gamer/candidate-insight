@@ -1,3 +1,4 @@
+/* Base header styles */
 header {
     position: sticky;
     top: 0px;
@@ -5,18 +6,24 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 25px;
+    padding: 10px 25px;
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
     background: rgba(255, 255, 255, 1.0);
     color: #1c1c84;
+    transition: box-shadow 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.header-shadow {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo container */
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .logo {
@@ -28,6 +35,7 @@ header h1 {
     font-variant: small-caps;
     font-size: 24pt;
     font-weight: 400;
+    margin: 0;
 }
 
 header h1 a {
@@ -44,43 +52,111 @@ header nav {
     display: flex;
     align-items: center;
 }
-  
+
 header nav a {
-    margin-right: 15px;
-    text-decoration: underline;
+    margin-left: 24px;
     text-underline-offset: 5px;
     color: #1c1c84;
-    font-size: 12pt;
+    font-size: 14pt;
     transition: color 0.3s ease-in-out;
+    font-weight: 500;
 }
-  
+
 header nav a:hover {
     color: #b31942;
+    text-decoration: underline;
 }
-  
-header nav input {
-    padding: 5px;
-    font-size: 10pt;
-    box-sizing: border-box;
-    border: 1px solid #D3D3D3;
-}
-  
 
-/* I'm not exactly sure what this looks like yet */
+header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #1c1c84;
+    display: none;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+header button:hover {
+    color: #b31942;
+}
+
+header .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+}
+
+header .mobile-menu a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #1c1c84;
+    font-size: 16px;
+    border-bottom: 1px solid #eaeaea;
+    transition: background-color 0.3s ease;
+}
+
+header .mobile-menu a:hover {
+    background-color: #f8f9fa;
+    color: #b31942;
+}
+
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        padding: 12px 20px;
     }
-
+    
+    .logo {
+        height: 32px;
+    }
+    
+    header h1 {
+        font-size: 20pt;
+    }
+    
     header nav {
-        flex-direction: column;
-        align-items: center;
+        display: none;
     }
+    
+    header button {
+        display: block;
+    }
+    
+    .mobile-menu.open {
+        display: block;
+        animation: slideDown 0.3s ease-in-out;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
 
-    header nav a {
+@media (max-width: 768px) {
+    header .mobile-menu .flex {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    header .mobile-menu a {
         width: 100%;
         text-align: center;
+        margin: 0;
     }
 }

@@ -1,12 +1,12 @@
 // This is the candidates directory page
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import React, { useState, useEffect, useMemo } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Candidate } from '@/types/candidate';
 import type { NextPage } from 'next';
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Card,
   CardContent,
@@ -15,14 +15,6 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Button } from '@/components/ui/button';
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from '@/components/ui/command';
 import {
   Popover,
   PopoverContent,
@@ -33,64 +25,58 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import Pages from "@/components/Pages";
+import { Input } from "@/components/ui/input";
 import { Checkbox } from '@/components/ui/checkbox';
-import { Label } from '@/components/ui/label';
-import { getPosition, stateAbbrevs, getStateName } from '@/utils/candidateHelperFuncs';
-import { FilterFilled } from '@ant-design/icons';
+import {Separator} from '@/components/ui/separator';
+import { stateAbbrevs } from '@/utils/candidateHelperFuncs';
+import { FilterFilled, SearchOutlined } from '@ant-design/icons';
+import { parse } from 'path';
+import { Skeleton } from '@/components/ui/skeleton';
 
 type ApiCandidate = {
+  candidate_id: number;
   first_name: string;
   last_name: string;
   party_affiliation?: string | null;
   state?: string | null;
   profile_image_url?: string | null;
+  dob?: string | null;
   election_year: string;
   congressional_district?: string | null;
   incumbent_position?: string | null;
   running_for_position?: string | null;
 };
 
-function getCandidateDescriptor(candidate: ApiCandidate): string {
-  const formatDescriptor = (position: string | null | undefined, state: string | null | undefined, district: string | null | undefined): string => {
-    if (!position) return '';
-    
-    if (position === 'Representative') {
-      return `${position} (${district})`
-    }
-    
-    // handle other positions
-    switch(position) {
-      case 'Senator':
-      case 'Governor':
-        return state ? `${position} (${state})` : position;
-      default:
-        return position; // for other positions if we add those
-    }
-  };
+const formatDate = (isoDate: string) => {
+  const date = new Date(isoDate);
+  const month = String(date.getMonth() + 1).padStart(2, '0'); // 0-padded
+  const day = String(date.getDate()).padStart(2, '0');
+  const year = String(date.getFullYear()).slice(-2); // Last 2 digits
+  return `${month}/${day}/${year}`;
+};
 
-  // case 1: incumbent running for different position
-  if (candidate.incumbent_position && candidate.running_for_position) {
-    const current = formatDescriptor(candidate.incumbent_position, candidate.state, candidate.congressional_district);
-    const runningFor = formatDescriptor(candidate.running_for_position, candidate.state, candidate.congressional_district);
-    return `${current} running for ${runningFor}`;
+function getAge(birthDate: Date | string): number {
+  // Handle string input
+  const birth = typeof birthDate === 'string' ? new Date(birthDate) : birthDate;
+  const today = new Date();
+  
+  // Calculate raw age
+  let age = today.getFullYear() - birth.getFullYear();
+  const monthDiff = today.getMonth() - birth.getMonth();
+  
+  // Adjust if birthday hasn't occurred yet this year
+  if (
+    monthDiff < 0 || 
+    (monthDiff === 0 && today.getDate() < birth.getDate())
+  ) {
+    age--;
   }
   
-  // case 2: non-incumbent running for position
-  if (candidate.running_for_position) {
-    return formatDescriptor(candidate.running_for_position, candidate.state, candidate.congressional_district);
-  }
-  
-  // case 3: incumbent not running (or unknown)
-  if (candidate.incumbent_position) {
-    return formatDescriptor(candidate.incumbent_position, candidate.state, candidate.congressional_district);
-  }
-
-  // default case
-  return 'Candidate';
+  return age;
 }
 
 const InfoCardButton: React.FC<{ candidate: ApiCandidate; groupByParty: boolean }> = ({ candidate, groupByParty }) => {
@@ -104,23 +90,33 @@ const InfoCardButton: React.FC<{ candidate: ApiCandidate; groupByParty: boolean 
   };
   
   const imgSrc = candidate.profile_image_url ?? '/images/Rect_NonID_Grey.png';
-  
   const party = candidate.party_affiliation ?? "Independent";
   const partyAbbrev = party.slice(0, 1);
   const fullName = `${candidate.first_name} ${candidate.last_name}`;
-  let position = getCandidateDescriptor(candidate);
-  
+  let runningForPosition = candidate.running_for_position ? `${candidate.running_for_position} (${candidate.state})` : "Not Running";
+  let incumbentPosition = candidate.incumbent_position ? `${candidate.incumbent_position} (${candidate.state})` : "Not Holding Office";
+
   const bgColor = groupByParty ? partyColors[party] || "bg-gray-500" : "bg-gray-700 hover:bg-gray-900";
 
   return (
     <Card 
-      className={`w-[275px] cursor-pointer rounded-none duration-300 ease-in-out ${bgColor}`}
+      className={`w-[275px] h-[425px] cursor-pointer rounded-none duration-300 ease-in-out ${bgColor}`}
     >
-      <CardHeader className="text-center">
-        <CardTitle className="text-white">{`${fullName} (${partyAbbrev})`}</CardTitle>
-        <CardDescription className="text-white">{position}</CardDescription>
+      <CardHeader className="text-center h-24 flex flex-col justify-center items-center px-2">
+        <CardTitle className="text-white">{fullName}</CardTitle>
+        <CardDescription className="text-white flex flex-row items-center gap-2 mt-1">
+          <span>({partyAbbrev})</span>
+          <Separator orientation="vertical" className="h-4 w-px bg-white/50" />
+          <span>Age: {getAge(candidate.dob!)}</span>
+          <Separator orientation="vertical" className="h-4 w-px bg-white/50" />
+          <span>Born: {formatDate(candidate.dob!)}</span>
+        </CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-col items-center gap-4">
+      <CardContent className="flex flex-col items-center justify-center gap-4 text-center">
+        <div className="text-white">
+          <h2 className="font-medium">Running For: {runningForPosition}</h2>
+          <h2 className="italic">Currently: {incumbentPosition}</h2>
+        </div>
         <Image
           src={imgSrc}
           width={200}
@@ -132,31 +128,69 @@ const InfoCardButton: React.FC<{ candidate: ApiCandidate; groupByParty: boolean 
   );
 };
 
+const LIMIT = 32;
+
 const Candidates: NextPage = () => {
   const searchParams = useSearchParams();
   const urlYear = searchParams.get('year');
   
+  const electionYears = ["2028", "2026", "2024", "2022"];
   const [filters, setFilters] = useState({
     party: '',
     state: '',
     position: '',
     year: urlYear || '2024',
+    str: ''
   });
+  const [sortValue, setSortValue] = useState<number>(0);
 
   const [groupByParty, setGroupByParty] = useState(false);
-  const [open, setOpen] = React.useState(false);
-  const [selectedCandidate, setSelectedCandidate] = useState<ApiCandidate | null>(null);
   const [candidates, setCandidates] = useState<ApiCandidate []>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const router = useRouter();
+  const [totalCandidates, setTotalCandidates] = useState(null);
+  const [page, setPage] = useState(1);
+
+  const sortedCandidates = useMemo(() => {
+    const sorted = [...candidates]; // always copy first to avoid mutating
+
+    if (sortValue !== 0) {
+      if (sortValue === 1 || sortValue === -1) {
+        sorted.sort((a, b) => {
+          const dateA = new Date(a.dob || '');
+          const dateB = new Date(b.dob || '');
+          return sortValue === -1 ? dateA.getTime() - dateB.getTime() : dateB.getTime() - dateA.getTime();
+        });
+      }
+      else if (sortValue === 2 || sortValue === -2) {
+        sorted.sort((a, b) => {
+          const nameA = `${a.first_name} ${a.last_name}`.toLowerCase();
+          const nameB = `${b.first_name} ${b.last_name}`.toLowerCase();
+          return sortValue === 2 ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+        });
+      }
+    }
+
+    return sorted;
+  }, [candidates, sortValue]);
 
   const fetchCandidates = async (year: string = filters.year) => {
+    setLoading(true);
     try {
-      const response = await fetch(`/api/candidates?year=${year}`);
+      const url = `
+      /api/candidates?page=${page}&limit=${LIMIT}&year=${year}&state=${filters.state}&party=${filters.party}&position=${filters.position}&search=${filters.str.toLowerCase().replace(/ /g, '')}`;
+      const response = await fetch(url);
       const data = await response.json();
 
       if (data.success) {
+        const count = data.total;
+        // Don't display invalid page numbers
+        if (count > 0) {
+          if (Math.ceil(count / LIMIT) < page)
+            setPage(Math.ceil(count / LIMIT));
+          setTotalCandidates(count);
+        }
+
         setCandidates(data.candidates);
       } else {
         setError('Failed to load candidates');
@@ -169,280 +203,259 @@ const Candidates: NextPage = () => {
     }
   };
 
-  // this is for if the year changes and the URL needs to be changed
+  // fetch candidates when filters change
   useEffect(() => {
-    const newParams = new URLSearchParams(searchParams.toString());
-
-    if (filters.year !== '2024') {
-      newParams.set('year', filters.year);
-    } else {
-      newParams.delete('year');
-    }
+    const delayBounce = setTimeout(() => {
+      fetchCandidates(filters.year);
+    }, 300);
     
-    router.replace(`?${newParams.toString()}`, { scroll: false });
-  }, [filters.year]);
+    return () => clearTimeout(delayBounce);
+    // fetchCandidates(filters.year);
+  }, [filters.year, page, filters.state, filters.party, filters.position, filters.str]);
 
-  // here I fetched candidates based on the default year
-  useEffect(() => {
-    fetchCandidates(filters.year);
-  }, [filters.year]);
 
-  // this is for if the URL changes
-  useEffect(() => {
-    const urlYear = searchParams.get('year');
-    if (urlYear && urlYear !== filters.year) {
-      setFilters(prev => ({ ...prev, year: urlYear }));
-    }
-  }, [searchParams]);
-
-  const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement> | { name: string, value: string }) => {
-    const name = 'target' in e ? e.target.name : e.name;
-    const value = 'target' in e ? e.target.value : e.value;
-    setFilters(prev => ({ ...prev, [name]: value }));
-  }
-  
   const toggleGroupByParty = () => {
     setGroupByParty(prevState => !prevState);
   };
-
-  const filteredCandidates = candidates.filter(candidate => {
-    const matchesParty = filters.party ? candidate.party_affiliation === filters.party: true;
-    const matchesState = (() => {
-      if (!filters.state) return true;
-      const state = candidate.state;
-      if (!state || state === "US") return false;
-
-      const stateName = getStateName(state);
-      return (stateAbbrevs as Record<string, string>)[stateName!] === filters.state;
-    })(); // immediately invoked function expression
-    
-    let matchesPosition = true;
-    if (filters.position === "house") {
-      matchesPosition = candidate.incumbent_position === "Representative" || 
-      candidate.running_for_position === "Represenative";
-    } else if (filters.position === "senate") {
-      matchesPosition = candidate.incumbent_position === "Senator" || 
-      candidate.running_for_position === "Senator";
-    } else if (filters.position === "presidential") {
-      matchesPosition = candidate.incumbent_position === "President" || 
-      candidate.running_for_position === "President";
-    } else if (filters.position === "gubernatorial") {
-      matchesPosition = candidate.incumbent_position === "Governor" || 
-      candidate.running_for_position === "Governor";
-    }
-    return matchesParty && matchesState && matchesPosition;
-  });
 
   const handleClearFilters = () => {
     setFilters({
       party: '',
       state: '',
       position: '',
-      year: '',
+      year: filters.year, // keep it current
+      str: ''
     });
+    setSortValue(0); 
     setGroupByParty(false);
   };
 
-  const handleClick = async () => {
-    if (!selectedCandidate) {
-      alert('Please select a candidate');
-      return;
-    }
-    
-    const response = await fetch(`/api/candidates/${selectedCandidate.first_name}-${selectedCandidate.last_name}`);
-    const data = await response.json();
-
-    // will probably need to modify this based on what year the candidate is selected, or perhaps
-    // just allow users to switch between years
-    if (data.success) {
-      router.push(`/candidates/${selectedCandidate.first_name}-${selectedCandidate.last_name}`);
-    } else {
-      alert('Candidate not found');
-      console.error(data.error);
-    }
-  };
-
-  if (loading) {
-    return <p>Loading candidates...</p>
-  }
-
-  if (error) {
-    return <p>{error}</p>
-  }
-
   return (    
     <div className="font-sans p-6">
-
+      
+      <h1 className="text-3xl text-center font-bold mb-6 text-[#1c1c84]">{filters.year} Candidates</h1>
+    
       {/* search section */}
-      <div className="flex justify-center items-center space-x-4">
-        <Popover open={open} onOpenChange={setOpen}>
-          <PopoverTrigger asChild>
-            <Button
-              variant="outline"
-              role="combobox"
-              aria-expanded={open}
-              className="w-[200px] justify-between rounded-none"
-            >
-              {selectedCandidate 
-                ? `${selectedCandidate.first_name} ${selectedCandidate.last_name}` 
-                : "Find a candidate..."
-              }
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent className="w-[200px] p-0 rounded-none">
-            <Command className="font-sans">
-            <CommandInput placeholder="Search candidates..." className="rounded-none"/>
-              <CommandList>
-                <CommandEmpty>No candidate found.</CommandEmpty>
-                <CommandGroup>
-                  {filteredCandidates.map((candidate) => (
-                    <CommandItem
-                      key={`${candidate.first_name}-${candidate.last_name}`}
-                      value={`${candidate.first_name}-${candidate.last_name}`}
-                      onSelect={() => {
-                        setSelectedCandidate(candidate);
-                        setOpen(false)
-                      }}
-                    >
-                      {candidate.first_name} {candidate.last_name}
-                    </CommandItem>
-                  ))}
-                </CommandGroup>
-              </CommandList>  
-            </Command>
-          </PopoverContent>
-        </Popover>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 px-4 md:px-8 w-full gap-4">
+        {/* Search & filters - stacks on mobile, horizontal on larger screens */}
+        <div className="flex flex-col w-full md:w-auto md:flex-row md:items-center gap-3 md:space-x-4">
+          {/* Search input - full width on mobile */}
+          <div className="relative w-full md:w-auto">
+            <Input
+              value={filters.str}
+              onChange={(e) => {
+                setFilters(prev => ({
+                  ...prev,
+                  str: e.target.value
+                }))
+              }}
+              placeholder='Find a candidate...'
+              className="w-full md:w-64 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0"
+            />
+            <SearchOutlined className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
+          </div>
 
-        {/* filters */}
-        <Popover>
-          <PopoverTrigger asChild>
-            <Button variant="outline" className="h-10 rounded-none">
-              <FilterFilled />
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent className="w-[200px] p-4 rounded-none">
-            {/* checkbox for partying by group */}
-            <div className="mb-3">
-              <label className="flex items-center">
-                <Checkbox 
-                  id="groupByParty" 
-                  checked={groupByParty}
-                  onCheckedChange={toggleGroupByParty}
-                  className="rounded-none"
+          {/* Top row of filters on mobile - Year and Party/Group filters */}
+          <div className="flex flex-row w-full md:w-auto gap-2">
+            {/* Year dropdown */}
+            <Select
+              value={filters.year}
+              onValueChange={(value) => {
+                setFilters(prev => ({
+                  ...prev,
+                  year: value
+                }));
+              }}
+            >
+              <SelectTrigger className="w-full md:w-32 text-sm rounded-none">
+                <SelectValue placeholder="Election Year" />
+              </SelectTrigger>
+              <SelectContent>
+                {electionYears.map(year => (
+                <SelectItem key={year} value={year}>
+                  {year}
+                </SelectItem>
+              ))}
+              </SelectContent>
+            </Select>
+
+            {/* Advanced filters popover */}
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button variant="outline" aria-label="filters button" className="h-10 rounded-none">
+                  <FilterFilled />
+                  <span className="ml-2 hidden sm:inline">Filters</span>
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-64 p-4 rounded-none">
+                {/* checkbox for partying by group */}
+                <div className="mb-3">
+                  <label className="flex items-center">
+                    <Checkbox 
+                      id="groupByParty" 
+                      checked={groupByParty}
+                      onCheckedChange={toggleGroupByParty}
+                      className="rounded-none"
+                    />
+                    <span className="font-sans ml-2">Group By Party</span>
+                  </label>
+                </div>
+
+                {/* party filter section */}
+                <Select
+                  value={filters.party}
+                  onValueChange={(value) => {
+                    setFilters(prev => ({
+                      ...prev,
+                      party: value === "All" ? "" : value // store empty string for "All"
+                    }));
+                  }}
+                >
+                  <SelectTrigger className="text-sm rounded-none">
+                    <SelectValue placeholder="Filter by Party" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="All">All</SelectItem>
+                      <SelectItem value="Democratic">Democratic</SelectItem>
+                      <SelectItem value="Republican">Republican</SelectItem>
+                      <SelectItem value="Constitution">Constitution</SelectItem>
+                      <SelectItem value="Green">Green</SelectItem>
+                      <SelectItem value="Libertarian">Libertarian</SelectItem>
+                      <SelectItem value="Independent">Independent</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+
+                {/* state filter section*/}
+                <Select
+                  value={filters.state}
+                  onValueChange={(value) => {
+                    setFilters(prev => ({
+                      ...prev,
+                      state: value === "All" ? "" : value // store empty string for "All"
+                    }));
+                  }}
+                >
+                  <SelectTrigger className="text-sm mt-3 rounded-none">
+                    <SelectValue placeholder="Filter by State" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="All">All</SelectItem>
+                      {Object.entries(stateAbbrevs).map(([stateName, abbrev]) => (
+                        <SelectItem key={abbrev} value={abbrev}>
+                          {stateName}
+                        </SelectItem>
+                      ))}
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+                
+                {/* position filter section*/}
+                <Select
+                  value={filters.position}
+                  onValueChange={(value) => {
+                    setFilters(prev => ({
+                      ...prev,
+                      position: value === "All" ? "" : value // store empty string for "All"
+                    }));
+                  }}
+                >
+                  <SelectTrigger className="text-sm mt-3 rounded-none">
+                    <SelectValue placeholder="Filter by Position" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="All">All</SelectItem>
+                      <SelectItem value="House">House</SelectItem>
+                      <SelectItem value="Senator">Senate</SelectItem>
+                      <SelectItem value="President">Presidential</SelectItem>
+                      <SelectItem value="gubernatorial">Governor</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+
+                <Button onClick={handleClearFilters} className="mt-3 w-full bg-[#1c1c84] hover:bg-[#b31942] h-10 rounded-none duration-300 ease-in-out">
+                  Clear Filters
+                </Button>
+              </PopoverContent>
+            </Popover>
+
+            {/* Sort dropdown */}
+            <Select
+              onValueChange={(value) => setSortValue(parseInt(value))}
+            >
+              <SelectTrigger className="w-full md:w-32 text-sm rounded-none">
+                <SelectValue placeholder="Sort By" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectItem value="0">Any</SelectItem>
+                  <SelectItem value="1">Youngest to Oldest</SelectItem>
+                  <SelectItem value="-1">Oldest to Youngest</SelectItem>
+                  <SelectItem value="2">A-Z</SelectItem>
+                  <SelectItem value="-2">Z-A</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+        
+        {/* Pagination - full width on mobile */}
+        <div className="w-full md:w-auto flex justify-center md:justify-end mt-2 md:mt-0">
+          <Pages 
+            page={page} 
+            limit={LIMIT} 
+            total={totalCandidates || 1} 
+            onPageChange={setPage}
+          />
+        </div>
+      </div>
+
+      <div className="text-center mb-6">
+        {loading && (
+          <div className="flex flex-col gap-8 px-4 py-4">
+            <p className="text-gray-500 mt-2">Loading candidates...</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              {Array.from({ length: 32 }).map((_, index) => (
+                <Skeleton
+                  key={index}
+                  className="w-[275px] h-[425px] rounded-none"
                 />
-                <span className="font-sans ml-2">Group By Party</span>
-              </label>
+              ))}
             </div>
-
-            {/* party filter section */}
-            <Select
-              value={filters.party}
-              onValueChange={(value) => {
-                setFilters(prev => ({
-                  ...prev,
-                  party: value === "All" ? "" : value // store empty string for "All"
-                }));
-              }}
-            >
-              <SelectTrigger className="text-sm rounded-none">
-                <SelectValue placeholder="Filter by Party" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectItem value="All">All</SelectItem>
-                  <SelectItem value="Democratic">Democratic</SelectItem>
-                  <SelectItem value="Republican">Republican</SelectItem>
-                  <SelectItem value="Constitution">Constitution</SelectItem>
-                  <SelectItem value="Green">Green</SelectItem>
-                  <SelectItem value="Libertarian">Libertarian</SelectItem>
-                  <SelectItem value="Independent">Independent</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-
-            {/* state filter section*/}
-            <Select
-              value={filters.state}
-              onValueChange={(value) => {
-                setFilters(prev => ({
-                  ...prev,
-                  state: value === "All" ? "" : value // store empty string for "All"
-                }));
-              }}
-            >
-              <SelectTrigger className="text-sm mt-3 rounded-none">
-                <SelectValue placeholder="Filter by State" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectItem value="All">All</SelectItem>
-                    {Object.entries(stateAbbrevs).map(([stateName, abbrev]) => (
-                      <SelectItem key={abbrev} value={abbrev}>
-                        {stateName}
-                      </SelectItem>
-                    ))}
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-            
-            {/* position filter section*/}
-            <Select
-              value={filters.position}
-              onValueChange={(value) => {
-                setFilters(prev => ({
-                  ...prev,
-                  position: value === "All" ? "" : value // store empty string for "All"
-                }));
-              }}
-            >
-              <SelectTrigger className="text-sm mt-3 rounded-none">
-                <SelectValue placeholder="Filter by Position" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectItem value="All">All</SelectItem>
-                  <SelectItem value="house">House</SelectItem>
-                  <SelectItem value="senate">Senate</SelectItem>
-                  <SelectItem value="presidential">Presidential</SelectItem>
-                  <SelectItem value="gubernatorial">Governor</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-
-              <Button onClick={handleClearFilters} className="mt-3 bg-[#1c1c84] hover:bg-[#b31942] h-10 rounded-none duration-300 ease-in-out">
-                Clear Filters
-              </Button>
-          </PopoverContent>
-        </Popover>
-
-        {/* search button (redirects them) */ }
-        <Button onClick={handleClick} className="bg-[#1c1c84] hover:bg-[#b31942] h-10 rounded-none duration-300 ease-in-out">
-          Search
-        </Button>
+          </div>        
+        )}
+        {error && <p className="text-red-500 mt-2">{error}</p>}
+        {!loading && sortedCandidates.length === 0 && (
+          <p className="text-gray-500 mt-2">No candidates found for the selected filters.</p>
+        )}
       </div>
       
       {/* candidate cards */}
-      <div className="flex flex-col gap-8 p-4">
+      <ScrollArea className="h-[600px] w-full rounded-none">
+      <div className="flex flex-col gap-8 px-4 py-4">
         {groupByParty ? (
           // group by party
           ["Democratic", "Republican", "Independent", "Green", "Constitution", "Libertarian"].map((party) => {
-            const candidates = filteredCandidates.filter((c) => c.party_affiliation === party);
-            if (candidates.length === 0) return null;
+            const groupedCandidates = sortedCandidates.filter((c) => c.party_affiliation === party);
+            if (groupedCandidates.length === 0) return null;
 
             return (
               <section key={party} className="font-sans p-6 rounded-none border-2 border-gray-300 bg-gray-100">
                 <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">{party} Party</h2>
                 <div className="flex flex-wrap justify-center gap-4">
-                  {candidates.map((candidate) => (
+                  {groupedCandidates.map((candidate) => (
                     <Link
-                    key={`${candidate.first_name}-${candidate.last_name}`}
+                    key={candidate.candidate_id}
                     href={`/candidates/${candidate.first_name}-${candidate.last_name}`}
                     className="parent"
                   >
                     <InfoCardButton 
-                      key={`${candidate.first_name}-${candidate.last_name}`} 
+                      key={candidate.candidate_id} 
                       candidate={candidate} 
-                      groupByParty={false}
+                      groupByParty={true}
                     />
                   </Link>
                   ))}
@@ -454,14 +467,14 @@ const Candidates: NextPage = () => {
           
           // simply display all candidates
           <div className="flex flex-wrap justify-center gap-4">
-            {filteredCandidates.map((candidate) => (
+            {sortedCandidates.map((candidate) => (
               <Link
-                key={`${candidate.first_name}-${candidate.last_name}`}
+                key={candidate.candidate_id}
                 href={`/candidates/${candidate.first_name}-${candidate.last_name}`}
                 className="parent"
               >
                 <InfoCardButton 
-                  key={`${candidate.first_name}-${candidate.last_name}`} 
+                  key={candidate.candidate_id} 
                   candidate={candidate} 
                   groupByParty={false}
                 />
@@ -470,6 +483,7 @@ const Candidates: NextPage = () => {
           </div>
         )}
       </div>
+      </ScrollArea>
     </div>
   );
 };

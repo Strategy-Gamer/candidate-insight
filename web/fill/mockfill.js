@@ -164,8 +164,8 @@ async function insertMeta(candidates) {
     2028: "2028-11-08",
   };
 
-  const incumbentPositions = ["Governor", "Representative", "Senator", "President"];
-  const runningForPositions = ["Representative", "Senator", "President"];
+  const incumbentPositions = ["Governor", "House", "Senator", "President"];
+  const runningForPositions = ["House", "Senator", "President"];
   const stateCodes = [
     "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", 
     "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", 
@@ -289,10 +289,11 @@ async function insertPositions(issues, percentage, candidates) {
 
     console.log("Inserting sources for positions...");
     const sourcePromises = [];
-    for (let i=0; i < positionIds.length; i++) {
+    for (let i=0; i < candidates.length; i++) {
       let tweetIndex = Math.floor(Math.random() * tweets.length);
       sourcePromises.push(db.query(sourceQuery, [null, "www.google.com", generateDate()]));
       sourcePromises.push(db.query(sourceQuery, [tweets[tweetIndex], "https://github.com/Strategy-Gamer/candidate-insight", generateDate()]));
+      sourcePromises.push(db.query(sourceQuery, ["This tweet is for testing purposes", "https://github.com/Strategy-Gamer/candidate-insight", generateDate()]));
     }
 
     const sourceResults = await Promise.all(sourcePromises);
@@ -302,11 +303,10 @@ async function insertPositions(issues, percentage, candidates) {
     const positionSourcePromises = [];
     let sourceIndex = 0;
     for (const positionId of positionIds) {
-      if (sourceIndex + 1 < sourceIds.length) {
-        positionSourcePromises.push(db.query(positionSourceQuery, [positionId, sourceIds[sourceIndex]]));
-        positionSourcePromises.push(db.query(positionSourceQuery, [positionId, sourceIds[sourceIndex+1]]));
-        sourceIndex += 2;
-      }
+        positionSourcePromises.push(db.query(positionSourceQuery, [positionId, sourceIds[sourceIndex % sourceIds.length]]));
+        positionSourcePromises.push(db.query(positionSourceQuery, [positionId, sourceIds[(sourceIndex+1) % sourceIds.length]]));
+        positionSourcePromises.push(db.query(positionSourceQuery, [positionId, sourceIds[(sourceIndex+2) % sourceIds.length]]));
+        sourceIndex += 3;
     }
     await Promise.all(positionSourcePromises);
 

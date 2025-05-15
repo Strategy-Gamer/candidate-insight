@@ -12,20 +12,12 @@ h2 {
      padding: 4px;
 }
 
-.positions {
-     display: grid;
-     grid-template-columns: repeat(4, minmax(100px, 20vw));
-     gap: 2rem;
-     text-align: center;
-     justify-content: center;
-     margin: 1rem 0;
-}
-
 .position {
-     padding: 1rem;
+     padding: max(8px, 1vw);
      border: 1px solid #ddd;
      border-radius: 8px;
      box-shadow: #ddd;
+     margin-right: 2px;
 }
 
 .Name {
@@ -49,26 +41,34 @@ p {
      font-weight: bold;
 }
 
-.party.Democratic {
+.Democratic {
      color: darkblue;
 }
 
-.party.Republican {
+.Republican {
      color: darkred;
 }
 
-.party.Green {
+.Green {
      color: green;
 }
 
-.party.Libertarian {
+.Libertarian {
      color: darkgoldenrod;
 }
 
-.party.Independent {
+.Independent {
      color: gray;
 }
 
-.party.Constitution {
+.Constitution {
      color: purple;
+}
+
+@media (max-width: 768px) {
+
+     .position {
+          font-size: 0.8em;
+     }
+
 }
