@@ -9,9 +9,11 @@ export type Position = {
 export type Source = {
     position_id?: number,
     source_id: number,
+    source_type: string,
     tweet: string,
     url: string,
-    date: string
+    date: string,
+    scraped_on: string
 };
 
 export type ApiCandidatePosition = {

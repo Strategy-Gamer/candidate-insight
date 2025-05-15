@@ -25,7 +25,7 @@ import {
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { FilterFilled, SortAscendingOutlined, SortDescendingOutlined } from '@ant-design/icons';
+import { CheckOutlined, CloseOutlined, FilterFilled, SortAscendingOutlined, SortDescendingOutlined } from '@ant-design/icons';
 import { Button } from './ui/button';
 import { ScrollArea } from "@/components/ui/scroll-area"
 import Link from 'next/link';
@@ -228,15 +228,18 @@ const Positions: React.FC<PositionsProps> = ({positions, issue}: PositionsProps)
           {filteredPositions.map((position, index) => (
             <AccordionItem key={index} value={`item-${index}`} className="w-full">
               <AccordionTrigger onClick={() => handleSourceClick(position.position_id)} className="hover:no-underline w-full">
-                <div className="flex justify-between items-center w-full">
+                <div className="flex justify-between items-center w-full ">
                   <div className="position">
-                    <span className={`Name ${position.party_affiliation}`}>
-                      {position.first_name} {position.last_name}
-                    </span>
-                    <span className={`status ${position.supports_position ? 'yes' : 'no'}`}>
-                      {position.supports_position ? " supports " : " opposes "}
-                    </span>
-                    because {position.position_description}
+                    <div className="flex items-center justify-center gap-2">
+                      <span className={`Name ${position.party_affiliation}`}>
+                        {position.first_name} {position.last_name.replace(/#/g, ' ')}
+                      </span>
+                      <span>
+                        {position.supports_position ? " Supports " : " Opposes "}
+                        {position.supports_position ? <CheckOutlined className="text-[#008000]" />  : <CloseOutlined className="text-[#D2042D]" />}
+                      </span>
+                    </div>
+                    {position.position_description != "Insufficient Data." && position.position_description}
                   </div>
                   <span className="text-sm md:text-base lg:text-lg hover:underline">Sources</span>
                 </div>
@@ -246,41 +249,40 @@ const Positions: React.FC<PositionsProps> = ({positions, issue}: PositionsProps)
                   
                   <>
                     {/* TODO: Web Sources */}
-                    <div className="flex justify-evenly w-full flex-wrap">
+                    <div className="flex justify-evenly w-full max-w-[650px] flex-wrap">
                       {positionSources[position.position_id].filter(source => source.tweet == null).map((source, index) => (
                         <Link
                             href={source.url}
                             key={index}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-600 hover:underline"
+                            className="text-blue-600 hover:underline ml-2"
                         >
-                            View Source
-                            {source.date && (
-                                <span className="text-gray-400 ml-1">
-                                    ({new Date(source.date).toLocaleDateString()})
-                                </span>
-                            )}
+                            {source.source_type != "Other" ? source.source_type : "Source"}
                         </Link>
                       ))}
                     </div>
 
                     {/* Twitter Sources*/}
-                    <h2 className="text-xl font-bold mt-4">Tweets</h2>
-                    <div className="flex justify-center w-full">
-                      <div className="flex flex-col border-l border-r border-b border-gray-125 w-full max-w-[650px]">
-                        {positionSources[position.position_id].filter(source => source.tweet != null).map((source, index) => (
-                          <Tweet 
-                            key={index}
-                            tweet={source.tweet}
-                            date={source.date}
-                            firstName={position.first_name}
-                            lastName={position.last_name}
-                            username={position.twitter}
-                          />
-                        ))}
-                      </div>
-                    </div>
+                    {positionSources[position.position_id].filter(source => source.tweet != null).length > 0 && (
+                      <>
+                        <h2 className="text-xl font-bold mt-4">Tweets</h2>
+                        <div className="flex justify-center w-full">
+                          <div className="flex flex-col border-l border-r border-b border-gray-125 w-full max-w-[650px]">
+                            {positionSources[position.position_id].filter(source => source.tweet != null).map((source, index) => (
+                              <Tweet 
+                                key={index}
+                                tweet={source.tweet}
+                                date={source.date}
+                                firstName={position.first_name}
+                                lastName={position.last_name}
+                                username={position.twitter}
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </>
                 ) : (
                   <p>Getting sources...</p>

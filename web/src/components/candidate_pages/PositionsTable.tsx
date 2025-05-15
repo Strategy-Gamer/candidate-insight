@@ -32,6 +32,8 @@ type ApiPosition = {
         tweet?: string;
         url?: string;
         date?: string;
+        source_type?: string;
+        scraped_on?: string;
     }[];
 }
 
@@ -118,12 +120,7 @@ const PositionsTable = ({ category, candidate}: Props) => {
                                             rel="noopener noreferrer"
                                             className="text-blue-600 hover:underline"
                                         >
-                                            View Source
-                                            {source.date && (
-                                                <span className="text-gray-400 ml-1">
-                                                    ({new Date(source.date).toLocaleDateString()})
-                                                </span>
-                                            )}
+                                            {source.source_type != "Other" ? source.source_type : "Source"}
                                         </Link>
                                     ) : (
                                         <span className="text-gray-500">[No URL provided]</span>

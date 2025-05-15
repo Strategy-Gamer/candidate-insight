@@ -15,9 +15,10 @@ h2 {
 .position {
      padding: max(8px, 1vw);
      border: 1px solid #ddd;
-     border-radius: 8px;
+     border-radius: 2px;
      box-shadow: #ddd;
      margin-right: 2px;
+     width: 100%;
      max-width: 600px;
 }
 
@@ -30,17 +31,6 @@ p {
      padding-bottom: 1%;
 }
 
-.status.yes {
-     color: darkgreen;
-}
-
-.status.no {
-     color: darkred;
-}
-
-.status {
-     font-weight: bold;
-}
 
 .Democratic {
      color: darkblue;

@@ -21,8 +21,10 @@ export async function GET(
                 SELECT COALESCE(JSON_AGG(
                   jsonb_build_object(
                     'url', s.url,
+                    'source_type', s.source_type,
                     'tweet', s.tweet,
-                    'date', s.date
+                    'date', s.date,
+                    'scraped_on', s.scraped_on
                   )
                 ), '[]')
                 FROM position_sources ps
